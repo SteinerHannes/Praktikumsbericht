@@ -1,0 +1,6 @@
+
+\begin{thenomenclature} 
+\nomgroup{A}
+  \item [{etc.}]\begingroup et cetera\nomeqref {\relax 5.0}\nompageref{9}
+
+\end{thenomenclature}
