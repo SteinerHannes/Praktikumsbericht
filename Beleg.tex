@@ -62,16 +62,59 @@
 		
 	Was noch?
 	
-	Soll hier schon rein, dass eine App, ein Webportal, etc. entstehen soll? Oder ist das Teil der Anforderungen? Problemstellung und Anforderungen zusammenfassen?
-	Vor- Nachteile von Handy App (man muss immer dabei sein)
+	Soll hier schon rein, dass eine App, ein Webportal, etc. entstehen soll? Oder soll die Grund Idee zur Lösung in ein extra Kapitel?
+	
+\chapter{ ,,Grundidee zum L"osen des Problems`` }
+	- Vorlagen erstellen und die dann benutzen, um Texte zu erkennen...
+	
+	- Vorlagen abspeichern online,
+	
+	- 
 
 \chapter{Anforderungen}
-
-
+	- ios app:
+	
+	- ios 13.0 > version, wegen swiftui und vision / vision kit -> bedeutet geräte dab dem 6s, aber nicht ältere
+	
+	- vlt ein paar worte zu swift, swiftui, vision und visionkit
+	
+	- dokumente ein scannen
+	
+	- vorlagen erstellen, um wichtige Bereiche zu erfassen
+	
+	- mit der vorlage dokumente einscannen
+	
+	- auf dem gerät oder auf dem server die texte erkennen
+	
+	- vorlagen auf einem server speichern und abrufen
+	
+	- ergebnisse an den server schicken, nicht auf der App speichern
+	
+	- Datenschutz/sicherheit beachten, auch bei Server und APIs
+	
+	- 
 
 	
-\chapter{Konzept}
-	Gemeinsam mit den Betreuern des Praktikums und Tobias Kallauke entstand eine typische Client-Server-Architektur. Mit Hilfe von verschiedenen Apps, auf der Basis von Android, iOS oder auch im Browser sollen.
+\chapter{Entwicklung des ersten Prototyps}
+	- beschreiben wie die einzelnen Views/Seiten nun aussehen und funktionieren? oder eher den Prozess der Entwicklung?
+	
+	
+	- Bild mit Wireframe aller Views und deren Workflow?
+	
+	- AppState erklären? (Single source of truth) -> später AppStore mit mehreren States
+	
+	- Umrechnung der Bilder vom Template aus und zuschneiden der neuen Regionen erklären
+	
+	- Attribute hinzufügen (den Vorgang) -> Rechteck einzeichnen...
+	
+	- 
+	
+
+
+
+
+
+%	Gemeinsam mit den Betreuern des Praktikums und Tobias Kallauke entstand eine typische Client-Server-Architektur. Mit Hilfe von verschiedenen Apps, auf der Basis von Android, iOS oder auch im Browser sollen.
 	
 %	Die Grund Idee des Dokumentenscanner ist es den Vorgang der Klausuren-Kontrolle und deren Noteneintragung zu vereinfachen. Genauer soll es möglich sein die wichtigen Daten auf der ersten Seite einer Klausur, wie Vor- und Nachname des Studeten, seine Matrikelnummer sowie die Note zu erkennen, digitalisieren und in ein geeignetes Format zu bringen, um es anschließend der Notenfreigabe der Hochschule zu übermitteln. 
 %
@@ -80,10 +123,35 @@
 %	Durch die Erweiterung der Grundidee um Scan-Vorlagen wurde es auch möglich Daten anderer Dokumente zu digitalisieren und in ein geeignetes Format zu bringen. Genauer soll es dem Benutzer möglich sein von jedem beliebigen Dokument eine Vorlage zu erstellen, in der er Stellen auf dem Dokument markiert, wo sich die zu digitaliserenden Daten befinden.
 
 \chapter{App Architektur}
+	- redux like app store mit states erklären? (single source of truth)
+	
+	- auf die API eingehen?
+	
+	- 
 
 
-\chapter{Grenzen}
-	Die Abkürzung etc.\nomenclature{etc.}{et cetera} steht im Abkürzungsverzeichnis.
+\chapter{Grenzen der App}
+	\cmmnt{Die Abkürzung etc.\nomenclature{etc.}{et cetera} steht im Abkürzungsverzeichnis.}
+	
+	\section{Probleme beim Erkennen von Dokumenten}
+		- Gleich-farbiger Hintergrund
+			
+		- Wenig Licht
+		
+		- Hintergrund mit starken Kanten
+		
+		- Runde Ecken, keine Ecken
+		
+		- Starke Kanten im Bild (schwarzer Kreditkartenstreifen)
+		
+		- zu jedem möglichem vlt. dann ein Beispiel Bild
+		
+\chapter{Ausblick}
+	- Es müssen nicht nur klausuren sein, sondern alles mögliche
+	
+	- Server mit bildern als Klausuren-Einsicht nutzen -> allerdings viele Probleme (Klausuren würden kopiert werden -> Profs mehr Arbeit, keinen direkten Kontakt zum Prof wegen Fragen, Verbesserungen oder Anmerkungen, ... )
+	
+	
 
 \Anhang
 
