@@ -5,7 +5,19 @@
 \contentsline {chapter}{Abk\"urzungsverzeichnis}{IV}% 
 \contentsline {chapter}{\numberline {1}Einleitung}{1}% 
 \contentsline {chapter}{\numberline {2}Problemstellung}{3}% 
-\contentsline {chapter}{\numberline {3}Anforderungen}{5}% 
-\contentsline {chapter}{\numberline {4}Konzept}{7}% 
-\contentsline {chapter}{\numberline {5}Grenzen}{9}% 
-\contentsline {chapter}{\nonumberline Literaturverzeichnis}{11}% 
+\contentsline {section}{\numberline {2.1}Digitalisieren der Klausur-Daten}{3}% 
+\contentsline {section}{\numberline {2.2}Klausuren-Vorlage}{3}% 
+\contentsline {section}{\numberline {2.3}Vorlage verbessern}{4}% 
+\contentsline {section}{\numberline {2.4}Weitere Anmerkungen}{4}% 
+\contentsline {chapter}{\numberline {3},,Grundidee zum L\active@dq \dq@prtct {o}sen des Problems``}{5}% 
+\contentsline {chapter}{\numberline {4}Anforderungen}{7}% 
+\contentsline {chapter}{\numberline {5}Entwicklung des ersten Prototyps}{9}% 
+\contentsline {chapter}{\numberline {6}Weitere Entwicklung}{11}% 
+\contentsline {section}{\numberline {6.1}App Architektur}{11}% 
+\contentsline {chapter}{\numberline {7}Grenzen der App}{13}% 
+\contentsline {section}{\numberline {7.1}Probleme beim Erkennen von Dokumenten}{13}% 
+\contentsline {section}{\numberline {7.2}Probleme der Klausur-Vorlage beim Scannen}{13}% 
+\contentsline {section}{\numberline {7.3}Weitere ...}{13}% 
+\contentsline {chapter}{\numberline {8}Templates}{15}% 
+\contentsline {chapter}{\numberline {9}Ausblick}{17}% 
+\contentsline {chapter}{\nonumberline Literaturverzeichnis}{19}% 
