@@ -1,6 +1,7 @@
 
 \begin{thenomenclature} 
 \nomgroup{A}
-  \item [{etc.}]\begingroup et cetera\nomeqref {\relax 7.0}\nompageref{13}
+  \item [{bzw.}]\begingroup beziehungsweise\nomeqref {\relax 2.0}\nompageref{3}
+  \item [{Fakultät CB}]\begingroup Fakultät für angewandte Computer- und Biowissenschaften\nomeqref {\relax 2.0}\nompageref{3}
 
 \end{thenomenclature}
