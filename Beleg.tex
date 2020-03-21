@@ -67,7 +67,7 @@
 	Für genau diesen Vorgang des Digitalisierens wird eine Lösung gesucht. Die Prüfer sollen so bequem und möglichst zeitsparend diese Aufgabe verrichten, ohne dabei ihre Aufmerksamkeitsspanne zu überlasten. Des Weiteren müssen die Ergebnisse der Prüfungen, sowie die Eckdaten der Studenten in ein geeignetes digitales Format gebracht werden, um es der Notenfreigabe weiterzuleiten. Darüber hinaus empfiehlt es sich, digitale Kopien der Klausuren abzuspeichern, da/um ... (warum genau, sollen die gespeichert werden? meine/unsere Idee Online Klausureneinsicht -> ins Fazit/Ausblick (hat viele ''Probleme'' ))
 	
 	\section{Klausuren-Vorlage}
-	- ist es eher ein Gestaltungsleitfaden "style guide" oder eine Klausuren-/Layout-Vorlage?
+	- ist es eher ein Gestaltungsleitfaden ''style guide'' oder eine Klausuren-/Layout-Vorlage?
 	
 	Eine Klausuren-Vorlage bzw.\nomenclature{bzw.}{beziehungsweise} ein Gestaltungsleitfaden für Klausuren der Fakultät \textit{Angewandte Computer- und Biowissenschaften} (Fakultät CB)\nomenclature{Fakultät CB}{Fakultät für angewandte Computer- und Biowissenschaften} bietet außerdem die Möglichkeit der Kontrolle des Prüfers an. Genauer ist es durch das vorgegebene Layout der Klausur möglich, einen Teil der Arbeit des Prüfenden auf Fehler zu untersuchen. Auf dem Deckblatt der Klausur ist eine Tabelle, mit drei Zeilen und für jede Aufgabe eine Spalte. In der ersten Zeile befinden sich die Nummern der Aufgaben. In der zweiten, die zu erreichenden Punkte der Aufgabe. Und in der dritten Zeile trägt der Prüfer die erbrachten Punkte des Studenten ein. Unter der Tabelle befindet sich ein Feld für die erreichte Gesamtpunktzahl, sowie ein Feld für die aus den Punkten resultierende Note. Die Punkte pro Aufgabe, die Gesamtpunktzahl und die Zensur stehen in (Korrelation?) Relation zu einander, sodass aus den Punkten der Aufgaben die beiden anderen Felder errechnet werden und mit den Ergebnissen des Prüfers abgeglichen werden könnten. Eine weiteres Merkmal der Klausuren-Vorlage ist ein Feld, für die vom Studenten erreichten Punkte über jeder Aufgabenstellung. Die dortige Angabe sollte mit der, in der Tabelle auf dem Deckblatt übereinstimmen und bietet somit noch eine weitere Möglichkeit der Kontrolle an.
 	
@@ -85,37 +85,29 @@
 	
 	Soll hier schon rein, dass eine App, ein Webportal, etc. entstehen soll? Oder soll die Grund Idee zur Lösung in ein extra Kapitel?
 
-
-
-
 %%%%%%%%%%%%%%% - GRUND IDEE ZUM LÖSEN DES PROBLEMS - %%%%%%%%%%%%%%%
 
-\chapter{Documenten-Scanner}
+\chapter{Konzept des Documenten-Scanners}
 
-	Aus der Problemstellung heraus entstand die Idee einer Dokumenten-Scanner App. Diese soll die wichtigen Daten auf dem Deckblatt einer Klausur, wie Vor- und Nachname des Studenten, seine Matrikelnummer sowie die Note erkennen, digitalisieren und in ein für die Notenfreigabe geeignetes Format zu bringen. Die digitalisierten Daten sollen anschließend an einen Server gesendet werde, wo sie und die beim Einscannen entstandenen Bilder gespeichert werden. Bei Verwendung der Klausuren-Vorlage der Fakultät CB oder ähnlichen, die eine Punkteübersicht haben, soll es außerdem möglich sein, die Punkte sowie die Note zu überprüfen. 
-	
-	Zur Digitalisierung und Kontrolle der Daten werden Scan-Vorlagen verwendet.	Bei der Erstellung einer Scan-Vorlage geht man wie folgt vor:
+	Aus der Problemstellung heraus entstand die Idee einer Dokumenten-Scanner App. Diese soll die wichtigen Daten auf dem Deckblatt einer Klausur, wie Vor- und Nachname des Studenten, seine Matrikelnummer sowie die Note erkennen, digitalisieren und in ein für die Notenfreigabe geeignetes Format bringen. Die digitalisierten Daten sollen anschließend an einen Server gesendet werde, wo sie und die beim Einscannen entstandenen Bilder gespeichert werden. Bei Verwendung der Klausuren-Vorlage der Fakultät CB oder ähnlichen, die eine Punkteübersicht haben, soll es außerdem möglich sein, die Punkte sowie die Note auf Richtigkeit zu überprüfen. 
+
+	Zur Digitalisierung und Kontrolle der Daten werden Scan-Vorlagen verwendet. Diese muss vor dem Einscannen der ausgefüllten Klausuren erstellt werden, um zu gewährleisten, dass die richtigen Daten digitalisiert werden. Beim Erstellen einer Scan-Vorlage geht man wie folgt vor:
 	\begin{itemize}
-		\item Zuerst scannt man jede Seite der Klausur ein.
-		\item Anschließend markiert man diejenigen Stellen auf jeder Seite, die zu digitalisieren und/oder kontrollieren sind.
-		\item Des weiteren kann man aus allen markierten Regionen noch diese auswählen, die in Relation stehen. Diesen Relationen werden danach noch weitere Eigenschaften zugeteilt, um sie später bei der Kontrolle richtig zu analysieren. So eine Eigenschaft könnte sein, dass es sich um einen Vergleich zwischen zwei in Relation stehenden Regionen handelt. Z.B. ist die eine Region die Zelle in der Punkteüberichts-Tabelle, in der die erreichten Punkte zu Aufgabe 1 rein geschrieben werden sollen und die zweite Region die Stelle über der Aufgabenstellung von Aufgabe 1, in der ebenfalls die erreichten Punkte eingetragen werden sollen. Weitere Beispiele für solche Relationen und Eigenschaften sind die Summanden für die erreichte Gesamtpunktzahl und die Summe selbst, oder auch noch die daraus resultierende Note.
+		\item Zuerst wird jede Seite der Klausur fotografiert. Dabei wird in jedem Bild das Dokument erkannt, vom Hintergrund getrennt bzw. ausgeschnitten und perfekt ausgerichtet. (Kontrast erhöht -> Schrift besser zu erkennen, ...) 
+		\item Anschließend markiert man diejenigen Regionen auf jeder Seite, die zu digitalisieren und/oder kontrollieren sind.
+		\item Des Weiteren kann man aus allen markierten Regionen noch diese auswählen, die in Relation stehen. Diesen Relationen werden danach noch weitere Eigenschaften zugeteilt, um sie später bei der Kontrolle richtig zu analysieren. So eine Eigenschaft könnte sein, dass es sich um einen Vergleich zwischen zwei in Relation stehenden Regionen handelt. Z.B. ist die eine Region die Zelle in der Punkteübersichts-Tabelle, in der die erreichten Punkte zu Aufgabe 1 rein geschrieben werden sollen und die zweite Region die Stelle über der Aufgabenstellung von Aufgabe 1, in der ebenfalls die erreichten Punkte eingetragen werden sollen. Weitere Beispiele für solche Relationen und Eigenschaften sind die Summanden für die erreichte Gesamtpunktzahl und die Summe selbst, oder auch noch die daraus resultierende Note.
 		\item Als letztes speichert man die Vorlage ab, welche dann automatisch an einen Server gesendet wird, so dass auch andere diese Vorlage nutzen können.
 	\end{itemize}
 	
+	Nach der Erstellung einer Vorlage kann das Dokument digitalisiert werden. Dazu scannt man die Seiten in der selben Reihenfolge, wie in der Vorlage ein. Die App digitalisiert mit Hilfe der Vorlage und optical character recognition (OCR)\nomenclature{OCR}{optical character recognition, deutsch: optische Zeichen Erkennung} den Inhalt in den vordefinierten Regionen. Im Anschluss an die Texterkennung kann das Resultat nochmal überprüft und korrigiert werden, bevor es an den Server zum Abspeichern gesendet wird.
 	
+	... noch mehr? (Auf Tobias warten...)
 	
 	Ein wichtiger Vorteil einer App gegenüber anderen Lösungen ist, dass so gut wie jeder Mitarbeiter an einer Lehr- und Forschungseinrichtung ein eigenes oder Zugang zu einem Smartphone oder Tablet hat.
 
+	- Einspeisung von erwarteten Ergebnissen noch mit rein nehmen? (Noten: ,0 ,3 oder ,7; Seminargruppen und Klausur Teilnehmer.)
 	
-	
-	- Vorlagen erstellen und die dann benutzen, um Texte zu erkennen...
-
-	- Vorlagen abspeichern online,
-	
-	- Verwendung von OCR, 
-	
-	- OCR erklären -> extra Kapitel oder Section ( wenn ich ehh noch mit IronOCR arbeite auf jeden Fall mit rein)
-
+	- Noch mehr zu OCR sagen, was es ist, wie es geht, komplettes eigenes Kapitel?
 
 
 
@@ -151,22 +143,22 @@
 %%%%%%%%%%%%%%% - PROTOTYP - %%%%%%%%%%%%%%%
 	
 \chapter{Entwicklung des ersten Prototyps}
-	- Verwendete Programme, Sprache, etc. 
-	
-	- ein paar Worte, wie gut die Entwicklung lief (Simulator vs. echtes Gerät), wo sind die Grenzen des Simulators (Keine Kamera), wo waren Probleme mit dem echten Gerät...
 	
 	- beschreiben wie die einzelnen Views/Seiten nun aussehen und funktionieren? oder eher den Prozess der Entwicklung?
-	
 	
 	- Bild mit Wireframe aller Views und deren Workflow?
 	
 	- AppState erklären? (Single source of truth) -> später AppStore mit mehreren States
 	
+	- erklären deskew / Dokument ausrichten?
+	
 	- Umrechnung der Bilder vom Template aus und zuschneiden der neuen Regionen erklären
 	
 	- Attribute hinzufügen (den Vorgang) -> Rechteck einzeichnen...
 	
-	- 
+	- Verwendete Programme, Sprache, etc. 
+	
+	- ein paar Worte, wie gut die Entwicklung lief (Simulator vs. echtes Gerät), wo sind die Grenzen des Simulators (Keine Kamera), wo waren Probleme mit dem echten Gerät...
 	
 
 
