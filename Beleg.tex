@@ -8,7 +8,7 @@
 \Vorname{Hannes}
 \Nachname{Steiner}
 
-\Thema{Entwicklung eines Dokumenten Scanners}
+\Thema{Entwicklung einer Dokumenten-Scanner-App}
 \Unterthema{Digitalisierung der Verwaltung an der Hochschule Mittweida}
 
 \Studiengang{Softwareentwicklung}
@@ -49,7 +49,7 @@
 \chapter{Einleitung}
 	Digitalisierung wird gängig als Integration von digitaler Technologie in den Alltag verstanden, und soll helfen Zeit einzusparen \cite{digital}. Mit diesem Gedanken initiierten die Mitarbeiter Holger Langner und Falk Schmidsberger der Hochschule Mittweida, das Projekt \textit{Memo Space}. Im Zuge dessen sollen kleinere Forschungsergebnisse entstehen, die richtungsweisend für die Digitalisierung der Verwaltung von Lehr- und Forschungseinrichtung sind.
 
-	Eine der ersten Ideen \cmmnt{im Zusammenhang mit Memo Space} ist es, die Arbeit von Klausur-Prüfern zu erleichtern. Diese müssen, nachdem die Klausuren kontrolliert wurden, die Benotungen, sowie die Eckdaten der Studenten, in ein digitales Format bringen. Grund dafür ist, dass die Noten in das Notensystem der Einrichtung eingetragen werden müssen. 
+	Eine der ersten Ideen\cmmnt{im Zusammenhang mit Memo Space} ist es, die Arbeit von Klausur-Prüfern zu erleichtern. Diese müssen, nachdem die Klausuren kontrolliert wurden, die Zensur, sowie die Eckdaten der Studenten, in ein digitales Format bringen. Grund dafür ist, dass die Noten in das Notensystem der Einrichtung eingetragen werden müssen. 
 
 	Im Rahmen eines Forschungspraktikums an der Hochschule Mittweida arbeiteten der Student Tobias Kallauke und der Verfasser, gemeinsam an einer Lösung zur Digitalisierung dieses Arbeitsschrittes. Sie entwickelten... (Klausuren-Vorlage, App, Server, OCR? evtl.) / Dabei entstanden .../ Der Verfasser programmierte...
 	
@@ -87,7 +87,7 @@
 
 %%%%%%%%%%%%%%% - GRUND IDEE ZUM LÖSEN DES PROBLEMS - %%%%%%%%%%%%%%%
 
-\chapter{Konzept des Documenten-Scanners}
+\chapter{Konzept des Dokumenten-Scanners}
 
 	Aus der Problemstellung heraus entstand die Idee einer Dokumenten-Scanner App. Diese soll die wichtigen Daten auf dem Deckblatt einer Klausur, wie Vor- und Nachname des Studenten, seine Matrikelnummer sowie die Note erkennen, digitalisieren und in ein für die Notenfreigabe geeignetes Format bringen. Die digitalisierten Daten sollen anschließend an einen Server gesendet werde, wo sie und die beim Einscannen entstandenen Bilder gespeichert werden. Bei Verwendung der Klausuren-Vorlage der Fakultät CB oder ähnlichen, die eine Punkteübersicht haben, soll es außerdem möglich sein, die Punkte sowie die Note auf Richtigkeit zu überprüfen. 
 
@@ -107,7 +107,7 @@
 
 	- Einspeisung von erwarteten Ergebnissen noch mit rein nehmen? (Noten: ,0 ,3 oder ,7; Seminargruppen und Klausur Teilnehmer.)
 	
-	- Noch mehr zu OCR sagen, was es ist, wie es geht, komplettes eigenes Kapitel?
+	- Noch mehr zu OCR sagen: was es ist, wie es geht, komplett eigenes Kapitel?
 
 
 
@@ -143,6 +143,39 @@
 %%%%%%%%%%%%%%% - PROTOTYP - %%%%%%%%%%%%%%%
 	
 \chapter{Entwicklung des ersten Prototyps}
+	Vor Beginn des Praktikums saßen die Praktikum-Betreuer Falk Schmidsberger, Robert Manthey der Hochschule Mittweida, mit Tobias Kallauke und mir zusammen. Wir diskutierten, welches Thema für das Praktikum geeignet ist, wie eine Art Durchführbarkeits- / Machbarkeitsstudie und entschieden uns für den Dokumenten-Scanner. Da ich privat Erfahrung in Swift sowie iOS-Entwicklung gesammelt habe, sollte ich damit anfangen den Scanner als iOS-App zu entwickeln. Wir machten uns auch direkt noch Gedanken über die Anforderungen an die App und definierten, wie das zukünftige Software-System mit Server und Backend aussehen könnte.
+
+	\section{Planung und Vorbereitung}
+		In der aller ersten Woche habe ich mich hauptsächlich mit der Problemstellung auseinander gesetzt, Ideen entwickelt, Problemanalyse betrieben und einen kleinen Prototypen entwickelt. Ich begann damit die Dokumentation von \textit{Vision}, \textit{VisionKit} und \textit{PhotoKit} von \textit{Apple} an zu schauen. Danach hatte ich einen guten Überblick darüber, was ich noch zu entwickeln habe und was mir Frameworks abnehmen können. Zum einen war das Erkennen und gerade ziehen von Dokumenten in Echtzeit in der Kamera, sowie die Texterkennung auf Bildern schon in den Frameworks implementiert. Nebenbei entdeckte ich eine Beispiel-App von \textit{Apple} \cite{visionBasicApp}, in der es um Erkennen von Objekten in Standbildern ging. Diese schaute ich mir an, um das Vision Framework genauer zu verstehen, sodass ich mich gut eingearbeitet habe.
+		
+		- Scrum-Prinzip mit rein, ...
+
+	
+	\section{Entwurf und Design}
+		Ich begann anschließend damit, mir Gedanken zu dem Workflow der App zu machen, erstellte einen minimalen Projektplan, als Leitfaden für die Prototypen Entwicklung und die spätere Weiterentwicklung. Außerdem fertigte ich für jede View ein grobes Design an, sodass es möglichst schnell und effizient mit SwiftUI umzusetzen war. Danach setzte ich ein Repository in GitHub auf und begann mit dem Programmieren des Prototyps. 
+		
+		- Nochmal umschreiben: Redux mit rein	
+	\section{Implementierung}
+		
+		Einzelne Schritte als eigene Section mit Verlauf der jeweiligen Entwicklung: erst das, dann kam das, dann musste es so, ...
+			
+		\subsection{Template erstellen}
+		
+		\subsection{Template speichern}
+		
+		\subsection{Template verwenden}
+		
+		...
+		
+		Die Beispiel-App von \textit{Apple} nahm ich mir als Vorbild für die Umsetzung der Texterkennung.
+		
+		...
+		
+	\section{''Abnahme''}	
+		Abnahme ... \\ \\ \\
+	
+	
+	Weitere Punkte die in Kapitel 5 rein könnten/sollten: 
 	
 	- beschreiben wie die einzelnen Views/Seiten nun aussehen und funktionieren? oder eher den Prozess der Entwicklung?
 	
@@ -164,13 +197,15 @@
 
 %%%%%%%%%%%%%%% - WEITERENTWICKLUNG - %%%%%%%%%%%%%%%
 
-\chapter{Weitere Entwicklung}
+\chapter{Weitere Entwicklung und Besonderheiten}
 
-	\section{App Architektur}
+	\section{App-Architektur}
 		- redux like app store mit states erklären? (single source of truth)
 	
+	\section{API}
 		- auf die API eingehen? oder nur tobias?
 	
+	\section{}
 		- 
 
 
@@ -235,13 +270,37 @@
 
 \Anhang
 
-%\chapter{}
-
+\chapter{Tätigkeitsbericht}
+	\begin{table}[h!]
+		\begin{tabular}{ p{4em} | p{356pt} }
+			Datum & Tätigkeit \\ \hline
+			24.02. - 01.03. & 
+				Ich habe mich mit der Problemstellung auseinander gesetzt, Ideen gesammelt, Problemanalyse betrieben und einen kleinen Prototypen entwickelt. Dazu erstellte ich einen minimalen Projektplanung, arbeitete mich in die Frameworks \textit{Vision} und \textit{VisionKit} ein und setzte eine Versionsverwaltung auf. Zusätzlich suchte ich nach einer passenden App-Architektur, die geeignet für das deklarative GUI-Framwwork SwiftUI, sowie für asynchrone Aufgaben, wie z. B. API-Aufrufe ist. Dabei stieß ich auf \textit{Cleancode Architecture} und \textit{Redux}.
+				
+				Am Ende der Woche konnte man in der App Vorlagen mit einer Seite erstellen. Das heißt man konnte ein Foto machen, aus welchem das Dokument rausgeschnitten und anschließend ausgerichtet wurde. Weiter war es möglich Regionen auf dem Dokument zu markieren und diese in der Vorlage abspeichern. Ansonsten konnten die Vorlage schon dazu benutzt werden, um die Regionen auf dem neuen Foto heraus zu schneiden.
+				\\ \hline
+			02.03. - 08.03. &
+				In dieser Woche habe ich die Texterkennung auf den berechneten Regionen eines neuen Fotos implementiert, den Workflow sowie viele andere Kleingikeiten in der App verbessert und alle Fehler der letzten Woche behoben, sodass ich neue Dinge implementieren konnte. Zudem probierte ich CI sowie Lint für das Projekt aus. Da CI für eine iOS-App mit \textit{GitHub Actions} schwer aufzusetzen war und ab April etwas kosten würde, lies ich es sein. Des Weiteren pflegte ich das Projekt Management durch \textit{Issues} und \textit{Project-Boards} in GitHub. Anschließend programmierte ich den App-Workflow so um, dass nun mehr als eine Seite aufgenommen und analysiert werden konnte. 
+				
+				Abgesehen von neuem Quellcode fing ich an den Praktikumsbericht zu schreiben und arbeitet mich dafür in \LaTeX \xspace und die Bachelorarbeits-Vorlage für \LaTeX \xspace der Hochschule Mittweida ein.
+				  \\ \hline
+	 		09.03. - 15.03. &
+	 			  \\ \hline
+	 		16.03. - 22.03. & 
+	 			 
+		\end{tabular}
+	\end{table}
+		
+		
 \begin{thebibliography}{99}
 	\bibitem{digital}
 		% nochmal genauer nachschauen, guten Link finden, und genauen Namen...
 		Michael Graf, Partner bei PwC
 		\\\texttt{http://www-cs-faculty.stanford.edu/\~{}uno/abcde.html}
+		
+	\bibitem{visionBasicApp}
+		Apple Developer - Sample Code, Detecting Objects in Still Images
+		\\\texttt{https://developer.apple.com/documentation/vision/detecting\_objects\_in\_still\_images}		
 		
 \end{thebibliography}
 

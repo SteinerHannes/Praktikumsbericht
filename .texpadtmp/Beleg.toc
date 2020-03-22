@@ -9,15 +9,24 @@
 \contentsline {section}{\numberline {2.2}Klausuren-Vorlage}{3}% 
 \contentsline {section}{\numberline {2.3}Vorlage verbessern}{4}% 
 \contentsline {section}{\numberline {2.4}Weitere Anmerkungen}{4}% 
-\contentsline {chapter}{\numberline {3}Konzept des Documenten-Scanners}{5}% 
+\contentsline {chapter}{\numberline {3}Konzept des Dokumenten-Scanners}{5}% 
 \contentsline {chapter}{\numberline {4}Anforderungen}{7}% 
 \contentsline {chapter}{\numberline {5}Entwicklung des ersten Prototyps}{9}% 
-\contentsline {chapter}{\numberline {6}Weitere Entwicklung}{11}% 
-\contentsline {section}{\numberline {6.1}App Architektur}{11}% 
-\contentsline {chapter}{\numberline {7}Grenzen der App}{13}% 
-\contentsline {section}{\numberline {7.1}Probleme beim Erkennen von Dokumenten}{13}% 
-\contentsline {section}{\numberline {7.2}Probleme der Klausur-Vorlage beim Scannen}{13}% 
-\contentsline {section}{\numberline {7.3}Weitere ...}{13}% 
-\contentsline {chapter}{\numberline {8}Templates}{15}% 
-\contentsline {chapter}{\numberline {9}Ausblick}{17}% 
-\contentsline {chapter}{\nonumberline Literaturverzeichnis}{19}% 
+\contentsline {section}{\numberline {5.1}Planung und Vorbereitung}{9}% 
+\contentsline {section}{\numberline {5.2}Entwurf und Design}{9}% 
+\contentsline {section}{\numberline {5.3}Implementierung}{10}% 
+\contentsline {subsection}{\numberline {5.3.1}Template erstellen}{10}% 
+\contentsline {subsection}{\numberline {5.3.2}Template speichern}{10}% 
+\contentsline {subsection}{\numberline {5.3.3}Template verwenden}{10}% 
+\contentsline {section}{\numberline {5.4}''Abnahme''}{10}% 
+\contentsline {chapter}{\numberline {6}Weitere Entwicklung und Besonderheiten}{13}% 
+\contentsline {section}{\numberline {6.1}App-Architektur}{13}% 
+\contentsline {section}{\numberline {6.2}API}{13}% 
+\contentsline {chapter}{\numberline {7}Grenzen der App}{15}% 
+\contentsline {section}{\numberline {7.1}Probleme beim Erkennen von Dokumenten}{15}% 
+\contentsline {section}{\numberline {7.2}Probleme der Klausur-Vorlage beim Scannen}{15}% 
+\contentsline {section}{\numberline {7.3}Weitere ...}{15}% 
+\contentsline {chapter}{\numberline {8}Templates}{17}% 
+\contentsline {chapter}{\numberline {9}Ausblick}{19}% 
+\contentsline {chapter}{\numberline {A}T\IeC {\"a}tigkeitsbericht}{21}% 
+\contentsline {chapter}{\nonumberline Literaturverzeichnis}{23}% 
