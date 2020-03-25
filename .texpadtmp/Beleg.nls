@@ -1,8 +1,8 @@
 
 \begin{thenomenclature} 
 \nomgroup{A}
-  \item [{bzw.}]\begingroup beziehungsweise\nomeqref {\relax 2.0}\nompageref{3}
-  \item [{Fakultät CB}]\begingroup Fakultät für angewandte Computer- und Biowissenschaften\nomeqref {\relax 2.0}\nompageref{3}
-  \item [{OCR}]\begingroup optical character recognition, deutsch: optische Zeichen Erkennung\nomeqref {\relax 3.0}\nompageref{5}
+  \item [{bzw.}]\begingroup beziehungsweise\nomeqref {\relax 3.0}\nompageref{5}
+  \item [{Fakultät CB}]\begingroup Fakultät für angewandte Computer- und Biowissenschaften\nomeqref {\relax 3.0}\nompageref{5}
+  \item [{OCR}]\begingroup optical character recognition, deutsch: optische Zeichen Erkennung\nomeqref {\relax 5.0}\nompageref{9}
 
 \end{thenomenclature}
