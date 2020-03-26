@@ -12,9 +12,8 @@
 \Unterthema{Digitalisierung der Verwaltung an der Hochschule Mittweida}
 
 \Studiengang{Softwareentwicklung}
-\Seminargruppe{IF17wS-B}
-\Fakultaet{Angewandte Computer- und Biowissenschaften}
-
+\Seminargruppe{IF17wS-B \\[\bigskipamount] Matrikelnummer:\\ 46540}
+\Fakultaet{\MNI}
 \Erstpruefer{Prof\@. Dr\@. Mark Ritter}
 \Zweitpruefer{}
 
@@ -31,10 +30,13 @@
 \Verlag{}
 \ISBN{}
 
+
 \begin{document}
 
 \begin{Referat}
 % Referat
+In dem vorliegendem Praktikumsbericht...
+
 \end{Referat}
 
 %\begin{Vorwort}
@@ -51,11 +53,21 @@
 
 	Eine der ersten Ideen\cmmnt{im Zusammenhang mit Memo Space} ist es, die Arbeit von Klausur-Prüfern zu erleichtern. Diese müssen, nachdem die Klausuren kontrolliert wurden, die Zensur, sowie die Eckdaten der Studenten, in ein digitales Format bringen. Grund dafür ist, dass die Noten in das Notensystem der Einrichtung eingetragen werden müssen. 
 
-	Im Rahmen eines Forschungspraktikums an der Hochschule Mittweida arbeiteten der Student Tobias Kallauke und der Verfasser, gemeinsam an einer Lösung zur Digitalisierung dieses Arbeitsschrittes. Beide arbeiteten zum einem Teil zusammen und auch getrennt an Aufgaben... Sie entwickelten... (Klausuren-Vorlage, App, Server, OCR? evtl.) / Dabei entstanden .../ Der Verfasser programmierte...
+	Im Rahmen eines zwölfwöchigem Forschungspraktikums an der Hochschule Mittweida arbeiteten der Student Tobias Kallauke und der Verfasser, gemeinsam an einer Lösung zur Digitalisierung dieses Arbeitsschrittes. Beide arbeiteten zum einem Teil zusammen und auch getrennt an Aufgaben... Sie entwickelten... (Klausuren-Vorlage, App, Server, OCR? evtl.) / Dabei entstanden .../ Der Verfasser programmierte...
 	
 	Was noch? 
 
 \chapter{Hochschule Mittweida}
+	Die Hochschule Mittweida - university of applied sience (HSMW) \nomenclature{HSMW}{Hochschule Mittweida - university of applied sience} ist ...
+	
+	- was gibt es da
+	
+	- wer leitet die hochschule
+	
+	- was machen meine betreuer in der hochschule
+	
+	- aktuelles
+	
 
 %%%%%%%%%%%%%%% - PROBLEMSTELLUNG - %%%%%%%%%%%%%%%
 
@@ -81,47 +93,41 @@
 	Ferner soll bei der Lösung von der Anschaffung neuer Technologie und Geräte abgesehen werden. Grund dafür sind neben den Anschaffungskosten, die Idee, dass das Ergebnis des Forschungsprojekts in weiteren Lehr- und Forschungseinrichtung Anwendung finden sollte.
 			
 	Was noch?
-	
-	Soll hier schon rein, dass eine App, ein Webportal, etc. entstehen soll? Oder soll die Grund Idee zur Lösung in ein extra Kapitel?
 
 
 %%%%%%%%%%%%%%% - ANFORDERUNGEN - %%%%%%%%%%%%%%%
 
 \chapter{Anforderungen}
-	Es soll eine iOS-App entstehen mit der Klausuren digitalisiert werden können und mit der diese Daten dann, an einen Server gesendet werden.
+	Es soll eine iOS-App entstehen mit der Klausuren digitalisiert werden können. Genauer müssen die, für die Notenfreigabe relevanten Daten der Klausur, in ein tabellarisches Format gebracht werden. Um unterschiedlichste Klausuren, Klausuren-Vorlagen oder auch andere Dokumente zu unterstützen, soll das Anlegen von Scan-Vorlagen in der App möglich sein. Diese enthalten jede Seite des Dokuments und alle Regionen der Seiten, in denen sich die zu digitalisierenden Informationen befinden. 
 	
 	
 	
-	- ios app:
+	Die App muss Berechtigung für das Kamera-System des Gerätes haben, damit der Benutzer in der Lage ist, jede Seite zu fotografieren. Ihm muss es außerdem möglich sein, die Regionen auf dem Fotos zu markieren und zu bezeichnen, damit die 
 	
-	- ios 13.0 > version, wegen swiftui und vision / vision kit -> bedeutet geräte dab dem 6s, aber nicht ältere (Prozessor ist entscheidend) 
 	
-	- auch iPads sind recht einfach möglich dank SwiftUI!!! 
 	
-	- vlt ein paar worte zu swift, swiftui, vision und visionkit ...
 	
-	- dokumente ein scannen
+	... Tabelle halt.
 	
-	- vorlagen erstellen, um wichtige Bereiche zu erfassen
 	
-	- mit der vorlage dokumente einscannen
 	
-	- auf dem gerät oder auf dem server die texte erkennen
 	
-	- vorlagen auf einem server speichern und abrufen
 	
-	- ergebnisse an den server schicken, nicht auf der App speichern
 	
-	- Datenschutz/sicherheit beachten, auch bei Server und APIs
+	Die erstellten Vorlagen, die digitalisierten Daten und die für die Texterkennung entstandenen Dokumenten-Bilder, soll außerhalb der App auf einem Server gespeichert werden. Somit ist die Möglichkeit gegeben, die Vorlagen wieder zu verwenden und anderen Benutzern der App zur Verfügung zu stellen. 
 	
-	- 
+	Zudem muss die Texterkennung auf dem Gerät selbst statt finden. Allerdings darf die App auch Texterkennung auf externen Servern unterstützen. Hierfür müssen dann die entsprechenden API-Schnittstellen implementiert oder für einen eigenen Server entwickelt werden.
+	
+	Da die gesamte Kommunikation über das Internet geschieht, muss das Softwaresystem die üblichen Datenschutz- und Datensicherheit-Richtlinien entsprechen, bzw. implementieren.
+	
+	Die App kann (oder braucht?) nur Geräte mit iOS 13.0 oder neuer zu unterstützen. Grund dafür sind die \textit{Apple} Frameworks \textit{SwiftUI} und \textit{VisionKit}. \textit{SwiftUI} bietet die Möglichkeit, Benutzeroberflächen für alle \textit{Apple}-Plattformen in \textit{Swift} zu erstellen. Die deklarative \textit{Swift}-Syntax ist einfach zu lesen und schnell zu schreiben, so dass es möglich ist, die App in wenigen Wochen für iPhone und iPad zu schreiben. \textit{VisionKit} dagegen ist das Framework zum Scannen der Dokumente benötigt daher eine gute Kamera und einen recht guten Prozessor, so dass alle Geräte, die iOS 13.0 wegen ihrer geringen Leistung unterstützen raus fallen.
 	
 
 %%%%%%%%%%%%%%% - GRUND IDEE ZUM LÖSEN DES PROBLEMS - %%%%%%%%%%%%%%%
 
 \chapter{Konzept des Dokumenten-Scanners}
 
-	Aus der Problemstellung heraus entstand die Idee einer Dokumenten-Scanner App. Diese soll die wichtigen Daten auf dem Deckblatt einer Klausur, wie Vor- und Nachname des Studenten, seine Matrikelnummer sowie die Note erkennen, digitalisieren und in ein für die Notenfreigabe geeignetes Format bringen. Die digitalisierten Daten sollen anschließend an einen Server gesendet werde, wo sie und die beim Einscannen entstandenen Bilder gespeichert werden. Bei Verwendung der Klausuren-Vorlage der Fakultät CB oder ähnlichen, die eine Punkteübersicht haben, soll es außerdem möglich sein, die Punkte sowie die Note auf Richtigkeit zu überprüfen. 
+	Wie in der Problemstellung und Anforderung beschreiben, soll die Dokumenten-Scanner App wichtigen Daten auf dem Deckblatt einer Klausur, wie Vor- und Nachname des Studenten, seine Matrikelnummer sowie die Note erkennen, digitalisieren und in ein für die Notenfreigabe geeignetes Format bringen. Die digitalisierten Daten sollen anschließend an einen Server gesendet werde, wo sie und die beim Einscannen entstandenen Bilder gespeichert werden. Bei Verwendung der Klausuren-Vorlage der Fakultät CB oder ähnlichen, die eine Punkteübersicht haben, soll es außerdem möglich sein, die Punkte sowie die Note auf Richtigkeit zu überprüfen. 
 
 	Zur Digitalisierung und Kontrolle der Daten werden Scan-Vorlagen verwendet. Diese muss vor dem Einscannen der ausgefüllten Klausuren erstellt werden, um zu gewährleisten, dass die richtigen Daten digitalisiert werden. Beim Erstellen einer Scan-Vorlage geht man wie folgt vor:
 	\begin{itemize}

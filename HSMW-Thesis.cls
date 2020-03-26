@@ -534,7 +534,7 @@ pdfcreator = {LaTeX mit HSMW-Thesis}
 % Einstellungen fuer Inhaltsverzeichnis
 \ifthenelse{\isundefined{\@classictoc}}{%
 \addtocontents{toc}{\protect\doublespacing}
-\renewcommand{\@dotsep}{1}
+\renewcommand{\@dotsep}{4}
 \renewcommand\l@chapter{\@dottedtocline{0}{0em}{1.5em}}
 \renewcommand\l@section{\@dottedtocline{1}{0em}{1.5em}}
 \renewcommand*\l@subsection{\@dottedtocline{2}{1.5em}{2.3em}}
