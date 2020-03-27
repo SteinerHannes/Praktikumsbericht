@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.3.7)  27 MAR 2020 15:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.3.7)  27 MAR 2020 15:32
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -646,7 +646,7 @@ Package: pdflscape 2016/05/14 v0.11 Display of landscape pages in PDF (HO)
 Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
-) (/Users/hannessteiner/Documents/Praktikum-Bachelor/Praktikum/Beleg/LateX/.texpadtmp/Beleg.glsdefs)
+)
 \c@theorem=\count150
 runsystem(makeindex Beleg.idx)...executed.
 
@@ -1010,10 +1010,10 @@ Overfull \hbox (106.56955pt too wide) in paragraph at lines 314--316
 
 ] (/Users/hannessteiner/Documents/Praktikum-Bachelor/Praktikum/Beleg/LateX/.texpadtmp/Beleg.aux) ) 
 Here is how much of TeX's memory you used:
- 14920 strings out of 492616
- 254715 string characters out of 6129482
- 515855 words of memory out of 5000000
- 18485 multiletter control sequences out of 15000+600000
+ 14888 strings out of 492616
+ 254035 string characters out of 6129482
+ 515731 words of memory out of 5000000
+ 18455 multiletter control sequences out of 15000+600000
  58244 words of font info for 95 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  64i,12n,105p,9119b,558s stack positions out of 5000i,500n,10000p,200000b,80000s
