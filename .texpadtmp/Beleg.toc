@@ -11,7 +11,7 @@
 \contentsline {section}{\numberline {3.3}Vorlage verbessern}{6}% 
 \contentsline {section}{\numberline {3.4}Weitere Anmerkungen}{6}% 
 \contentsline {chapter}{\numberline {4}Anforderungen}{7}% 
-\contentsline {chapter}{\numberline {5}Konzept des Dokumenten-Scanners}{9}% 
+\contentsline {chapter}{\numberline {5}Konzept der Dokumenten-Scanner-App}{9}% 
 \contentsline {chapter}{\numberline {6}Entwicklung des ersten Prototyps}{11}% 
 \contentsline {section}{\numberline {6.1}Planung und Vorbereitung}{11}% 
 \contentsline {section}{\numberline {6.2}Entwurf und Design}{11}% 

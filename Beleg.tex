@@ -53,7 +53,7 @@ In dem vorliegendem Praktikumsbericht...
 
 	Eine der ersten Ideen\cmmnt{im Zusammenhang mit Memo Space} ist es, die Arbeit von Klausur-Prüfern zu erleichtern. Diese müssen, nachdem die Klausuren kontrolliert wurden, die Zensur, sowie die Eckdaten der Studenten, in ein digitales Format bringen. Grund dafür ist, dass die Noten in das Notensystem der Einrichtung eingetragen werden müssen. 
 
-	Im Rahmen eines zwölfwöchigem Forschungspraktikums an der Hochschule Mittweida arbeiteten der Student Tobias Kallauke und der Verfasser, gemeinsam an einer Lösung zur Digitalisierung dieses Arbeitsschrittes. Beide arbeiteten zum einem Teil zusammen und auch getrennt an Aufgaben... Sie entwickelten... (Klausuren-Vorlage, App, Server, OCR? evtl.) / Dabei entstanden .../ Der Verfasser programmierte...
+	Im Rahmen eines zwölfwöchigem Forschungspraktikums an der Hochschule Mittweida arbeiteten der Student Tobias Kallauke und der Verfasser, gemeinsam an einer Lösung zur Digitalisierung dieses Arbeitsschrittes. ... Beide arbeiteten zum einem Teil zusammen und auch getrennt an Aufgaben... Sie entwickelten... (Klausuren-Vorlage, App, Server, OCR? evtl.) / Dabei entstanden .../ Der Verfasser programmierte...
 	
 	Was noch? 
 
@@ -66,7 +66,7 @@ In dem vorliegendem Praktikumsbericht...
 	
 	- was machen meine betreuer in der hochschule
 	
-	- aktuelles
+	- aktuelles?
 	
 
 %%%%%%%%%%%%%%% - PROBLEMSTELLUNG - %%%%%%%%%%%%%%%
@@ -78,8 +78,6 @@ In dem vorliegendem Praktikumsbericht...
 	Für genau diesen Vorgang des Digitalisierens wird eine Lösung gesucht. Die Prüfer sollen so bequem und möglichst zeitsparend diese Aufgabe verrichten, ohne dabei ihre Aufmerksamkeitsspanne zu überlasten. Des Weiteren müssen die Ergebnisse der Prüfungen, sowie die Eckdaten der Studenten in ein geeignetes digitales Format gebracht werden, um es der Notenfreigabe weiterzuleiten. Darüber hinaus empfiehlt es sich, digitale Kopien der Klausuren abzuspeichern, da/um ... (warum genau, sollen die gespeichert werden? meine/unsere Idee Online Klausureneinsicht -> ins Fazit/Ausblick (hat viele ''Probleme'' ))
 	
 	\section{Klausuren-Vorlage}
-	- ist es eher ein Gestaltungsleitfaden ''style guide'' oder eine Klausuren-/Layout-Vorlage?
-	
 	Eine Klausuren-Vorlage bzw.\nomenclature{bzw.}{beziehungsweise} ein Gestaltungsleitfaden für Klausuren der Fakultät \textit{Angewandte Computer- und Biowissenschaften} (Fakultät CB)\nomenclature{Fakultät CB}{Fakultät für angewandte Computer- und Biowissenschaften} bietet außerdem die Möglichkeit der Kontrolle des Prüfers an. Genauer ist es durch das vorgegebene Layout der Klausur möglich, einen Teil der Arbeit des Prüfenden auf Fehler zu untersuchen. Auf dem Deckblatt der Klausur ist eine Tabelle, mit drei Zeilen und für jede Aufgabe eine Spalte. In der ersten Zeile befinden sich die Nummern der Aufgaben. In der zweiten, die zu erreichenden Punkte der Aufgabe. Und in der dritten Zeile trägt der Prüfer die erbrachten Punkte des Studenten ein. Unter der Tabelle befindet sich ein Feld für die erreichte Gesamtpunktzahl, sowie ein Feld für die aus den Punkten resultierende Note. Die Punkte pro Aufgabe, die Gesamtpunktzahl und die Zensur stehen in (Korrelation?) Relation zu einander, sodass aus den Punkten der Aufgaben die beiden anderen Felder errechnet werden und mit den Ergebnissen des Prüfers abgeglichen werden könnten. Eine weiteres Merkmal der Klausuren-Vorlage ist ein Feld, für die vom Studenten erreichten Punkte über jeder Aufgabenstellung. Die dortige Angabe sollte mit der, in der Tabelle auf dem Deckblatt übereinstimmen und bietet somit noch eine weitere Möglichkeit der Kontrolle an.
 	
 	\section{Vorlage verbessern}
@@ -98,12 +96,11 @@ In dem vorliegendem Praktikumsbericht...
 %%%%%%%%%%%%%%% - ANFORDERUNGEN - %%%%%%%%%%%%%%%
 
 \chapter{Anforderungen}
-
 	Es soll eine iOS-App entstehen mit der Klausuren digitalisiert werden können. Genauer müssen die, für die Notenfreigabe relevanten Daten der Klausur, in ein tabellarisches Format gebracht werden. Um unterschiedliche Klausuren oder auch andere Dokumente zu unterstützen, soll das Anlegen von Scan-Vorlagen in der App möglich sein. Hierfür (aber auch zum Einscannen) benötigt die App die Berechtigung für das Kamera-System. Diese muss, bei der ersten Benutzung einmalig erteilt werden.
 	
 	Die Scan-Vorlagen bestehen aus zwei Komponenten. Die eine sind zugeschnittene Fotos der Seiten eines Dokuments. Und die zweite sind die Regionen auf den Bildern, wo sich die zu digitalisierenden Informationen befinden. Dem Benutzer muss es möglich sein, zuerst die Fotos zu machen und anschließend Regionen auf den Seiten zu markieren. Weiter benötigen die Regionen Namen bzw. Typen, die der Benutzer angeben muss. Die Angabe des Typs ist wichtig, da dadurch eindeutig wird, ob es sich um die Note oder die Matrikelnummer des Studenten handelt. Diese Eindeutigkeit wird nicht nur für die automatische Erstellung der Tabelle benötigt, sondern auch für die Texterkennung. 
 	
-	Optical character recognition (OCR)\nomenclature{OCR}{optical character recognition, deutsch: optische Zeichen Erkennung}, auf deutsch optische Zeichen Erkennung, soll dazu benutzt werden, die Informationen der Regionen zu digitalisieren. Um die Texterkennung zu verbessern, soll der Typ der Regionen verwendet werden. Damit könne dem OCR mögliche Ergebnisse mitgeteilt oder die Ergebnisse angepasst werden. Beispielsweise bestehen Zensuren immer aus Dezimalzahlen von 1 bis 6 und mit nur einer Nachkommastelle. Wird der Buchstabe O anstelle der Ziffer 0 erkannt, kann so der Fehler korrigiert werden.
+	Optical character recognition (OCR)\nomenclature{OCR}{optical character recognition, deutsch: optische Zeichen Erkennung und im deutschen Synonym für Texterkennung}, auf deutsch optische Zeichen Erkennung, soll dazu benutzt werden, die Informationen der Regionen zu digitalisieren. Um die Texterkennung zu verbessern, soll der Typ der Regionen verwendet werden. Damit könne dem OCR mögliche Ergebnisse mitgeteilt oder die Ergebnisse angepasst werden. Beispielsweise bestehen Zensuren immer aus Dezimalzahlen von 1 bis 6 und mit nur einer Nachkommastelle. Wird der Buchstabe O anstelle der Ziffer 0 erkannt, kann so der Fehler korrigiert werden.
 	
 	Zudem muss die Texterkennung auf dem Gerät selbst statt finden. Allerdings darf die App auch Texterkennung auf externen Servern unterstützen. Hierfür müssen dann die entsprechenden API-Schnittstellen implementiert oder für einen eigenen Server entwickelt werden.
 
@@ -116,19 +113,22 @@ In dem vorliegendem Praktikumsbericht...
 
 %%%%%%%%%%%%%%% - GRUND IDEE ZUM LÖSEN DES PROBLEMS - %%%%%%%%%%%%%%%
 
-\chapter{Konzept des Dokumenten-Scanners}
-
-	Wie in der Problemstellung und Anforderung beschreiben, soll die Dokumenten-Scanner App wichtigen Daten auf dem Deckblatt einer Klausur, wie Vor- und Nachname des Studenten, seine Matrikelnummer sowie die Note erkennen, digitalisieren und in ein für die Notenfreigabe geeignetes Format bringen. Die digitalisierten Daten sollen anschließend an einen Server gesendet werde, wo sie und die beim Einscannen entstandenen Bilder gespeichert werden. Bei Verwendung der Klausuren-Vorlage der Fakultät CB oder ähnlichen, die eine Punkteübersicht haben, soll es außerdem möglich sein, die Punkte sowie die Note auf Richtigkeit zu überprüfen. 
+\chapter{Konzept der Dokumenten-Scanner-App}
+	Wie in der Problemstellung und Anforderung beschreiben, soll die Dokumenten-Scanner App wichtigen Daten auf dem Deckblatt einer Klausur, wie Vor- und Nachname des Studenten, seine Matrikelnummer sowie die Note erkennen, digitalisieren und in ein für die Notenfreigabe geeignetes Format bringen. Die digitalisierten Daten sollen anschließend an einen Server gesendet werde, wo sie und die beim Einscannen entstandenen Bilder gespeichert werden. Verwendet eine ein zu scannende Klausur die Klausuren-Vorlage der Fakultät CB oder ähnliche, die eine Punkteübersicht haben, dann soll es außerdem möglich sein, die Punkte sowie die Note auf Richtigkeit zu überprüfen. 
 
 	Zur Digitalisierung und Kontrolle der Daten werden Scan-Vorlagen verwendet. Diese muss vor dem Einscannen der ausgefüllten Klausuren erstellt werden, um zu gewährleisten, dass die richtigen Daten digitalisiert werden. Beim Erstellen einer Scan-Vorlage geht man wie folgt vor:
 	\begin{itemize}
-		\item Zuerst wird jede Seite der Klausur fotografiert. Dabei wird in jedem Bild das Dokument erkannt, vom Hintergrund getrennt oder genauer gesagt ausgeschnitten und perfekt ausgerichtet. (Kontrast erhöht -> Schrift besser zu erkennen, ...) 
-		\item Anschließend markiert man diejenigen Regionen auf jeder Seite, die zu digitalisieren und/oder kontrollieren sind.
-		\item Des Weiteren kann man aus allen markierten Regionen diese auswählen, die in Relation stehen. Diesen Relationen werden danach noch weitere Eigenschaften zugeteilt, um sie später bei der Kontrolle richtig zu analysieren. So eine Eigenschaft könnte sein, dass es sich um einen Vergleich zwischen zwei in Relation stehenden Regionen handelt. Z. B. ist die eine Region die Zelle in der Punkteübersichts-Tabelle, in der die erreichten Punkte zu Aufgabe 1 rein geschrieben werden sollen und die zweite Region die Stelle über der Aufgabenstellung von Aufgabe 1, in der ebenfalls die erreichten Punkte eingetragen werden sollen. Weitere Beispiele für solche Relationen und Eigenschaften sind die Summanden für die erreichte Gesamtpunktzahl und die Summe selbst, oder auch noch die daraus resultierende Note.
-		\item Als letztes speichert man die Vorlage ab, welche dann automatisch an einen Server gesendet wird, so dass andere genauso diese Vorlage nutzen können.
+		\item Zuerst wird jede Seite der Klausur fotografiert. Dabei wird in jedem Bild das Dokument erkannt, vom Hintergrund getrennt oder genauer gesagt ausgeschnitten und perfekt ausgerichtet. Zudem wird der Kontrast erhöht, so dass die Schrift leichter lesbarer wird.
+		\item Anschließend markiert man diejenigen Regionen auf jeder Seite, die zu digitalisieren und/oder kontrollieren sind. Zusätzlich muss jeder Region ein Name und einer der folgenden Typen zugeordnet werden: Unbekannt, Name, Matrikelnummer, Seminargruppe, Punkte und Note. Mithilfe des Typs wird die Texterkennung verbessert und falsche Ergebnisse automatisch korrigiert. Dazu später mehr.
+		\item Des Weiteren kann man aus allen markierten Regionen diese auswählen, die in Relation stehen. Diesen Relationen werden danach noch weitere Eigenschaften zugeteilt, um sie später bei der Kontrolle richtig zu analysieren. So eine Eigenschaft könnte sein, dass es sich um einen Vergleich zwischen zwei in Relation stehenden Regionen handelt. Z. B. ist die eine Region die Zelle in der Punkteübersichts-Tabelle, in der die erreichten Punkte zu Aufgabe 1 rein geschrieben werden sollen. Und die zweite Region die Stelle über der Aufgabenstellung von Aufgabe 1, in der ebenfalls die erreichten Punkte eingetragen werden sollen. Weitere Beispiele für solche Relationen und Eigenschaften sind die Summanden für die erreichte Gesamtpunktzahl und die Summe selbst, oder auch noch die daraus resultierende Note.
+		\item Als letztes speichert man die Vorlage ab, welche dann automatisch an einen Server gesendet wird, so dass andere diese Vorlage ebenfalls nutzen können.
 	\end{itemize}
 	
-	Nach der Erstellung einer Vorlage kann das Dokument digitalisiert werden. Dazu scannt man die Seiten in derselben Reihenfolge, wie in der Vorlage ein. Die App digitalisiert mithilfe der Vorlage und OCR den Inhalt in den vordefinierten Regionen. Im Anschluss an die Texterkennung kann das Resultat noch mal überprüft und korrigiert werden, bevor es an den Server zum Abspeichern gesendet wird.
+	Nach der Erstellung einer Vorlage kann das Dokument digitalisiert werden. Dazu scannt man die Seiten in derselben Reihenfolge, wie in der Scan-Vorlage ein. Die App digitalisiert mithilfe von OCR den Inhalt, in den vordefinierten Regionen. Der Typ der Region nimmt nun Einfluss auf das Ergebnis. Durch ihn wird während der Worterkennungsphase eine Liste an vordefinierten Ergebnissen eingespeist. Diese Liste hat Vorrang vor dem Standard-Lexikon, welches verwendet wird. Ein Beispiel für solch eine Liste könnten, wie in den Anforderungen beschrieben, alle möglichen Noten sein. Auch vorstellbar ist, dass alle Seminargruppen oder Namen von Personen, die an der Klausur teilgenommen haben, dort verwendet werden. 
+	
+	Weiter wäre eine zusätzliche Möglichkeit der Korrektur erdenklich. Angenommen, jemand verschreibt sich bei seiner Seminargruppe und vergisst ein Zeichen. Die Texterkennung erkennt zwar jedes Zeichen richtig, jedoch wäre es für die Notenfreigabe eine nicht korrekte Seminargruppe. Deshalb könnte man auch im Nachhinein das Ergebnis mit einer Seminargruppe ersetzt, die die größte Übereinstimmung mit dem erkannten Wort hat. Dieses Vorgehen kann man dadurch verbessern, wenn man dafür nur die Seminargruppen-Bezeichnungen verwendet, die auch tatsächlich die Klausur geschrieben haben. Ähnliches gilt auch für die Namen oder Matrikelnummern der Studenten.
+	
+	Um wirklich sicher zu gehen, ist es aber im Anschluss an die Texterkennung möglich die Resultate noch einmal zu überprüfen und zu korrigieren, bevor es an den Server zum Abspeichern gesendet wird. Dazu wird außerdem die confidence des OCR bei jeder Region angezeigt. Diese sagt aus, wie sicher sich die Texterkennung ist, das das Ergebnis stimmt. Jedoch kann es auch hier falsche Positiv-Ergebnisse geben, weshalb auch das kein perfekter Indikator für die Richtigkeit ist.
 	
 	... noch mehr? (Auf Tobias warten...)
 	
@@ -177,7 +177,7 @@ In dem vorliegendem Praktikumsbericht...
 		Abnahme ... \\ \\ \\
 	
 	
-	Weitere Punkte die in Kapitel 5 rein könnten/sollten: 
+	Weitere Punkte die in Kapitel 6 rein könnten/sollten: 
 	
 	- beschreiben wie die einzelnen Views/Seiten nun aussehen und funktionieren? oder eher den Prozess der Entwicklung?
 	
