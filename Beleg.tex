@@ -98,29 +98,20 @@ In dem vorliegendem Praktikumsbericht...
 %%%%%%%%%%%%%%% - ANFORDERUNGEN - %%%%%%%%%%%%%%%
 
 \chapter{Anforderungen}
-	Es soll eine iOS-App entstehen mit der Klausuren digitalisiert werden können. Genauer müssen die, für die Notenfreigabe relevanten Daten der Klausur, in ein tabellarisches Format gebracht werden. Um unterschiedlichste Klausuren, Klausuren-Vorlagen oder auch andere Dokumente zu unterstützen, soll das Anlegen von Scan-Vorlagen in der App möglich sein. Diese enthalten jede Seite des Dokuments und alle Regionen der Seiten, in denen sich die zu digitalisierenden Informationen befinden. 
+
+	Es soll eine iOS-App entstehen mit der Klausuren digitalisiert werden können. Genauer müssen die, für die Notenfreigabe relevanten Daten der Klausur, in ein tabellarisches Format gebracht werden. Um unterschiedliche Klausuren oder auch andere Dokumente zu unterstützen, soll das Anlegen von Scan-Vorlagen in der App möglich sein. Hierfür (aber auch zum Einscannen) benötigt die App die Berechtigung für das Kamera-System. Diese muss, bei der ersten Benutzung einmalig erteilt werden.
 	
+	Die Scan-Vorlagen bestehen aus zwei Komponenten. Die eine sind zugeschnittene Fotos der Seiten eines Dokuments. Und die zweite sind die Regionen auf den Bildern, wo sich die zu digitalisierenden Informationen befinden. Dem Benutzer muss es möglich sein, zuerst die Fotos zu machen und anschließend Regionen auf den Seiten zu markieren. Weiter benötigen die Regionen Namen bzw. Typen, die der Benutzer angeben muss. Die Angabe des Typs ist wichtig, da dadurch eindeutig wird, ob es sich um die Note oder die Matrikelnummer des Studenten handelt. Diese Eindeutigkeit wird nicht nur für die automatische Erstellung der Tabelle benötigt, sondern auch für die Texterkennung. 
 	
-	
-	Die App muss Berechtigung für das Kamera-System des Gerätes haben, damit der Benutzer in der Lage ist, jede Seite zu fotografieren. Ihm muss es außerdem möglich sein, die Regionen auf dem Fotos zu markieren und zu bezeichnen, damit die 
-	
-	
-	
-	
-	... Tabelle halt.
-	
-	
-	
-	
-	
-	
-	Die erstellten Vorlagen, die digitalisierten Daten und die für die Texterkennung entstandenen Dokumenten-Bilder, soll außerhalb der App auf einem Server gespeichert werden. Somit ist die Möglichkeit gegeben, die Vorlagen wieder zu verwenden und anderen Benutzern der App zur Verfügung zu stellen. 
+	Optical character recognition (OCR)\nomenclature{OCR}{optical character recognition, deutsch: optische Zeichen Erkennung}, auf deutsch optische Zeichen Erkennung, soll dazu benutzt werden, die Informationen der Regionen zu digitalisieren. Um die Texterkennung zu verbessern, soll der Typ der Regionen verwendet werden. Damit könne dem OCR mögliche Ergebnisse mitgeteilt oder die Ergebnisse angepasst werden. Beispielsweise bestehen Zensuren immer aus Dezimalzahlen von 1 bis 6 und mit nur einer Nachkommastelle. Wird der Buchstabe O anstelle der Ziffer 0 erkannt, kann so der Fehler korrigiert werden.
 	
 	Zudem muss die Texterkennung auf dem Gerät selbst statt finden. Allerdings darf die App auch Texterkennung auf externen Servern unterstützen. Hierfür müssen dann die entsprechenden API-Schnittstellen implementiert oder für einen eigenen Server entwickelt werden.
+
+	Die digitalisierten Daten, die für die Texterkennung entstandenen Dokumenten-Bilder und die erstellten Scan-Vorlagen, soll außerhalb der App auf einem Server gespeichert werden. Somit ist die Möglichkeit gegeben, die Vorlagen wieder zu verwenden und anderen Benutzern der App zur Verfügung zu stellen. Des Weiteren hat diese zentralen Stelle den Vorteil alle anfallenden Daten zu verwalten, was die Benutzung der App trotz vieler Benutzer vereinfacht.
+	
+	Damit Synchronität der Daten auf den Geräten und dem Server gewährleistet werden kann, benötig die App hierfür ebenfalls Schnittstellen. Diese sollten den standardmäßigen \textit{CRUD}\nomenclature{CRUD}{Das Akronym CRUD steht für Create/Erstellen, Read/Lesen, Update/Aktualisieren und Delete/Löschen und umfasst die vier grundlegenden Operationen persistenter Speicher}-Operationen entsprechen. 
 	
 	Da die gesamte Kommunikation über das Internet geschieht, muss das Softwaresystem die üblichen Datenschutz- und Datensicherheit-Richtlinien entsprechen, bzw. implementieren.
-	
-	Die App kann (oder braucht?) nur Geräte mit iOS 13.0 oder neuer zu unterstützen. Grund dafür sind die \textit{Apple} Frameworks \textit{SwiftUI} und \textit{VisionKit}. \textit{SwiftUI} bietet die Möglichkeit, Benutzeroberflächen für alle \textit{Apple}-Plattformen in \textit{Swift} zu erstellen. Die deklarative \textit{Swift}-Syntax ist einfach zu lesen und schnell zu schreiben, so dass es möglich ist, die App in wenigen Wochen für iPhone und iPad zu schreiben. \textit{VisionKit} dagegen ist das Framework zum Scannen der Dokumente benötigt daher eine gute Kamera und einen recht guten Prozessor, so dass alle Geräte, die iOS 13.0 wegen ihrer geringen Leistung unterstützen raus fallen.
 	
 
 %%%%%%%%%%%%%%% - GRUND IDEE ZUM LÖSEN DES PROBLEMS - %%%%%%%%%%%%%%%
@@ -137,7 +128,7 @@ In dem vorliegendem Praktikumsbericht...
 		\item Als letztes speichert man die Vorlage ab, welche dann automatisch an einen Server gesendet wird, so dass andere genauso diese Vorlage nutzen können.
 	\end{itemize}
 	
-	Nach der Erstellung einer Vorlage kann das Dokument digitalisiert werden. Dazu scannt man die Seiten in derselben Reihenfolge, wie in der Vorlage ein. Die App digitalisiert mithilfe der Vorlage und optical character recognition (OCR)\nomenclature{OCR}{optical character recognition, deutsch: optische Zeichen Erkennung} den Inhalt in den vordefinierten Regionen. Im Anschluss an die Texterkennung kann das Resultat noch mal überprüft und korrigiert werden, bevor es an den Server zum Abspeichern gesendet wird.
+	Nach der Erstellung einer Vorlage kann das Dokument digitalisiert werden. Dazu scannt man die Seiten in derselben Reihenfolge, wie in der Vorlage ein. Die App digitalisiert mithilfe der Vorlage und OCR den Inhalt in den vordefinierten Regionen. Im Anschluss an die Texterkennung kann das Resultat noch mal überprüft und korrigiert werden, bevor es an den Server zum Abspeichern gesendet wird.
 	
 	... noch mehr? (Auf Tobias warten...)
 	
@@ -151,16 +142,19 @@ In dem vorliegendem Praktikumsbericht...
 %%%%%%%%%%%%%%% - PROTOTYP - %%%%%%%%%%%%%%%
 	
 \chapter{Entwicklung des ersten Prototyps}
-	Vor Beginn des Praktikums saßen die Praktikum-Betreuer Falk Schmidsberger, Robert Manthey der Hochschule Mittweida, mit Tobias Kallauke und mir zusammen. Wir diskutierten, welches Thema für das Praktikum geeignet ist, wie eine Art Durchführbarkeits- / Machbarkeitsstudie und entschieden uns für den Dokumenten-Scanner. Da ich privat Erfahrung in Swift sowie iOS-Entwicklung gesammelt habe, sollte ich damit anfangen den Scanner als iOS-App zu entwickeln. Wir machten uns auch direkt noch Gedanken über die Anforderungen an die App und definierten, wie das zukünftige Software-System mit Server und Backend aussehen könnte.
+	Vor Beginn des Praktikums saßen die Praktikum-Betreuer Falk Schmidsberger, Robert Manthey der Hochschule Mittweida, mit Tobias Kallauke und mir zusammen. Wir diskutierten, welches Thema für das Praktikum geeignet ist, wie eine Art Durchführbarkeits- / Machbarkeitsstudie und entschieden uns für den Dokumenten-Scanner. Da ich privat Erfahrung in \textit{Swift} sowie \textit{iOS}-Entwicklung gesammelt habe, sollte ich damit anfangen den Scanner als \textit{iOS}-App zu entwickeln. Wir machten uns auch direkt noch Gedanken über die Anforderungen an die App und definierten, wie das zukünftige Software-System mit Server und Backend aussehen könnte.
 
 	\section{Planung und Vorbereitung}
 		In der aller ersten Woche habe ich mich hauptsächlich mit der Problemstellung auseinander gesetzt, Ideen entwickelt, Problemanalyse betrieben und einen kleinen Prototypen entwickelt. Ich begann damit die Dokumentation von \textit{Vision}, \textit{VisionKit} und \textit{PhotoKit} von \textit{Apple} an zu schauen. Danach hatte ich einen guten Überblick darüber, was ich noch zu entwickeln habe und was mir Frameworks abnehmen können. Zum einen war das Erkennen und gerade ziehen von Dokumenten in Echtzeit in der Kamera, sowie die Texterkennung auf Bildern schon in den Frameworks implementiert. Nebenbei entdeckte ich eine Beispiel-App von \textit{Apple} \cite{visionBasicApp}, in der es um Erkennen von Objekten in Standbildern ging. Diese schaute ich mir an, um das Vision Framework genauer zu verstehen, sodass ich mich gut eingearbeitet habe.
 		
 		- Scrum-Prinzip mit rein, ...
+		
+		Die App kann (oder braucht?) nur Geräte mit iOS 13.0 oder neuer zu unterstützen. Grund dafür sind die \textit{Apple} Frameworks \textit{SwiftUI} und \textit{VisionKit}. \textit{SwiftUI} bietet die Möglichkeit, Benutzeroberflächen für alle \textit{Apple}-Plattformen in \textit{Swift} zu erstellen. Die deklarative \textit{Swift}-Syntax ist einfach zu lesen und schnell zu schreiben, so dass es möglich ist, die App in wenigen Wochen für iPhone und iPad zu schreiben. \textit{VisionKit} dagegen ist das Framework zum Scannen der Dokumente benötigt daher eine gute Kamera und einen recht guten Prozessor, so dass alle Geräte, die iOS 13.0 wegen ihrer geringen Leistung unterstützen raus fallen.
+	
 
 	
 	\section{Entwurf und Design}
-		Ich begann anschließend damit, mir Gedanken zu dem Workflow der App zu machen, erstellte einen minimalen Projektplan, als Leitfaden für die Prototypen Entwicklung und die spätere Weiterentwicklung. Außerdem fertigte ich für jede View ein grobes Design an, sodass es möglichst schnell und effizient mit SwiftUI umzusetzen war. Danach setzte ich ein Repository in GitHub auf und begann mit dem Programmieren des Prototyps. 
+		Ich begann anschließend damit, mir Gedanken zu dem Workflow der App zu machen, erstellte einen minimalen Projektplan, als Leitfaden für die Prototypen Entwicklung und die spätere Weiterentwicklung. Außerdem fertigte ich für jede View ein grobes Design an, sodass es möglichst schnell und effizient mit \textit{SwiftUI} umzusetzen war. Danach setzte ich ein Repository in GitHub auf und begann mit dem Programmieren des Prototyps. 
 		
 		- Nochmal umschreiben: Redux mit rein	
 	\section{Implementierung}
