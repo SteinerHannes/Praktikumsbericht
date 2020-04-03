@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.3.7)  27 MAR 2020 15:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.3.7)  3 APR 2020 18:04
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -864,57 +864,67 @@ chapter 2.
 
 ]
 chapter 3.
-[5] [6]
-chapter 4.
-[7
 
-
-] [8]
-chapter 5.
-
-Overfull \hbox (0.45984pt too wide) in paragraph at lines 117--118
-\T1/phv/m/n/12 Wie in der Pro-blem-stel-lung und An-for-de-rung be-schrei-ben, soll die Dokumenten-Scanner
+Overfull \hbox (64.06982pt too wide) in paragraph at lines 84--88
+\T1/phv/m/n/12 ten kön-nen al-ler-dings nur ge - htt-ps://github.com/reduxjs/redux - https://redux.js.org/introduction/core-
  []
 
-LaTeX Font Info:    Try loading font information for OMS+phv on input line 121.
-(/usr/local/texlive/2019/texmf-dist/tex/latex/psnfss/omsphv.fd
-File: omsphv.fd 
-)
-LaTeX Font Info:    Font shape `OMS/phv/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 121.
- [9
+[5] [6
+
+
+]
+chapter 4.
+[7] [8]
+chapter 5.
+[9
 
 
 ] [10]
 chapter 6.
-[11
+
+Overfull \hbox (0.45984pt too wide) in paragraph at lines 143--144
+\T1/phv/m/n/12 Wie in der Pro-blem-stel-lung und An-for-de-rung be-schrei-ben, soll die Dokumenten-Scanner
+ []
+
+LaTeX Font Info:    Try loading font information for OMS+phv on input line 147.
+(/usr/local/texlive/2019/texmf-dist/tex/latex/psnfss/omsphv.fd
+File: omsphv.fd 
+)
+LaTeX Font Info:    Font shape `OMS/phv/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 147.
+ [11
+
+
+] [12]
+chapter 7.
+
+Overfull \hbox (137.52748pt too wide) in paragraph at lines 176--178
+[]\T1/phv/m/n/12 - Link zu weS-can und den an-dern Fra-me-works? - Video-Link noch mit rein. (https://www.youtube.com/watch?v=qk2y-
+ []
+
+[13
 
 
 ]
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 164.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 193.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 13.24796pt on input line 164.
-
-Underfull \hbox (badness 10000) in paragraph at lines 177--178
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 177--178
+(Font)              scaled to size 13.24796pt on input line 193.
+ [14]
+Underfull \hbox (badness 10000) in paragraph at lines 206--207
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 177--178
+Underfull \hbox (badness 10000) in paragraph at lines 206--207
 
  []
 
-[12] [13] [14
 
+Underfull \hbox (badness 10000) in paragraph at lines 206--207
 
-]
-chapter 7.
+ []
+
 [15] [16
 
 
@@ -934,94 +944,104 @@ chapter 10.
 
 
 ]
+chapter 11.
+[23] [24
+
+
+]
 chapter A.
 
-Overfull \hbox (0.21384pt too wide) in alignment at lines 276--278
+Overfull \hbox (0.21384pt too wide) in alignment at lines 305--307
  [] [] 
  []
 
 
-Overfull \hbox (0.21384pt too wide) in alignment at lines 278--280
+Overfull \hbox (0.21384pt too wide) in alignment at lines 307--309
  [] [] 
  []
 
 
-Overfull \hbox (0.21384pt too wide) in alignment at lines 280--283
+Overfull \hbox (0.21384pt too wide) in alignment at lines 309--312
  [] [] 
  []
 
 
-Underfull \hbox (badness 4846) in paragraph at lines 285--285
+Underfull \hbox (badness 4846) in paragraph at lines 314--314
 []|\T1/phv/m/n/12 24.02. -
  []
 
 
-Underfull \hbox (badness 4846) in paragraph at lines 290--290
+Underfull \hbox (badness 4846) in paragraph at lines 319--319
 []|\T1/phv/m/n/12 02.03. -
  []
 
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 8.27998pt on input line 293.
+(Font)              scaled to size 8.27998pt on input line 322.
 
-Underfull \hbox (badness 4846) in paragraph at lines 295--295
+Underfull \hbox (badness 4846) in paragraph at lines 324--324
 []|\T1/phv/m/n/12 09.03. -
  []
 
 
-Underfull \hbox (badness 4846) in paragraph at lines 298--298
+Underfull \hbox (badness 4846) in paragraph at lines 327--327
 []|\T1/phv/m/n/12 16.03. -
  []
 
 
-Underfull \hbox (badness 4846) in paragraph at lines 301--301
+Underfull \hbox (badness 4846) in paragraph at lines 330--330
 []|\T1/phv/m/n/12 23.03. -
  []
 
 
-Overfull \hbox (0.21384pt too wide) in alignment at lines 283--304
+Overfull \hbox (0.21384pt too wide) in alignment at lines 312--333
  [] [] 
- []
-
-[23
-
-
-
-
-] [24]
-chapter without number
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 311.
-(/usr/local/texlive/2019/texmf-dist/tex/latex/base/t1cmtt.fd
-File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-Overfull \hbox (106.56955pt too wide) in paragraph at lines 314--316
-\T1/cmtt/m/n/12 https://developer.apple.com/documentation/vision/detecting_objects_in_still_images 
  []
 
 [25
 
 
-] [26
 
 
-] [27
+] [26]
+chapter without number
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 340.
+(/usr/local/texlive/2019/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+Underfull \hbox (badness 10000) in paragraph at lines 343--346
+\T1/cmtt/m/n/12 https://developer.apple.com/documentation/vision/
+ []
+
+
+Overfull \hbox (38.66113pt too wide) in paragraph at lines 352--354
+\T1/cmtt/m/n/12 https://www.heise.de/developer/artikel/Einstieg-in-SwiftUI-4594018.html 
+ []
+
+[27
+
+
+] [28
+
+
+] [29
 
 
 
 
 ] (/Users/hannessteiner/Documents/Praktikum-Bachelor/Praktikum/Beleg/LateX/.texpadtmp/Beleg.aux) ) 
 Here is how much of TeX's memory you used:
- 14888 strings out of 492616
- 254035 string characters out of 6129482
- 515731 words of memory out of 5000000
- 18455 multiletter control sequences out of 15000+600000
+ 14890 strings out of 492616
+ 254080 string characters out of 6129482
+ 515737 words of memory out of 5000000
+ 18457 multiletter control sequences out of 15000+600000
  58244 words of font info for 95 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  64i,12n,105p,9119b,558s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on /Users/hannessteiner/Documents/Praktikum-Bachelor/Praktikum/Beleg/LateX/.texpadtmp/Beleg.pdf (41 pages, 108809 bytes).
+Output written on /Users/hannessteiner/Documents/Praktikum-Bachelor/Praktikum/Beleg/LateX/.texpadtmp/Beleg.pdf (43 pages, 116414 bytes).
 PDF statistics:
- 165 PDF objects out of 1000 (max. 8388607)
- 113 compressed objects within 2 object streams
+ 172 PDF objects out of 1000 (max. 8388607)
+ 118 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  12 words of extra memory for PDF output out of 10000 (max. 10000000)
 
