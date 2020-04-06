@@ -302,45 +302,27 @@ In dem vorliegendem Praktikumsbericht...
 \Anhang
 
 \chapter{Tätigkeitsbericht}
-	\begin{longtable}[h!]{ p{4em} | p{356pt} }
-		Datum & Tätigkeit \\ \hline
-		\endfirsthead
-		Datum & Tätigkeit \\ \hline
- 		\endhead
-
- 		\hline
- 		\endfoot
-		
-		24.02. - 01.03. & 
-			Ich habe mich mit der Problemstellung auseinander gesetzt, Ideen gesammelt, Problemanalyse betrieben und einen kleinen Prototypen entwickelt. Dazu erstellte ich einen minimalen Projektplanung, arbeitete mich in die Frameworks \textit{Vision} und \textit{VisionKit} ein und setzte eine Versionsverwaltung auf. Zusätzlich suchte ich nach einer passenden App-Architektur, die geeignet für das deklarative GUI-Framwwork SwiftUI, sowie für asynchrone Aufgaben, wie z. B. API-Aufrufe ist. Dabei stieß ich auf \textit{Cleancode Architecture} und \textit{Redux}.
-				
-			Am Ende der Woche konnte man in der App Vorlagen mit einer Seite erstellen. Das heißt man konnte ein Foto machen, aus welchem das Dokument rausgeschnitten und anschließend ausgerichtet wurde. Weiter war es möglich Regionen auf dem Dokument zu markieren und diese in der Vorlage abspeichern. Ansonsten konnten die Vorlage schon dazu benutzt werden, um die Regionen auf dem neuen Foto heraus zu schneiden.
-			\\ \hline
-		02.03. - 08.03. &
-			In dieser Woche habe ich die Texterkennung auf den berechneten Regionen eines neuen Fotos implementiert, den Workflow sowie viele andere Kleingikeiten in der App verbessert und alle Fehler der letzten Woche behoben, sodass ich neue Dinge implementieren konnte. Zudem probierte ich CI sowie Lint für das Projekt aus. Da CI für eine iOS-App mit \textit{GitHub Actions} schwer aufzusetzen war und ab April etwas kosten würde, lies ich es sein. Des Weiteren pflegte ich das Projekt Management durch \textit{Issues} und \textit{Project-Boards} in GitHub. Anschließend programmierte ich den App-Workflow so um, dass nun mehr als eine Seite aufgenommen und analysiert werden konnte. 
-				
-			Abgesehen von neuem Quellcode fing ich an den Praktikumsbericht zu schreiben und arbeitet mich dafür in \LaTeX \xspace und die Bachelorarbeits-Vorlage für \LaTeX \xspace der Hochschule Mittweida ein.
-			\\ \hline
-	 	09.03. - 15.03. &
-	 		Zu Beginn der dritten Woche schaute ich mir Möglichkeiten für serverseitiges OCR an. Genauer sammelte ich Informationen zu dem Framework Vapor und Swift unter Linux. Jedoch funktionieren die Frameworks \textit{Vision} und \textit{CoreML} von \textit{Apple} unter Linux nicht, weshalb sich IronOCR als beste Option herausstellte. Ich entwickelte ein Datenbankmodell, mithilfe der in der App verwendeten Datentypen und erstellte dazu noch eine JSON-Struktur die später für die APIs verwendet werden könnte. Außerdem gab es ein Meeting, in dem wir unseren aktuellen Stand präsentieren sollten, um weitere Schritte und Aufgaben zu planen.Bis zum Ende der Woche arbeitete ich weiter an meinem Beleg und schrieb den Datenfluss in der App um. Nun ähnelt er sehr dem Redux-Model.
-	 		\\ \hline
-	 	16.03. - 22.03. & 
-	 		Anfangs habe ich weiter an meinem Praktikumsbericht geschrieben, neue Issues hinzugefügt und bearbeitet. Außerdem gepflegte ich die Dokumentation und betrieben Projekt Management, um nun Links zwischen Regionen hinzuzufügen. Dabei entstanden neue Views und der Redux-Store musste dadurch angapsst werden. Es kam eine Erweiterung für die Texterkennung hinzu, so dass man durch die Auswahl eines Datentyps, das Resultat der Erkennung verbessern konnte. Des Weiteren habe ich bis zum Ende der Woche die Vergleich-Links vollständig implementiert und die App auf Fehler und Abstürze kontrolliert, sowie den Beleg um einige Kapitel erweitert.
-	 		\\ \hline
-	 	23.03. - 30.03. &
-	 		...
-	 		\\ \hline
-	\end{longtable}
-		
+	24.02. - 01.03.\\
+	Ich habe mich mit der Problemstellung auseinander gesetzt, Ideen gesammelt, Problemanalyse betrieben und einen kleinen Prototypen entwickelt. Dazu erstellte ich einen minimalen Projektplanung, arbeitete mich in die Frameworks \textit{Vision} und \textit{VisionKit} ein und setzte eine Versionsverwaltung auf. Zusätzlich suchte ich nach einer passenden App-Architektur, die geeignet für das deklarative GUI-Framwwork SwiftUI, sowie für asynchrone Aufgaben, wie z. B. API-Aufrufe ist. Dabei stieß ich auf \textit{Cleancode Architecture} und \textit{Redux}.
 	
+	02.03. - 08.03. \\
+	In dieser Woche habe ich die Texterkennung auf den berechneten Regionen eines neuen Fotos implementiert, den Workflow sowie viele andere Kleingikeiten in der App verbessert und alle Fehler der letzten Woche behoben, sodass ich neue Dinge implementieren konnte. Zudem probierte ich CI sowie Lint für das Projekt aus. Da CI für eine iOS-App mit \textit{GitHub Actions} schwer aufzusetzen war und ab April etwas kosten würde, lies ich es sein. Des Weiteren pflegte ich das Projekt Management durch \textit{Issues} und \textit{Project-Boards} in GitHub. Anschließend programmierte ich den App-Workflow so um, dass nun mehr als eine Seite aufgenommen und analysiert werden konnte. \\ 			
+	Abgesehen von neuem Quellcode fing ich an den Praktikumsbericht zu schreiben und arbeitet mich dafür in \LaTeX \xspace und die Bachelorarbeits-Vorlage für \LaTeX \xspace der Hochschule Mittweida ein.
+	
+	09.03. - 15.03. \\
+	Zu Beginn der dritten Woche schaute ich mir Möglichkeiten für serverseitiges OCR an. Genauer sammelte ich Informationen zu dem Framework Vapor und Swift unter Linux. Jedoch funktionieren die Frameworks \textit{Vision} und \textit{CoreML} von \textit{Apple} unter Linux nicht, weshalb sich IronOCR als beste Option herausstellte. Ich entwickelte ein Datenbankmodell, mithilfe der in der App verwendeten Datentypen und erstellte dazu noch eine JSON-Struktur die später für die APIs verwendet werden könnte. Außerdem gab es ein Meeting, in dem wir unseren aktuellen Stand präsentieren sollten, um weitere Schritte und Aufgaben zu planen.Bis zum Ende der Woche arbeitete ich weiter an meinem Beleg und schrieb den Datenfluss in der App um. Nun ähnelt er sehr dem Redux-Model.
+	
+	16.03. - 22.03. \\ 
+	Anfangs habe ich weiter an meinem Praktikumsbericht geschrieben, neue Issues hinzugefügt und bearbeitet. Außerdem gepflegte ich die Dokumentation und betrieben Projekt Management, um nun Links zwischen Regionen hinzuzufügen. Dabei entstanden neue Views und der Redux-Store musste dadurch angapsst werden. Es kam eine Erweiterung für die Texterkennung hinzu, so dass man durch die Auswahl eines Datentyps, das Resultat der Erkennung verbessern konnte. Des Weiteren habe ich bis zum Ende der Woche die Vergleich-Links vollständig implementiert und die App auf Fehler und Abstürze kontrolliert, sowie den Beleg um einige Kapitel erweitert.
+
 \begin{thebibliography}{99}
 	\bibitem{digital}
 		% nochmal genauer nachschauen, guten Link finden, und genauen Namen...
-		Michael Graf, Partner bei PwC
+		Graf, Michael Partner bei PwC
 		\\\texttt{http://www-cs-faculty.stanford.edu/\~{}uno/abcde.html}
 		
 	\bibitem{visionBasicApp}
-		Apple Developer - Sample Code, Detecting Objects in Still Images
+		Apple Developer Detecting Objects in Still Images
 		\\\texttt{https://developer.apple.com/documentation/vision/
 		detecting\_objects\_in\_still\_images}		
 	
@@ -349,7 +331,7 @@ In dem vorliegendem Praktikumsbericht...
 		\\\texttt{https://lutpub.lut.fi/handle/10024/92156}
 		
 	\bibitem{heise2019einsitegInSwiftUI}
-		Thomas Sillmann - Einsteig in SwiftUI. 22.11.2019
+		Sillmann, Thomas Einsteig in SwiftUI. 22.11.2019
 		\\\texttt{https://www.heise.de/developer/artikel/Einstieg-in-SwiftUI-4594018.html}
 	
 \end{thebibliography}
@@ -363,4 +345,34 @@ In dem vorliegendem Praktikumsbericht...
 %	Des Weiteren ist es für die Prüfer der Klausur hilfreich, wenn die Punkte der Klausur kontrolliert bzw. überprüft werden. Konkret bezieht sich die Überprüfung der Punkte auf eine Klausuren-Format-Vorlage, die im Bereich der Fakultät Angwandte Computer- und Biowissenschaften genutzt wird. Diese Vorlage hat auf dem Deckblatt der Klausur zu jeder Aufgabe ein Feld für die erreichten und die zu erreichenden Punkte. Sowie die Summe der erreichten Punkte. Hier könnte der Dokumentenscanner die erreichte Gesamtpunktezahl sowie die daraus resultierende Note überprüfen. Des Weiteren befinden sich auf den nachfolgenden Seite der Klausur über jeder Aufgabe ein Feld für die erreichten und die zu erreichenden Punkte der jeweiligen Aufgabe. Die dort vom Prüfer eingetragenen Punkte könnten ebenfalls mit denen auf dem Deckblatt verglichen werden. 
 %
 %	Durch die Erweiterung der Grundidee um Scan-Vorlagen wurde es auch möglich Daten anderer Dokumente zu digitalisieren und in ein geeignetes Format zu bringen. Genauer soll es dem Benutzer möglich sein von jedem beliebigen Dokument eine Vorlage zu erstellen, in der er Stellen auf dem Dokument markiert, wo sich die zu digitaliserenden Daten befinden.
+
+%	\begin{longtable}[h!]{ p{4em} | p{356pt} }
+%		Datum & Tätigkeit \\ \hline
+%		\endfirsthead
+%		Datum & Tätigkeit \\ \hline
+% 		\endhead
+%
+% 		\hline
+% 		\endfoot
+%		
+%		24.02. - 01.03. & 
+%			Ich habe mich mit der Problemstellung auseinander gesetzt, Ideen gesammelt, Problemanalyse betrieben und einen kleinen Prototypen entwickelt. Dazu erstellte ich einen minimalen Projektplanung, arbeitete mich in die Frameworks \textit{Vision} und \textit{VisionKit} ein und setzte eine Versionsverwaltung auf. Zusätzlich suchte ich nach einer passenden App-Architektur, die geeignet für das deklarative GUI-Framwwork SwiftUI, sowie für asynchrone Aufgaben, wie z. B. API-Aufrufe ist. Dabei stieß ich auf \textit{Cleancode Architecture} und \textit{Redux}.
+%				
+%			Am Ende der Woche konnte man in der App Vorlagen mit einer Seite erstellen. Das heißt man konnte ein Foto machen, aus welchem das Dokument rausgeschnitten und anschließend ausgerichtet wurde. Weiter war es möglich Regionen auf dem Dokument zu markieren und diese in der Vorlage abspeichern. Ansonsten konnten die Vorlage schon dazu benutzt werden, um die Regionen auf dem neuen Foto heraus zu schneiden.
+%			\\ \hline
+%		02.03. - 08.03. &
+%			In dieser Woche habe ich die Texterkennung auf den berechneten Regionen eines neuen Fotos implementiert, den Workflow sowie viele andere Kleingikeiten in der App verbessert und alle Fehler der letzten Woche behoben, sodass ich neue Dinge implementieren konnte. Zudem probierte ich CI sowie Lint für das Projekt aus. Da CI für eine iOS-App mit \textit{GitHub Actions} schwer aufzusetzen war und ab April etwas kosten würde, lies ich es sein. Des Weiteren pflegte ich das Projekt Management durch \textit{Issues} und \textit{Project-Boards} in GitHub. Anschließend programmierte ich den App-Workflow so um, dass nun mehr als eine Seite aufgenommen und analysiert werden konnte. 
+%				
+%			Abgesehen von neuem Quellcode fing ich an den Praktikumsbericht zu schreiben und arbeitet mich dafür in \LaTeX \xspace und die Bachelorarbeits-Vorlage für \LaTeX \xspace der Hochschule Mittweida ein.
+%			\\ \hline
+%	 	09.03. - 15.03. &
+%	 		Zu Beginn der dritten Woche schaute ich mir Möglichkeiten für serverseitiges OCR an. Genauer sammelte ich Informationen zu dem Framework Vapor und Swift unter Linux. Jedoch funktionieren die Frameworks \textit{Vision} und \textit{CoreML} von \textit{Apple} unter Linux nicht, weshalb sich IronOCR als beste Option herausstellte. Ich entwickelte ein Datenbankmodell, mithilfe der in der App verwendeten Datentypen und erstellte dazu noch eine JSON-Struktur die später für die APIs verwendet werden könnte. Außerdem gab es ein Meeting, in dem wir unseren aktuellen Stand präsentieren sollten, um weitere Schritte und Aufgaben zu planen.Bis zum Ende der Woche arbeitete ich weiter an meinem Beleg und schrieb den Datenfluss in der App um. Nun ähnelt er sehr dem Redux-Model.
+%	 		\\ \hline
+%	 	16.03. - 22.03. & 
+%	 		Anfangs habe ich weiter an meinem Praktikumsbericht geschrieben, neue Issues hinzugefügt und bearbeitet. Außerdem gepflegte ich die Dokumentation und betrieben Projekt Management, um nun Links zwischen Regionen hinzuzufügen. Dabei entstanden neue Views und der Redux-Store musste dadurch angapsst werden. Es kam eine Erweiterung für die Texterkennung hinzu, so dass man durch die Auswahl eines Datentyps, das Resultat der Erkennung verbessern konnte. Des Weiteren habe ich bis zum Ende der Woche die Vergleich-Links vollständig implementiert und die App auf Fehler und Abstürze kontrolliert, sowie den Beleg um einige Kapitel erweitert.
+%	 		\\ \hline
+%	 	23.03. - 30.03. &
+%	 		...
+%	 		\\ \hline
+%	\end{longtable}
 
