@@ -1,36 +1,36 @@
 \doublespacing 
-\contentsline {chapter}{Inhaltsverzeichnis}{I}% 
-\contentsline {chapter}{Abbildungsverzeichnis}{II}% 
-\contentsline {chapter}{Tabellenverzeichnis}{III}% 
-\contentsline {chapter}{Abk\"urzungsverzeichnis}{IV}% 
-\contentsline {chapter}{\numberline {1}Einleitung}{1}% 
-\contentsline {chapter}{\numberline {2}Hochschule Mittweida}{3}% 
-\contentsline {chapter}{\numberline {3}Grundlagen}{5}% 
-\contentsline {section}{\numberline {3.1}Model-View-ViewModel}{5}% 
-\contentsline {section}{\numberline {3.2}Redux.js}{5}% 
-\contentsline {chapter}{\numberline {4}Problemstellung}{7}% 
-\contentsline {section}{\numberline {4.1}Digitalisieren der Klausur-Daten}{7}% 
-\contentsline {section}{\numberline {4.2}Klausuren-Vorlage}{7}% 
-\contentsline {section}{\numberline {4.3}Vorlage verbessern}{8}% 
-\contentsline {section}{\numberline {4.4}Weitere Anmerkungen}{8}% 
-\contentsline {chapter}{\numberline {5}Anforderungen}{9}% 
-\contentsline {chapter}{\numberline {6}Konzept der Dokumenten-Scanner-App}{11}% 
-\contentsline {chapter}{\numberline {7}Entwicklung des ersten Prototyps}{13}% 
-\contentsline {section}{\numberline {7.1}Planung und Vorbereitung}{13}% 
-\contentsline {section}{\numberline {7.2}Entwurf und Design}{14}% 
-\contentsline {section}{\numberline {7.3}Implementierung}{14}% 
-\contentsline {subsection}{\numberline {7.3.1}Template erstellen}{14}% 
-\contentsline {subsection}{\numberline {7.3.2}Template speichern}{14}% 
-\contentsline {subsection}{\numberline {7.3.3}Template verwenden}{14}% 
-\contentsline {section}{\numberline {7.4}''Abnahme''}{15}% 
-\contentsline {chapter}{\numberline {8}Weitere Entwicklung und Besonderheiten}{17}% 
-\contentsline {section}{\numberline {8.1}App-Architektur}{17}% 
-\contentsline {section}{\numberline {8.2}API}{17}% 
-\contentsline {chapter}{\numberline {9}Grenzen der App}{19}% 
-\contentsline {section}{\numberline {9.1}Probleme beim Erkennen von Dokumenten}{19}% 
-\contentsline {section}{\numberline {9.2}Probleme der Klausur-Vorlage beim Scannen}{19}% 
-\contentsline {section}{\numberline {9.3}Weitere ...}{19}% 
-\contentsline {chapter}{\numberline {10}Templates}{21}% 
-\contentsline {chapter}{\numberline {11}Ausblick}{23}% 
-\contentsline {chapter}{\numberline {A}T\IeC {\"a}tigkeitsbericht}{25}% 
-\contentsline {chapter}{\nonumberline Literaturverzeichnis}{27}% 
+\contentsline {chapter}{Inhaltsverzeichnis}{I}{section*.1}% 
+\contentsline {chapter}{Abbildungsverzeichnis}{II}{section*.3}% 
+\contentsline {chapter}{Tabellenverzeichnis}{III}{section*.5}% 
+\contentsline {chapter}{Abk\"urzungsverzeichnis}{IV}{section*.7}% 
+\contentsline {chapter}{\numberline {1}Einleitung}{1}{chapter.1}% 
+\contentsline {chapter}{\numberline {2}Hochschule Mittweida}{3}{chapter.2}% 
+\contentsline {chapter}{\numberline {3}Problemstellung}{5}{chapter.3}% 
+\contentsline {section}{\numberline {3.1}Digitalisieren der Klausur-Daten}{5}{section.3.1}% 
+\contentsline {section}{\numberline {3.2}Klausuren-Vorlage}{5}{section.3.2}% 
+\contentsline {section}{\numberline {3.3}Vorlage verbessern}{6}{section.3.3}% 
+\contentsline {section}{\numberline {3.4}Weitere Anmerkungen}{6}{section.3.4}% 
+\contentsline {chapter}{\numberline {4}Anforderungen}{7}{chapter.4}% 
+\contentsline {chapter}{\numberline {5}Konzept der Dokumenten-Scanner-App}{9}{chapter.5}% 
+\contentsline {chapter}{\numberline {6}Entwicklung des ersten Prototyps}{11}{chapter.6}% 
+\contentsline {section}{\numberline {6.1}Planung und Vorbereitung}{11}{section.6.1}% 
+\contentsline {section}{\numberline {6.2}Entwurf und Design}{12}{section.6.2}% 
+\contentsline {subsection}{\numberline {6.2.1}Grundlagen}{12}{subsection.6.2.1}% 
+\contentsline {subsection}{\numberline {6.2.2}Entwurf und Design}{13}{subsection.6.2.2}% 
+\contentsline {section}{\numberline {6.3}Implementierung}{15}{section.6.3}% 
+\contentsline {subsection}{\numberline {6.3.1}Registrieren und Anmelden}{15}{subsection.6.3.1}% 
+\contentsline {subsection}{\numberline {6.3.2}Template erstellen}{15}{subsection.6.3.2}% 
+\contentsline {subsection}{\numberline {6.3.3}Template speichern}{15}{subsection.6.3.3}% 
+\contentsline {subsection}{\numberline {6.3.4}Template verwenden}{15}{subsection.6.3.4}% 
+\contentsline {section}{\numberline {6.4}''Abnahme''}{15}{section.6.4}% 
+\contentsline {chapter}{\numberline {7}Weitere Entwicklung und Besonderheiten}{17}{chapter.7}% 
+\contentsline {section}{\numberline {7.1}App-Architektur}{17}{section.7.1}% 
+\contentsline {section}{\numberline {7.2}API}{17}{section.7.2}% 
+\contentsline {chapter}{\numberline {8}Grenzen der App}{19}{chapter.8}% 
+\contentsline {section}{\numberline {8.1}Probleme beim Erkennen von Dokumenten}{19}{section.8.1}% 
+\contentsline {section}{\numberline {8.2}Probleme der Klausur-Vorlage beim Scannen}{19}{section.8.2}% 
+\contentsline {section}{\numberline {8.3}Weitere ...}{19}{section.8.3}% 
+\contentsline {chapter}{\numberline {9}Templates}{21}{chapter.9}% 
+\contentsline {chapter}{\numberline {10}Ausblick}{23}{chapter.10}% 
+\contentsline {chapter}{\numberline {A}T\IeC {\"a}tigkeitsbericht}{25}{appendix.A}% 
+\contentsline {chapter}{\nonumberline Literaturverzeichnis}{27}{chapter*.9}% 

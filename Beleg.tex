@@ -2,6 +2,16 @@
 % Bei Abgabe löschen
 \documentclass[nomenclature, 150]{HSMW-Thesis}
 
+\usepackage{hyperref}
+\hypersetup{
+	urlcolor=black
+}
+
+\usepackage{environ}
+\usepackage{xcolor}
+\NewEnviron{specifics}{\colorbox{red}{\begin{minipage}{\textwidth}\BODY\end{minipage}}\par\noindent}
+
+
 \Art{Praktikumsbericht}
 
 \Anrede{Herr}
@@ -51,54 +61,21 @@ In dem vorliegendem Praktikumsbericht...
 \chapter{Einleitung}
 	Digitalisierung wird gängig als Integration von digitaler Technologie in den Alltag verstanden, und soll helfen Zeit einzusparen \cite{digital}. Mit diesem Gedanken initiierten die Mitarbeiter Holger Langner und Falk Schmidsberger der Hochschule Mittweida, das Projekt \textit{Memo Space}. Im Zuge dessen sollen kleinere Forschungsergebnisse entstehen, die richtungsweisend für die Digitalisierung der Verwaltung von Lehr- und Forschungseinrichtung sind.
 
-	Eine der ersten Ideen\cmmnt{im Zusammenhang mit Memo Space} ist es, die Arbeit von Klausur-Prüfern zu erleichtern. Diese müssen, nachdem die Klausuren kontrolliert wurden, die Zensur, sowie die Eckdaten der Studenten, in ein digitales Format bringen. Grund dafür ist, dass die Noten in das Notensystem der Einrichtung eingetragen werden müssen. 
-
-	Im Rahmen eines zwölfwöchigem Forschungspraktikums an der Hochschule Mittweida arbeiteten der Student Tobias Kallauke und der Verfasser, gemeinsam an einer Lösung zur Digitalisierung dieses Arbeitsschrittes. 
-	
-	
-	... Beide arbeiteten zum einem Teil zusammen und auch getrennt an Aufgaben... Sie entwickelten... (Klausuren-Vorlage, App, Server, OCR? evtl.) / Dabei entstanden .../ Der Verfasser programmierte...
-	
-	Was noch? 
+	Im Rahmen eines zwölfwöchigem Forschungspraktikums an der Hochschule Mittweida arbeiteten der Student Tobias Kallauke und ich, gemeinsam an einem Forschnungsprojekt von Memo Space. Dabei entwickelten wir ein Software-System, mit dem die Arbeit von vielen Hochschulmitarbeitern erleichtert und auch Zeit eingespart werden soll.
 
 %%%%%%%%%%%%%%% - HSMW - %%%%%%%%%%%%%%%
 
 \chapter{Hochschule Mittweida}
-	Die Hochschule Mittweida - university of applied science (HSMW) \nomenclature{HSMW}{Hochschule Mittweida - university of applied science} ist ...
+	Die Hochschule Mittweida - university of applied science (HSMW) \nomenclature{HSMW}{Hochschule Mittweida - university of applied science} wurde vor über 150 Jahren gegründet. Heute lehrt und forscht sie mit ca. 6000 Studenten in fünf Fakultäten und vier Forschungsschwerpunkten\footnote{Quelle: \href{https://www.hs-mittweida.de/hochschule/portrait.html}{\url{https://www.hs-mittweida.de/hochschule/portrait.html}}}. Eines der Schwerpunkte ist die angewandte Informatik, in dem Memo Space angesiedelt ist.
 	
-	- was gibt es da
+	Pro Semester schreibt jeder Student ca. 5 Prüfungen, was bedeutet, dass im Jahr um die 60.000 Klausuren kontrolliert werden. Dazu kommt, dass nachdem die Klausuren kontrolliert wurden, die Zensur, sowie die Eckdaten der Studenten, die an der Prüfung teilgenommen haben, in ein digitales Format gebracht werden muss. Grund dafür ist, dass die Übertragung der Noten in das Notensystem der Hochschule. Da die Mitarbeiter Holger Langner und Falk Schmidsberger selbst Klausuren kontrollieren und die Problematik genau kennen, entstand hier eines der ersten Ideen für Memo Space.
 	
-	- wer leitet die Hochschule
 	
-	- was machen meine Betreuer in der Hochschule
 	
-	- aktuelles?
-	
-\chapter{Grundlagen}
-	
-	In diesem Kapitel werden wichtige Grundlagen vermittelt...
-	
-	\section{Model-View-ViewModel}
-		Das Entwurfsmuster Model View ViewModel (MVVM)\nomenclature{MVVM}{Model View ViewModel} entstand bei \textit{Microsoft} im Jahr 2005 mit der \textit{Windows Presentation Foundation} (WPF) und \textit{Silverlight-Technologien}. MVVM verwendet das Konzept eines Schichtmodells und ist eine abstrakte Darstellung einer Benutzeroberfläche, in Form einer Klasse, wie man sie unter objektorientierten Programmiersprachen kennt. Diese Klasse enthält Daten, die auf der Benutzeroberfläche angezeigt werden sollen und Anweisungen, die auf der Benutzeroberfläche aufgerufen werden können. Dieses sogenannte ViewModel, weiß nichts von Views, wie es sonst bei anderen Entwurfsmustern üblich ist, um Daten auf der Benutzeroberfläche anzuzeigen. Stattdessen verwendet eine MVVM-View eine Bindungsfunktion (data binging) zur bidirektionalen Zuordnung von Daten aus dem ViewModel zu den jeweiligen Eigenschaften auf der View. Z. B. Einträge in einer Dropdown-Menü. Aber auch das binden von Daten aus dem Model zu Benutzereingaben durch Maus, Tastatur oder Touch-Screens ist möglich. Beispielsweise kann ein Mausklick eine Anweisung in dem ViewModel auslösen. Diese verändert einen Wert im Model, wodurch die View durch data binding aktualisiert wird. 
-
-	\section{Redux.js}
-		... Dieser Container besteht aus verschiedenen States. Diese sind dazu da einer View oder mehrere zusammenhängende Views die benötigten Daten bereit zustellen. Die Daten können allerdings nur ge
-		- https://github.com/reduxjs/redux
-		- https://redux.js.org/introduction/core-concepts
-		- https://redux.js.org/introduction/three-principles
-	
-	- MVVM
-	
-	- data binding
-	
-	- redux state container, actions, unidirectional data flow
-	
-	- publisher und subsciber 
-	
-
 %%%%%%%%%%%%%%% - PROBLEMSTELLUNG - %%%%%%%%%%%%%%%
 
 \chapter{Problemstellung} 
-	Hochschulmitarbeiter sitzen zum Ende eines Semesters über Tage an der Kontrolle von Klausuren. Diese Aufgabe muss stets mit hoher Konzentration erledigt werden, und lässt sich aber in den meisten Fällen nur schwer durch Maschinen ersetzen. Unter keinen Umständen dürfen bei der Bewertung Fehler vorkommen, was jedoch bei der kognitiven Last der Prüfer immer wieder passiert. Auch nach der Durchsicht der Prüfungsaufgaben ist eine hohe Achtsamkeit wichtig. Denn anschließend wird die Benotung in eine digitale Tabelle überführt. In diese muss die Matrikelnummer, der Vor- und Nachname, sowie die Note des Studenten eingetragen werden. Hier kommt es vor allem bei der Matrikelnummer und der Zensur auf die Richtigkeit jedes Zeichens drauf an. 
+	An der Kontrolle von Klausuren sitzen zum Ende eines Semesters Hochschulmitarbeiter über Tage dran. Diese Aufgabe muss stets mit hoher Konzentration erledigt werden, und lässt sich aber in den meisten Fällen nur schwer durch Maschinen ersetzen. Unter keinen Umständen dürfen bei der Bewertung Fehler vorkommen, was jedoch bei der kognitiven Last der Prüfer immer wieder passiert. Auch nach der Durchsicht der Prüfungsaufgaben ist eine hohe Achtsamkeit wichtig. Denn anschließend wird die Benotung in eine digitale Tabelle überführt. In diese muss die Matrikelnummer, der Vor- und Nachname, sowie die Note des Studenten eingetragen werden. Hier kommt es vor allem bei der Matrikelnummer und der Zensur auf die Richtigkeit jedes Zeichens drauf an. 
 	
 	\section{Digitalisieren der Klausur-Daten}
 	Für genau diesen Vorgang des Digitalisierens wird eine Lösung gesucht. Die Prüfer sollen so bequem und möglichst zeitsparend diese Aufgabe verrichten, ohne dabei ihre Aufmerksamkeitsspanne zu überlasten. Des Weiteren müssen die Ergebnisse der Prüfungen, sowie die Eckdaten der Studenten in ein geeignetes digitales Format gebracht werden, um es der Notenfreigabe weiterzuleiten. Darüber hinaus empfiehlt es sich, digitale Kopien der Klausuren abzuspeichern, da/um ... (warum genau, sollen die gespeichert werden? meine/unsere Idee Online Klausureneinsicht -> ins Fazit/Ausblick (hat viele ''Probleme'' ))
@@ -107,24 +84,19 @@ In dem vorliegendem Praktikumsbericht...
 	Eine Klausuren-Vorlage bzw.\nomenclature{bzw.}{beziehungsweise} ein Gestaltungsleitfaden für Klausuren der Fakultät \textit{Angewandte Computer- und Biowissenschaften} (Fakultät CB)\nomenclature{Fakultät CB}{Fakultät für angewandte Computer- und Biowissenschaften} bietet außerdem die Möglichkeit der Kontrolle des Prüfers an. Genauer ist es durch das vorgegebene Layout der Klausur möglich, einen Teil der Arbeit des Prüfenden auf Fehler zu untersuchen. Auf dem Deckblatt der Klausur ist eine Tabelle, mit drei Zeilen und für jede Aufgabe eine Spalte. In der ersten Zeile befinden sich die Nummern der Aufgaben. In der zweiten, die zu erreichenden Punkte der Aufgabe. Und in der dritten Zeile trägt der Prüfer die erbrachten Punkte des Studenten ein. Unter der Tabelle befindet sich ein Feld für die erreichte Gesamtpunktzahl, sowie ein Feld für die aus den Punkten resultierende Note. Die Punkte pro Aufgabe, die Gesamtpunktzahl und die Zensur stehen in (Korrelation?) Relation zu einander, sodass aus den Punkten der Aufgaben die beiden anderen Felder errechnet werden und mit den Ergebnissen des Prüfers abgeglichen werden könnten. Eine weiteres Merkmal der Klausuren-Vorlage ist ein Feld, für die vom Studenten erreichten Punkte über jeder Aufgabenstellung. Die dortige Angabe sollte mit der, in der Tabelle auf dem Deckblatt übereinstimmen und bietet somit noch eine weitere Möglichkeit der Kontrolle an.
 	
 	\section{Vorlage verbessern}
-	
-	
-	Templates entwerfen, die optimiert für die Digitalisierungs-Prozesse sind ... 
+	Nachdem ein erster Prototyp zur Digitalisieren der Klausur-Daten entstanden ist, soll außerdem Prüfungsvorlagen entstehen, die für die Digitalisierung optimiert ist. Dabei sollen Probleme die beim Einscannen der aktuellen Vorlage erkannt wurden, behoben werden. 
 	
 	\section{Weitere Anmerkungen}
-	TODO:
-	
 	Ferner soll bei der Lösung von der Anschaffung neuer Technologie und Geräte abgesehen werden. Grund dafür sind neben den Anschaffungskosten, die Idee, dass das Ergebnis des Forschungsprojekts in weiteren Lehr- und Forschungseinrichtung Anwendung finden sollte.
-			
-	Was noch?
-
 
 %%%%%%%%%%%%%%% - ANFORDERUNGEN - %%%%%%%%%%%%%%%
 
 \chapter{Anforderungen}
 	Es soll eine iOS-App entstehen mit der Klausuren digitalisiert werden können. Genauer müssen die, für die Notenfreigabe relevanten Daten der Klausur, in ein tabellarisches Format gebracht werden. Um unterschiedliche Klausuren oder auch andere Dokumente zu unterstützen, soll das Anlegen von Scan-Vorlagen in der App möglich sein. Hierfür (aber auch zum Einscannen) benötigt die App die Berechtigung für das Kamera-System. Diese muss, bei der ersten Benutzung einmalig erteilt werden.
 	
-	Die Scan-Vorlagen bestehen aus zwei Komponenten. Die eine sind zugeschnittene Fotos der Seiten eines Dokuments. Und die zweite sind die Regionen auf den Bildern, wo sich die zu digitalisierenden Informationen befinden. Dem Benutzer muss es möglich sein, zuerst die Fotos zu machen und anschließend Regionen auf den Seiten zu markieren. Weiter benötigen die Regionen Namen bzw. Typen, die der Benutzer angeben muss. Die Angabe des Typs ist wichtig, da dadurch eindeutig wird, ob es sich um die Note oder die Matrikelnummer des Studenten handelt. Diese Eindeutigkeit wird nicht nur für die automatische Erstellung der Tabelle benötigt, sondern auch für die Texterkennung. 
+	- Bild Scan-Vorlage: Aus Foto wird Dokument extrahiert und Auf der Seite werden Regionen markiert. -> Sammlung an Seiten mit Regionen
+	
+	Eine Scan-Vorlagen bestehen aus zwei Komponenten. Die eine sind zugeschnittene Fotos der Seiten eines Dokuments. Und die zweite sind die Regionen auf den Bildern, wo sich die zu digitalisierenden Informationen befinden. Dem Benutzer muss es möglich sein, zuerst die Fotos zu machen und anschließend Regionen auf den Seiten zu markieren. Weiter benötigen die Regionen Namen bzw. Typen, die der Benutzer angeben muss. Die Angabe des Typs ist wichtig, da dadurch eindeutig wird, ob es sich um die Note oder die Matrikelnummer des Studenten handelt. Diese Eindeutigkeit wird nicht nur für die automatische Erstellung der Tabelle benötigt, sondern auch für die Texterkennung. 
 	
 	Optical character recognition (OCR)\nomenclature{OCR}{optical character recognition, deutsch: optische Zeichen Erkennung und im deutschen Synonym für Texterkennung}, auf deutsch optische Zeichen Erkennung, soll dazu benutzt werden, die Informationen der Regionen zu digitalisieren. Um die Texterkennung zu verbessern, soll der Typ der Regionen verwendet werden. Damit könne dem OCR mögliche Ergebnisse mitgeteilt oder die Ergebnisse angepasst werden. Beispielsweise bestehen Zensuren immer aus Dezimalzahlen von 1 bis 6 und mit nur einer Nachkommastelle. Wird der Buchstabe O anstelle der Ziffer 0 erkannt, kann so der Fehler korrigiert werden.
 	
@@ -145,8 +117,17 @@ In dem vorliegendem Praktikumsbericht...
 	Zur Digitalisierung und Kontrolle der Daten werden Scan-Vorlagen verwendet. Diese muss vor dem Einscannen der ausgefüllten Klausuren erstellt werden, um zu gewährleisten, dass die richtigen Daten digitalisiert werden. Beim Erstellen einer Scan-Vorlage geht man wie folgt vor:
 	\begin{itemize}
 		\item Zuerst wird jede Seite der Klausur fotografiert. Dabei wird in jedem Bild das Dokument erkannt, vom Hintergrund getrennt oder genauer gesagt ausgeschnitten und perfekt ausgerichtet. Zudem wird der Kontrast erhöht, so dass die Schrift leichter lesbarer wird.
+		
+			- Bild einfügen von APP
+		
 		\item Anschließend markiert man diejenigen Regionen auf jeder Seite, die zu digitalisieren und/oder kontrollieren sind. Zusätzlich muss jeder Region ein Name und einer der folgenden Typen zugeordnet werden: Unbekannt, Name, Matrikelnummer, Seminargruppe, Punkte und Note. Mithilfe des Typs wird die Texterkennung verbessert und falsche Ergebnisse automatisch korrigiert. Dazu später mehr.
+		
+			- Bild einfügen von APP
+			
 		\item Des Weiteren kann man aus allen markierten Regionen diese auswählen, die in Relation stehen. Diesen Relationen werden danach noch weitere Eigenschaften zugeteilt, um sie später bei der Kontrolle richtig zu analysieren. So eine Eigenschaft könnte sein, dass es sich um einen Vergleich zwischen zwei in Relation stehenden Regionen handelt. Z. B. ist die eine Region die Zelle in der Punkteübersichts-Tabelle, in der die erreichten Punkte zu Aufgabe 1 rein geschrieben werden sollen. Und die zweite Region die Stelle über der Aufgabenstellung von Aufgabe 1, in der ebenfalls die erreichten Punkte eingetragen werden sollen. Weitere Beispiele für solche Relationen und Eigenschaften sind die Summanden für die erreichte Gesamtpunktzahl und die Summe selbst, oder auch noch die daraus resultierende Note.
+		
+			- Bild einfügen von APP
+		
 		\item Als letztes speichert man die Vorlage ab, welche dann automatisch an einen Server gesendet wird, so dass andere diese Vorlage ebenfalls nutzen können.
 	\end{itemize}
 	
@@ -161,6 +142,8 @@ In dem vorliegendem Praktikumsbericht...
 		... noch mehr? (Auf Tobias warten...)
 	
 	- Noch mehr zu OCR sagen: was es ist, wie es geht, komplett eigenes Kapitel?
+	
+	- Upload download verwendung auf allen geräten
 
 
 %%%%%%%%%%%%%%% - PROTOTYP - %%%%%%%%%%%%%%%
@@ -171,36 +154,83 @@ In dem vorliegendem Praktikumsbericht...
 	\section{Planung und Vorbereitung}
 		In der aller ersten Woche habe ich mich hauptsächlich mit der Problemstellung auseinander gesetzt, Ideen entwickelt, Problemanalyse betrieben und einen kleinen Prototypen entwickelt. Ich begann damit die Dokumentation von \textit{Vision}, \textit{VisionKit} und \textit{PhotoKit} von \textit{Apple} an zu schauen. Danach hatte ich einen guten Überblick darüber, was ich noch zu entwickeln habe und was mir Frameworks abnehmen können. Zum einen war das Erkennen und gerade ziehen von Dokumenten in Echtzeit in der Kamera, sowie die Texterkennung auf Bildern schon in den Frameworks implementiert. Nebenbei entdeckte ich eine Beispiel-App von \textit{Apple} \cite{visionBasicApp}, in der es um Erkennen von Objekten in Standbildern ging. Diese schaute ich mir an, um das Vision Framework genauer zu verstehen, sodass ich mich gut eingearbeitet habe.
 		
-		Bei meiner Recherche stellte ich fest, dass die App nur Geräte mit iOS 13.0 oder neuer unterstützen werden kann. Grund dafür sind die \textit{Apple} Frameworks \textit{SwiftUI} und \textit{VisionKit}. \textit{SwiftUI} bietet die Möglichkeit, Benutzeroberflächen für alle \textit{Apple}-Plattformen in \textit{Swift} zu erstellen. Die deklarative \textit{Swift}-Syntax ist für mich einfach zu lesen und schnell zu schreiben, so dass es möglich ist, die App in wenigen Wochen für iPhone und iPad zu schreiben. Als Alternative gibt es noch \textit{UIKit} oder auch \textit{AppKit}, die unter alle iOS Versionen funktioniere. Diese Frameworks sind allerdings nicht deklarativ sodass, Views sowohl im Code als auch in Interface-Dateien getrennt voneinander erstellt und konfiguriert werden müssen \cite{heise2019einsitegInSwiftUI}. Dadurch dauert die Entwicklung einer App, im Gegensatz zu SwiftUI deutlich länger.  \textit{VisionKit} dagegen, ist das Framework zum Scannen der Dokumente. Auch hierfür gibt es eine Alternative. Das Framework ist von den Entwicklern von \textit{WeTransfer} und funktioniert auch auf älteren iOS Versionen. Allerdings unterstützt \textit{WeScan} noch kein stapelweises Scannen. Das bedeutet man kann immer nur ein Foto machen, welches erst abgespeichert werden muss, bevor man das nächste machen kann. Das ist für den Benutzer nicht bequem und spart wahrscheinlich auch keine Zeit.
-		
-		- Link zu weScan und den andern Frameworks?
-		- Video-Link noch mit rein. (https://www.youtube.com/watch?v=qk2y-TiLDZo) zur Verdeutlichung
+		Bei meiner Recherche stellte ich fest, dass die App nur Geräte mit iOS 13.0 oder neuer unterstützen werden kann. Grund dafür sind die \textit{Apple} Frameworks \textit{SwiftUI} und \textit{VisionKit}. \textit{SwiftUI} bietet die Möglichkeit, Benutzeroberflächen für alle \textit{Apple}-Plattformen in \textit{Swift} zu erstellen. Die deklarative \textit{Swift}-Syntax ist für mich einfach zu lesen und schnell zu schreiben, so dass es möglich ist, die App in wenigen Wochen für iPhone und iPad zu schreiben. Als Alternative gibt es noch \textit{UIKit} oder auch \textit{AppKit}, die unter alle iOS Versionen funktioniere. Diese Frameworks sind allerdings nicht deklarativ sodass, Views sowohl im Code als auch in Interface-Dateien getrennt voneinander erstellt und konfiguriert werden müssen \cite{heise2019einsitegInSwiftUI}. Dadurch dauert die Entwicklung einer App, im Gegensatz zu SwiftUI deutlich länger, wie man auch hier in dem Video \footnote{SwiftUI vs UIKit – Comparison of building the same app in each framework - \href{https://www.youtube.com/watch?v=qk2y-TiLDZo}{\url{https://www.youtube.com/watch?v=qk2y-TiLDZo}} } sieht. Sehr ähnliche Erfahrung habe ich mit den beiden Frameworks gemacht. \textit{VisionKit} dagegen, ist das Framework zum Scannen der Dokumente. Auch hierfür gibt es eine Alternative. Das Framework ist von den Entwicklern von \textit{WeTransfer} und funktioniert auch auf älteren iOS Versionen. Allerdings unterstützt \textit{WeScan} \footnote{WeScan GitHub Repository - \href{https://github.com/WeTransfer/WeScan}{\url{https://github.com/WeTransfer/WeScan}}} noch kein stapelweises Scannen. Das bedeutet man kann immer nur ein Foto machen, welches erst abgespeichert werden muss, bevor man das nächste machen kann. Das ist für den Benutzer nicht bequem und spart wahrscheinlich auch keine Zeit.
 		
 		Um das Projekt gut durch zu planen benutze ich \textit{Scrum} als Projektmanagement. Dies ist für agile Softwareentwicklung gut geeignet. Durch die gesammelte Erfahrung mit Scrum aus den vorherigen Semester, fiel mir die Planung leicht. Mit GitHub Projects und Issues konnte ich so dem Sprint Aufgaben zuordnen und Fortschritt nachvollziehen. 
 		
 	\section{Entwurf und Design}
-		Nach der Vorbereitung begann ich damit, mir Gedanken zu dem Workflow der App zu machen und erstellte den ersten Sprint bis zum nächsten Meeting. Für den Workflow fertigte ich zu jeder View ein grobes Design an, welches sehr schnell in \textit{SwiftUI} umzusetzen ist. Das Aussehen der App sollten sich dann im Laufe der Zeit noch ändern, jedoch stand erstmal die Umsetzung des Konzepts im Vordergrund. 
+		\subsection{Grundlagen}
+			In den folgenden zwei Absätze werden wichtige Konzepte erklärt, die im Entwurf der App benutzt und nochmal aufgegriffen werden.
+			
+		\textbf{Model-View-ViewModel:}
+			Das Entwurfsmuster Model View ViewModel (MVVM)\nomenclature{MVVM}{Model View ViewModel} entstand bei \textit{Microsoft} im Jahr 2005 mit der \textit{Windows Presentation Foundation} (WPF) und \textit{Silverlight-Technologien}. MVVM verwendet das Konzept eines Schichtmodells und ist eine abstrakte Darstellung einer Benutzeroberfläche, in Form einer Klasse, wie man sie unter objektorientierten Programmiersprachen kennt. Diese Klasse enthält Daten, die auf der Benutzeroberfläche angezeigt werden sollen und Anweisungen, die auf der Benutzeroberfläche aufgerufen werden können. Dieses sogenannte ViewModel, weiß nichts von Views, wie es sonst bei anderen Entwurfsmustern üblich ist, um Daten auf der Benutzeroberfläche anzuzeigen. Stattdessen verwendet eine MVVM-View eine Bindungsfunktion (data binging) zur bidirektionalen Zuordnung von Daten aus dem ViewModel zu den jeweiligen Eigenschaften auf der View. Z. B. Einträge in einer Dropdown-Menü. Aber auch das binden von Daten aus dem Model zu Benutzereingaben durch Maus, Tastatur oder Touch-Screens ist möglich. Beispielsweise kann ein Mausklick eine Anweisung in dem ViewModel auslösen. Diese verändert einen Wert im Model, wodurch die View durch data binding aktualisiert wird. \cite{freeman}\cite{bragge2013model}
+
+		\textbf{Redux.js:}
+			Redux.js ist eine Bibliothek\footnote{Redux.js Github Repository - \href{https://github.com/reduxjs/redux}{\url{https://github.com/reduxjs/redux}}} für die Programmiersprache JavaScript. Diese stellt einen sogenannten vorhersehbaren Zustandscontainer\footnote{Core Concepts - \href{https://redux.js.org/introduction/core-concepts}{\url{https://redux.js.org/introduction/core-concepts}}} für JavaScript Anwendungen bereit. In diesem Container wird der Zustand der gesamten Anwendung in einem Objektbaum innerhalb eines einzigen Speichers gespeichert. Diesen Baum kann man sich vorstellen, wie eine Matrjoschka die weitere Puppen in sich hat. Der wichtige Unterschied zwischen einer Matrjoschka und einem Baum ist jedoch, dass in eine Puppe genau nur eine andere gesteckt werden kann. Beim einem Objektbaum hingegen können mehrere Objekte in ein Objekt ''gesteckt'' werden und so weiter. Im Bezug auf einen Zustandscontainer enthält dieser dann States (Objekte) auf deutsch Zustände und Daten, die unteranderem auf der Benutzeroberfläche angezeigt werden sollen. Diese Aufteilung in die States ist dazu gedacht, einer View oder mehrere zusammenhängende Views nur die wirklich benötigten Daten bereit zustellen. Diese Struktur erleichtert das Testen oder Untersuchen der Anwendung und ermöglicht es, durch hinzufügen eines neuen States den aktuellen Entwicklungsstand der Anwendung beizubehalten und dadurch den Entwicklungsprozess zu beschleunigen. \\
+			Ein weiteres wichtiges Prinzip\footnote{Three Principles - \href{https://redux.js.org/introduction/three-principles}{\url{https://redux.js.org/introduction/three-principles}}} von Redux ist, dass die Daten in den States Schreibgeschütz sind. Die einzige Möglichkeit den Zustand zu ändern, besteht darin, eine Aktion auszulösen, die beschreibt, was passiert. Dadurch wird sichergestellt, dass weder die Views noch Netzwerk-Rückrufe jemals direkt an den Zustand schreiben werden. Stattdessen bringen sie nur die Absicht zum Ausdruck, den Zustand zu verändern und lösen eine Aktion aus. Da alle Änderungen zentralisiert sind und eine nach der anderen in einer strikten Reihenfolge erfolgen, gibt es weniger Programmfehler-Quellen.
+	
+		\subsection{Entwurf und Design}
+			
+			Nach der Planung und Vorbereitung begann ich damit, mir Gedanken zu dem Workflow der App zu machen und erstellte den ersten Sprint bis zum nächsten Meeting. Für den Workflow fertigte ich zu jeder View ein grobes Design an, welches sehr schnell in \textit{SwiftUI} umzusetzen ist. Das Aussehen der App sollten sich dann im Laufe der Zeit noch ändern, jedoch stand erstmal die Umsetzung des Konzepts im Vordergrund. 
 		
-		Aus den Designs und dem Workflow heraus entwickelte ich einen groben Plan, wie die Daten in der App gehandhabt werden sollten. Jedoch stellte ich schnell fest, dass meine Idee des Datenflusses nicht ideal ist, wenn noch mehr Views hinzukommen. Außerdem stellte die Kommunikation mit dem Server ein Problem dar, da diese immer asynchron abläuft. Aus diesen Gründen suchte ich nach einer Lösung. Bei der Suche entdeckte ich \textit{Redux.js} eine JavaScript-Bibliothek zur Verwaltung von Zustandsinformationen in Webanwendung. ...
+			Aus den Designs und dem Workflow heraus entwickelte ich einen groben Plan, wie die Daten in der App gehandhabt werden sollten. Da \textit{SwiftUI} das Entwurfsmuster MVVM umsetzt, überlegte ich mir eine Struktur für das ViewModel und für den Datenfluss der asynchronen Server-Rückrufe. Jedoch stellte ich schnell fest, dass meine Idee nicht ideal ist, wenn noch mehr Views hinzukommen. Aus diesen Gründen suchte ich nach einer besseren Lösung. Dabei entdeckte ich die JavaScript-Bibliothek \textit{Redux.js} zur Verwaltung von Zustandsinformationen in Webanwendung. 
 		
-		Da \textit{SwiftUI} das Entwurfsmuster MVVM umsetzt, ist es möglich einen \textit{Redux.js} ähnlichen State Container, als ViewModel zu implementieren. Und weil die App an einen Server gekoppelt sind und durch die Synchronisation mit diesem viele 
+			\textit{Redux} hilft durch das Konzept, komplexen Views mit vielen Daten schnell und einfach zu implementieren. Auch werden so Serverantworten und zwischengespeicherte Daten sowie lokal erstellte Daten, die noch nicht auf dem Server gespeichert wurden, strukturiert und zentral abgelegt. Das erleichtert nicht nur das Wiederverwenden von Daten, sondern spart auch wiederholte Server-Aufrufe ein. Für mich war es wichtig, trotz der der begrenzten Zeit im Praktikum, möglichst viel mit wenig Fehlern umzusetzen. Und auch da sah ich in Redux großes Potential mir dabei zu helfen. Denn die modulare Aufteilung des State Containers ermöglicht eine schnelle Weiterentwicklung der App, auch wenn die Komplexität der Anwendung steigt. Und die Vorteile von Redux hinsichtlich des Testens und Untersuchens der App sollten helfen, Fehler möglichst schnell ausfindig zu machen, trotz asynchroner Programmabschnitte.
+			
+			Daher entschied ich mich die wesentlichen Konzepte von \textit{Redux} umzusetzen und einen \textit{Redux} ähnlichen State Container, als ViewModel zu implementieren. Dafür überlegte ich mir States sowie Aktionen der einzelnen States, die zwingend notwendig sind.
 		
 		
+		
+		Der Container sollte mindestens 5 States haben: 
+		\begin{itemize}
+			\item für Authentifizierung sowie Registrierung,
+			\item für das Anlegen von Vorlagen, um Zwischenergebnisse zu speichern,
+			\item für das Ausführen von Server-Aufrufen zum Speichern und Abrufen von Templates, 
+			\item für die Steuerung von in Abhängigkeit stehenden Views und
+			\item für sonstige Daten, die sehr häufig verwendet werden.
+		\end{itemize}
+		
+		
+			
+		Da ich zuvor noch nie mit einem State Container gearbeitet habe, fing ich 
+		
+		
+		
+		Ich machte mir Gedanken darüber, welche States zu implementieren wären und kam auf 
+		Die App benötigte für 
+		
+		- auth
+		
+		- service
+		
+		- template anlegen
+		
+		- routing
+		
+		- sonstiges
+		
+		- actions können actions aufrufen -> verändern den container und die views upadten sich, zu den änderungen in den states
+
 	\section{Implementierung}
 		
 		Einzelne Schritte als eigene Section mit Verlauf der jeweiligen Entwicklung: erst das, dann kam das, dann musste es so, ...
+		
+		\subsection{Registrieren und Anmelden}
 			
 		\subsection{Template erstellen}
+			- Workflow als Bild?
 		
 		\subsection{Template speichern}
 		
 		\subsection{Template verwenden}
 		
-		...
+		.
 		
 		Die Beispiel-App von \textit{Apple} nahm ich mir als Vorbild für die Umsetzung der Texterkennung.
 		
 		...
+		
+		- keine Unit Tests etc. keine Zeit
 		
 	\section{''Abnahme''}	
 		Abnahme ... \\ \\ \\
@@ -231,7 +261,7 @@ In dem vorliegendem Praktikumsbericht...
 \chapter{Weitere Entwicklung und Besonderheiten}
 
 	\section{App-Architektur}
-		- redux like app store miTobiast states erklären? (single source of truth)
+		- redux like app store mit states erklären? (single source of truth)
 	
 	\section{API}
 		- auf die API eingehen? oder nur Tobias?
@@ -302,43 +332,47 @@ In dem vorliegendem Praktikumsbericht...
 \Anhang
 
 \chapter{Tätigkeitsbericht}
-	24.02. - 01.03.\\
+	\textbf{24.02. - 01.03.}
 	Ich habe mich mit der Problemstellung auseinander gesetzt, Ideen gesammelt, Problemanalyse betrieben und einen kleinen Prototypen entwickelt. Dazu erstellte ich einen minimalen Projektplanung, arbeitete mich in die Frameworks \textit{Vision} und \textit{VisionKit} ein und setzte eine Versionsverwaltung auf. Zusätzlich suchte ich nach einer passenden App-Architektur, die geeignet für das deklarative GUI-Framework SwiftUI, sowie für asynchrone Aufgaben, wie z. B. API-Aufrufe ist. Dabei stieß ich auf \textit{Cleancode Architecture} und \textit{Redux}.
 	
-	02.03. - 08.03. \\
+	\textbf{02.03. - 08.03.} 
 	In dieser Woche habe ich die Texterkennung auf den berechneten Regionen eines neuen Fotos implementiert, den Workflow sowie viele andere Kleinigkeiten in der App verbessert und alle Fehler der letzten Woche behoben, sodass ich neue Dinge implementieren konnte. Zudem probierte ich CI sowie Lint für das Projekt aus. Da CI für eine iOS-App mit \textit{GitHub Actions} schwer aufzusetzen war und ab April etwas kosten würde, lies ich es sein. Des Weiteren pflegte ich das Projekt Management durch \textit{Issues} und \textit{Project-Boards} in GitHub. Anschließend programmierte ich den App-Workflow so um, dass nun mehr als eine Seite aufgenommen und analysiert werden konnte. \\ 			
 	Abgesehen von neuem Quellcode fing ich an den Praktikumsbericht zu schreiben und arbeitet mich dafür in \LaTeX \xspace und die Bachelorarbeit-Vorlage für \LaTeX \xspace der Hochschule Mittweida ein.
 	
-	09.03. - 15.03. \\
+	\textbf{09.03. - 15.03.} 
 	Zu Beginn der dritten Woche schaute ich mir Möglichkeiten für serverseitiges OCR an. Genauer sammelte ich Informationen zu dem Framework Vapor und Swift unter Linux. Jedoch funktionieren die Frameworks \textit{Vision} und \textit{CoreML} von \textit{Apple} unter Linux nicht, weshalb sich IronOCR als beste Option herausstellte. Ich entwickelte ein Datenbankmodell, mithilfe der in der App verwendeten Datentypen und erstellte dazu noch eine JSON-Struktur die später für die APIs verwendet werden könnte. Außerdem gab es ein Meeting, in dem wir unseren aktuellen Stand präsentieren sollten, um weitere Schritte und Aufgaben zu planen.Bis zum Ende der Woche arbeitete ich weiter an meinem Beleg und schrieb den Datenfluss in der App um. Nun ähnelt er sehr dem Redux-Model.
 	
-	16.03. - 22.03. \\ 
+	\textbf{16.03. - 22.03.} 
 	Anfangs habe ich weiter an meinem Praktikumsbericht geschrieben, neue Issues hinzugefügt und bearbeitet. Außerdem gepflegte ich die Dokumentation und betrieben Projekt Management, um nun Links zwischen Regionen hinzuzufügen. Dabei entstanden neue Views und der Redux-Store musste dadurch angepasst werden. Es kam eine Erweiterung für die Texterkennung hinzu, so dass man durch die Auswahl eines Datentyps, das Resultat der Erkennung verbessern konnte. Des Weiteren habe ich bis zum Ende der Woche die Vergleich-Links vollständig implementiert und die App auf Fehler und Abstürze kontrolliert, sowie den Beleg um einige Kapitel erweitert.
 	
-	23.03. - 29.03. \\
+	\textbf{23.03. - 29.03.} 
 	Ich begann den Workflow und die Navigation in der App, zu verbessern und vereinfachen. Dabei beseitigte ich Quellcode des Prototyps, erweiterte die Dokumentation und behob einige Fehler. Anschließend überarbeitet ich einige Views, so dass sie übersichtlicher und einfacher zu benutzen sind. Nach dem iOS 13.4 Update in der Mitte der Woche, funktionierte ein Teil der App nicht, da sich das Verhalten von Views geändert hat. Ich behob die Fehler, testete ausgiebig die App und fügte iPad Unterstützung hinzu. Des Weiteren entstand ein neues verbessertes Template und ich schrieb einen großen Teil am Bericht.
 	
-	30.03. - 04.04. \\
+	\textbf{30.03. - 05.04.} 
 	Das Backend für die App war soweit, dass ich es aufsetzten und die API-Schnittstellen implementieren konnte. Dazu erstellte ich Views für Registrieren und Anmelden, die mithilfe von regulären Ausdrücken, die Eingaben überprüfen. Außerdem entwickelte ich einen Schicht im App-Store, für die anfallenden asynchronen Aufgaben. Dabei laß ich mich in das Framework Combine ein und überlegte mir einen geeigneten Aufbau. Da der Ansatz von Combine sehr neu für mich war, dauerte es zwei Tage, bis ein erster API-Service mit Fehler-Handling funktionierte. Zum Ende der Woche waren alle der Create-Schnittstellen implementiert, getestet und dokumentiert. Nebenbei erstellte ein paar Issues für das Backend und sprach mich mit Tobias über OCR auf dem Server ab.
+	
+	\textbf{06.04. - 12.04}
 
 \begin{thebibliography}{99}
 	\bibitem{digital}
 		% nochmal genauer nachschauen, guten Link finden, und genauen Namen...
 		Graf, Michael Partner bei PwC
-		\\\texttt{http://www-cs-faculty.stanford.edu/\~{}uno/abcde.html}
+		\\\url{http://www-cs-faculty.stanford.edu/~{}uno/abcde.html}
 		
 	\bibitem{visionBasicApp}
-		Apple Developer Detecting Objects in Still Images
-		\\\texttt{https://developer.apple.com/documentation/vision/
-		detecting\_objects\_in\_still\_images}		
+		Detecting Objects in Still Images | Apple Developer Documentation. URL \href{https://developer.apple.com/documentation/vision/detecting_objects_in_still_images}{\url{https://developer.apple.com/documentation/vision/detecting_objects_in_still_images}} . - abgerufen am 12.04.2020
+
 	
 	\bibitem{bragge2013model}
-		BRAGGE, Matti, et al. Model-View-Controller architectural pattern and its evolution in graphical user interface frameworks. 2013.
-		\\\texttt{https://lutpub.lut.fi/handle/10024/92156}
+		Bragge, Matti: Model-View-Controller architectural pattern and its evolution in graphical user interface frameworks (2013), S. 34
+		
+	\bibitem{freeman}
+		Freeman, Adam: Pro ASP.NET Core MVC 2, Expert’s Voice in .NET. Apress, 2017 — ISBN 978-1-4842-3150-0
+
 		
 	\bibitem{heise2019einsitegInSwiftUI}
-		Sillmann, Thomas Einsteig in SwiftUI. 22.11.2019
-		\\\texttt{https://www.heise.de/developer/artikel/Einstieg-in-SwiftUI-4594018.html}
+		Sillmann, Thomas: Einstieg in SwiftUI. URL \href{https://www.heise.de/developer/artikel/Einstieg-in-SwiftUI-4594018.html}{\url{https://www.heise.de/developer/artikel/Einstieg-in-SwiftUI-4594018.html}}. - abgerufen am 12.04.2020. — Developer
+		
 	
 \end{thebibliography}
 
@@ -381,4 +415,7 @@ In dem vorliegendem Praktikumsbericht...
 %	 		...
 %	 		\\ \hline
 %	\end{longtable}
+
+	
+
 
