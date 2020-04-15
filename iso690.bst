@@ -375,19 +375,19 @@ FUNCTION {bbl.edby}
 { "bearbeitet von" }
 
 FUNCTION {bbl.edition}
-{ "edn." }
+{ "Edition" }
 
 FUNCTION {bbl.volume}
-{ "vol." }
+{ "Band" }
 
 FUNCTION {bbl.of}
 { "of" }
 
 FUNCTION {bbl.number}
-{ "no." }
+{ "Nr." }
 
 FUNCTION {bbl.nr}
-{ "no." }
+{ "Nr." }
 
 FUNCTION {bbl.in}
 { "in" }
@@ -809,7 +809,7 @@ FUNCTION {format.edition}
 { edition duplicate$ empty$ 'skip$
     {
       output.state mid.sentence =
-        { "l" }
+        { "ll" }
         { "t" }
       if$ change.case$
       "edition" bibinfo.check

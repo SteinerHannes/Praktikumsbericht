@@ -16,15 +16,12 @@ Hochschule {Mittweida}: {Portrait}.
 \newblock \emph{Model-{View}-{Controller} architectural pattern and its
   evolution in graphical user interface frameworks}.
 \newblock Disertation (2013).
-\newblock Verfügbar unter:
-  \url{https://lutpub.lut.fi/bitstream/handle/10024/92156/Model-View-Controller
-  architectural pattern and its evolution in graphical user interface
-  frameworks.pdf?sequence=2&isAllowed=y}.
+\newblock Verfügbar unter: \url{https://lutpub.lut.fi/handle/10024/92156}.
 
 \bibitem{freeman_pro_2017}
 \textsc{Freeman, A.}
 \newblock \emph{Pro {ASP}.{NET} {Core} {MVC} 2}.
-\newblock Expert's {Voice} in .{NET}. Apress, 2 (30. juni 2010) edn. (2017).
+\newblock Expert's {Voice} in .{NET}. Apress, 2 (30. Juni 2010) Edition (2017).
 \newblock ISBN 978-1-4842-3150-0.
 \newblock OCLC: 1007700442.
 \newblock Verfügbar unter:

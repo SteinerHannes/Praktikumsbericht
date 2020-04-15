@@ -8,13 +8,14 @@ Reallocated global_strs (elt_size=20001) to 20 items from 10.
 Reallocated glb_str_end (elt_size=4) to 20 items from 10.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Database file #1: ../Beleg.bib
-Warning--I didn't find a database entry for "digital"
 Warning--to sort, need author or key in noauthor_hochschule_nodate
 Warning--to sort, need author or key in noauthor_detecting_nodate
 Warning--missing school in bragge_model-view-controller_2013
+ll is an illegal case-conversion string for entry freeman_pro_2017
+while executing---line 1770 of file ../iso690.bst.bst
 You've used 5 entries,
             3472 wiz_defined-function locations,
-            722 strings with 6709 characters,
+            722 strings with 6569 characters,
 and the built_in function-call counts, 1863 in all, are:
 = -- 176
 > -- 23
@@ -53,4 +54,4 @@ warning$ -- 3
 while$ -- 6
 width$ -- 6
 write$ -- 57
-(There were 4 warnings)
+(There was 1 error message)
