@@ -13,17 +13,18 @@
 \contentsline {chapter}{\numberline {4}Anforderungen}{7}{chapter.4}% 
 \contentsline {chapter}{\numberline {5}Konzept der Dokumenten-Scanner-App}{9}{chapter.5}% 
 \contentsline {chapter}{\numberline {6}Entwicklung des ersten Prototyps}{11}{chapter.6}% 
-\contentsline {section}{\numberline {6.1}Planung und Vorbereitung}{11}{section.6.1}% 
-\contentsline {subsection}{\numberline {6.1.1}Grundlagen}{12}{subsection.6.1.1}% 
+\contentsline {section}{\numberline {6.1}Anforderungsplanung}{11}{section.6.1}% 
+\contentsline {section}{\numberline {6.2}Planung und Vorbereitung bzw. Analyse und Definition}{11}{section.6.2}% 
+\contentsline {section}{\numberline {6.3}Grundlagen}{12}{section.6.3}% 
 \contentsline {paragraph}{\nonumberline Model-View-ViewModel:}{12}{section*.9}% 
-\contentsline {paragraph}{\nonumberline Redux.js:}{12}{section*.10}% 
-\contentsline {section}{\numberline {6.2}Entwurf und Design}{13}{section.6.2}% 
-\contentsline {section}{\numberline {6.3}Implementierung}{14}{section.6.3}% 
-\contentsline {subsection}{\numberline {6.3.1}Registrieren und Anmelden}{15}{subsection.6.3.1}% 
-\contentsline {subsection}{\numberline {6.3.2}Template erstellen}{15}{subsection.6.3.2}% 
-\contentsline {subsection}{\numberline {6.3.3}Template speichern}{15}{subsection.6.3.3}% 
-\contentsline {subsection}{\numberline {6.3.4}Template verwenden}{15}{subsection.6.3.4}% 
-\contentsline {section}{\numberline {6.4}''Abnahme''}{15}{section.6.4}% 
+\contentsline {paragraph}{\nonumberline Redux.js:}{13}{section*.10}% 
+\contentsline {section}{\numberline {6.4}Entwurf und Design}{13}{section.6.4}% 
+\contentsline {section}{\numberline {6.5}Implementierung}{15}{section.6.5}% 
+\contentsline {subsection}{\numberline {6.5.1}Registrieren und Anmelden}{15}{subsection.6.5.1}% 
+\contentsline {subsection}{\numberline {6.5.2}Template erstellen}{15}{subsection.6.5.2}% 
+\contentsline {subsection}{\numberline {6.5.3}Template speichern}{15}{subsection.6.5.3}% 
+\contentsline {subsection}{\numberline {6.5.4}Template verwenden}{15}{subsection.6.5.4}% 
+\contentsline {section}{\numberline {6.6}''Abnahme''}{15}{section.6.6}% 
 \contentsline {chapter}{\numberline {7}Weitere Entwicklung und Besonderheiten}{17}{chapter.7}% 
 \contentsline {section}{\numberline {7.1}App-Architektur}{17}{section.7.1}% 
 \contentsline {section}{\numberline {7.2}API}{17}{section.7.2}% 
