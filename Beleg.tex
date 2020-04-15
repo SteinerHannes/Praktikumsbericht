@@ -7,11 +7,6 @@
 	urlcolor=black
 }
 
-\usepackage{environ}
-\usepackage{xcolor}
-\NewEnviron{specifics}{\colorbox{red}{\begin{minipage}{\textwidth}\BODY\end{minipage}}\par\noindent}
-
-
 \Art{Praktikumsbericht}
 
 \Anrede{Herr}
@@ -24,8 +19,6 @@
 \Studiengang{Softwareentwicklung}
 \Seminargruppe{IF17wS-B \\[\bigskipamount] Matrikelnummer:\\ 46540}
 \Fakultaet{\MNI}
-\Erstpruefer{Prof\@. Dr\@. Mark Ritter}
-\Zweitpruefer{}
 
 \Datum{13.03.2020}
 
@@ -61,17 +54,15 @@ In dem vorliegendem Praktikumsbericht...
 \chapter{Einleitung}
 	Digitalisierung wird gängig als Integration von digitaler Technologie in den Alltag verstanden, und soll helfen Zeit einzusparen \cite{digital}. Mit diesem Gedanken initiierten die Mitarbeiter Holger Langner und Falk Schmidsberger der Hochschule Mittweida, das Projekt \textit{Memo Space}. Im Zuge dessen sollen kleinere Forschungsergebnisse entstehen, die richtungsweisend für die Digitalisierung der Verwaltung von Lehr- und Forschungseinrichtung sind.
 
-	Im Rahmen eines zwölfwöchigem Forschungspraktikums an der Hochschule Mittweida arbeiteten der Student Tobias Kallauke und ich, gemeinsam an einem Forschnungsprojekt von Memo Space. Dabei entwickelten wir ein Software-System, mit dem die Arbeit von vielen Hochschulmitarbeitern erleichtert und auch Zeit eingespart werden soll.
+	Im Rahmen eines zwölfwöchigem Forschungspraktikums an der Hochschule Mittweida arbeiteten der Student Tobias Kallauke und der Verfasser, gemeinsam an einem Forschnungsprojekt von Memo Space. Dabei entwickelten sie ein Software-System, mit dem die Arbeit von vielen Hochschulmitarbeitern erleichtert und auch Zeit eingespart werden soll.
 
 %%%%%%%%%%%%%%% - HSMW - %%%%%%%%%%%%%%%
 
 \chapter{Hochschule Mittweida}
-	Die Hochschule Mittweida - university of applied science (HSMW) \nomenclature{HSMW}{Hochschule Mittweida - university of applied science} wurde vor über 150 Jahren gegründet. Heute lehrt und forscht sie mit ca. 6000 Studenten in fünf Fakultäten und vier Forschungsschwerpunkten\footnote{Quelle: \href{https://www.hs-mittweida.de/hochschule/portrait.html}{\url{https://www.hs-mittweida.de/hochschule/portrait.html}}}. Eines der Schwerpunkte ist die angewandte Informatik, in dem Memo Space angesiedelt ist.
+	Die Hochschule Mittweida - university of applied science (HSMW) \nomenclature{HSMW}{Hochschule Mittweida - university of applied science} wurde vor über 150 Jahren gegründet. Heute lehrt und forscht sie mit ca. 6000 Studenten in fünf Fakultäten und vier Forschungsschwerpunkten\cite{hsmwPortrait} \footnote{Quelle: }. Eines der Schwerpunkte ist die angewandte Informatik, in dem Memo Space angesiedelt ist.
 	
 	Pro Semester schreibt jeder Student ca. 5 Prüfungen, was bedeutet, dass im Jahr um die 60.000 Klausuren kontrolliert werden. Dazu kommt, dass nachdem die Klausuren kontrolliert wurden, die Zensur, sowie die Eckdaten der Studenten, die an der Prüfung teilgenommen haben, in ein digitales Format gebracht werden muss. Grund dafür ist, dass die Übertragung der Noten in das Notensystem der Hochschule. Da die Mitarbeiter Holger Langner und Falk Schmidsberger selbst Klausuren kontrollieren und die Problematik genau kennen, entstand hier eines der ersten Ideen für Memo Space.
-	
-	
-	
+
 %%%%%%%%%%%%%%% - PROBLEMSTELLUNG - %%%%%%%%%%%%%%%
 
 \chapter{Problemstellung} 
@@ -98,7 +89,7 @@ In dem vorliegendem Praktikumsbericht...
 	
 	Eine Scan-Vorlagen bestehen aus zwei Komponenten. Die eine sind zugeschnittene Fotos der Seiten eines Dokuments. Und die zweite sind die Regionen auf den Bildern, wo sich die zu digitalisierenden Informationen befinden. Dem Benutzer muss es möglich sein, zuerst die Fotos zu machen und anschließend Regionen auf den Seiten zu markieren. Weiter benötigen die Regionen Namen bzw. Typen, die der Benutzer angeben muss. Die Angabe des Typs ist wichtig, da dadurch eindeutig wird, ob es sich um die Note oder die Matrikelnummer des Studenten handelt. Diese Eindeutigkeit wird nicht nur für die automatische Erstellung der Tabelle benötigt, sondern auch für die Texterkennung. 
 	
-	Optical character recognition (OCR)\nomenclature{OCR}{optical character recognition, deutsch: optische Zeichen Erkennung und im deutschen Synonym für Texterkennung}, auf deutsch optische Zeichen Erkennung, soll dazu benutzt werden, die Informationen der Regionen zu digitalisieren. Um die Texterkennung zu verbessern, soll der Typ der Regionen verwendet werden. Damit könne dem OCR mögliche Ergebnisse mitgeteilt oder die Ergebnisse angepasst werden. Beispielsweise bestehen Zensuren immer aus Dezimalzahlen von 1 bis 6 und mit nur einer Nachkommastelle. Wird der Buchstabe O anstelle der Ziffer 0 erkannt, kann so der Fehler korrigiert werden.
+	Optical character recognition (OCR)\nomenclature{OCR}{optical character recognition, deutsch: optische Zeichen Erkennung und im deutschen Synonym für Texterkennung}, auf deutsch optische Zeichen Erkennung, soll dazu benutzt werden, die Informationen der Regionen zu digitalisieren. Um die Texterkennung zu verbessern, soll der Typ der Regionen verwendet werden. Damit könne dem OCR mögliche Ergebnisse mitgeteilt oder die Ergebnisse angepasst werden. Beispielsweise bestehen Zensuren immer aus Dezimalzahlen von Eins bis Sechs und mit nur einer Nachkommastelle. Wird der Buchstabe O anstelle der Ziffer Null erkannt, kann so der Fehler korrigiert werden.
 	
 	Zudem muss die Texterkennung auf dem Gerät selbst statt finden. Allerdings darf die App auch Texterkennung auf externen Servern unterstützen. Hierfür müssen dann die entsprechenden API-Schnittstellen implementiert oder für einen eigenen Server entwickelt werden.
 
@@ -142,42 +133,42 @@ In dem vorliegendem Praktikumsbericht...
 		... noch mehr? (Auf Tobias warten...)
 	
 	- Noch mehr zu OCR sagen: was es ist, wie es geht, komplett eigenes Kapitel?
-	
+
 	- Upload download verwendung auf allen geräten
 
 
 %%%%%%%%%%%%%%% - PROTOTYP - %%%%%%%%%%%%%%%
-	
+
 \chapter{Entwicklung des ersten Prototyps}
-	Vor Beginn des Praktikums saßen die Praktikum-Betreuer Falk Schmidsberger, Robert Manthey der Hochschule Mittweida, mit Tobias Kallauke und mir zusammen. Wir diskutierten, welches Thema für das Praktikum geeignet ist, wie eine Art Durchführbarkeits- / Machbarkeitsstudie und entschieden uns für den Dokumenten-Scanner. Da ich privat Erfahrung in \textit{Swift} sowie \textit{iOS}-Entwicklung gesammelt habe, sollte ich damit anfangen den Scanner als \textit{iOS}-App zu entwickeln. Wir machten uns auch direkt noch Gedanken über die Anforderungen an die App und definierten, wie das zukünftige Software-System mit Server und Backend aussehen könnte.
+	Vor Beginn des Praktikums wurde diskutiert, welches Thema aus dem Projekt Memo Space geeignet ist. Dabei entstand eine Art Durchführbarkeits- / Machbarkeitsstudie und welche zur Entscheidung führte, ein Dokumenten-Scanner-Softwaresystem umzusetzen. Aufgrund der Kenntnisse und Erfahrung, sollte ein Backend mit entsprechenden Schnittstellen und einer Android-App von Tobias Kallauke umgesetzt werden, währende vom Verfasser eine iOS-App gefordert wurde.
 
 	\section{Planung und Vorbereitung}
-		In der aller ersten Woche habe ich mich hauptsächlich mit der Problemstellung auseinander gesetzt, Ideen entwickelt, Problemanalyse betrieben und einen kleinen Prototypen entwickelt. Ich begann damit die Dokumentation von \textit{Vision}, \textit{VisionKit} und \textit{PhotoKit} von \textit{Apple} an zu schauen. Danach hatte ich einen guten Überblick darüber, was ich noch zu entwickeln habe und was mir Frameworks abnehmen können. Zum einen war das Erkennen und gerade ziehen von Dokumenten in Echtzeit in der Kamera, sowie die Texterkennung auf Bildern schon in den Frameworks implementiert. Nebenbei entdeckte ich eine Beispiel-App von \textit{Apple} \cite{visionBasicApp}, in der es um Erkennen von Objekten in Standbildern ging. Diese schaute ich mir an, um das Vision Framework genauer zu verstehen, sodass ich mich gut eingearbeitet habe.
+		Die Ziele der ersten Phase des Praktikums waren die Auseinandersetzung mit der Problemstellung, die Entwicklung von Ideen, das Betreiben von einer Problemanalyse und das Entwickeln eines Prototyps, als ersten Machbarkeitsnachweis. Die Dokumentationen der Frameworks \textit{Vision}, \textit{VisionKit} und \textit{PhotoKit} von \textit{Apple} ermöglichen schnell einen Überblick zu bekommen. Aus ihnen wurde klar, welche Funktionen der App noch zu entwickeln und welche in Frameworks schon vorhanden sind. Z. B. ist das Erkennen und das gerade Ziehen von Dokumenten in Echtzeit, sowie die Texterkennung auf Bildern in \textit{Vision} und \textit{VisionKit} enthalten. Bei der Entwicklung des ersten Prototyps half eine Beispiel-App von \textit{Apple} \cite{visionBasicApp}, die das Erkennen von Objekten in Standbildern mithilfe der genannten Frameworks umsetzt.
 		
-		Bei meiner Recherche stellte ich fest, dass die App nur Geräte mit iOS 13.0 oder neuer unterstützen werden kann. Grund dafür sind die \textit{Apple} Frameworks \textit{SwiftUI} und \textit{VisionKit}. \textit{SwiftUI} bietet die Möglichkeit, Benutzeroberflächen für alle \textit{Apple}-Plattformen in \textit{Swift} zu erstellen. Die deklarative \textit{Swift}-Syntax ist für mich einfach zu lesen und schnell zu schreiben, so dass es möglich ist, die App in wenigen Wochen für iPhone und iPad zu schreiben. Als Alternative gibt es noch \textit{UIKit} oder auch \textit{AppKit}, die unter alle iOS Versionen funktioniere. Diese Frameworks sind allerdings nicht deklarativ sodass, Views sowohl im Code als auch in Interface-Dateien getrennt voneinander erstellt und konfiguriert werden müssen \cite{heise2019einsitegInSwiftUI}. Dadurch dauert die Entwicklung einer App, im Gegensatz zu SwiftUI deutlich länger, wie man auch hier in dem Video \footnote{SwiftUI vs UIKit – Comparison of building the same app in each framework - \href{https://www.youtube.com/watch?v=qk2y-TiLDZo}{\url{https://www.youtube.com/watch?v=qk2y-TiLDZo}} } sieht. Sehr ähnliche Erfahrung habe ich mit den beiden Frameworks gemacht. \textit{VisionKit} dagegen, ist das Framework zum Scannen der Dokumente. Auch hierfür gibt es eine Alternative. Das Framework ist von den Entwicklern von \textit{WeTransfer} und funktioniert auch auf älteren iOS Versionen. Allerdings unterstützt \textit{WeScan} \footnote{WeScan GitHub Repository - \href{https://github.com/WeTransfer/WeScan}{\url{https://github.com/WeTransfer/WeScan}}} noch kein stapelweises Scannen. Das bedeutet man kann immer nur ein Foto machen, welches erst abgespeichert werden muss, bevor man das nächste machen kann. Das ist für den Benutzer nicht bequem und spart wahrscheinlich auch keine Zeit.
-		
-		Um das Projekt gut durch zu planen benutze ich \textit{Scrum} als Projektmanagement. Dies ist für agile Softwareentwicklung gut geeignet. Durch die gesammelte Erfahrung mit Scrum aus den vorherigen Semester, fiel mir die Planung leicht. Mit GitHub Projects und Issues konnte ich so dem Sprint Aufgaben zuordnen und Fortschritt nachvollziehen. 
-		
-	\section{Entwurf und Design}
-		\subsection{Grundlagen}
-			In den folgenden zwei Absätze werden wichtige Konzepte erklärt, die im Entwurf der App benutzt und nochmal aufgegriffen werden.
-			
-		\textbf{Model-View-ViewModel:}
+		Durch die Auseinandersetzung mit den Bibliotheken konnte festgestellt werden, dass die zu entwickelnde App nur Geräte mit iOS 13.0 oder neuer unterstützen werden kann. Grund dafür sind die \textit{Apple} Frameworks \textit{SwiftUI} und \textit{VisionKit}. \textit{SwiftUI} bietet die Möglichkeit, Benutzeroberflächen für alle \textit{Apple}-Plattformen in \textit{Swift} zu erstellen. Die deklarative \textit{Swift}-Syntax ist einfach zu lesen und schnell zu schreiben, so dass es möglich ist, die App in wenigen Wochen für iPhone und iPad zu schreiben. Als Alternative gibt es noch \textit{UIKit} oder auch \textit{AppKit}, die unter alle iOS Versionen funktioniere. Diese Frameworks sind allerdings nicht deklarativ sodass, Views sowohl im Code als auch in Interface-Dateien getrennt voneinander erstellt und konfiguriert werden müssen \cite{heise2019einsitegInSwiftUI}. Dadurch dauert die Entwicklung einer App, im Gegensatz zu SwiftUI deutlich länger, wie man auch hier in dem Video \footnote{SwiftUI vs UIKit – Comparison of building the same app in each framework - \href{https://www.youtube.com/watch?v=qk2y-TiLDZo}{\url{https://www.youtube.com/watch?v=qk2y-TiLDZo}} } sieht. Sehr ähnliche Erfahrung, wie sie von  hat der Verfasser vor dem Praktikum mit den beiden Frameworks gemacht. \textit{VisionKit} dagegen, ist das Framework zum Scannen der Dokumente. Auch hierfür gibt es eine Alternative. Das Framework ist von den Entwicklern von \textit{WeTransfer} und funktioniert auch auf älteren iOS Versionen. Allerdings unterstützt \textit{WeScan} \footnote{WeScan GitHub Repository - \href{https://github.com/WeTransfer/WeScan}{\url{https://github.com/WeTransfer/WeScan}}} noch kein stapelweises Scannen. Das bedeutet, man kann immer nur ein Foto machen, welches erst abgespeichert werden muss, bevor man das nächste machen kann. Das ist für den Benutzer nicht bequem und spart wahrscheinlich auch keine Zeit.
+
+		Durch die Recherche und Auseinandersetzung mit der Problemstellung wurde festgestellt, dass die App nur Geräte mit iOS 13.0 oder neuer unterstützen werden kann. Grund dafür sind die \textit{Apple} Frameworks \textit{SwiftUI} und \textit{VisionKit}, welche für die Entwicklung am wichtigsten sind. \textit{SwiftUI} bietet die Möglichkeit, Benutzeroberflächen für alle \textit{Apple}-Plattformen in \textit{Swift} zu erstellen. Die deklarative \textit{Swift}-Syntax ist für mich einfach zu lesen und schnell zu schreiben, so dass es möglich ist, die App in wenigen Wochen für iPhone und iPad zu schreiben. Als Alternative gibt es noch \textit{UIKit} oder auch \textit{AppKit}, die unter alle iOS Versionen funktioniere. Diese Frameworks sind allerdings nicht deklarativ sodass, Views sowohl im Code als auch in Interface-Dateien getrennt voneinander erstellt und konfiguriert werden müssen \cite{heise2019einsitegInSwiftUI}. Dadurch dauert die Entwicklung einer App, im Gegensatz zu SwiftUI deutlich länger, wie man auch hier in dem Video \footnote{SwiftUI vs UIKit – Comparison of building the same app in each framework - \href{https://www.youtube.com/watch?v=qk2y-TiLDZo}{\url{https://www.youtube.com/watch?v=qk2y-TiLDZo}} } von Paul Hudson, einem in der Swift-Community bekannten Programmiere und Autor, sieht. Sehr ähnliche Erfahrung hat der Autor des Berichts vor dem Praktikum mit den beiden Frameworks gemacht. \textit{VisionKit} dagegen, ist das Framework zum Scannen der Dokumente. Auch hierfür gibt es eine Alternative, welche von den Entwicklern von \textit{WeTransfer} ist. Diese Framwork funktioniert auch auf älteren iOS Versionen. Allerdings unterstützt \textit{WeScan} \footnote{WeScan GitHub Repository - \href{https://github.com/WeTransfer/WeScan}{\url{https://github.com/WeTransfer/WeScan}}} noch kein stapelweises Scannen. Das bedeutet, man kann immer nur ein Foto machen, welches erst abgespeichert werden muss, bevor man das nächste machen kann. Das ist für den Benutzer nicht bequem und spart wahrscheinlich auch keine Zeit.
+
+		Das Scrum-Konzept, welches sich für agile Softwareentwicklung anbietet, wurde zur Projektplanung und zum Projektmanagement verwendet. Als Versionsverwaltung der Software wurde Git in Kombination mit GitHub Issues und GitHub Projects als Planungstools benutzt. So konnte der Verfasser selbständig jedem Sprint Aufgaben zuordnen und den Fortschritt nachvollziehen.
+
+	\subsection{Grundlagen}
+			In den folgenden zwei Absätze werden wichtige Konzepte erklärt, die im Kapitel Entwurf und Design nochmal aufgegriffen werden.
+
+		\paragraph{Model-View-ViewModel:}
 			Das Entwurfsmuster Model View ViewModel (MVVM)\nomenclature{MVVM}{Model View ViewModel} entstand bei \textit{Microsoft} im Jahr 2005 mit der \textit{Windows Presentation Foundation} (WPF) und \textit{Silverlight-Technologien}. MVVM verwendet das Konzept eines Schichtmodells und ist eine abstrakte Darstellung einer Benutzeroberfläche, in Form einer Klasse, wie man sie unter objektorientierten Programmiersprachen kennt. Diese Klasse enthält Daten, die auf der Benutzeroberfläche angezeigt werden sollen und Anweisungen, die auf der Benutzeroberfläche aufgerufen werden können. Dieses sogenannte ViewModel, weiß nichts von Views, wie es sonst bei anderen Entwurfsmustern üblich ist, um Daten auf der Benutzeroberfläche anzuzeigen. Stattdessen verwendet eine MVVM-View eine Bindungsfunktion (data binging) zur bidirektionalen Zuordnung von Daten aus dem ViewModel zu den jeweiligen Eigenschaften auf der View. Z. B. Einträge in einer Dropdown-Menü. Aber auch das binden von Daten aus dem Model zu Benutzereingaben durch Maus, Tastatur oder Touch-Screens ist möglich. Beispielsweise kann ein Mausklick eine Anweisung in dem ViewModel auslösen. Diese verändert einen Wert im Model, wodurch die View durch data binding aktualisiert wird. \cite{freeman}\cite{bragge2013model}
 
-		\textbf{Redux.js:}
+		\paragraph{Redux.js:}
 			Redux.js ist eine Bibliothek\footnote{Redux.js Github Repository - \href{https://github.com/reduxjs/redux}{\url{https://github.com/reduxjs/redux}}} für die Programmiersprache JavaScript. Diese stellt einen sogenannten vorhersehbaren Zustandscontainer\footnote{Core Concepts - \href{https://redux.js.org/introduction/core-concepts}{\url{https://redux.js.org/introduction/core-concepts}}} für JavaScript Anwendungen bereit. In diesem Container wird der Zustand der gesamten Anwendung in einem Objektbaum innerhalb eines einzigen Speichers gespeichert. Diesen Baum kann man sich vorstellen, wie eine Matrjoschka die weitere Puppen in sich hat. Der wichtige Unterschied zwischen einer Matrjoschka und einem Baum ist jedoch, dass in eine Puppe genau nur eine andere gesteckt werden kann. Beim einem Objektbaum hingegen können mehrere Objekte in ein Objekt ''gesteckt'' werden und so weiter. Im Bezug auf einen Zustandscontainer enthält dieser dann States (Objekte) auf deutsch Zustände und Daten, die unteranderem auf der Benutzeroberfläche angezeigt werden sollen. Diese Aufteilung in die States ist dazu gedacht, einer View oder mehrere zusammenhängende Views nur die wirklich benötigten Daten bereit zustellen. Diese Struktur erleichtert das Testen oder Untersuchen der Anwendung und ermöglicht es, durch hinzufügen eines neuen States den aktuellen Entwicklungsstand der Anwendung beizubehalten und dadurch den Entwicklungsprozess zu beschleunigen. \\
 			Ein weiteres wichtiges Prinzip\footnote{Three Principles - \href{https://redux.js.org/introduction/three-principles}{\url{https://redux.js.org/introduction/three-principles}}} von Redux ist, dass die Daten in den States Schreibgeschütz sind. Die einzige Möglichkeit den Zustand zu ändern, besteht darin, eine Aktion auszulösen, die beschreibt, was passiert. Dadurch wird sichergestellt, dass weder die Views noch Netzwerk-Rückrufe jemals direkt an den Zustand schreiben werden. Stattdessen bringen sie nur die Absicht zum Ausdruck, den Zustand zu verändern und lösen eine Aktion aus. Da alle Änderungen zentralisiert sind und eine nach der anderen in einer strikten Reihenfolge erfolgen, gibt es weniger Programmfehler-Quellen.
-	
-		\subsection{Entwurf und Design}
-			
-			Nach der Planung und Vorbereitung begann ich damit, mir Gedanken zu dem Workflow der App zu machen und erstellte den ersten Sprint bis zum nächsten Meeting. Für den Workflow fertigte ich zu jeder View ein grobes Design an, welches sehr schnell in \textit{SwiftUI} umzusetzen ist. Das Aussehen der App sollten sich dann im Laufe der Zeit noch ändern, jedoch stand erstmal die Umsetzung des Konzepts im Vordergrund. 
+
+	\section{Entwurf und Design}
+		Nach der Planung und Vorbereitung begann ich damit, mir Gedanken zu dem Workflow der App zu machen und erstellte den ersten Sprint bis zum nächsten Meeting. Für den Workflow fertigte ich zu jeder View ein grobes Design an, welches sehr schnell in \textit{SwiftUI} umzusetzen ist. Das Aussehen der App sollten sich dann im Laufe der Zeit noch ändern, jedoch stand erstmal die Umsetzung des Konzepts im Vordergrund. 
+
+		Aus den Designs und dem Workflow heraus entwickelte ich einen groben Plan, wie die Daten in der App gehandhabt werden sollten. Da \textit{SwiftUI} das Entwurfsmuster MVVM umsetzt, überlegte ich mir eine Struktur für das ViewModel und für den Datenfluss der asynchronen Server-Rückrufe. Jedoch stellte ich schnell fest, dass meine Idee nicht ideal ist, wenn noch mehr Views hinzukommen. Aus diesen Gründen suchte ich nach einer besseren Lösung. Dabei entdeckte ich die JavaScript-Bibliothek \textit{Redux.js} zur Verwaltung von Zustandsinformationen in Webanwendung. 
 		
-			Aus den Designs und dem Workflow heraus entwickelte ich einen groben Plan, wie die Daten in der App gehandhabt werden sollten. Da \textit{SwiftUI} das Entwurfsmuster MVVM umsetzt, überlegte ich mir eine Struktur für das ViewModel und für den Datenfluss der asynchronen Server-Rückrufe. Jedoch stellte ich schnell fest, dass meine Idee nicht ideal ist, wenn noch mehr Views hinzukommen. Aus diesen Gründen suchte ich nach einer besseren Lösung. Dabei entdeckte ich die JavaScript-Bibliothek \textit{Redux.js} zur Verwaltung von Zustandsinformationen in Webanwendung. 
-		
-			\textit{Redux} hilft durch das Konzept, komplexen Views mit vielen Daten schnell und einfach zu implementieren. Auch werden so Serverantworten und zwischengespeicherte Daten sowie lokal erstellte Daten, die noch nicht auf dem Server gespeichert wurden, strukturiert und zentral abgelegt. Das erleichtert nicht nur das Wiederverwenden von Daten, sondern spart auch wiederholte Server-Aufrufe ein. Für mich war es wichtig, trotz der der begrenzten Zeit im Praktikum, möglichst viel mit wenig Fehlern umzusetzen. Und auch da sah ich in Redux großes Potential mir dabei zu helfen. Denn die modulare Aufteilung des State Containers ermöglicht eine schnelle Weiterentwicklung der App, auch wenn die Komplexität der Anwendung steigt. Und die Vorteile von Redux hinsichtlich des Testens und Untersuchens der App sollten helfen, Fehler möglichst schnell ausfindig zu machen, trotz asynchroner Programmabschnitte.
+		\textit{Redux} hilft durch das Konzept, komplexen Views mit vielen Daten schnell und einfach zu implementieren. Auch werden so Serverantworten und zwischengespeicherte Daten sowie lokal erstellte Daten, die noch nicht auf dem Server gespeichert wurden, strukturiert und zentral abgelegt. Das erleichtert nicht nur das Wiederverwenden von Daten, sondern spart auch wiederholte Server-Aufrufe ein. Für mich war es wichtig, trotz der der begrenzten Zeit im Praktikum, möglichst viel mit wenig Fehlern umzusetzen. Und auch da sah ich in Redux großes Potential mir dabei zu helfen. Denn die modulare Aufteilung des State Containers ermöglicht eine schnelle Weiterentwicklung der App, auch wenn die Komplexität der Anwendung steigt. Und die Vorteile von Redux hinsichtlich des Testens und Untersuchens der App sollten helfen, Fehler möglichst schnell ausfindig zu machen, trotz asynchroner Programmabschnitte.
 			
-			Daher entschied ich mich die wesentlichen Konzepte von \textit{Redux} umzusetzen und einen \textit{Redux} ähnlichen State Container, als ViewModel zu implementieren. Dafür überlegte ich mir States sowie Aktionen der einzelnen States, die zwingend notwendig sind.
+		Daher entschied ich mich die wesentlichen Konzepte von \textit{Redux} umzusetzen und einen \textit{Redux} ähnlichen State Container, als ViewModel zu implementieren. Ich überlegte mir noch vor Beginn der Implementierung die States sowie deren Aktionen, die zwingend notwendig sind, um Views und Daten sinnvoll zu separieren.
 		
 		
 		
@@ -212,6 +203,13 @@ In dem vorliegendem Praktikumsbericht...
 		- actions können actions aufrufen -> verändern den container und die views upadten sich, zu den änderungen in den states
 
 	\section{Implementierung}
+		
+		- In welcher Reihenfolge soll ich hier vor gehen? In der logischen oder in der, wie ich es gemacht habe?
+		
+		Bei der Implementierung und Umsetzung der Anforderungen 
+		
+		
+		
 		
 		Einzelne Schritte als eigene Section mit Verlauf der jeweiligen Entwicklung: erst das, dann kam das, dann musste es so, ...
 		
@@ -253,8 +251,6 @@ In dem vorliegendem Praktikumsbericht...
 	- Verwendete Programme, Sprache, etc. 
 	
 	- ein paar Worte, wie gut die Entwicklung lief (Simulator vs. echtes Gerät), wo sind die Grenzen des Simulators (Keine Kamera), wo waren Probleme mit dem echten Gerät...
-	
-
 
 %%%%%%%%%%%%%%% - WEITERENTWICKLUNG - %%%%%%%%%%%%%%%
 
@@ -268,9 +264,6 @@ In dem vorliegendem Praktikumsbericht...
 	
 	\section{}
 		- 
-
-
-
 %%%%%%%%%%%%%%% - GRENZEN - %%%%%%%%%%%%%%%
 
 \chapter{Grenzen der App}
@@ -314,9 +307,6 @@ In dem vorliegendem Praktikumsbericht...
 	
 	- Welche Probleme konnten behoben werden?
 	
-
-
-
 %%%%%%%%%%%%%%% - AUSBLICK - %%%%%%%%%%%%%%%
 		
 \chapter{Ausblick}
@@ -354,6 +344,10 @@ In dem vorliegendem Praktikumsbericht...
 	\textbf{06.04. - 12.04}
 
 \begin{thebibliography}{99}
+	
+	\bibitem{hsmwPortrait}
+	Hochschule Mittweida, Portrait[online]. URL https://www.hs-mittweida.de/hochschule/portrait.html? . - abgerufen am 2020-04-15
+
 	\bibitem{digital}
 		% nochmal genauer nachschauen, guten Link finden, und genauen Namen...
 		Graf, Michael Partner bei PwC
@@ -416,6 +410,8 @@ In dem vorliegendem Praktikumsbericht...
 %	 		\\ \hline
 %	\end{longtable}
 
-	
+	- wie benutze ich die App wie installiere ich die
+	- programmier sprachen, IDEs, 
+	- 
 
 
