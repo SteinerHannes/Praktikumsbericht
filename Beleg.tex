@@ -6,10 +6,6 @@
 \hypersetup{
 	urlcolor=black
 }
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage[ngerman]{babel}
-\usepackage{hyphenat}
 
 \Art{Praktikumsbericht}
 
@@ -111,7 +107,7 @@ In dem vorliegendem Praktikumsbericht...
 
 %%%%%%%%%%%%%%% - GRUND IDEE ZUM LÖSEN DES PROBLEMS - %%%%%%%%%%%%%%%
 
-\chapter{Konzept der Dokumenten-Scanner-App}
+\chapter{Konzept der Dokumenten-Scanner-App}\hypertarget{konzept}{}
 	Wie in der Problemstellung und Anforderung beschreiben, soll die Dokumenten-Scanner App wichtigen Daten auf dem Deckblatt einer Klausur, wie Vor- und Nachname des Studenten, seine Matrikelnummer sowie die Note erkennen, digitalisieren und in ein für die Notenfreigabe geeignetes Format bringen. Die digitalisierten Daten sollen anschließend an einen Server gesendet werde, wo sie und die beim Einscannen entstandenen Bilder gespeichert werden. Verwendet eine einzuscannende Klausur die Klausuren-Vorlage der Fakultät CB oder ähnliche, die eine Punkteübersicht haben, dann soll es außerdem möglich sein, die Punkte sowie die Note auf Richtigkeit zu überprüfen. 
 
 	Zur Digitalisierung und Kontrolle der Daten werden Scan-Vorlagen verwendet. Diese muss vor dem Einscannen der ausgefüllten Klausuren erstellt werden, um zu gewährleisten, dass die richtigen Daten digitalisiert werden. Beim Erstellen einer Scan-Vorlage geht man wie folgt vor:
@@ -159,18 +155,18 @@ In dem vorliegendem Praktikumsbericht...
 		\begin{enumerate}
 			\item die Auseinandersetzung mit der Problemstellung bzw. den Anforderungen,
 			\item das Betreiben von einer Problemanalyse,
-			\item die Entwicklung von Ideen und eines genauen Konzepts der iOS-App, wie im Kapitel Konzept der Dokumenten-Scanner-App zu lesen ist und 
+			\item die Entwicklung von Ideen und eines genauen Konzepts der iOS-App und 
 			\item das Entwickeln eines ersten Prototyps, als Machbarkeitsnachweis.
 		\end{enumerate}
 		
-		Für die Entwicklung des Konzepts spielen die Dokumentationen der Frameworks \textit{Vision}, \textit{VisionKit} und \textit{PhotoKit} von \textit{Apple} eine entscheidende Rolle. Aus ihnen wird klar, welche Funktionen der App noch zu entwickeln und welche in Frameworks schon vorhanden sind. Z. B. ist das Erkennen und das gerade Ziehen von Dokumenten in Echtzeit, sowie die Texterkennung auf Bildern in \textit{Vision} und \textit{VisionKit} enthalten. Bei der Entwicklung des ersten Prototyps half eine Beispiel-App von \textit{Apple} \cite{noauthor_detecting_nodate}, die das Erkennen von Objekten in Standbildern mithilfe der genannten Frameworks umsetzt.
+		Für die Entwicklung des Konzepts, welches im Kapitel \hyperlink{konzept}{Konzept der Dokumenten-Scanner-App} zu finden ist, spielen die Dokumentationen der Frameworks \textit{Vision}, \textit{VisionKit} und \textit{PhotoKit} von \textit{Apple} eine entscheidende Rolle. Aus ihnen wird klar, welche Funktionen der App noch zu entwickeln und welche in Frameworks schon vorhanden sind. Z. B. ist das Erkennen und das gerade Ziehen von Dokumenten in Echtzeit, sowie die Texterkennung auf Bildern in \textit{Vision} und \textit{VisionKit} enthalten. Bei der Entwicklung des ersten Prototyps half eine Beispiel-App von \textit{Apple} \cite{noauthor_detecting_nodate}, die das Erkennen von Objekten in Standbildern mithilfe der genannten Frameworks umsetzt.
 		
 		Durch die Auseinandersetzung mit den Bibliotheken konnte festgestellt werden, dass die zu entwickelnde App nur Geräte mit iOS 13.0 oder neuer unterstützen werden kann. Grund dafür sind die \textit{Apple} Frameworks \textit{SwiftUI} und \textit{VisionKit}. \textit{SwiftUI} bietet die Möglichkeit, Benutzeroberflächen für alle \textit{Apple}-Plattformen in \textit{Swift} zu erstellen. Die deklarative \textit{Swift}-Syntax ist einfach zu lesen und schnell zu schreiben, so dass es möglich ist, die App in wenigen Wochen für iPhone und iPad zu schreiben. Als Alternative gibt es noch \textit{UIKit} oder auch \textit{AppKit}, die unter alle iOS Versionen funktioniere. Diese Frameworks sind allerdings nicht deklarativ sodass, Views sowohl im Code als auch in Interface-Dateien getrennt voneinander erstellt und konfiguriert werden müssen \cite{sillmann_einstieg_nodate}. Dadurch dauert die Entwicklung einer App, im Gegensatz zu SwiftUI deutlich länger, wie man auch hier in dem Video \footnote{SwiftUI vs UIKit – Comparison of building the same app in each framework - \href{https://www.youtube.com/watch?v=qk2y-TiLDZo}{\url{https://www.youtube.com/watch?v=qk2y-TiLDZo}} } sieht. Sehr ähnliche Erfahrung, wie sie von  hat der Verfasser vor dem Praktikum mit den beiden Frameworks gemacht. \textit{VisionKit} dagegen, ist das Framework zum Scannen der Dokumente. Auch hierfür gibt es eine Alternative. Das Framework ist von den Entwicklern von \textit{WeTransfer} und funktioniert auch auf älteren iOS Versionen. Allerdings unterstützt \textit{WeScan} \footnote{WeScan GitHub Repository - \href{https://github.com/WeTransfer/WeScan}{\url{https://github.com/WeTransfer/WeScan}}} noch kein stapelweises Scannen. Das bedeutet, man kann immer nur ein Foto machen, welches erst abgespeichert werden muss, bevor man das nächste machen kann. Das ist für den Benutzer nicht bequem und spart wahrscheinlich auch keine Zeit.
 
-		Das Scrum-Konzept, welches sich für agile Softwareentwicklung anbietet, wurde zur Projektplanung und zum Projektmanagement verwendet. Als Versionsverwaltung der Software wurde Git in Kombination mit GitHub Issues und GitHub Projects als Planungstools benutzt. So konnte der Verfasser selbständig jedem Sprint Aufgaben zuordnen und den Fortschritt nachvollziehen.
+		Abschließend zu dieser Phase ist zu erwähnen, dass das Scrum-Konzept, welches sich für agile Softwareentwicklung anbietet, zur Projektplanung und zum Projektmanagement verwendet wurde. Als Versionsverwaltung der Software wurde Git in Kombination mit GitHub Issues und GitHub Projects als Planungstools benutzt. So konnte der Verfasser selbständig jedem Sprint Aufgaben zuordnen und den Fortschritt nachvollziehen.
 
 	\section{Grundlagen}
-			In den folgenden zwei Absätze werden wichtige Konzepte erklärt, die im Kapitel Entwurf und Design nochmal aufgegriffen werden.
+			In den folgenden zwei Absätze werden wichtige Konzepte und Grundwissen vermittelt, die im folgenden Kapitel Entwurf und Design nochmal aufgegriffen werden.
 
 		\paragraph{Model-View-ViewModel:}
 			Das Entwurfsmuster Model View ViewModel (MVVM)\nomenclature{MVVM}{Model View ViewModel} entstand bei \textit{Microsoft} im Jahr 2005 mit der \textit{Windows Presentation Foundation} (WPF) und \textit{Silverlight-Technologien}. MVVM verwendet das Konzept eines Schichtmodells und ist eine abstrakte Darstellung einer Benutzeroberfläche, in Form einer Klasse, wie man sie unter objektorientierten Programmiersprachen kennt. Diese Klasse enthält Daten, die auf der Benutzeroberfläche angezeigt werden sollen und Anweisungen, die auf der Benutzeroberfläche aufgerufen werden können. Dieses sogenannte ViewModel, weiß nichts von Views, wie es sonst bei anderen Entwurfsmustern üblich ist, um Daten auf der Benutzeroberfläche anzuzeigen. Stattdessen verwendet eine MVVM-View eine Bindungsfunktion (data binging) zur bidirektionalen Zuordnung von Daten aus dem ViewModel zu den jeweiligen Eigenschaften auf der View. Z. B. Einträge in einer Dropdown-Menü. Aber auch das binden von Daten aus dem Model zu Benutzereingaben durch Maus, Tastatur oder Touch-Screens ist möglich. Beispielsweise kann ein Mausklick eine Anweisung in dem ViewModel auslösen. Diese verändert einen Wert im Model, wodurch die View durch data binding aktualisiert wird. \cite{freeman_pro_2017} \cite{bragge_model-view-controller_2013}

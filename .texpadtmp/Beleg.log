@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.3.7)  15 APR 2020 18:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.3.7)  15 APR 2020 19:05
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -630,19 +630,6 @@ Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 282.
 )
 \Hy@SectionHShift=\skip81
-) (/usr/local/texlive/2019/texmf-dist/tex/latex/base/inputenc.sty
-Package: inputenc 2018/08/11 v1.3c Input encoding file
-\inpenc@prehook=\toks42
-\inpenc@posthook=\toks43
-) (/usr/local/texlive/2019/texmf-dist/tex/latex/base/fontenc.sty
-Package: fontenc 2018/08/11 v2.0j Standard LaTeX package
- (/usr/local/texlive/2019/texmf-dist/tex/latex/base/t1enc.def
-File: t1enc.def 2018/08/11 v2.0j Standard LaTeX file
-LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
-)) (/usr/local/texlive/2019/texmf-dist/tex/latex/hyphenat/hyphenat.sty
-Package: hyphenat 2009/09/02 v2.3c hyphenation utilities
-\langwohyphens=\language84
-LaTeX Info: Redefining \_ on input line 43.
 )
 
 LaTeX Warning: Unused global option(s):
@@ -651,26 +638,26 @@ LaTeX Warning: Unused global option(s):
 (/Users/hannessteiner/Documents/Praktikum-Bachelor/Praktikum/Beleg/LateX/.texpadtmp/Beleg.aux)
 \openout1 = `Beleg.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Try loading font information for T1+phv on input line 41.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Try loading font information for T1+phv on input line 37.
  (/usr/local/texlive/2019/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 )
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 11.03998pt on input line 41.
+(Font)              scaled to size 11.03998pt on input line 37.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -713,12 +700,12 @@ LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 \scratchbox=\box38
 \nofMPsegments=\count155
 \nofMParguments=\count156
-\everyMPshowfont=\toks44
+\everyMPshowfont=\toks42
 \MPscratchCnt=\count157
 \MPscratchDim=\dimen148
 \MPnumerator=\count158
 \makeMPintoPDFobject=\count159
-\everyMPtoPDFconversion=\toks45
+\everyMPtoPDFconversion=\toks43
 ) (/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
  (/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/grfext.sty
@@ -774,70 +761,70 @@ Package: setspace 2011/12/19 v6.7a set line spacing
 )
 \c@myromancounter=\count161
 
-Underfull \hbox (badness 10000) in paragraph at lines 41--41
+Underfull \hbox (badness 10000) in paragraph at lines 37--37
 
  []
 
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 22.88956pt on input line 41.
+(Font)              scaled to size 22.88956pt on input line 37.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <24.88> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 41.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 37.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 22.88956pt on input line 41.
+(Font)              scaled to size 22.88956pt on input line 37.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 10.07397pt on input line 41.
+(Font)              scaled to size 10.07397pt on input line 37.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 41.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 37.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 10.07397pt on input line 41.
+(Font)              scaled to size 10.07397pt on input line 37.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 15.89755pt on input line 41.
+(Font)              scaled to size 15.89755pt on input line 37.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <17.28> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 41.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 37.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 15.89755pt on input line 41.
+(Font)              scaled to size 15.89755pt on input line 37.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 41.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 37.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 11.03998pt on input line 41.
-LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 41.
+(Font)              scaled to size 11.03998pt on input line 37.
+LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 37.
 (/usr/local/texlive/2019/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
 File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 41.
+LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 37.
  (/usr/local/texlive/2019/texmf-dist/tex/latex/psnfss/omlztmcm.fd
 File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OMS+ztmcm on input line 41.
+LaTeX Font Info:    Try loading font information for OMS+ztmcm on input line 37.
  (/usr/local/texlive/2019/texmf-dist/tex/latex/psnfss/omsztmcm.fd
 File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 41.
+LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 37.
  (/usr/local/texlive/2019/texmf-dist/tex/latex/psnfss/omxztmcm.fd
 File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for U+rsfs on input line 41.
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 37.
  (/usr/local/texlive/2019/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 41.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 37.
  (/usr/local/texlive/2019/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 41.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 37.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 41.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 37.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 41.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 37.
 
-Underfull \vbox (badness 10000) detected at line 41
+Underfull \vbox (badness 10000) detected at line 37
  []
 
 <HSMW-Logo-150.pdf, id=1, 597.23125pt x 845.1575pt>
 File: HSMW-Logo-150.pdf Graphic file (type pdf)
 <use HSMW-Logo-150.pdf>
-Package pdftex.def Info: HSMW-Logo-150.pdf  used on input line 41.
+Package pdftex.def Info: HSMW-Logo-150.pdf  used on input line 37.
 (pdftex.def)             Requested size: 159.33542pt x 90.4174pt.
 [1
 
@@ -848,11 +835,11 @@ Package pdftex.def Info: HSMW-Logo-150.pdf  used on input line 41.
 
 ]
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 19.08076pt on input line 41.
+(Font)              scaled to size 19.08076pt on input line 37.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <20.74> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 41.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 37.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 19.08076pt on input line 41.
+(Font)              scaled to size 19.08076pt on input line 37.
 \@indexfile=\write4
 \openout4 = `Beleg.idx'.
 
@@ -861,13 +848,13 @@ Writing index file Beleg.idx
 \@nomenclaturefile=\write5
 \openout5 = `Beleg.nlo'.
 
-Package nomencl Info: Writing nomenclature file Beleg.nlo on input line 41.
+Package nomencl Info: Writing nomenclature file Beleg.nlo on input line 37.
 \glswrite=\write6
 \glo@main@file=\write7
 \openout7 = `Beleg.glo'.
 
-Package glossaries Info: Writing glossary file Beleg.glo on input line 41.
-Package hyperref Info: Link coloring OFF on input line 41.
+Package glossaries Info: Writing glossary file Beleg.glo on input line 37.
+Package hyperref Info: Link coloring OFF on input line 37.
 (/usr/local/texlive/2019/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
  (/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
@@ -876,21 +863,21 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 \c@section@level=\count162
 LaTeX Info: Redefining \Ref on input line 515.
 )
-LaTeX Info: Redefining \ref on input line 41.
-LaTeX Info: Redefining \pageref on input line 41.
-LaTeX Info: Redefining \nameref on input line 41.
+LaTeX Info: Redefining \ref on input line 37.
+LaTeX Info: Redefining \pageref on input line 37.
+LaTeX Info: Redefining \nameref on input line 37.
  (/Users/hannessteiner/Documents/Praktikum-Bachelor/Praktikum/Beleg/LateX/.texpadtmp/Beleg.out) (/Users/hannessteiner/Documents/Praktikum-Bachelor/Praktikum/Beleg/LateX/.texpadtmp/Beleg.out)
 \@outlinefile=\write8
 \openout8 = `Beleg.out'.
 
-LaTeX Info: Redefining \Ref on input line 41.
+LaTeX Info: Redefining \Ref on input line 37.
 Class scrbook Info: loading recommended package `bookmark'.
 (scrbook)           Using `bookmark' together with `hyperref' is recommended,
 (scrbook)           because of handling of possible bookmark level gaps.
 (scrbook)           You can avoid loading `bookmark' with KOMA-Script option
 (scrbook)           `bookmarkpackage=false' before \begin{document} and
 (scrbook)           you can avoid this message with `\usepackage{bookmark}'
-(scrbook)           before \begin{document} on input line 41.
+(scrbook)           before \begin{document} on input line 37.
  (/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/bookmark.sty
 Package: bookmark 2016/05/17 v1.26 PDF bookmarks (HO)
  (/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/bkm-pdftex.def
@@ -926,7 +913,7 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
 pdfTeX warning (ext4): destination with the same identifier (name{page.I}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.47 \end{Referat}
+l.43 \end{Referat}
                    [8] (/Users/hannessteiner/Documents/Praktikum-Bachelor/Praktikum/Beleg/LateX/.texpadtmp/Beleg.lof)
 \tf@lof=\write10
 \openout10 = `Beleg.lof'.
@@ -941,7 +928,7 @@ l.47 \end{Referat}
 ]pdfTeX warning (ext4): destination with the same identifier (name{page.II}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.47 \end{Referat}
+l.43 \end{Referat}
                    [10
 
 
@@ -957,7 +944,7 @@ l.47 \end{Referat}
 ]pdfTeX warning (ext4): destination with the same identifier (name{page.III}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.47 \end{Referat}
+l.43 \end{Referat}
                    [12
 
 
@@ -976,20 +963,20 @@ Overfull \hbox (31.37244pt too wide) in paragraph at lines 5--6
 ]pdfTeX warning (ext4): destination with the same identifier (name{page.IV}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.47 \end{Referat}
+l.43 \end{Referat}
                    [14
 
 
 ]
 chapter 1.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <12> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 59.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 55.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 11.03998pt on input line 59.
+(Font)              scaled to size 11.03998pt on input line 55.
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.65 \chapter
+l.61 \chapter
              {Hochschule Mittweida} [1
 
 
@@ -1000,20 +987,23 @@ l.65 \chapter
 ]pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.65 \chapter
+l.61 \chapter
              {Hochschule Mittweida} [2
 
 
 ]
 chapter 2.
+
+LaTeX Warning: Citation `noauthor_hochschule_nodate' on page 3 undefined on input line 62.
+
 pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.74 \chapter
+l.70 \chapter
              {Problemstellung} [3]pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.74 \chapter
+l.70 \chapter
              {Problemstellung} [4
 
 
@@ -1022,11 +1012,11 @@ chapter 3.
 pdfTeX warning (ext4): destination with the same identifier (name{page.5}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.85 	
+l.81 	
        [5]pdfTeX warning (ext4): destination with the same identifier (name{page.6}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.94 \chapter
+l.90 \chapter
              {Anforderungen} [6]
 chapter 4.
 [7
@@ -1035,54 +1025,72 @@ chapter 4.
 ] [8]
 chapter 5.
 
-Overfull \hbox (0.45984pt too wide) in paragraph at lines 115--116
+Overfull \hbox (0.45984pt too wide) in paragraph at lines 111--112
 \T1/phv/m/n/12 Wie in der Pro-blem-stel-lung und An-for-de-rung be-schrei-ben, soll die Dokumenten-Scanner
  []
 
-LaTeX Font Info:    Try loading font information for OMS+phv on input line 119.
+LaTeX Font Info:    Try loading font information for OMS+phv on input line 115.
 (/usr/local/texlive/2019/texmf-dist/tex/latex/psnfss/omsphv.fd
 File: omsphv.fd 
 )
 LaTeX Font Info:    Font shape `OMS/phv/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 119.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 115.
  [9
 
 
 ] [10]
 chapter 6.
+
+LaTeX Warning: Citation `noauthor_detecting_nodate' on page 11 undefined on input line 162.
+
+
+Overfull \hbox (7.60344pt too wide) in paragraph at lines 162--163
+[]\T1/phv/m/n/12 Für die Ent-wick-lung des Kon-zepts, wel-ches im Ka-pi-tel []Kon-zept der Dokumenten-Scanner-
+ []
+
+
+LaTeX Warning: Citation `sillmann_einstieg_nodate' on page 11 undefined on input line 164.
+
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 8.27998pt on input line 168.
+(Font)              scaled to size 8.27998pt on input line 164.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 9.19998pt on input line 168.
+(Font)              scaled to size 9.19998pt on input line 164.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 168.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 164.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 168.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 164.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 6.80797pt on input line 168.
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 168.
+(Font)              scaled to size 6.80797pt on input line 164.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 164.
 (/usr/local/texlive/2019/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 ) [11
 
 
-] [12] [13] [14]
+]
+
+LaTeX Warning: Citation `freeman_pro_2017' on page 12 undefined on input line 172.
+
+
+LaTeX Warning: Citation `bragge_model-view-controller_2013' on page 12 undefined on input line 172.
+
+[12] [13] [14]
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 235.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 231.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 13.24796pt on input line 235.
+(Font)              scaled to size 13.24796pt on input line 231.
 
-Underfull \hbox (badness 10000) in paragraph at lines 253--254
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 253--254
+Underfull \hbox (badness 10000) in paragraph at lines 249--250
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 253--254
+Underfull \hbox (badness 10000) in paragraph at lines 249--250
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 249--250
 
  []
 
@@ -1150,19 +1158,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 31--36
 
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 397.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 397.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 393.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 393.
  (/Users/hannessteiner/Documents/Praktikum-Bachelor/Praktikum/Beleg/LateX/.texpadtmp/Beleg.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 397.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 397.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 393.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 393.
 Package rerunfilecheck Info: File `Beleg.out' has not changed.
 (rerunfilecheck)             Checksum: <no file>.
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 18572 strings out of 492616
- 311127 string characters out of 6129482
+ 18513 strings out of 492616
+ 309943 string characters out of 6129482
  606561 words of memory out of 5000000
- 22003 multiletter control sequences out of 15000+600000
+ 21954 multiletter control sequences out of 15000+600000
  75906 words of font info for 119 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  64i,12n,105p,9119b,670s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1177,10 +1192,10 @@ pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist,
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
 
 {/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on /Users/hannessteiner/Documents/Praktikum-Bachelor/Praktikum/Beleg/LateX/.texpadtmp/Beleg.pdf (43 pages, 161316 bytes).
+Output written on /Users/hannessteiner/Documents/Praktikum-Bachelor/Praktikum/Beleg/LateX/.texpadtmp/Beleg.pdf (43 pages, 161274 bytes).
 PDF statistics:
- 473 PDF objects out of 1000 (max. 8388607)
- 415 compressed objects within 5 object streams
- 91 named destinations out of 1000 (max. 500000)
+ 470 PDF objects out of 1000 (max. 8388607)
+ 412 compressed objects within 5 object streams
+ 92 named destinations out of 1000 (max. 500000)
  308 words of extra memory for PDF output out of 10000 (max. 10000000)
 

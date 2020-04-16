@@ -7,8 +7,8 @@ Scanning style file /usr/local/texlive/2019/texmf-dist/makeindex/nomencl/nomencl
 ** Input style error (file = /usr/local/texlive/2019/texmf-dist/makeindex/nomencl/nomencl.ist, line = 38):
    -- Unknown specifier lethead_flag.
 ....done (12 attributes redefined, 3 ignored).
-Scanning input file /Users/hannessteiner/Documents/Praktikum-Bachelor/Praktikum/Beleg/LateX/.texpadtmp/Beleg.nlo....done (7 entries accepted, 0 rejected).
-Sorting entries....done (23 comparisons).
-Generating output file /Users/hannessteiner/Documents/Praktikum-Bachelor/Praktikum/Beleg/LateX/.texpadtmp/Beleg.nls....done (12 lines written, 0 warnings).
+Scanning input file /Users/hannessteiner/Documents/Praktikum-Bachelor/Praktikum/Beleg/LateX/.texpadtmp/Beleg.nlo....done (6 entries accepted, 0 rejected).
+Sorting entries....done (18 comparisons).
+Generating output file /Users/hannessteiner/Documents/Praktikum-Bachelor/Praktikum/Beleg/LateX/.texpadtmp/Beleg.nls....done (11 lines written, 0 warnings).
 Output written in /Users/hannessteiner/Documents/Praktikum-Bachelor/Praktikum/Beleg/LateX/.texpadtmp/Beleg.nls.
 Transcript written in /Users/hannessteiner/Documents/Praktikum-Bachelor/Praktikum/Beleg/LateX/.texpadtmp/Beleg.nlg.
