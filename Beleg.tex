@@ -185,9 +185,7 @@ In dem vorliegendem Praktikumsbericht...
 		
 		Eine typische Aufgabe dieser Entwurfsphase ist die Entscheidung über die Datenhaltung, die Verteilung im Netz und die Benutzeroberfläche des Software-Systems. Jedoch standen diese Grundsatzentscheidungen schon zu Beginn des Praktika, durch die Kenntnisse von Tobias Kallauke und dem Verfasser fest. Der Server verwendet zur Datenspeicherung Postgres, eine relationale Datenbank, sowie das Dateiverzeichnis für Bilder, während die App keine Daten persistent speichert. Durch die Aufteilung von App und Server handelt es sich um eine sogenannte Client/Server-Architektur und für die Benutzeroberfläche wird das deklarative SwiftUI verwendet. Bei Fragen zum Backend und der Android App siehe im Praktikumsbericht von Tobias Kallauke.
 		
-		- Verweis auf den Anhang
-		
-		Jedoch mussten noch Arbeit in den Workflow und in die Architektur der App gesteckt werden. Zur Definition einzelner Teil-Workflows, die zusammenhängende Aufgaben umfassen, wurden eine Art Zustandsautomaten bzw. Flussdiagramm beschrieben. Die Modelle halfen dabei Views zu entwickeln und deren Design festzulegen. Das Aussehen der App sollten sich jedoch im Laufe der Zeit noch ändern, denn erstmaleinmal stand die Umsetzung des Konzepts im Vordergrund.
+		Jedoch mussten noch Arbeit in den Workflow und in die Architektur der App gesteckt werden. Zur Definition einzelner Teil-Workflows, die zusammenhängende Aufgaben umfassen, wurden eine Art Zustandsautomaten bzw. Flussdiagramm beschrieben. Ein Beispiel, was noch einmal geändert in der App verwendet wurde befindet sich im Anhang \ref{ch:workflow}. Die Modelle halfen dabei Views zu entwickeln und deren Design festzulegen. Das Aussehen der App sollten sich jedoch im Laufe der Zeit noch ändern, denn erstmaleinmal stand die Umsetzung des Konzepts im Vordergrund.
 
 		Aus den Designs und den Teil-Workflows heraus entstand einen groben Plan, wie die Daten in der App gehandhabt werden sollten. Da \textit{SwiftUI} das Entwurfsmuster MVVM umsetzt, benötigt es eine Struktur für das ViewModel und für den Datenfluss der asynchronen Server-Rückrufe. Jedoch stellte sich die Entwicklung dieser Strukturen, auch schon während des allerersten Prototyps, als problematisch heraus. Denn auch bei steigender Komplexität soll das ViewModel noch übersichtlich bleiben, um eine schnelle Weiterentwicklung zu gewährleisten. Aus diesen Gründen begann die Suche nach einer besseren Lösung, bei der die JavaScript-Bibliothek \textit{Redux.js} zur Verwaltung von Zustandsinformationen in Webanwendung entdeckt wurde. 
 
@@ -204,8 +202,8 @@ In dem vorliegendem Praktikumsbericht...
 
 	\section{Implementierung}
 		
-		Dieses Kapitel...
-		
+		Dieses Kapitel behandelt ...
+			
 		\subsection{Registrieren und Anmelden}
 			\begin{figure}[th]
     			\centering
@@ -227,7 +225,16 @@ In dem vorliegendem Praktikumsbericht...
     			\caption{}\label{fig:start}
 			\end{figure}
 			
+			Die technische Implementierung der Registrierung und Anmeldung beinhaltet typische Charakteristiken, wie die meisten Anmelde- und Registrier-Formulare. Die E-Mail-Textfelder besitzt, wie auch das Passwort-Feld in der Anmeldung eine Auto-Fill-Funktion. Dadurch kann das iOS-Gerät Registrier- und Anmelde-Daten vorschlagen. Dies sieht man im dritten Bild \ref{fig:anmelden} anhand des ''Passwörter''-Knopfes über der Tastatur. 
 			
+			Weiter sind alle Passwort-Felder gesichert. Das bedeutet, dass der Inhalt zum Schutz der Privatsphäre standardmäßig ausgeblendet und mit Punkten ersetzt wird. Durch das drücken des Auges am Ende des Textfeldes kann der Inhalt jedoch eingesehen werden. Im mittlerem Bild \ref{fig:register} sind wegen der Sicherheitsstandards von iOS, bei einer Aufnahme des Bildschirms nicht einmal die Punkte des ersten Passwort-Textfelds zu sehen.
+			
+			Zusätzlich validieren alle Text-Felder ihren Inhalt mithilfe von regulären Ausdrücken. Beispielsweiße muss ein Passwort aus 8 Zeichen bestehen und zwei von den drei Folgenden Eigenschaften erfüllen:
+			\begin{enumerate}
+				\item Es ist mindestens ein Sonderzeichen enthalten.
+				\item Es ist mindestens ein Großbuchstabe enthalten.
+				\item Es ist mindestens eine Zahl enthalten.
+			\end{enumerate}
 			
 		\subsection{Template erstellen}
 			- Workflow als Bild?
@@ -336,7 +343,7 @@ In dem vorliegendem Praktikumsbericht...
 
 \Anhang
 
-\chapter{Workflow}
+\chapter{Workflow} \label{ch:workflow}
 	\section*{Vorlage erstellen}
 	\begin{enumerate}
 		\item ''Neue Vorlage erstellen''

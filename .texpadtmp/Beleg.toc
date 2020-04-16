@@ -21,19 +21,19 @@
 \contentsline {section}{\numberline {6.4}Entwurf und Design}{11}{section.6.4}% 
 \contentsline {section}{\numberline {6.5}Implementierung}{13}{section.6.5}% 
 \contentsline {subsection}{\numberline {6.5.1}Registrieren und Anmelden}{13}{subsection.6.5.1}% 
-\contentsline {subsection}{\numberline {6.5.2}Template erstellen}{13}{subsection.6.5.2}% 
+\contentsline {subsection}{\numberline {6.5.2}Template erstellen}{14}{subsection.6.5.2}% 
 \contentsline {subsection}{\numberline {6.5.3}Template speichern}{14}{subsection.6.5.3}% 
 \contentsline {subsection}{\numberline {6.5.4}Template verwenden}{14}{subsection.6.5.4}% 
 \contentsline {section}{\numberline {6.6}''Abnahme''}{14}{section.6.6}% 
-\contentsline {chapter}{\numberline {7}Weitere Entwicklung und Besonderheiten}{15}{chapter.7}% 
-\contentsline {section}{\numberline {7.1}App-Architektur}{15}{section.7.1}% 
-\contentsline {section}{\numberline {7.2}API}{15}{section.7.2}% 
-\contentsline {chapter}{\numberline {8}Grenzen der App}{16}{chapter.8}% 
-\contentsline {section}{\numberline {8.1}Probleme beim Erkennen von Dokumenten}{16}{section.8.1}% 
-\contentsline {section}{\numberline {8.2}Probleme der Klausur-Vorlage beim Scannen}{16}{section.8.2}% 
-\contentsline {section}{\numberline {8.3}Weitere ...}{16}{section.8.3}% 
-\contentsline {chapter}{\numberline {9}Templates}{17}{chapter.9}% 
-\contentsline {chapter}{\numberline {10}Ausblick}{18}{chapter.10}% 
-\contentsline {chapter}{\numberline {A}Workflow}{19}{appendix.A}% 
-\contentsline {chapter}{\numberline {B}T\IeC {\"a}tigkeitsbericht}{20}{appendix.B}% 
-\contentsline {chapter}{\nonumberline Literaturverzeichnis}{22}{chapter*.13}% 
+\contentsline {chapter}{\numberline {7}Weitere Entwicklung und Besonderheiten}{16}{chapter.7}% 
+\contentsline {section}{\numberline {7.1}App-Architektur}{16}{section.7.1}% 
+\contentsline {section}{\numberline {7.2}API}{16}{section.7.2}% 
+\contentsline {chapter}{\numberline {8}Grenzen der App}{17}{chapter.8}% 
+\contentsline {section}{\numberline {8.1}Probleme beim Erkennen von Dokumenten}{17}{section.8.1}% 
+\contentsline {section}{\numberline {8.2}Probleme der Klausur-Vorlage beim Scannen}{17}{section.8.2}% 
+\contentsline {section}{\numberline {8.3}Weitere ...}{17}{section.8.3}% 
+\contentsline {chapter}{\numberline {9}Templates}{18}{chapter.9}% 
+\contentsline {chapter}{\numberline {10}Ausblick}{19}{chapter.10}% 
+\contentsline {chapter}{\numberline {A}Workflow}{20}{appendix.A}% 
+\contentsline {chapter}{\numberline {B}T\IeC {\"a}tigkeitsbericht}{21}{appendix.B}% 
+\contentsline {chapter}{\nonumberline Literaturverzeichnis}{23}{chapter*.13}% 
