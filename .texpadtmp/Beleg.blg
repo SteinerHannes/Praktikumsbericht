@@ -12,10 +12,10 @@ Warning--to sort, need author or key in noauthor_hochschule_nodate
 Warning--to sort, need author or key in noauthor_detecting_nodate
 Warning--missing school in bragge_model-view-controller_2013
 ll is an illegal case-conversion string for entry freeman_pro_2017
-while executing---line 1770 of file ../iso690.bst.bst
+while executing---line 1790 of file ../iso690.bst.bst
 You've used 5 entries,
-            3472 wiz_defined-function locations,
-            722 strings with 6569 characters,
+            3509 wiz_defined-function locations,
+            725 strings with 6609 characters,
 and the built_in function-call counts, 1863 in all, are:
 = -- 176
 > -- 23

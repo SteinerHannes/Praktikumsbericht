@@ -63,7 +63,7 @@ In dem vorliegendem Praktikumsbericht...
 	
 	- wie komme ich auf 5? ''Laut der Studie...''
 	
-	Pro Semester schreibt jeder Student ca. 5 Prüfungen, was bedeutet, dass im Jahr um die 60.000 Klausuren kontrolliert werden. Dazu kommt, dass nachdem die Klausuren kontrolliert wurden, die Zensur, sowie die Eckdaten der Studenten, die an der Prüfung teilgenommen haben, in ein digitales Format gebracht werden muss. Grund dafür ist, dass die Übertragung der Noten in das Notensystem der Hochschule. Da die Mitarbeiter der Fakultät \textit{Angewandte Computer- und Biowissenschaften} (Fakultät CB)\nomenclature{Fakultät CB}{Fakultät für angewandte Computer- und Biowissenschaften} Holger Langner und Falk Schmidsberger selbst Klausuren kontrollieren und die Problematik genau kennen, entstand hier eines der ersten Ideen für Memo Space.
+	Nach eigener Einschätzung, schreibt jeder Student ca. 5 Prüfungen pro Semester, was bedeutet, dass im Jahr um die 60.000 Klausuren kontrolliert werden. Dazu kommt, dass nachdem die Klausuren kontrolliert wurden, die Zensur, sowie die Eckdaten der Studenten, die an der Prüfung teilgenommen haben, in ein digitales Format gebracht werden muss. Grund dafür ist, dass die Übertragung der Noten in das Notensystem der Hochschule. Da die Mitarbeiter der Fakultät \textit{Angewandte Computer- und Biowissenschaften} (Fakultät CB)\nomenclature{Fakultät CB}{Fakultät für angewandte Computer- und Biowissenschaften} Holger Langner und Falk Schmidsberger selbst Klausuren kontrollieren und die Problematik genau kennen, entstand hier eines der ersten Ideen für Memo Space.
 
 %%%%%%%%%%%%%%% - PROBLEMSTELLUNG - %%%%%%%%%%%%%%%
 
@@ -186,9 +186,9 @@ In dem vorliegendem Praktikumsbericht...
 		Jedoch mussten noch Arbeit in den Workflow und in die Architektur der App gesteckt werden. Zur Definition einzelner Teil-Workflows, die zusammenhängende Aufgaben umfassen, wurden eine Art Zustandsautomaten bzw. Flussdiagramm beschrieben. Die Modelle halfen dabei Views zu entwickeln und deren Design festzulegen. Das Aussehen der App sollten sich jedoch im Laufe der Zeit noch ändern, denn erstmaleinmal stand die Umsetzung des Konzepts im Vordergrund.
 
 		Aus den Designs und den Teil-Workflows heraus entstand einen groben Plan, wie die Daten in der App gehandhabt werden sollten. Da \textit{SwiftUI} das Entwurfsmuster MVVM umsetzt, benötigt es eine Struktur für das ViewModel und für den Datenfluss der asynchronen Server-Rückrufe. Jedoch stellte sich die Entwicklung dieser Strukturen, auch schon während des allerersten Prototyps, als problematisch heraus. Denn auch bei steigender Komplexität soll das ViewModel noch übersichtlich bleiben, um eine schnelle Weiterentwicklung zu gewährleisten. Aus diesen Gründen begann die Suche nach einer besseren Lösung, bei der die JavaScript-Bibliothek \textit{Redux.js} zur Verwaltung von Zustandsinformationen in Webanwendung entdeckt wurde. 
-		
+
 		\textit{Redux} hilft durch das Konzept, komplexen Views mit vielen Daten schnell und einfach zu implementieren. Auch werden so Serverantworten und zwischengespeicherte Daten sowie lokal erstellte Daten, die noch nicht auf dem Server gespeichert wurden, strukturiert und zentral abgelegt. Das erleichtert nicht nur das Wiederverwenden von Daten, sondern spart auch wiederholte Server-Aufrufe ein. Es erschien wichtig, trotz der der begrenzten Zeit im Praktikum, möglichst viel mit wenig Fehlern umzusetzen. Und auch da biete Redux großes Potential. Denn die modulare Aufteilung des State Containers ermöglicht eine schnelle Weiterentwicklung der App, auch wenn die Komplexität der Anwendung steigt. Und die Vorteile von Redux hinsichtlich des Testens und Untersuchens der App sollten helfen, Fehler möglichst schnell ausfindig zu machen, trotz asynchroner Programmabschnitte.
-		
+
 		Daher lag es nah die wesentlichen Konzepte von \textit{Redux} umzusetzen und einen \textit{Redux} ähnlichen State Container, als ViewModel zu implementieren. Aus der Definition von Teil-Workflows sollte der Container oder auch Store genannt mindestens 5 States haben: 
 		\begin{itemize}
 			\item für Authentifizierung sowie Registrierung,
@@ -197,8 +197,6 @@ In dem vorliegendem Praktikumsbericht...
 			\item für die Steuerung des Workflows bzw. den stellvertretenden Views sowie
 			\item für sonstige Daten, die sehr häufig verwendet werden.
 		\end{itemize}
-		
-		
 
 	\section{Implementierung}
 		
@@ -229,9 +227,13 @@ In dem vorliegendem Praktikumsbericht...
 		- keine Unit Tests etc. keine Zeit
 		
 	\section{''Abnahme''}	
-		Abnahme ... \\ \\ \\
-	
-	
+		Abnahme ... 
+		
+		
+	- wie benutze ich die App wie installiere ich die
+	- programmier sprachen, IDEs, 
+	- 
+		\\ \\ \\
 	Weitere Punkte die in Kapitel 6 rein könnten/sollten: 
 	
 	- beschreiben wie die einzelnen Views/Seiten nun aussehen und funktionieren? oder eher den Prozess der Entwicklung?
@@ -370,6 +372,11 @@ In dem vorliegendem Praktikumsbericht...
 	Das Backend für die App war soweit, dass ich es aufsetzten und die API-Schnittstellen implementieren konnte. Dazu erstellte ich Views für Registrieren und Anmelden, die mithilfe von regulären Ausdrücken, die Eingaben überprüfen. Außerdem entwickelte ich einen Schicht im App-Store, für die anfallenden asynchronen Aufgaben. Dabei laß ich mich in das Framework Combine ein und überlegte mir einen geeigneten Aufbau. Da der Ansatz von Combine sehr neu für mich war, dauerte es zwei Tage, bis ein erster API-Service mit Fehler-Handling funktionierte. Zum Ende der Woche waren alle der Create-Schnittstellen implementiert, getestet und dokumentiert. Nebenbei erstellte ein paar Issues für das Backend und sprach mich mit Tobias über OCR auf dem Server ab.
 	
 	\textbf{06.04. - 12.04.}
+	Diese Woche startete mit dem Umschreiben der Regionen-Links und deren Analyse. Anschließend integrierte ich die Neuerungen vom Backend und erstellte die API für den Upload von Bildern. Nachdem das fertig war fügte ich die APIs zusammen, um Vorlagen vollständig auf dem Server zu speichern und abzurufen. Dazu schrieb ich einen eigenen JSON Decoder-Funktion, um die App internen Datentypen zu unterstützen. Zusätzlich wurde die App etwas benutzerfreundlicher und ein Problem mit dem Start der iPad Version wurde behoben. Nach einem Meeting folgten noch weitere Absprachen mit Tobias und ich arbeitete weiter an dem Bericht.
+	
+	\textbf{14.04. - 19.04.}
+	Ein kritisches Problem mit den Sessions aus der vorherigen Woche konnte in dieser immer noch nicht gelöst werden. Dazu kamen weitere Probleme mit der Datenbank, um die sich Tobias kümmern muss, die die Funktionalität der App einschränkt. Allerdings konnte ich die Anwendung etwas optimieren und einen sehr großen Teil des Beleges fertig stellen. Dabei half auch die Beantwortung vieler Fragen während eines Meetings mit dem Betreuer.<
+	
 
 \bibliography{Beleg}
 \bibliographystyle{iso690.bst}
@@ -441,9 +448,5 @@ In dem vorliegendem Praktikumsbericht...
 %	 		...
 %	 		\\ \hline
 %	\end{longtable}
-
-	- wie benutze ich die App wie installiere ich die
-	- programmier sprachen, IDEs, 
-	- 
 
 

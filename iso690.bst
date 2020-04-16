@@ -404,6 +404,9 @@ FUNCTION {bbl.chapter}
 FUNCTION {bbl.techrep}
 { "Tech. Rep." }
 
+FUNCTION {bbl.bthesis}
+{ "Bachelorarbeit" }
+
 FUNCTION {bbl.mthesis}
 { "Masterarbeit" }
 
@@ -1482,6 +1485,23 @@ FUNCTION {mastersthesis}
   "title" output.check
   new.block
   bbl.mthesis format.thesis.type output.nonnull
+  school "school" bibinfo.warn output
+  address "address" bibinfo.check output
+  format.date "year" output.check
+  new.block
+  format.note output
+  fin.entry
+}
+
+FUNCTION {bachelorsthesis}
+{ output.bibitem
+  format.authors "author" output.check
+  new.block
+  title empty$ 'skip$ 'setup.inlinelink if$ % C:\Program Files\MiKTeX 2.8\scripts\urlbst\perl\urlbst.pl
+  format.btitle
+  "title" output.check
+  new.block
+  bbl.bthesis format.thesis.type output.nonnull
   school "school" bibinfo.warn output
   address "address" bibinfo.check output
   format.date "year" output.check
