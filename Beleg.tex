@@ -7,6 +7,10 @@
 	urlcolor=black
 }
 
+\usepackage{subcaption}
+\usepackage[section]{placeins}
+\usepackage{fancybox, graphicx}
+
 \Art{Praktikumsbericht}
 
 \Anrede{Herr}
@@ -87,7 +91,7 @@ In dem vorliegendem Praktikumsbericht...
 
 %%%%%%%%%%%%%%% - ANFORDERUNGEN - %%%%%%%%%%%%%%%
 
-\chapter{Anforderungen}
+\chapter{Anforderungen}\label{ch:anforderungen}
 	Es soll eine iOS-App entstehen mit der Klausuren digitalisiert werden können. Genauer müssen die, für die Notenfreigabe relevanten Daten der Klausur, in ein tabellarisches Format gebracht werden. Um unterschiedliche Klausuren oder auch andere Dokumente zu unterstützen, soll das Anlegen von Scan-Vorlagen in der App möglich sein. Hierfür (aber auch zum Einscannen) benötigt die App die Berechtigung für das Kamera-System. Diese muss, bei der ersten Benutzung einmalig erteilt werden.
 	
 	- Bild Scan-Vorlage: Aus Foto wird Dokument extrahiert und Auf der Seite werden Regionen markiert. -> Sammlung an Seiten mit Regionen
@@ -107,7 +111,7 @@ In dem vorliegendem Praktikumsbericht...
 
 %%%%%%%%%%%%%%% - GRUND IDEE ZUM LÖSEN DES PROBLEMS - %%%%%%%%%%%%%%%
 
-\chapter{Konzept der Dokumenten-Scanner-App}\hypertarget{konzept}{}
+\chapter{Konzept der Dokumenten-Scanner-App}\label{ch:konzept}
 	Wie in der Problemstellung und Anforderung beschreiben, soll die Dokumenten-Scanner App wichtigen Daten auf dem Deckblatt einer Klausur, wie Vor- und Nachname des Studenten, seine Matrikelnummer sowie die Note erkennen, digitalisieren und in ein für die Notenfreigabe geeignetes Format bringen. Die digitalisierten Daten sollen anschließend an einen Server gesendet werde, wo sie und die beim Einscannen entstandenen Bilder gespeichert werden. Verwendet eine einzuscannende Klausur die Klausuren-Vorlage der Fakultät CB oder ähnliche, die eine Punkteübersicht haben, dann soll es außerdem möglich sein, die Punkte sowie die Note auf Richtigkeit zu überprüfen. 
 
 	Zur Digitalisierung und Kontrolle der Daten werden Scan-Vorlagen verwendet. Diese muss vor dem Einscannen der ausgefüllten Klausuren erstellt werden, um zu gewährleisten, dass die richtigen Daten digitalisiert werden. Beim Erstellen einer Scan-Vorlage geht man wie folgt vor:
@@ -148,7 +152,7 @@ In dem vorliegendem Praktikumsbericht...
 	Dieses Kapitel beschreibt die Entwicklung der iOS-App in einer ähnlichen Reihenfolge, wie das bekannte Wasserfall-Model über die Verwaltung der Entwicklung großer Softwaresysteme nach Winston W. Royce. - Quelle:...
 	
 	\section{Anforderungsplanung}
-	Vor Beginn des Praktikums wurde diskutiert und kalkuliert, welches Thema aus dem Projekt Memo Space für ein zwölfwöchiges Praktikum geeignet ist. Dabei entstand eine Art Durchführbarkeits- / Machbarkeitsstudie, welche zur Entscheidung führte, ein Dokumenten-Scanner-Softwaresystem umzusetzen. Aufgrund der Kenntnisse und Erfahrung, soll ein Backend mit entsprechenden Schnittstellen und einer Android-App von Tobias Kallauke umgesetzt werden, währende vom Verfasser eine iOS-App gefordert ist. Die Anwendung soll den Anforderungen, die im gleichnamigen Kapitel zu finden sind, erfüllen. Für weitere Details über den Server und die Android-App siehe im Praktikumsbericht von Tobias Kallauke.
+	Vor Beginn des Praktikums wurde diskutiert und kalkuliert, welches Thema aus dem Projekt Memo Space für ein zwölfwöchiges Praktikum geeignet ist. Dabei entstand eine Art Durchführbarkeits- / Machbarkeitsstudie, welche zur Entscheidung führte, ein Dokumenten-Scanner-Softwaresystem umzusetzen. Aufgrund der Kenntnisse und Erfahrung, soll ein Backend mit entsprechenden Schnittstellen und einer Android-App von Tobias Kallauke umgesetzt werden, währende vom Verfasser eine iOS-App gefordert ist. Die Anwendung soll den Anforderungen, die im gleichnamigen Kapitel \ref{ch:anforderungen} zu finden sind, erfüllen. Für weitere Details über den Server und die Android-App siehe im Praktikumsbericht von Tobias Kallauke.
 
 	\section{Planung und Vorbereitung bzw. Analyse und Definition}
 		Die Aufgaben bzw. Ziele dieser Phase sind:
@@ -159,7 +163,7 @@ In dem vorliegendem Praktikumsbericht...
 			\item das Entwickeln eines ersten Prototyps, als Machbarkeitsnachweis.
 		\end{enumerate}
 		
-		Bei der Entstehung des Konzepts, welches im Kapitel \hyperlink{konzept}{Konzept der Dokumenten-Scanner-App} zu finden ist, spielen die Dokumentationen der Frameworks \textit{Vision}, \textit{VisionKit} und \textit{PhotoKit} von \textit{Apple} eine entscheidende Rolle. Aus ihnen wird klar, welche Funktionen der App noch zu entwickeln und welche in Frameworks schon vorhanden sind. Z. B. ist das Erkennen und das gerade Ziehen von Dokumenten in Echtzeit, sowie die Texterkennung auf Bildern in \textit{Vision} und \textit{VisionKit} enthalten. Bei der Entwicklung des ersten Prototyps half eine Beispiel-App von \textit{Apple} \cite{noauthor_detecting_nodate}, die das Erkennen von Objekten in Standbildern mithilfe der genannten Frameworks umsetzt.
+		Bei der Entstehung des Konzepts, welches im Kapitel \ref{ch:konzept} zu finden ist, spielen die Dokumentationen der Frameworks \textit{Vision}, \textit{VisionKit} und \textit{PhotoKit} von \textit{Apple} eine entscheidende Rolle. Aus ihnen wird klar, welche Funktionen der App noch zu entwickeln und welche in Frameworks schon vorhanden sind. Z. B. ist das Erkennen und das gerade Ziehen von Dokumenten in Echtzeit, sowie die Texterkennung auf Bildern in \textit{Vision} und \textit{VisionKit} enthalten. Bei der Entwicklung des ersten Prototyps half eine Beispiel-App von \textit{Apple} \cite{noauthor_detecting_nodate}, die das Erkennen von Objekten in Standbildern mithilfe der genannten Frameworks umsetzt.
 		
 		Durch die Auseinandersetzung mit den Bibliotheken konnte festgestellt werden, dass die zu entwickelnde App nur Geräte mit iOS 13.0 oder neuer unterstützen werden kann. Grund dafür sind die \textit{Apple} Frameworks \textit{SwiftUI} und \textit{VisionKit}. \textit{SwiftUI} bietet die Möglichkeit, Benutzeroberflächen für alle \textit{Apple}-Plattformen in \textit{Swift} zu erstellen. Die deklarative \textit{Swift}-Syntax ist einfach zu lesen und schnell zu schreiben, so dass es möglich ist, die App in wenigen Wochen für iPhone und iPad zu schreiben. Als Alternative gibt es noch \textit{UIKit} oder auch \textit{AppKit}, die unter alle iOS Versionen funktioniere. Diese Frameworks sind allerdings nicht deklarativ sodass, Views sowohl im Code als auch in Interface-Dateien getrennt voneinander erstellt und konfiguriert werden müssen \cite{sillmann_einstieg_nodate}. Dadurch dauert die Entwicklung einer App, im Gegensatz zu SwiftUI deutlich länger, wie man auch hier in dem Video \footnote{SwiftUI vs UIKit – Comparison of building the same app in each framework - \href{https://www.youtube.com/watch?v=qk2y-TiLDZo}{\url{https://www.youtube.com/watch?v=qk2y-TiLDZo}} } von Paul Hudson einem in der Swift-Community sehr bekannten Programmiere und Autor sieht. Sehr ähnliche Erfahrung hat der Verfasser vor dem Praktikum mit den beiden Frameworks gemacht. \textit{VisionKit} dagegen, ist das Framework zum Scannen der Dokumente. Auch hierfür gibt es eine Alternative. Das Framework ist von den Entwicklern von \textit{WeTransfer} und funktioniert auch auf älteren iOS Versionen. Allerdings unterstützt \textit{WeScan} \footnote{WeScan GitHub Repository - \href{https://github.com/WeTransfer/WeScan}{\url{https://github.com/WeTransfer/WeScan}}} noch kein stapelweises Scannen. Das bedeutet, man kann immer nur ein Foto machen, welches erst abgespeichert werden muss, bevor man das nächste machen kann. Das ist für den Benutzer nicht bequem und spart wahrscheinlich auch keine Zeit.
 
@@ -200,16 +204,30 @@ In dem vorliegendem Praktikumsbericht...
 
 	\section{Implementierung}
 		
-		- In welcher Reihenfolge soll ich hier vor gehen? In der logischen oder in der, wie ich es gemacht habe?
-		
-		Bei der Implementierung und Umsetzung der Anforderungen 
-		
-		
-		
-		
-		Einzelne Schritte als eigene Section mit Verlauf der jeweiligen Entwicklung: erst das, dann kam das, dann musste es so, ...
+		Dieses Kapitel...
 		
 		\subsection{Registrieren und Anmelden}
+			\begin{figure}[th]
+    			\centering
+    			\begin{subfigure}[t]{0.3\textwidth}
+        			\frame{\includegraphics[width=0.96\textwidth]{img/1willkommen.png}}
+        			\caption{Willkommen View}
+        			\label{fig:willkommen}
+    			\end{subfigure}
+    			\begin{subfigure}[t]{0.3\textwidth}
+        			\frame{\includegraphics[width=0.96\textwidth]{img/7reg_full_see.png}}
+        			\caption{Registrierung mit sicheren Eingabefeldern}
+        			\label{fig:register}
+    			\end{subfigure}
+    			\begin{subfigure}[t]{0.3\textwidth}
+       				\frame{\includegraphics[width=0.96\textwidth]{img/12an_full_pass.png}}
+        			\caption{Anmeldung mit AutoFill-Funktion}
+        			\label{fig:anmelden}
+    			\end{subfigure}
+    			\caption{}\label{fig:start}
+			\end{figure}
+			
+			
 			
 		\subsection{Template erstellen}
 			- Workflow als Bild?
@@ -218,11 +236,7 @@ In dem vorliegendem Praktikumsbericht...
 		
 		\subsection{Template verwenden}
 		
-		.
-		
-		Die Beispiel-App von \textit{Apple} nahm ich mir als Vorbild für die Umsetzung der Texterkennung.
-		
-		...
+
 		
 		- keine Unit Tests etc. keine Zeit
 		
