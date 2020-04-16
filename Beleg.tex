@@ -1,6 +1,6 @@
 \newcommand{\cmmnt}[1]{}
 % Bei Abgabe löschen
-\documentclass[nomenclature, onesided, 150]{HSMW-Thesis}
+\documentclass[nomenclature, oneside, 150]{HSMW-Thesis}
 
 \usepackage{hyperref}
 \hypersetup{
@@ -145,7 +145,7 @@ In dem vorliegendem Praktikumsbericht...
 %%%%%%%%%%%%%%% - PROTOTYP - %%%%%%%%%%%%%%%
 
 \chapter{Entwicklung des ersten Prototyps}
-	Diese Kapitel beschreibt die Entwicklung der iOS-App in einer ähnlichen Reihenfolge, wie das Wasserfall-Model über die Verwaltung der Entwicklung großer Softwaresysteme nach Winston W. Royce. - Quelle:...
+	Dieses Kapitel beschreibt die Entwicklung der iOS-App in einer ähnlichen Reihenfolge, wie das bekannte Wasserfall-Model über die Verwaltung der Entwicklung großer Softwaresysteme nach Winston W. Royce. - Quelle:...
 	
 	\section{Anforderungsplanung}
 	Vor Beginn des Praktikums wurde diskutiert und kalkuliert, welches Thema aus dem Projekt Memo Space für ein zwölfwöchiges Praktikum geeignet ist. Dabei entstand eine Art Durchführbarkeits- / Machbarkeitsstudie, welche zur Entscheidung führte, ein Dokumenten-Scanner-Softwaresystem umzusetzen. Aufgrund der Kenntnisse und Erfahrung, soll ein Backend mit entsprechenden Schnittstellen und einer Android-App von Tobias Kallauke umgesetzt werden, währende vom Verfasser eine iOS-App gefordert ist. Die Anwendung soll den Anforderungen, die im gleichnamigen Kapitel zu finden sind, erfüllen. Für weitere Details über den Server und die Android-App siehe im Praktikumsbericht von Tobias Kallauke.
@@ -153,15 +153,15 @@ In dem vorliegendem Praktikumsbericht...
 	\section{Planung und Vorbereitung bzw. Analyse und Definition}
 		Die Aufgaben bzw. Ziele dieser Phase sind:
 		\begin{enumerate}
-			\item die Auseinandersetzung mit der Problemstellung bzw. den Anforderungen,
+			\item die Auseinandersetzung mit der Problemstellung und den Anforderungen,
 			\item das Betreiben von einer Problemanalyse,
-			\item die Entwicklung von Ideen und eines genauen Konzepts der iOS-App und 
+			\item die Entwicklung von Ideen und eines genauen Konzepts der iOS-App sowie 
 			\item das Entwickeln eines ersten Prototyps, als Machbarkeitsnachweis.
 		\end{enumerate}
 		
-		Für die Entwicklung des Konzepts, welches im Kapitel \hyperlink{konzept}{Konzept der Dokumenten-Scanner-App} zu finden ist, spielen die Dokumentationen der Frameworks \textit{Vision}, \textit{VisionKit} und \textit{PhotoKit} von \textit{Apple} eine entscheidende Rolle. Aus ihnen wird klar, welche Funktionen der App noch zu entwickeln und welche in Frameworks schon vorhanden sind. Z. B. ist das Erkennen und das gerade Ziehen von Dokumenten in Echtzeit, sowie die Texterkennung auf Bildern in \textit{Vision} und \textit{VisionKit} enthalten. Bei der Entwicklung des ersten Prototyps half eine Beispiel-App von \textit{Apple} \cite{noauthor_detecting_nodate}, die das Erkennen von Objekten in Standbildern mithilfe der genannten Frameworks umsetzt.
+		Bei der Entstehung des Konzepts, welches im Kapitel \hyperlink{konzept}{Konzept der Dokumenten-Scanner-App} zu finden ist, spielen die Dokumentationen der Frameworks \textit{Vision}, \textit{VisionKit} und \textit{PhotoKit} von \textit{Apple} eine entscheidende Rolle. Aus ihnen wird klar, welche Funktionen der App noch zu entwickeln und welche in Frameworks schon vorhanden sind. Z. B. ist das Erkennen und das gerade Ziehen von Dokumenten in Echtzeit, sowie die Texterkennung auf Bildern in \textit{Vision} und \textit{VisionKit} enthalten. Bei der Entwicklung des ersten Prototyps half eine Beispiel-App von \textit{Apple} \cite{noauthor_detecting_nodate}, die das Erkennen von Objekten in Standbildern mithilfe der genannten Frameworks umsetzt.
 		
-		Durch die Auseinandersetzung mit den Bibliotheken konnte festgestellt werden, dass die zu entwickelnde App nur Geräte mit iOS 13.0 oder neuer unterstützen werden kann. Grund dafür sind die \textit{Apple} Frameworks \textit{SwiftUI} und \textit{VisionKit}. \textit{SwiftUI} bietet die Möglichkeit, Benutzeroberflächen für alle \textit{Apple}-Plattformen in \textit{Swift} zu erstellen. Die deklarative \textit{Swift}-Syntax ist einfach zu lesen und schnell zu schreiben, so dass es möglich ist, die App in wenigen Wochen für iPhone und iPad zu schreiben. Als Alternative gibt es noch \textit{UIKit} oder auch \textit{AppKit}, die unter alle iOS Versionen funktioniere. Diese Frameworks sind allerdings nicht deklarativ sodass, Views sowohl im Code als auch in Interface-Dateien getrennt voneinander erstellt und konfiguriert werden müssen \cite{sillmann_einstieg_nodate}. Dadurch dauert die Entwicklung einer App, im Gegensatz zu SwiftUI deutlich länger, wie man auch hier in dem Video \footnote{SwiftUI vs UIKit – Comparison of building the same app in each framework - \href{https://www.youtube.com/watch?v=qk2y-TiLDZo}{\url{https://www.youtube.com/watch?v=qk2y-TiLDZo}} } sieht. Sehr ähnliche Erfahrung, wie sie von  hat der Verfasser vor dem Praktikum mit den beiden Frameworks gemacht. \textit{VisionKit} dagegen, ist das Framework zum Scannen der Dokumente. Auch hierfür gibt es eine Alternative. Das Framework ist von den Entwicklern von \textit{WeTransfer} und funktioniert auch auf älteren iOS Versionen. Allerdings unterstützt \textit{WeScan} \footnote{WeScan GitHub Repository - \href{https://github.com/WeTransfer/WeScan}{\url{https://github.com/WeTransfer/WeScan}}} noch kein stapelweises Scannen. Das bedeutet, man kann immer nur ein Foto machen, welches erst abgespeichert werden muss, bevor man das nächste machen kann. Das ist für den Benutzer nicht bequem und spart wahrscheinlich auch keine Zeit.
+		Durch die Auseinandersetzung mit den Bibliotheken konnte festgestellt werden, dass die zu entwickelnde App nur Geräte mit iOS 13.0 oder neuer unterstützen werden kann. Grund dafür sind die \textit{Apple} Frameworks \textit{SwiftUI} und \textit{VisionKit}. \textit{SwiftUI} bietet die Möglichkeit, Benutzeroberflächen für alle \textit{Apple}-Plattformen in \textit{Swift} zu erstellen. Die deklarative \textit{Swift}-Syntax ist einfach zu lesen und schnell zu schreiben, so dass es möglich ist, die App in wenigen Wochen für iPhone und iPad zu schreiben. Als Alternative gibt es noch \textit{UIKit} oder auch \textit{AppKit}, die unter alle iOS Versionen funktioniere. Diese Frameworks sind allerdings nicht deklarativ sodass, Views sowohl im Code als auch in Interface-Dateien getrennt voneinander erstellt und konfiguriert werden müssen \cite{sillmann_einstieg_nodate}. Dadurch dauert die Entwicklung einer App, im Gegensatz zu SwiftUI deutlich länger, wie man auch hier in dem Video \footnote{SwiftUI vs UIKit – Comparison of building the same app in each framework - \href{https://www.youtube.com/watch?v=qk2y-TiLDZo}{\url{https://www.youtube.com/watch?v=qk2y-TiLDZo}} } von Paul Hudson einem in der Swift-Community sehr bekannten Programmiere und Autor sieht. Sehr ähnliche Erfahrung hat der Verfasser vor dem Praktikum mit den beiden Frameworks gemacht. \textit{VisionKit} dagegen, ist das Framework zum Scannen der Dokumente. Auch hierfür gibt es eine Alternative. Das Framework ist von den Entwicklern von \textit{WeTransfer} und funktioniert auch auf älteren iOS Versionen. Allerdings unterstützt \textit{WeScan} \footnote{WeScan GitHub Repository - \href{https://github.com/WeTransfer/WeScan}{\url{https://github.com/WeTransfer/WeScan}}} noch kein stapelweises Scannen. Das bedeutet, man kann immer nur ein Foto machen, welches erst abgespeichert werden muss, bevor man das nächste machen kann. Das ist für den Benutzer nicht bequem und spart wahrscheinlich auch keine Zeit.
 
 		Abschließend zu dieser Phase ist zu erwähnen, dass das Scrum-Konzept, welches sich für agile Softwareentwicklung anbietet, zur Projektplanung und zum Projektmanagement verwendet wurde. Als Versionsverwaltung der Software wurde Git in Kombination mit GitHub Issues und GitHub Projects als Planungstools benutzt. So konnte der Verfasser selbständig jedem Sprint Aufgaben zuordnen und den Fortschritt nachvollziehen.
 
@@ -176,46 +176,29 @@ In dem vorliegendem Praktikumsbericht...
 			Ein weiteres wichtiges Prinzip\footnote{Three Principles - \href{https://redux.js.org/introduction/three-principles}{\url{https://redux.js.org/introduction/three-principles}}} von Redux ist, dass die Daten in den States Schreibgeschütz sind. Die einzige Möglichkeit den Zustand zu ändern, besteht darin, eine Aktion auszulösen, die beschreibt, was passiert. Dadurch wird sichergestellt, dass weder die Views noch Netzwerk-Rückrufe jemals direkt an den Zustand schreiben werden. Stattdessen bringen sie nur die Absicht zum Ausdruck, den Zustand zu verändern und lösen eine Aktion aus. Da alle Änderungen zentralisiert sind und eine nach der anderen in einer strikten Reihenfolge erfolgen, gibt es weniger Programmfehler-Quellen.
 
 	\section{Entwurf und Design}
-		
-		Nach der Planung und Vorbereitung begann ich damit, mir Gedanken zu dem Workflow der App zu machen und erstellte den ersten Sprint bis zum nächsten Meeting. Für den Workflow fertigte ich zu jeder View ein grobes Design an, welches sehr schnell in \textit{SwiftUI} umzusetzen ist. Das Aussehen der App sollten sich dann im Laufe der Zeit noch ändern, jedoch stand erstmal die Umsetzung des Konzepts im Vordergrund. 
 
-		Aus den Designs und dem Workflow heraus entwickelte ich einen groben Plan, wie die Daten in der App gehandhabt werden sollten. Da \textit{SwiftUI} das Entwurfsmuster MVVM umsetzt, überlegte ich mir eine Struktur für das ViewModel und für den Datenfluss der asynchronen Server-Rückrufe. Jedoch stellte ich schnell fest, dass meine Idee nicht ideal ist, wenn noch mehr Views hinzukommen. Aus diesen Gründen suchte ich nach einer besseren Lösung. Dabei entdeckte ich die JavaScript-Bibliothek \textit{Redux.js} zur Verwaltung von Zustandsinformationen in Webanwendung. 
+		- Quelle Schubert Folien
 		
-		\textit{Redux} hilft durch das Konzept, komplexen Views mit vielen Daten schnell und einfach zu implementieren. Auch werden so Serverantworten und zwischengespeicherte Daten sowie lokal erstellte Daten, die noch nicht auf dem Server gespeichert wurden, strukturiert und zentral abgelegt. Das erleichtert nicht nur das Wiederverwenden von Daten, sondern spart auch wiederholte Server-Aufrufe ein. Für mich war es wichtig, trotz der der begrenzten Zeit im Praktikum, möglichst viel mit wenig Fehlern umzusetzen. Und auch da sah ich in Redux großes Potential mir dabei zu helfen. Denn die modulare Aufteilung des State Containers ermöglicht eine schnelle Weiterentwicklung der App, auch wenn die Komplexität der Anwendung steigt. Und die Vorteile von Redux hinsichtlich des Testens und Untersuchens der App sollten helfen, Fehler möglichst schnell ausfindig zu machen, trotz asynchroner Programmabschnitte.
+		Eine typische Aufgabe dieser Entwurfsphase ist die Entscheidung über die Datenhaltung, die Verteilung im Netz und die Benutzeroberfläche des Software-Systems. Jedoch standen diese Grundsatzentscheidungen schon zu Beginn des Praktika, durch die Kenntnisse von Tobias Kallauke und dem Verfasser fest. Der Server verwendet zur Datenspeicherung Postgres, eine relationale Datenbank, sowie das Dateiverzeichnis für Bilder, während die App keine Daten persistent speichert. Durch die Aufteilung von App und Server handelt es sich um eine sogenannte Client/Server-Architektur und für die Benutzeroberfläche wird das deklarative SwiftUI verwendet. Bei Fragen zum Backend und der Android App siehe im Praktikumsbericht von Tobias Kallauke.
 		
-		Daher lag es nah die wesentlichen Konzepte von \textit{Redux} umzusetzen und einen \textit{Redux} ähnlichen State Container, als ViewModel zu implementieren. Ich überlegte mir noch vor Beginn der Implementierung die States sowie deren Aktionen, die zwingend notwendig sind, um Views und Daten sinnvoll zu separieren.
+		- Verweis auf den Anhang
 		
+		Jedoch mussten noch Arbeit in den Workflow und in die Architektur der App gesteckt werden. Zur Definition einzelner Teil-Workflows, die zusammenhängende Aufgaben umfassen, wurden eine Art Zustandsautomaten bzw. Flussdiagramm beschrieben. Die Modelle halfen dabei Views zu entwickeln und deren Design festzulegen. Das Aussehen der App sollten sich jedoch im Laufe der Zeit noch ändern, denn erstmaleinmal stand die Umsetzung des Konzepts im Vordergrund.
+
+		Aus den Designs und den Teil-Workflows heraus entstand einen groben Plan, wie die Daten in der App gehandhabt werden sollten. Da \textit{SwiftUI} das Entwurfsmuster MVVM umsetzt, benötigt es eine Struktur für das ViewModel und für den Datenfluss der asynchronen Server-Rückrufe. Jedoch stellte sich die Entwicklung dieser Strukturen, auch schon während des allerersten Prototyps, als problematisch heraus. Denn auch bei steigender Komplexität soll das ViewModel noch übersichtlich bleiben, um eine schnelle Weiterentwicklung zu gewährleisten. Aus diesen Gründen begann die Suche nach einer besseren Lösung, bei der die JavaScript-Bibliothek \textit{Redux.js} zur Verwaltung von Zustandsinformationen in Webanwendung entdeckt wurde. 
 		
+		\textit{Redux} hilft durch das Konzept, komplexen Views mit vielen Daten schnell und einfach zu implementieren. Auch werden so Serverantworten und zwischengespeicherte Daten sowie lokal erstellte Daten, die noch nicht auf dem Server gespeichert wurden, strukturiert und zentral abgelegt. Das erleichtert nicht nur das Wiederverwenden von Daten, sondern spart auch wiederholte Server-Aufrufe ein. Es erschien wichtig, trotz der der begrenzten Zeit im Praktikum, möglichst viel mit wenig Fehlern umzusetzen. Und auch da biete Redux großes Potential. Denn die modulare Aufteilung des State Containers ermöglicht eine schnelle Weiterentwicklung der App, auch wenn die Komplexität der Anwendung steigt. Und die Vorteile von Redux hinsichtlich des Testens und Untersuchens der App sollten helfen, Fehler möglichst schnell ausfindig zu machen, trotz asynchroner Programmabschnitte.
 		
-		Der Container sollte mindestens 5 States haben: 
+		Daher lag es nah die wesentlichen Konzepte von \textit{Redux} umzusetzen und einen \textit{Redux} ähnlichen State Container, als ViewModel zu implementieren. Aus der Definition von Teil-Workflows sollte der Container oder auch Store genannt mindestens 5 States haben: 
 		\begin{itemize}
 			\item für Authentifizierung sowie Registrierung,
 			\item für das Anlegen von Vorlagen, um Zwischenergebnisse zu speichern,
-			\item für das Ausführen von Server-Aufrufen zum Speichern und Abrufen von Templates, 
-			\item für die Steuerung von in Abhängigkeit stehenden Views und
+			\item für das Ausführen von Server-Aufrufen zum Speichern und Abrufen von Vorlagen, 
+			\item für die Steuerung des Workflows bzw. den stellvertretenden Views sowie
 			\item für sonstige Daten, die sehr häufig verwendet werden.
 		\end{itemize}
 		
 		
-			
-		Da ich zuvor noch nie mit einem State Container gearbeitet habe, fing ich 
-		
-		
-		
-		Ich machte mir Gedanken darüber, welche States zu implementieren wären und kam auf 
-		Die App benötigte für 
-		
-		- auth
-		
-		- service
-		
-		- template anlegen
-		
-		- routing
-		
-		- sonstiges
-		
-		- actions können actions aufrufen -> verändern den container und die views upadten sich, zu den änderungen in den states
 
 	\section{Implementierung}
 		
@@ -337,6 +320,35 @@ In dem vorliegendem Praktikumsbericht...
 
 \Anhang
 
+\chapter{Workflow}
+	\section*{Vorlage erstellen}
+	\begin{enumerate}
+		\item ''Neue Vorlage erstellen''
+		\item Foto machen
+		\item Frage: Ist Foto gut? 
+		\begin{enumerate}
+			\item Ja: gehe zu 4.
+			\item Nein: gehe zu 2.
+		\end{enumerate}
+		\item Neues Attribut hinzufügen
+		\item Bereich auf Bild auswählen
+		\item Frage: Ist Bereich gut?
+		\begin{enumerate}
+			\item Ja: gehe zu 7.
+			\item Nein: gehe zu 5.
+		\end{enumerate}
+		\item Name für Attribut festlegen
+		\item Datentyp für Attribut festlegen (Name, Matrikelnummer, Note, ...)
+		\item Frage: Sind alle Attribute vorhanden?
+		\begin{enumerate}
+			\item Ja: gehe zu 10.
+			\item Nein: gehe zu 4.
+		\end{enumerate}
+		\item Fertig
+		\item Vorlage an Server senden
+	\end{enumerate}
+	
+
 \chapter{Tätigkeitsbericht}
 	\textbf{24.02. - 01.03.}
 	Ich habe mich mit der Problemstellung auseinander gesetzt, Ideen gesammelt, Problemanalyse betrieben und einen kleinen Prototypen entwickelt. Dazu erstellte ich einen minimalen Projektplanung, arbeitete mich in die Frameworks \textit{Vision} und \textit{VisionKit} ein und setzte eine Versionsverwaltung auf. Zusätzlich suchte ich nach einer passenden App-Architektur, die geeignet für das deklarative GUI-Framework SwiftUI, sowie für asynchrone Aufgaben, wie z. B. API-Aufrufe ist. Dabei stieß ich auf \textit{Cleancode Architecture} und \textit{Redux}.
@@ -357,7 +369,7 @@ In dem vorliegendem Praktikumsbericht...
 	\textbf{30.03. - 05.04.} 
 	Das Backend für die App war soweit, dass ich es aufsetzten und die API-Schnittstellen implementieren konnte. Dazu erstellte ich Views für Registrieren und Anmelden, die mithilfe von regulären Ausdrücken, die Eingaben überprüfen. Außerdem entwickelte ich einen Schicht im App-Store, für die anfallenden asynchronen Aufgaben. Dabei laß ich mich in das Framework Combine ein und überlegte mir einen geeigneten Aufbau. Da der Ansatz von Combine sehr neu für mich war, dauerte es zwei Tage, bis ein erster API-Service mit Fehler-Handling funktionierte. Zum Ende der Woche waren alle der Create-Schnittstellen implementiert, getestet und dokumentiert. Nebenbei erstellte ein paar Issues für das Backend und sprach mich mit Tobias über OCR auf dem Server ab.
 	
-	\textbf{06.04. - 12.04}
+	\textbf{06.04. - 12.04.}
 
 \bibliography{Beleg}
 \bibliographystyle{iso690.bst}

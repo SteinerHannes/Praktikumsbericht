@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.3.7)  15 APR 2020 19:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.3.7)  16 APR 2020 11:29
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -50,6 +50,12 @@ File: scrsize12pt.clo 2019/02/01 v3.26b KOMA-Script font size class option (12pt
 Package: typearea 2019/02/01 v3.26b KOMA-Script package (type area)
 \ta@bcor=\skip42
 \ta@div=\count82
+Package typearea Info: You've used standard option `oneside'.
+(typearea)             This is correct!
+(typearea)             Internally I'm using `twoside=false'.
+(typearea)             If you'd like to set the option with \KOMAoptions,
+(typearea)             you'd have to use `twoside=false' there
+(typearea)             instead of `oneside', too.
 \ta@hblk=\skip43
 \ta@vblk=\skip44
 \ta@temp=\skip45
@@ -60,8 +66,8 @@ Package typearea Info: These are the values describing the layout:
 (typearea)             \paperwidth      = 597.50793pt
 (typearea)              \textwidth      = 448.13095pt
 (typearea)              DIV departure   = -6%
-(typearea)              \evensidemargin = 27.31467pt
-(typearea)              \oddsidemargin  = -22.47766pt
+(typearea)              \evensidemargin = 2.4185pt
+(typearea)              \oddsidemargin  = 2.4185pt
 (typearea)             \paperheight     = 845.04694pt
 (typearea)              \textheight     = 606.5pt
 (typearea)              \topmargin      = -1.84941pt
@@ -630,12 +636,7 @@ Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 282.
 )
 \Hy@SectionHShift=\skip81
-)
-
-LaTeX Warning: Unused global option(s):
-    [onesided].
-
-(/Users/hannessteiner/Documents/Praktikum-Bachelor/Praktikum/Beleg/LateX/.texpadtmp/Beleg.aux)
+) (/Users/hannessteiner/Documents/Praktikum-Bachelor/Praktikum/Beleg/LateX/.texpadtmp/Beleg.aux)
 \openout1 = `Beleg.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
@@ -666,7 +667,7 @@ LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 * paper: a4paper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
-* modes: includehead twoside 
+* modes: includehead 
 * h-part:(L,W,R)=(99.58464pt, 423.94608pt, 73.97716pt)
 * v-part:(T,H,B)=(36.98857pt, 728.39056pt, 79.66771pt)
 * \paperwidth=597.50787pt
@@ -674,13 +675,13 @@ LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 * \textwidth=423.94608pt
 * \textheight=688.51556pt
 * \oddsidemargin=27.31465pt
-* \evensidemargin=1.70717pt
+* \evensidemargin=27.31465pt
 * \topmargin=-35.28142pt
 * \headheight=18.125pt
 * \headsep=21.75pt
 * \topskip=12.0pt
 * \footskip=50.75pt
-* \marginparwidth=74.68849pt
+* \marginparwidth=49.79233pt
 * \marginparsep=12.8401pt
 * \columnsep=10.0pt
 * \skip\footins=10.8pt plus 4.0pt minus 2.0pt
@@ -688,8 +689,8 @@ LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 * \voffset=0.0pt
 * \mag=1000
 * \@twocolumnfalse
-* \@twosidetrue
-* \@mparswitchtrue
+* \@twosidefalse
+* \@mparswitchfalse
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
@@ -830,10 +831,7 @@ Package pdftex.def Info: HSMW-Logo-150.pdf  used on input line 37.
 
 
 
-{/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./HSMW-Logo-150.pdf>] [2
-
-
-]
+{/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./HSMW-Logo-150.pdf>]
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 19.08076pt on input line 37.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <20.74> not available
@@ -885,13 +883,12 @@ File: bkm-pdftex.def 2016/05/17 v1.26 bookmark driver for pdfTeX (HO)
 Package auxhook Info: \AddLineBeginMainAux comes a little late,
 (auxhook)             because the main .aux file is already opened on input line 164.
 \BKM@id=\count163
-)) [3
+)) [2
+
+
 \openout6 = `Beleg.ist'.
 
-] [4
-
-
-] [5] [6
+] [3
 
 
 ] (/Users/hannessteiner/Documents/Praktikum-Bachelor/Praktikum/Beleg/LateX/.texpadtmp/Beleg.toc
@@ -901,7 +898,9 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2.
- [7
+ [4
+
+
 
 
 
@@ -914,38 +913,26 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.I}) has b
 <to be read again> 
                    \relax 
 l.43 \end{Referat}
-                   [8] (/Users/hannessteiner/Documents/Praktikum-Bachelor/Praktikum/Beleg/LateX/.texpadtmp/Beleg.lof)
+                   [5] (/Users/hannessteiner/Documents/Praktikum-Bachelor/Praktikum/Beleg/LateX/.texpadtmp/Beleg.lof)
 \tf@lof=\write10
 \openout10 = `Beleg.lof'.
 
- [9
+ [6
 
 
 
 
-
-
-]pdfTeX warning (ext4): destination with the same identifier (name{page.II}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.43 \end{Referat}
-                   [10
 
 
 ] (/Users/hannessteiner/Documents/Praktikum-Bachelor/Praktikum/Beleg/LateX/.texpadtmp/Beleg.lot)
 \tf@lot=\write11
 \openout11 = `Beleg.lot'.
 
- [11
+ [7
 
 
 
 
-]pdfTeX warning (ext4): destination with the same identifier (name{page.III}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.43 \end{Referat}
-                   [12
 
 
 ] (/Users/hannessteiner/Documents/Praktikum-Bachelor/Praktikum/Beleg/LateX/.texpadtmp/Beleg.nls
@@ -953,18 +940,13 @@ Overfull \hbox (31.37244pt too wide) in paragraph at lines 5--6
 []\T1/phv/m/n/10.95 Das Akro-nym CRUD steht für Crea-te/Erstellen, Read/Lesen, Up-da-te/Aktualisieren
  []
 
-) [13
+) [8
 
 
 
 
 
 
-]pdfTeX warning (ext4): destination with the same identifier (name{page.IV}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.43 \end{Referat}
-                   [14
 
 
 ]
@@ -984,45 +966,32 @@ l.61 \chapter
 
 
 
-]pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.61 \chapter
-             {Hochschule Mittweida} [2
 
 
 ]
 chapter 2.
-
-LaTeX Warning: Citation `noauthor_hochschule_nodate' on page 3 undefined on input line 62.
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.70 \chapter
-             {Problemstellung} [3]pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.70 \chapter
-             {Problemstellung} [4
+             {Problemstellung} [2
 
 
 ]
 chapter 3.
-pdfTeX warning (ext4): destination with the same identifier (name{page.5}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.81 	
-       [5]pdfTeX warning (ext4): destination with the same identifier (name{page.6}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.90 \chapter
-             {Anforderungen} [6]
+       [3
+
+
+] [4]
 chapter 4.
-[7
+[5
 
 
-] [8]
+] [6]
 chapter 5.
 
 Overfull \hbox (0.45984pt too wide) in paragraph at lines 111--112
@@ -1035,21 +1004,15 @@ File: omsphv.fd
 )
 LaTeX Font Info:    Font shape `OMS/phv/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 115.
- [9
+ [7
 
 
-] [10]
+] [8]
 chapter 6.
 
-LaTeX Warning: Citation `noauthor_detecting_nodate' on page 11 undefined on input line 162.
-
-
-Overfull \hbox (7.60344pt too wide) in paragraph at lines 162--163
-[]\T1/phv/m/n/12 Für die Ent-wick-lung des Kon-zepts, wel-ches im Ka-pi-tel []Kon-zept der Dokumenten-Scanner-
+Overfull \hbox (5.39517pt too wide) in paragraph at lines 162--163
+[]\T1/phv/m/n/12 Bei der Ent-ste-hung des Kon-zepts, wel-ches im Ka-pi-tel []Kon-zept der Dokumenten-Scanner-
  []
-
-
-LaTeX Warning: Citation `sillmann_einstieg_nodate' on page 11 undefined on input line 164.
 
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 8.27998pt on input line 164.
@@ -1064,70 +1027,71 @@ LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 164.
 (/usr/local/texlive/2019/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-) [11
+) [9
 
 
-]
-
-LaTeX Warning: Citation `freeman_pro_2017' on page 12 undefined on input line 172.
-
-
-LaTeX Warning: Citation `bragge_model-view-controller_2013' on page 12 undefined on input line 172.
-
-[12] [13] [14]
+] [10] [11] [12]
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 231.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 214.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 13.24796pt on input line 231.
+(Font)              scaled to size 13.24796pt on input line 214.
 
-Underfull \hbox (badness 10000) in paragraph at lines 249--250
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 249--250
+Underfull \hbox (badness 10000) in paragraph at lines 232--233
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 249--250
+Underfull \hbox (badness 10000) in paragraph at lines 232--233
 
  []
 
-[15] [16]
+
+Underfull \hbox (badness 10000) in paragraph at lines 232--233
+
+ []
+
+[13] [14]
 chapter 7.
-[17
-
-
-] [18
+[15
 
 
 ]
 chapter 8.
-[19] [20
+[16
 
 
 ]
 chapter 9.
-[21] [22
+[17
 
 
 ]
 chapter 10.
-[23] [24
+[18
 
 
 ]
 chapter A.
 
-Underfull \vbox (badness 1668) has occurred while \output is active []
+Class scrbook Warning: incompatible usage of \@ssect detected.
+(scrbook)              You've used the KOMA-Script implementation of \@ssect
+(scrbook)              from within a non compatible caller, that does not
+(scrbook)              \scr@s@ct@@nn@m@ locally.
+(scrbook)              This could result in several error messages on input line 324.
 
- [25
+[19
 
 
 
 
-] (/Users/hannessteiner/Documents/Praktikum-Bachelor/Praktikum/Beleg/LateX/.texpadtmp/Beleg.bbl [26]
+
+
+]
+chapter B.
+[20
+
+
+] (/Users/hannessteiner/Documents/Praktikum-Bachelor/Praktikum/Beleg/LateX/.texpadtmp/Beleg.bbl [21]
 chapter without number
 
 Underfull \hbox (badness 10000) in paragraph at lines 4--8
@@ -1146,38 +1110,30 @@ Underfull \hbox (badness 10000) in paragraph at lines 31--36
 \T1/phv/m/n/12 Ver-füg-bar un-ter: []$\T1/cmtt/m/n/12 https : / / www . heise . de / developer / artikel /
  []
 
-[27
+[22
 
 
-] [28
+]) [23
 
 
-]) [29
 
 
 
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 393.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 393.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 405.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 405.
  (/Users/hannessteiner/Documents/Praktikum-Bachelor/Praktikum/Beleg/LateX/.texpadtmp/Beleg.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 393.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 393.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 405.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 405.
 Package rerunfilecheck Info: File `Beleg.out' has not changed.
 (rerunfilecheck)             Checksum: <no file>.
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
- 18513 strings out of 492616
- 309943 string characters out of 6129482
- 606561 words of memory out of 5000000
- 21954 multiletter control sequences out of 15000+600000
+ 18527 strings out of 492616
+ 310041 string characters out of 6129482
+ 606573 words of memory out of 5000000
+ 21955 multiletter control sequences out of 15000+600000
  75906 words of font info for 119 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  64i,12n,105p,9119b,670s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1192,10 +1148,10 @@ pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist,
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
 
 {/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on /Users/hannessteiner/Documents/Praktikum-Bachelor/Praktikum/Beleg/LateX/.texpadtmp/Beleg.pdf (43 pages, 161274 bytes).
+Output written on /Users/hannessteiner/Documents/Praktikum-Bachelor/Praktikum/Beleg/LateX/.texpadtmp/Beleg.pdf (31 pages, 160728 bytes).
 PDF statistics:
- 470 PDF objects out of 1000 (max. 8388607)
- 412 compressed objects within 5 object streams
- 92 named destinations out of 1000 (max. 500000)
- 308 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 455 PDF objects out of 1000 (max. 8388607)
+ 409 compressed objects within 5 object streams
+ 105 named destinations out of 1000 (max. 500000)
+ 316 words of extra memory for PDF output out of 10000 (max. 10000000)
 
