@@ -23,6 +23,8 @@
 \Studiengang{Softwareentwicklung}
 \Seminargruppe{IF17wS-B \\[\bigskipamount] Matrikelnummer:\\ 46540}
 \Fakultaet{\MNI}
+\Erstpruefer{Prof\@. Dr\@. Mark Ritter}
+\Zweitpruefer{}
 
 \Datum{13.03.2020}
 
@@ -185,11 +187,11 @@ In dem vorliegendem Praktikumsbericht...
 		
 		Eine typische Aufgabe dieser Entwurfsphase ist die Entscheidung über die Datenhaltung, die Verteilung im Netz und die Benutzeroberfläche des Software-Systems. Jedoch standen diese Grundsatzentscheidungen schon zu Beginn des Praktika, durch die Kenntnisse von Tobias Kallauke und dem Verfasser fest. Der Server verwendet zur Datenspeicherung Postgres, eine relationale Datenbank, sowie das Dateiverzeichnis für Bilder, während die App keine Daten persistent speichert. Durch die Aufteilung von App und Server handelt es sich um eine sogenannte Client/Server-Architektur und für die Benutzeroberfläche wird das deklarative SwiftUI verwendet. Bei Fragen zum Backend und der Android App siehe im Praktikumsbericht von Tobias Kallauke.
 		
-		Jedoch mussten noch Arbeit in den Workflow und in die Architektur der App gesteckt werden. Zur Definition einzelner Teil-Workflows, die zusammenhängende Aufgaben umfassen, wurden eine Art Zustandsautomaten bzw. Flussdiagramm beschrieben. Ein Beispiel, was noch einmal geändert in der App verwendet wurde befindet sich im Anhang \ref{ch:workflow}. Die Modelle halfen dabei Views zu entwickeln und deren Design festzulegen. Das Aussehen der App sollten sich jedoch im Laufe der Zeit noch ändern, denn erstmaleinmal stand die Umsetzung des Konzepts im Vordergrund.
+		Jedoch mussten noch Arbeit in den Workflow und in die Architektur der App gesteckt werden. Zur Definition einzelner Teil-Workflows, die zusammenhängende Aufgaben umfassen, wurden eine Art Zustandsautomaten bzw. Flussdiagramm beschrieben. Ein Beispiel, was noch einmal geändert in der App verwendet wurde befindet sich im Anhang \ref{ch:workflow}. Die Modelle halfen dabei Views zu entwickeln und deren Design festzulegen. Das Aussehen der App sollten sich jedoch im Laufe der Zeit noch ändern, denn ersteinmal stand die Umsetzung des Konzepts im Vordergrund.
 
-		Aus den Designs und den Teil-Workflows heraus entstand einen groben Plan, wie die Daten in der App gehandhabt werden sollten. Da \textit{SwiftUI} das Entwurfsmuster MVVM umsetzt, benötigt es eine Struktur für das ViewModel und für den Datenfluss der asynchronen Server-Rückrufe. Jedoch stellte sich die Entwicklung dieser Strukturen, auch schon während des allerersten Prototyps, als problematisch heraus. Denn auch bei steigender Komplexität soll das ViewModel noch übersichtlich bleiben, um eine schnelle Weiterentwicklung zu gewährleisten. Aus diesen Gründen begann die Suche nach einer besseren Lösung, bei der die JavaScript-Bibliothek \textit{Redux.js} zur Verwaltung von Zustandsinformationen in Webanwendung entdeckt wurde. 
+		Aus den Designs und den Teil-Workflows heraus entstand ein grober Plan, wie die Daten in der App gehandhabt werden sollten. Da \textit{SwiftUI} das Entwurfsmuster MVVM umsetzt, benötigt es eine Struktur für das ViewModel und für den Datenfluss der asynchronen Server-Rückrufe. Jedoch stellte sich die Entwicklung dieser Strukturen, auch schon während des allerersten Prototyps, als problematisch heraus. Denn auch bei steigender Komplexität soll das ViewModel noch übersichtlich bleiben, um eine schnelle Weiterentwicklung zu gewährleisten. Aus diesen Gründen begann die Suche nach einer besseren Lösung, bei der die JavaScript-Bibliothek \textit{Redux.js} zur Verwaltung von Zustandsinformationen in Webanwendung entdeckt wurde. 
 
-		\textit{Redux} hilft durch das Konzept, komplexen Views mit vielen Daten schnell und einfach zu implementieren. Auch werden so Serverantworten und zwischengespeicherte Daten sowie lokal erstellte Daten, die noch nicht auf dem Server gespeichert wurden, strukturiert und zentral abgelegt. Das erleichtert nicht nur das Wiederverwenden von Daten, sondern spart auch wiederholte Server-Aufrufe ein. Es erschien wichtig, trotz der der begrenzten Zeit im Praktikum, möglichst viel mit wenig Fehlern umzusetzen. Und auch da biete Redux großes Potential. Denn die modulare Aufteilung des State Containers ermöglicht eine schnelle Weiterentwicklung der App, auch wenn die Komplexität der Anwendung steigt. Und die Vorteile von Redux hinsichtlich des Testens und Untersuchens der App sollten helfen, Fehler möglichst schnell ausfindig zu machen, trotz asynchroner Programmabschnitte.
+		\textit{Redux} hilft durch dessen Konzept, komplexe Views mit vielen Daten schnell und einfach zu implementieren. Auch werden so Serverantworten und zwischengespeicherte Daten sowie lokal erstellte Daten, die noch nicht auf dem Server gespeichert wurden, strukturiert und zentral abgelegt. Das erleichtert nicht nur das Wiederverwenden von Daten, sondern spart auch wiederholte Server-Aufrufe ein. Es erschien nun möglich, trotz der begrenzten Zeit im Praktikum, möglichst viel mit wenig Fehlern umzusetzen. Denn Redux ermöglicht durch die modulare Aufteilung des State Containers eine schnelle Weiterentwicklung der App, auch wenn die Komplexität der Anwendung steigt. Und die Vorteile von Redux hinsichtlich des Testens und Untersuchens der App sollten helfen, Fehler möglichst schnell ausfindig zu machen, trotz asynchroner Programmabschnitte.
 
 		Daher lag es nah die wesentlichen Konzepte von \textit{Redux} umzusetzen und einen \textit{Redux} ähnlichen State Container, als ViewModel zu implementieren. Aus der Definition von Teil-Workflows sollte der Container oder auch Store genannt mindestens 5 States haben: 
 		\begin{itemize}
@@ -199,7 +201,28 @@ In dem vorliegendem Praktikumsbericht...
 			\item für die Steuerung des Workflows bzw. den stellvertretenden Views sowie
 			\item für sonstige Daten, die sehr häufig verwendet werden.
 		\end{itemize}
+		
+		\begin{figure}[th]
+			\centering
+			\begin{subfigure}[t]{0.48\textwidth}
+				\centering
+				\includegraphics[width=\textwidth]{img/redux.png}
+				\caption{Schema der Documenten-Scanner Architektur}
+				\label{fig:redux}
+			\end{subfigure}
+			\begin{subfigure}[t]{0.48\textwidth}
+				\centering
+				\includegraphics[height=0.9\textwidth]{img/tree_example.png}
+				\caption{Reducer- und State-Objektbaum}
+				\label{fig:tree}
+			\end{subfigure}
+			\caption{Architektur Schemata}
+		\end{figure}
+		
+		Das Schema \ref{fig:redux} zeigt, die in der App umgesetzte Redux ähnliche Struktur. Über eine View (rot) können Aktionen (blau) aufgerufen werden. Diese gelangt zuerst in einen sogenannten Dispatcher (lila), welcher als Verteiler dient. Anhand der Art einer Aktion, wird der entsprechende Reducer (grün) vom Dispatcher beauftragt, die Aktion auszuführen. Ein Reducer ist für genau eine Art von Aktionen zuständig. Allerdings ist, wie in der Abbildung \ref{fig:tree} zu sehen ist, eine Schachtellung von Reducern (grün) möglich. Dies bedeutet auch, dass Aktions-Arten ineinander geschachtelt werden können. Das hat den Hintergrund, dass die States wie ein Objektbaum aufgebaut sind. So hat jeder State seinen eigenen Reducer, was für die oben erwähnte Modularität sorgt. Möchte man beispielsweise eine Änderung im Link State (siehe \ref{fig:tree}) vornehmen, muss die eigentliche Aktion in einer Link Reducer Aktion gekapselt und diese wiederum in einer Vorlagen Reducer Aktion. Zum ausführen der Aktion, werden dann die entsprechenden Reducer die Kapselung von außen nach innen auflösen. Nachdem die Aktion ausgeführt und eine State-Änderung herbeigeführt wurde, aktualisiert sich durch das data binding von MVVM die View. Genauer werden alle Views, die eine Bindung zu dem geänderten Datum haben, über die Änderung benachrichtigt und daraufhin aktualisieren diese sich.
 
+		Ein weiterer wichtiger Punkt sind die Server-Aufrufe. Für diese gibt es einen eigenen Reducer und eine besondere Schnittstelle, welche in der Abbildung \ref{fig:redux} grau markiert und mit API \nomenclature{API}{application programming interface, auf deutsch Programmierschnittstelle} beschriftet ist. Diese hat die Besonderheit selbst Aktionen an den Container zu senden. Beispielsweise löst ein Knopfdruck in einer View die Aktion aus, alle Vorlagen vom Server zu laden. Diese Aktion gelangt über den vorgesehenen Reducer zu der Schnittstelle. Dort wird ein entsprechender Server-Aufruf gestartet und ohne andere Prozesse anzuhalten auf den Server-Rückruf gewartet. Sobald die Antwort des Servers angekommen ist, wird diese in einer Aktion wieder zum Container gesendet. Dort wird sich wieder ein entsprechender Reducer um eventuelle Fehlerbehandlung oder das Ablegen der Vorlagen kümmern.
+		
 	\section{Implementierung}
 		
 		Dieses Kapitel behandelt ...
@@ -222,14 +245,10 @@ In dem vorliegendem Praktikumsbericht...
         			\caption{Anmeldung mit AutoFill-Funktion}
         			\label{fig:anmelden}
     			\end{subfigure}
-    			\caption{}\label{fig:start}
+    			\caption{Willkommen- Registrier- und Anmelde-View}\label{fig:start}
 			\end{figure}
 			
-			Die technische Implementierung der Registrierung und Anmeldung beinhaltet typische Charakteristiken, wie die meisten Anmelde- und Registrier-Formulare. Die E-Mail-Textfelder besitzt, wie auch das Passwort-Feld in der Anmeldung eine Auto-Fill-Funktion. Dadurch kann das iOS-Gerät Registrier- und Anmelde-Daten vorschlagen. Dies sieht man im dritten Bild \ref{fig:anmelden} anhand des ''Passwörter''-Knopfes über der Tastatur. 
-			
-			Weiter sind alle Passwort-Felder gesichert. Das bedeutet, dass der Inhalt zum Schutz der Privatsphäre standardmäßig ausgeblendet und mit Punkten ersetzt wird. Durch das drücken des Auges am Ende des Textfeldes kann der Inhalt jedoch eingesehen werden. Im mittlerem Bild \ref{fig:register} sind wegen der Sicherheitsstandards von iOS, bei einer Aufnahme des Bildschirms nicht einmal die Punkte des ersten Passwort-Textfelds zu sehen.
-			
-			Zusätzlich validieren alle Text-Felder ihren Inhalt mithilfe von regulären Ausdrücken. Beispielsweiße muss ein Passwort aus 8 Zeichen bestehen und zwei von den drei Folgenden Eigenschaften erfüllen:
+			Die technische Implementierung der Registrierung und Anmeldung beinhaltet typische Charakteristiken von Anmelde- und Registrier-Formularen. Die E-Mail-Textfelder besitzen, wie auch das Passwort-Feld der Anmeldung eine AutoFill-Funktion. Dadurch kann das iOS-Gerät Registrier- und Anmelde-Daten vorschlagen. Dies sieht man im dritten Bild \ref{fig:anmelden} anhand des ''Passwörter''-Knopfes über der Tastatur. Weiter sind alle Passwort-Felder gesichert. Das bedeutet, dass der Inhalt zum Schutz der Privatsphäre standardmäßig ausgeblendet und mit Punkten ersetzt wird. Durch das drücken des Auges am Ende des Textfeldes kann der Inhalt jedoch eingesehen werden. Im mittlerem Bild \ref{fig:register} sind wegen der Sicherheitsstandards von iOS, bei einer Aufnahme des Bildschirms nicht einmal die Punkte des ersten Passwort-Textfelds zu sehen. Zusätzlich validieren alle Text-Felder ihren Inhalt mithilfe von regulären Ausdrücken. Beispielsweiße muss ein Passwort aus 8 Zeichen bestehen und zwei von den drei Folgenden Eigenschaften erfüllen:
 			\begin{enumerate}
 				\item Es ist mindestens ein Sonderzeichen enthalten.
 				\item Es ist mindestens ein Großbuchstabe enthalten.
@@ -237,7 +256,7 @@ In dem vorliegendem Praktikumsbericht...
 			\end{enumerate}
 			
 		\subsection{Template erstellen}
-			- Workflow als Bild?
+			Bei der Implementierung des Workflows
 		
 		\subsection{Template speichern}
 		
@@ -401,7 +420,7 @@ In dem vorliegendem Praktikumsbericht...
 
 \bibliography{Beleg}
 \bibliographystyle{iso690.bst}
-
+\end{document}
 
 %\begin{thebibliography}{99}
 %	
@@ -430,7 +449,7 @@ In dem vorliegendem Praktikumsbericht...
 %	
 %\end{thebibliography}
 
-\end{document}
+
 
 %	Gemeinsam mit den Betreuern des Praktikums und Tobias Kallauke entstand eine typische Client-Server-Architektur. Mit Hilfe von verschiedenen Apps, auf der Basis von Android, iOS oder auch im Browser sollen.
 	
