@@ -83,7 +83,7 @@ In dem vorliegendem Praktikumsbericht...
 	
 	- Bild einfügen
 	
-	Eine Klausuren-Vorlage bzw.\nomenclature{bzw.}{beziehungsweise} ein Gestaltungsleitfaden für Klausuren der Fakultät \textit{Angewandte Computer- und Biowissenschaften} (Fakultät CB)\nomenclature{Fakultät CB}{Fakultät für angewandte Computer- und Biowissenschaften} bietet außerdem die Möglichkeit der Kontrolle des Prüfers an. Genauer ist es durch das vorgegebene Layout der Klausur möglich, einen Teil der Arbeit des Prüfenden auf Fehler zu untersuchen. Auf dem Deckblatt der Klausur ist eine Tabelle, mit drei Zeilen und für jede Aufgabe eine Spalte. In der ersten Zeile befinden sich die Nummern der Aufgaben. In der zweiten, die zu erreichenden Punkte der Aufgabe. Und in der dritten Zeile trägt der Prüfer die erbrachten Punkte des Studenten ein. Unter der Tabelle befindet sich ein Feld für die erreichte Gesamtpunktzahl, sowie ein Feld für die aus den Punkten resultierende Note. Die Punkte pro Aufgabe, die Gesamtpunktzahl und die Zensur stehen in (Korrelation?) Relation zu einander, sodass aus den Punkten der Aufgaben die beiden anderen Felder errechnet werden und mit den Ergebnissen des Prüfers abgeglichen werden könnten. Eine weiteres Merkmal der Klausuren-Vorlage ist ein Feld, für die vom Studenten erreichten Punkte über jeder Aufgabenstellung. Die dortige Angabe sollte mit der, in der Tabelle auf dem Deckblatt übereinstimmen und bietet somit noch eine weitere Möglichkeit der Kontrolle an.
+	Eine Klausuren-Vorlage bzw.\nomenclature{bzw.}{beziehungsweise} ein Gestaltungsleitfaden für Klausuren der Fakultät \textit{Angewandte Computer- und Biowissenschaften} bietet außerdem die Möglichkeit der Kontrolle des Prüfers an. Genauer ist es durch das vorgegebene Layout der Klausur möglich, einen Teil der Arbeit des Prüfenden auf Fehler zu untersuchen. Auf dem Deckblatt der Klausur ist eine Tabelle, mit drei Zeilen und für jede Aufgabe eine Spalte. In der ersten Zeile befinden sich die Nummern der Aufgaben. In der zweiten, die zu erreichenden Punkte der Aufgabe. Und in der dritten Zeile trägt der Prüfer die erbrachten Punkte des Studenten ein. Unter der Tabelle befindet sich ein Feld für die erreichte Gesamtpunktzahl, sowie ein Feld für die aus den Punkten resultierende Note. Die Punkte pro Aufgabe, die Gesamtpunktzahl und die Zensur stehen in (Korrelation?) Relation zu einander, sodass aus den Punkten der Aufgaben die beiden anderen Felder errechnet werden und mit den Ergebnissen des Prüfers abgeglichen werden könnten. Eine weiteres Merkmal der Klausuren-Vorlage ist ein Feld, für die vom Studenten erreichten Punkte über jeder Aufgabenstellung. Die dortige Angabe sollte mit der, in der Tabelle auf dem Deckblatt übereinstimmen und bietet somit noch eine weitere Möglichkeit der Kontrolle an.
 	
 	\section{Vorlage verbessern}
 	Nachdem ein erster Prototyp zur Digitalisieren der Klausur-Daten entstanden ist, soll außerdem Prüfungsvorlagen entstehen, die für die Digitalisierung optimiert ist. Dabei sollen Probleme die beim Einscannen der aktuellen Vorlage erkannt wurden, behoben werden. 
@@ -225,7 +225,7 @@ In dem vorliegendem Praktikumsbericht...
 		
 	\section{Implementierung}
 		
-		Dieses Kapitel behandelt ...
+		Zur Realisierung der entworfenen Systemkomponenten wurde ausschließlich die von Apple entwickelte IDE\nomenclature{IDE}{integrated development environment, auf deutsch Integrierte Entwicklungsumgebung} Xcode verwendet. Diese stellt integrierte Geräte-Simulatoren zur Verfügung, auf denen die App getestet werden kann. Diese Simulatoren bieten unteranderem auch die Möglichkeit an, die Anwendung schnell auf verschiedenen iOS bzw. iPadOS Versionen zu testen. Auch ist das Testen der App auf echten Geräten durch Xcode möglich, was bei der Entwicklung unumgänglich war. Grund dafür ist die Benutzung der Kamera, die bei den Simulatoren zu gewollten Abstürzen führt, da diese keinen Zugriff auf eine Kamerasystem besitzen. 
 			
 		\subsection{Registrieren und Anmelden}
 			\begin{figure}[th]
@@ -248,12 +248,13 @@ In dem vorliegendem Praktikumsbericht...
     			\caption{Willkommen- Registrier- und Anmelde-View}\label{fig:start}
 			\end{figure}
 			
-			Die technische Implementierung der Registrierung und Anmeldung beinhaltet typische Charakteristiken von Anmelde- und Registrier-Formularen. Die E-Mail-Textfelder besitzen, wie auch das Passwort-Feld der Anmeldung eine AutoFill-Funktion. Dadurch kann das iOS-Gerät Registrier- und Anmelde-Daten vorschlagen. Dies sieht man im dritten Bild \ref{fig:anmelden} anhand des ''Passwörter''-Knopfes über der Tastatur. Weiter sind alle Passwort-Felder gesichert. Das bedeutet, dass der Inhalt zum Schutz der Privatsphäre standardmäßig ausgeblendet und mit Punkten ersetzt wird. Durch das drücken des Auges am Ende des Textfeldes kann der Inhalt jedoch eingesehen werden. Im mittlerem Bild \ref{fig:register} sind wegen der Sicherheitsstandards von iOS, bei einer Aufnahme des Bildschirms nicht einmal die Punkte des ersten Passwort-Textfelds zu sehen. Zusätzlich validieren alle Text-Felder ihren Inhalt mithilfe von regulären Ausdrücken. Beispielsweiße muss ein Passwort aus 8 Zeichen bestehen und zwei von den drei Folgenden Eigenschaften erfüllen:
+			Die technische Implementierung der Registrierung und Anmeldung beinhaltet typische Charakteristiken von Anmelde- und Registrier-Formularen. Die E-Mail-Textfelder besitzen, wie auch das Passwort-Feld der Anmeldung eine AutoFill-Funktion. Dadurch kann das iOS-Gerät Registrier- und Anmelde-Daten vorschlagen und automatisch in die entsprechenden Felder einsetzten. Dies sieht man im dritten Bild \ref{fig:anmelden} anhand des ''Passwörter''-Knopfes über der Tastatur.  Weiter sind alle Passwort-Felder gesichert. Das bedeutet, dass der Inhalt zum Schutz der Privatsphäre standardmäßig ausgeblendet und mit Punkten ersetzt wird. Durch das drücken des Auges rechts des Textfeldes kann der Inhalt jedoch eingesehen werden. Im mittlerem Bild \ref{fig:register} sind wegen der Sicherheitsstandards von iOS, bei einer Aufnahme des Bildschirms nicht einmal die Punkte des ersten Passwort-Textfelds zu sehen. Zusätzlich validieren alle Text-Felder ihren Inhalt mithilfe von regulären Ausdrücken. Beispielsweiße muss ein Passwort aus 8 Zeichen bestehen und zwei von den drei Folgenden Eigenschaften erfüllen:
 			\begin{enumerate}
 				\item Es ist mindestens ein Sonderzeichen enthalten.
 				\item Es ist mindestens ein Großbuchstabe enthalten.
 				\item Es ist mindestens eine Zahl enthalten.
 			\end{enumerate}
+			Die Validierung ist jedoch nicht standardmäßig, sondern wurde selbst entwickelt.
 			
 		\subsection{Template erstellen}
 			Bei der Implementierung des Workflows
@@ -269,7 +270,7 @@ In dem vorliegendem Praktikumsbericht...
 	\section{''Abnahme''}	
 		Abnahme ... 
 		
-		
+	- Accessibility 	von Haus aus etwas... dank swiftui
 	- wie benutze ich die App wie installiere ich die
 	- programmier sprachen, IDEs, 
 	- 
@@ -279,8 +280,6 @@ In dem vorliegendem Praktikumsbericht...
 	- beschreiben wie die einzelnen Views/Seiten nun aussehen und funktionieren? oder eher den Prozess der Entwicklung?
 	
 	- Bild mit Wireframe aller Views und deren Workflow?
-	
-	- AppState erklären? (Single source of truth) -> später AppStore mit mehreren States
 	
 	- erklären deskew / Dokument ausrichten?
 	
@@ -295,9 +294,6 @@ In dem vorliegendem Praktikumsbericht...
 %%%%%%%%%%%%%%% - WEITERENTWICKLUNG - %%%%%%%%%%%%%%%
 
 \chapter{Weitere Entwicklung und Besonderheiten}
-
-	\section{App-Architektur}
-		- redux like app store mit states erklären? (single source of truth)
 	
 	\section{API}
 		- auf die API eingehen? oder nur Tobias?
@@ -415,7 +411,7 @@ In dem vorliegendem Praktikumsbericht...
 	Diese Woche startete mit dem Umschreiben der Regionen-Links und deren Analyse. Anschließend integrierte ich die Neuerungen vom Backend und erstellte die API für den Upload von Bildern. Nachdem das fertig war fügte ich die APIs zusammen, um Vorlagen vollständig auf dem Server zu speichern und abzurufen. Dazu schrieb ich einen eigenen JSON Decoder-Funktion, um die App internen Datentypen zu unterstützen. Zusätzlich wurde die App etwas benutzerfreundlicher und ein Problem mit dem Start der iPad Version wurde behoben. Nach einem Meeting folgten noch weitere Absprachen mit Tobias und ich arbeitete weiter an dem Bericht.
 	
 	\textbf{14.04. - 19.04.}
-	Ein kritisches Problem mit den Sessions aus der vorherigen Woche konnte in dieser immer noch nicht gelöst werden. Dazu kamen weitere Probleme mit der Datenbank, um die sich Tobias kümmern muss, die die Funktionalität der App einschränkt. Allerdings konnte ich die Anwendung etwas optimieren und einen sehr großen Teil des Beleges fertig stellen. Dabei half auch die Beantwortung vieler Fragen während eines Meetings mit dem Betreuer.<
+	Ein kritisches Problem mit den Sessions aus der vorherigen Woche konnte in dieser endlich gelöst werden. Dazu konnte ich die Anwendung etwas optimieren und einen sehr großen Teil des Beleges fertig stellen. Dabei half auch die Beantwortung vieler Fragen während eines Meetings mit dem Betreuer. Allerdings entstanden Probleme mit der Datenbank, die die Funktionalität der App einschränkt.
 	
 
 \bibliography{Beleg}
