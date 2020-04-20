@@ -356,7 +356,13 @@ In dem vorliegendem Praktikumsbericht...
 			\end{figure}
 		
 			\subsubsection{Vorlage speichern}
-			Nach dem der Prozess des Erstellen einer Vorlage fertig ist kann das
+			Wenn eine Vorlage gespeichert werden soll, passiert das in mehreren Schritten. 
+			\begin{enumerate}
+				\item Der Name und die Beschreibung der Vorlage sowie die Liste an Links wird gesendet. In der Antwort des Servers befindet sich dann die Vorlagen-ID, die in den nächsten Schritten benötigt wird. 
+				\item Die Bilder der Seiten werden gesendet. Als Antwort zu jedem Bild wird der Pfad geschickt, wo das Bild gespeichert wurde. Dieser Pfad wird im nächsten Schritt benötigt.
+				\item Die Seiten mit einer Seiten Nummer und dem Pfad zu dem Bild, wird mit der Vorlagen-ID gesendet. Als Antwort wird eine ID zurückgegeben, die im nächsten Schritt verwendet wird.
+				\item Die Regionen der Seiten werden gesendet. Eine Region, auch Attribut genannt hat X- und Y-Koordinaten. Diese repräsentieren den Abstand vom Bildursprung, der sich in jedem Bild oben links befindet. Außerdem besitzt eine Attribut eine Höhe und Breite, einen Namen und einen Datentyp. Zusammen mit der Seiten-ID wird das Attribute an den Server gesendet.
+			\end{enumerate}
 		
 		\subsection{Vorlage verwenden}
 		
