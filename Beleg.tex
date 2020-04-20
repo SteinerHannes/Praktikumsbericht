@@ -67,8 +67,6 @@ In dem vorliegendem Praktikumsbericht...
 \chapter{Hochschule Mittweida}
 	Die Hochschule Mittweida - university of applied science (HSMW) \nomenclature{HSMW}{Hochschule Mittweida - university of applied science} wurde vor über 150 Jahren gegründet. Heute lehrt und forscht sie mit ca. 6000 Studenten in fünf Fakultäten und vier Forschungsschwerpunkten\cite{noauthor_hochschule_nodate} . Eines der Schwerpunkte ist die angewandte Informatik, in dem Memo Space angesiedelt ist.
 	
-	- wie komme ich auf 5? ''Laut der Studie...''
-	
 	Nach eigener Einschätzung, schreibt jeder Student ca. 5 Prüfungen pro Semester, was bedeutet, dass im Jahr um die 60.000 Klausuren kontrolliert werden. Dazu kommt, dass nachdem die Klausuren kontrolliert wurden, die Zensur, sowie die Eckdaten der Studenten, die an der Prüfung teilgenommen haben, in ein digitales Format gebracht werden muss. Grund dafür ist, dass die Übertragung der Noten in das Notensystem der Hochschule. Da die Mitarbeiter der Fakultät \textit{Angewandte Computer- und Biowissenschaften} (Fakultät CB)\nomenclature{Fakultät CB}{Fakultät für angewandte Computer- und Biowissenschaften} Holger Langner und Falk Schmidsberger selbst Klausuren kontrollieren und die Problematik genau kennen, entstand hier eines der ersten Ideen für Memo Space.
 
 %%%%%%%%%%%%%%% - PROBLEMSTELLUNG - %%%%%%%%%%%%%%%
@@ -81,15 +79,30 @@ In dem vorliegendem Praktikumsbericht...
 	
 	\section{Klausuren-Vorlage}
 	
-	- Bild einfügen
+	\begin{figure}[th]
+    			\centering
+    			\begin{subfigure}[t]{0.4\textwidth}
+        			\frame{\includegraphics[width=0.96\textwidth]{img/seite1}}
+        			\caption{Deckblatt der Klausur}
+        			\label{fig:seite1}
+    			\end{subfigure}
+    			\begin{subfigure}[t]{0.4\textwidth}
+        			\frame{\includegraphics[width=0.96\textwidth]{img/seite2}}
+        			\caption{1. Seite der Klausur}
+        			\label{fig:seite2}
+    			\end{subfigure}
+    			\caption{Umsetzung der Klausuren-Vorlage der Fakultät CB.}
+    			\caption*{\textit{Die Bilder sind beim Erstellen einer Scan-Vorlage mit der App entstanden.}}
+    			\label{fig:klausur}
+			\end{figure}
 	
-	Eine Klausuren-Vorlage bzw.\nomenclature{bzw.}{beziehungsweise} ein Gestaltungsleitfaden für Klausuren der Fakultät \textit{Angewandte Computer- und Biowissenschaften} bietet außerdem die Möglichkeit der Kontrolle des Prüfers an. Genauer ist es durch das vorgegebene Layout der Klausur möglich, einen Teil der Arbeit des Prüfenden auf Fehler zu untersuchen. Auf dem Deckblatt der Klausur ist eine Tabelle, mit drei Zeilen und für jede Aufgabe eine Spalte. In der ersten Zeile befinden sich die Nummern der Aufgaben. In der zweiten, die zu erreichenden Punkte der Aufgabe. Und in der dritten Zeile trägt der Prüfer die erbrachten Punkte des Studenten ein. Unter der Tabelle befindet sich ein Feld für die erreichte Gesamtpunktzahl, sowie ein Feld für die aus den Punkten resultierende Note. Die Punkte pro Aufgabe, die Gesamtpunktzahl und die Zensur stehen in (Korrelation?) Relation zu einander, sodass aus den Punkten der Aufgaben die beiden anderen Felder errechnet werden und mit den Ergebnissen des Prüfers abgeglichen werden könnten. Eine weiteres Merkmal der Klausuren-Vorlage ist ein Feld, für die vom Studenten erreichten Punkte über jeder Aufgabenstellung. Die dortige Angabe sollte mit der, in der Tabelle auf dem Deckblatt übereinstimmen und bietet somit noch eine weitere Möglichkeit der Kontrolle an.
+	Eine Klausuren-Vorlage bzw.\nomenclature{bzw.}{beziehungsweise} ein Gestaltungsleitfaden für Klausuren der Fakultät \textit{Angewandte Computer- und Biowissenschaften} bietet außerdem die Möglichkeit der Kontrolle des Prüfers an. Genauer ist es durch das vorgegebene Layout der Klausur möglich, einen Teil der Arbeit des Prüfenden auf Fehler zu untersuchen. Auf dem Deckblatt der Klausur ist eine Tabelle, mit drei Zeilen und für jede Aufgabe eine Spalte. In der ersten Zeile befinden sich die Nummern der Aufgaben. In der zweiten, die zu erreichenden Punkte der Aufgabe. Und in der dritten Zeile trägt der Prüfer die erbrachten Punkte des Studenten ein. Unter der Tabelle befindet sich ein Feld für die erreichte Gesamtpunktzahl, sowie ein Feld für die aus den Punkten resultierende Note. Die Punkte pro Aufgabe, die Gesamtpunktzahl und die Zensur stehen in Relation zu einander, sodass aus den Punkten der Aufgaben die beiden anderen Felder errechnet werden und mit den Ergebnissen des Prüfers abgeglichen werden könnten. Eine weiteres Merkmal der Klausuren-Vorlage ist ein Feld, für die vom Studenten erreichten Punkte über jeder Aufgabenstellung. Die dortige Angabe sollte mit der, in der Tabelle auf dem Deckblatt übereinstimmen und bietet somit noch eine weitere Möglichkeit der Kontrolle an.
 	
 	\section{Vorlage verbessern}
 	Nachdem ein erster Prototyp zur Digitalisieren der Klausur-Daten entstanden ist, soll außerdem Prüfungsvorlagen entstehen, die für die Digitalisierung optimiert ist. Dabei sollen Probleme die beim Einscannen der aktuellen Vorlage erkannt wurden, behoben werden. 
 	
 	\section{Weitere Anmerkungen}
-	Ferner soll bei der Lösung von der Anschaffung neuer Technologie und Geräte abgesehen werden. Grund dafür sind neben den Anschaffungskosten, die Idee, dass das Ergebnis des Forschungsprojekts in weiteren Lehr- und Forschungseinrichtung Anwendung finden sollte.
+	Ferner soll bei der Lösung von der Anschaffung neuer Technologie und Geräte abgesehen werden. Grund dafür sind neben den Anschaffungskosten, die Idee, dass das Ergebnis des Forschungsprojekts in weiteren Lehr- und Forschungseinrichtung Anwendung finden sollte. Außerdem hat so gut wie jeder Mitarbeiter an einer Lehr- und Forschungseinrichtung ein eigenes oder Zugang zu einem Smartphone oder Tablet, welche durch die eingebaute Technik in der Lage sind, diese Aufgabe zu übernehmen. 
 
 %%%%%%%%%%%%%%% - ANFORDERUNGEN - %%%%%%%%%%%%%%%
 
@@ -98,7 +111,7 @@ In dem vorliegendem Praktikumsbericht...
 	
 	- Bild Scan-Vorlage: Aus Foto wird Dokument extrahiert und Auf der Seite werden Regionen markiert. -> Sammlung an Seiten mit Regionen
 	
-	Eine Scan-Vorlagen bestehen aus zwei Komponenten. Die eine sind zugeschnittene Fotos der Seiten eines Dokuments. Und die zweite sind die Regionen auf den Bildern, wo sich die zu digitalisierenden Informationen befinden. Dem Benutzer muss es möglich sein, zuerst die Fotos zu machen und anschließend Regionen auf den Seiten zu markieren. Weiter benötigen die Regionen Namen bzw. Typen, die der Benutzer angeben muss. Die Angabe des Typs ist wichtig, da dadurch eindeutig wird, ob es sich um die Note oder die Matrikelnummer des Studenten handelt. Diese Eindeutigkeit wird nicht nur für die automatische Erstellung der Tabelle benötigt, sondern auch für die Texterkennung. 
+	Eine Scan-Vorlagen bestehen aus zwei Komponenten. Die eine sind zugeschnittene Fotos der Seiten eines Dokuments (\ref{fig:klausur}). Und die zweite sind die Regionen auf den Bildern, wo sich die zu digitalisierenden Informationen befinden. Dem Benutzer muss es möglich sein, zuerst die Fotos zu machen und anschließend Regionen auf den Seiten zu markieren. Weiter benötigen die Regionen Namen bzw. Typen, die der Benutzer angeben muss. Die Angabe des Typs ist wichtig, da dadurch eindeutig wird, ob es sich um die Note oder die Matrikelnummer des Studenten handelt. Diese Eindeutigkeit wird nicht nur für die automatische Erstellung der Tabelle benötigt, sondern auch für die Texterkennung. 
 	
 	Optical character recognition (OCR)\nomenclature{OCR}{optical character recognition, deutsch: optische Zeichen Erkennung und im deutschen Synonym für Texterkennung}, auf deutsch optische Zeichen Erkennung, soll dazu benutzt werden, die Informationen der Regionen zu digitalisieren. Um die Texterkennung zu verbessern, soll der Typ der Regionen verwendet werden. Damit könne dem OCR mögliche Ergebnisse mitgeteilt oder die Ergebnisse angepasst werden. Beispielsweise bestehen Zensuren immer aus Dezimalzahlen von Eins bis Sechs und mit nur einer Nachkommastelle. Wird der Buchstabe O anstelle der Ziffer Null erkannt, kann so der Fehler korrigiert werden.
 	
@@ -108,45 +121,37 @@ In dem vorliegendem Praktikumsbericht...
 	
 	Damit Synchronität der Daten auf den Geräten und dem Server gewährleistet werden kann, benötig die App hierfür ebenfalls Schnittstellen. Diese sollten den standardmäßigen \textit{CRUD}\nomenclature{CRUD}{Das Akronym CRUD steht für Create/Erstellen, Read/Lesen, Update/Aktualisieren und Delete/Löschen und umfasst die vier grundlegenden Operationen persistenter Speicher}-Operationen entsprechen. 
 	
-	Da die gesamte Kommunikation über das Internet geschieht, muss das Softwaresystem die üblichen Datenschutz- und Datensicherheit-Richtlinien entsprechen, bzw. implementieren.
-	
+	Da die gesamte Kommunikation über das Internet geschieht, muss das Softwaresystem die üblichen Datenschutz- und Datensicherheit-Richtlinien entsprechen, bzw. implementieren. 
 
 %%%%%%%%%%%%%%% - GRUND IDEE ZUM LÖSEN DES PROBLEMS - %%%%%%%%%%%%%%%
 
 \chapter{Konzept der Dokumenten-Scanner-App}\label{ch:konzept}
+
 	Wie in der Problemstellung und Anforderung beschreiben, soll die Dokumenten-Scanner App wichtigen Daten auf dem Deckblatt einer Klausur, wie Vor- und Nachname des Studenten, seine Matrikelnummer sowie die Note erkennen, digitalisieren und in ein für die Notenfreigabe geeignetes Format bringen. Die digitalisierten Daten sollen anschließend an einen Server gesendet werde, wo sie und die beim Einscannen entstandenen Bilder gespeichert werden. Verwendet eine einzuscannende Klausur die Klausuren-Vorlage der Fakultät CB oder ähnliche, die eine Punkteübersicht haben, dann soll es außerdem möglich sein, die Punkte sowie die Note auf Richtigkeit zu überprüfen. 
 
 	Zur Digitalisierung und Kontrolle der Daten werden Scan-Vorlagen verwendet. Diese muss vor dem Einscannen der ausgefüllten Klausuren erstellt werden, um zu gewährleisten, dass die richtigen Daten digitalisiert werden. Beim Erstellen einer Scan-Vorlage geht man wie folgt vor:
 	\begin{itemize}
-		\item Zuerst wird jede Seite der Klausur fotografiert. Dabei wird in jedem Bild das Dokument erkannt, vom Hintergrund getrennt oder genauer gesagt ausgeschnitten und perfekt ausgerichtet. Zudem wird der Kontrast erhöht, so dass die Schrift leichter lesbarer wird.
+		\item Zuerst wird jede Seite der Klausur fotografiert (\ref{fig:v3}). Dabei wird in jedem Bild das Dokument erkannt, vom Hintergrund getrennt oder genauer gesagt ausgeschnitten und perfekt ausgerichtet (\ref{fig:klausur}). Zudem wird der Kontrast erhöht, so dass die Schrift leichter lesbarer wird.
 		
-			- Bild einfügen von APP
-		
-		\item Anschließend markiert man diejenigen Regionen auf jeder Seite, die zu digitalisieren und/oder kontrollieren sind. Zusätzlich muss jeder Region ein Name und einer der folgenden Typen zugeordnet werden: Unbekannt, Name, Matrikelnummer, Seminargruppe, Punkte und Note. Mithilfe des Typs wird die Texterkennung verbessert und falsche Ergebnisse automatisch korrigiert. Dazu später mehr.
-		
-			- Bild einfügen von APP
+		\item Anschließend markiert man diejenigen Regionen auf jeder Seite, die zu digitalisieren und/oder kontrollieren sind (\ref{fig:v9}). Zusätzlich muss jeder Region ein Name und einer der folgenden Typen zugeordnet werden: Unbekannt, Name, Matrikelnummer, Seminargruppe, Punkte und Note. Mithilfe des Typs wird die Texterkennung verbessert und falsche Ergebnisse automatisch korrigiert. Dazu später mehr.
 			
 		\item Des Weiteren kann man aus allen markierten Regionen diese auswählen, die in Relation stehen. Diesen Relationen werden danach noch weitere Eigenschaften zugeteilt, um sie später bei der Kontrolle richtig zu analysieren. So eine Eigenschaft könnte sein, dass es sich um einen Vergleich zwischen zwei in Relation stehenden Regionen handelt. Z. B. ist die eine Region die Zelle in der Punkteübersichts-Tabelle, in der die erreichten Punkte zu Aufgabe 1 rein geschrieben werden sollen. Und die zweite Region die Stelle über der Aufgabenstellung von Aufgabe 1, in der ebenfalls die erreichten Punkte eingetragen werden sollen. Weitere Beispiele für solche Relationen und Eigenschaften sind die Summanden für die erreichte Gesamtpunktzahl und die Summe selbst, oder auch noch die daraus resultierende Note.
-		
-			- Bild einfügen von APP
 		
 		\item Als letztes speichert man die Vorlage ab, welche dann automatisch an einen Server gesendet wird, so dass andere diese Vorlage ebenfalls nutzen können.
 	\end{itemize}
 	
-	Nach der Erstellung einer Vorlage kann das Dokument digitalisiert werden. Dazu scannt man die Seiten in derselben Reihenfolge, wie in der Scan-Vorlage ein. Die App digitalisiert mithilfe von OCR den Inhalt, in den vordefinierten Regionen. Der Typ der Region nimmt nun Einfluss auf das Ergebnis. Durch ihn wird während der Worterkennungsphase eine Liste an vordefinierten Ergebnissen eingespeist. Diese Liste hat Vorrang vor dem Standard-Lexikon, welches verwendet wird. Ein Beispiel für solch eine Liste könnten, wie in den Anforderungen beschrieben, alle möglichen Noten sein. Auch vorstellbar ist, dass alle Seminargruppen oder Namen von Personen, die an der Klausur teilgenommen haben, dort verwendet werden. 
+	Nach der Erstellung einer Vorlage kann das Dokument digitalisiert werden. Dazu scannt man die Seiten in derselben Reihenfolge, wie in der Scan-Vorlage ein. Die App digitalisiert mithilfe von OCR den Inhalt, in den vordefinierten Regionen. Der Typ der Region nimmt nun Einfluss auf das Ergebnis. Durch ihn wird während der Worterkennungsphase eine Liste an vordefinierten möglichen Ergebnissen eingespeist. Diese Liste hat Vorrang vor dem Standard-Lexikon und verbessert dadurch die Texterkennung. Ein Beispiel für solch eine Liste könnten, alle möglichen Noten sein, wie schon in dem Kapitel \ref{ch:anforderungen} Anforderungen beschrieben. Auch vorstellbar ist, dass alle Seminargruppen oder Namen von Personen, die an der Klausur teilgenommen haben, dort verwendet werden. 
 	
-	Weiter wäre eine zusätzliche Möglichkeit der Korrektur erdenklich. Angenommen, jemand verschreibt sich bei seiner Seminargruppe und vergisst ein Zeichen. Die Texterkennung erkennt zwar jedes Zeichen richtig, jedoch wäre es für die Notenfreigabe eine nicht korrekte Seminargruppe. Deshalb könnte man auch im Nachhinein das Ergebnis mit einer Seminargruppe ersetzt, die die größte Übereinstimmung mit dem erkannten Wort hat. Dieses Vorgehen kann man dadurch verbessern, wenn man dafür nur die Seminargruppen-Bezeichnungen verwendet, die auch tatsächlich die Klausur geschrieben haben. Ähnliches gilt auch für die Namen oder Matrikelnummern der Studenten.
+	Weiter wäre eine zusätzliche Möglichkeit der Korrektur erdenklich. Angenommen, jemand verschreibt sich bei seiner Seminargruppe und vergisst ein Zeichen. Die Texterkennung erkennt zwar jedes Zeichen richtig, jedoch ist das Ergebnis keine korrekte Seminargruppe. Deshalb könnte man auch im Nachhinein das Ergebnis mit einer Seminargruppe ersetzt, die die größte Übereinstimmung mit dem erkannten Wort hat. Bei diesem Vorgehen sollten natürlich auch nur die Seminargruppen verwendet werden, die tatsächlich die Klausur geschrieben haben. Ähnliches gilt wieder für die Namen oder Matrikelnummern der Studenten.
 	
-	Um wirklich sicher zu gehen, ist es aber im Anschluss an die Texterkennung möglich die Resultate noch einmal zu überprüfen und zu korrigieren, bevor es an den Server zum Abspeichern gesendet wird. Dazu wird außerdem die confidence des OCR bei jeder Region angezeigt. Diese sagt aus, wie sicher sich die Texterkennung ist, das das Ergebnis stimmt. Jedoch kann es auch hier falsche Positiv-Ergebnisse geben, weshalb auch das kein perfekter Indikator für die Richtigkeit ist.
-	
-	Ein wichtiger Vorteil einer App gegenüber anderen Lösungen ist, dass so gut wie jeder Mitarbeiter an einer Lehr- und Forschungseinrichtung ein eigenes oder Zugang zu einem Smartphone oder Tablet hat.
-
-		... noch mehr? (Auf Tobias warten...)
-	
-	- Noch mehr zu OCR sagen: was es ist, wie es geht, komplett eigenes Kapitel?
-
-	- Upload download verwendung auf allen geräten
-
+	Zudem kommt noch, dass die eingetragenen Punkte kontrolliert werden. Möglich wäre auch, die Note zu kontrollieren, jedoch müsste dafür der jeweilige Notenspiegel integriert werden. Für die Umsetzung dieser Kontrollinstanz werden die angelegten Relationen zwischen den Regionen verwendet. Genauer soll es zwei Typen von Links bzw. Relationen geben.
+		\begin{itemize}
+			\item Der erste Typ ist zum Vergleichen. Dafür benötigt es genau zwei Regionen und wie der Name des Typs ahnen lässt, wird der Inhalt der beiden Regionen auf Gleichheit überprüft. Wie schon vorher erwähnt, sollen so die Punkte auf dem Deckblatt mit den Punkte über den Aufgaben verglichen werden.
+			\item Der zweite Typ ist zum Summieren. Genauer ist dieser Typ nur für die Punkte auf dem Deckblatt der Klausur gedacht. Dabei wählt man alle Regionen aus, deren Inhalt summiert werden sollen und die Region, in die der Prüfer die berechnete Gesamtpunktzahl rein schreibt. Somit kann die Berechnung des Prüfers überprüft werden.
+		\end{itemize} 
+		Mithilfe der beiden Typen, wird dem Benutzer nach der Texterkennung mitgeteilt, wo Fehler vorliegen.
+		
+	Allerdings heißt das nicht, dass das OCR selbst keine Fehler macht. Aus diesem Grund ist die sogenannte confidence des OCR bei jeder Region sichtbar. Diese sagt aus, wie sicher sich die Texterkennung ist, das das Ergebnis stimmt. Jedoch kann es auch hier falsche Positiv-Ergebnisse geben, weshalb auch das kein perfekter Indikator für die Richtigkeit ist. Deshalb wird im Anschluss an die Texterkennung die Möglichkeit geboten, die Resultate noch einmal zu überprüfen und zu korrigieren, bevor sie an den Server zum Abspeichern gesendet werden. Genauer können die Ergebnisse der Texterkennung zu jeder Region einzeln bearbeitet werden, wodurch sich die Fehlermeldung durch einen Link ändern kann.
 
 %%%%%%%%%%%%%%% - PROTOTYP - %%%%%%%%%%%%%%%
 
@@ -225,7 +230,9 @@ In dem vorliegendem Praktikumsbericht...
 		
 	\section{Implementierung}
 		
-		Zur Realisierung der entworfenen Systemkomponenten wurde ausschließlich die von Apple entwickelte IDE\nomenclature{IDE}{integrated development environment, auf deutsch Integrierte Entwicklungsumgebung} Xcode verwendet. Diese stellt integrierte Geräte-Simulatoren zur Verfügung, auf denen die App getestet werden kann. Diese Simulatoren bieten unteranderem auch die Möglichkeit an, die Anwendung schnell auf verschiedenen iOS bzw. iPadOS Versionen zu testen. Auch ist das Testen der App auf echten Geräten durch Xcode möglich, was bei der Entwicklung unumgänglich war. Grund dafür ist die Benutzung der Kamera, die bei den Simulatoren zu gewollten Abstürzen führt, da diese keinen Zugriff auf eine Kamerasystem besitzen. 
+		Zur Realisierung der entworfenen Systemkomponenten wurde ausschließlich, die von Apple entwickelte IDE\nomenclature{IDE}{integrated development environment, auf deutsch Integrierte Entwicklungsumgebung} Xcode, verwendet. Diese stellt Geräte-Simulatoren zur Verfügung, auf denen die App getestet werden kann. Die Simulatoren bieten unteranderem auch die Möglichkeit an, die Anwendung schnell auf verschiedenen iOS bzw. iPadOS Versionen zu testen. Auch ist das Testen der App auf echten Geräten durch Xcode möglich, was bei der Entwicklung unumgänglich war. Grund dafür ist die Benutzung der Kamera, die bei den Simulatoren zu gewollten Abstürzen führt, da diese keinen Zugriff auf eine Kamerasystem besitzen. 
+		
+		Zum Ändern und Testen des Backends wurde außerdem Visual Studio Community bzw. Visual Studio Code\footnote{\href{https://visualstudio.microsoft.com/de/}{\url{https://visualstudio.microsoft.com/de/}}} mit dem REST Client Plugin\footnote{\href{https://marketplace.visualstudio.com/items?itemName=humao.rest-client}{\url{https://marketplace.visualstudio.com/items?itemName=humao.rest-client}}} , zum Testen der Server-Schnittstellen verwendet. Das Backend konnte dann als lokaler Server auf dem Entwicklungscomputer gestartet und über die IP-Adresse 0.0.0.0 sogar im lokalen Netzwerk aufgerufen werden. Für die Verwaltung der PostgreSQL-Datenbank genügte das Tool PgAdmin4\footnote{\href{https://www.pgadmin.org/}{\url{https://www.pgadmin.org/}}} . Damit ist es möglich einzelne Einträge oder auch ganze Tabellen zu bearbeiten.
 			
 		\subsection{Registrieren und Anmelden}
 			\begin{figure}[th]
@@ -256,12 +263,102 @@ In dem vorliegendem Praktikumsbericht...
 			\end{enumerate}
 			Die Validierung ist jedoch nicht standardmäßig, sondern wurde selbst entwickelt.
 			
-		\subsection{Template erstellen}
-			Bei der Implementierung des Workflows
+		\subsection{Scan-Vorlagen erstellen und speichern}
+			Bei der Implementierung des ersten Arbeitsschritts der Scan-Vorlagen wurde das schriftliche Flussdiagramm, welches im Anhang \ref{ch:workflow} zu finden ist, leicht verändert benutzt.
+			
+			\subsubsection{Scan-Vorlage erstellen}
+			\begin{figure}[th]
+    			\centering
+    			\begin{subfigure}[t]{0.3\textwidth}
+        			\frame{\includegraphics[width=0.96\textwidth]{img/V2}}
+        			\caption{View zum Anlegen einer Vorlage}
+        			\label{fig:v2}
+    			\end{subfigure}
+    			\begin{subfigure}[t]{0.3\textwidth}
+        			\frame{\includegraphics[width=0.96\textwidth]{img/V3}}
+        			\caption{Kamera- Scan-View mit Dokumenten-Erkennung}
+        			\label{fig:v3}
+    			\end{subfigure}
+    			\begin{subfigure}[t]{0.3\textwidth}
+       				\frame{\includegraphics[width=0.96\textwidth]{img/V4}}
+        			\caption{Seiten-Auswahl-View}
+        			\label{fig:v4}
+    			\end{subfigure}
+    			\caption{Die ersten Views zur Erstellung einer Scan-Vorlage}\label{fig:erstellung1}
+			\end{figure}
+			Im ersten Schritt sind ein Name und weitere Informationen, zu der Vorlage an zugegeben (\ref{fig:v2}), um im Anschluss die Fotos aufzunehmen. Bei der Kamera-View (\ref{fig:v3}) handelt es sich um die Scan-View des Frameworks VisionKit. Mithilfe von Kantenerkennung und anderen Algorithmen, die Tobias Kallauke in seinem Bericht beschreibt, kann dass Dokument sobald es erkannt ist, automatisch fotografiert werden. In Echtzeit wird das erkannte Dokument aus dem Bild ausgeschnitten und gerade gezogen. Ein manuelles Auslösen des Fotos und Anpassen der Dokumenten-Kanten im Bild, ist ebenfalls möglich. Des Weiterem werden alle erstellten Bilder zu einer Gruppe gesammelt. Diese können vor dem Abspeichern angeschaut und nochmal bearbeitet werden. 
+			
+			\subsubsection{Regionen erstellen}
+			\begin{figure}[th]
+    			\centering
+    			\begin{subfigure}[t]{0.3\textwidth}
+        			\frame{\includegraphics[width=0.96\textwidth]{img/V5}}
+        			\caption{View zum Festlegen von den Regionen Eigenschaften}
+        			\label{fig:v5}
+    			\end{subfigure}
+    			\begin{subfigure}[t]{0.3\textwidth}
+        			\frame{\includegraphics[width=0.96\textwidth]{img/V6}}
+        			\caption{Auswahl des Datentyps}
+        			\label{fig:v6}
+    			\end{subfigure}
+    			\begin{subfigure}[t]{0.3\textwidth}
+       				\frame{\includegraphics[width=0.96\textwidth]{img/V7}}
+        			\caption{Markierung der Region auf dem Dokument}
+        			\label{fig:v7}
+    			\end{subfigure}
+    			\caption{Views zur Erstellung von Regionen}
+    			\label{fig:erstellung2}
+			\end{figure}
+			Im nächsten Schritt sind die Regionen auf den Dokumenten-Seiten zu markieren, deren Inhalt beim Einscannen digitalisiert werden soll. Zu erst wird die gewünschte Seite aus einer Übersicht (\ref{fig:v4}) ausgewählt. Anschließend ist eine Vorschau der Seite mit alle eingetragenen Regionen zu sehen (\ref{fig:v8} bzw. \ref{fig:v9}). Über einen Button können weitere Regionen hinzugefügt werden. Dazu legt man einen Namen (\ref{fig:v5}) und einen Datentyp (\ref{fig:v6}) fest. Die Datentypen sind für die Texterkennung und für die Erstellung der Tabelle für die Notenfreigabe wichtig. Dazu später mehr. Wenn die Eigenschaften der Region festgelegt sind, muss diese noch auf dem Bild markiert werden. Dazu zieht man mit einem Finger ein Rechteck in einer beliebigen Größe ein (\ref{fig:v7}). Die markierte Region kann anschließend noch bewegt oder neu gemacht werden. Um kleinere Regionen präzise zu markieren kann mit einer Zwei-Finger-Geste auch an die Seite heran bzw. auch heraus gezoomt werden. Dieses Vorgehen muss dann für alle nötigen Regionen auf den jeweiligen Seiten wiederholt werden. 
+			\begin{figure}[th]
+    			\centering
+				\begin{subfigure}[t]{0.3\textwidth}
+       				\frame{\includegraphics[width=0.96\textwidth]{img/V8}}
+        			\caption{Seiten-Vorschau mit der ersten Region}
+        			\label{fig:v8}
+    			\end{subfigure}
+    			\begin{subfigure}[t]{0.3\textwidth}
+       				\frame{\includegraphics[width=0.96\textwidth]{img/V9}}
+        			\caption{Seiten-Vorschau mit allen Regionen}
+        			\label{fig:v9}
+    			\end{subfigure}
+    			\begin{subfigure}[t]{0.3\textwidth}
+       				\frame{\includegraphics[width=0.96\textwidth]{img/V10}}
+        			\caption{Löschen einer angelegten Region}
+        			\label{fig:v10}
+    			\end{subfigure}
+    			\caption{Seiten-Vorschau-View}
+				\label{fig:erstellung3}
+			\end{figure}
+			
+			\subsubsection{Links erstellen}
+			Zum Schluss können noch die sogenannte Links erstellt werden. Diese Funktion ist allerdings noch nicht sehr weit fortgeschritten und beinhaltet aktuell nur den Link-Typ zum Vergleichen von Regionen, wie im Kapitel \ref{ch:konzept} Konzept beschrieben ist. Beim Erstellen eines Vergleich-Links wählt man zwei Regionen aus, deren Inhalt nach der Texterkennung auf Gleichheit überprüft wird. 
+			
+			\begin{figure}[th]
+    			\centering
+				\begin{subfigure}[t]{0.3\textwidth}
+       				\frame{\includegraphics[width=0.96\textwidth]{img/L6}}
+        			\caption{Linkliste mit angelegten Links}
+        			\label{fig:l1}
+    			\end{subfigure}
+    			\begin{subfigure}[t]{0.3\textwidth}
+       				\frame{\includegraphics[width=0.96\textwidth]{img/L4}}
+        			\caption{View zur Erstellung eines Vergleich-Links}
+        			\label{fig:l2}
+    			\end{subfigure}
+    			\begin{subfigure}[t]{0.3\textwidth}
+       				\frame{\includegraphics[width=0.96\textwidth]{img/L3}}
+        			\caption{View zur Auswahl einer Region}
+        			\label{fig:l3}
+    			\end{subfigure}
+    			\caption{Seiten-Vorschau-View}
+				\label{fig:link1}
+			\end{figure}
 		
-		\subsection{Template speichern}
+			\subsubsection{Vorlage speichern}
+			Nach dem der Prozess des Erstellen einer Vorlage fertig ist kann das
 		
-		\subsection{Template verwenden}
+		\subsection{Vorlage verwenden}
 		
 
 		
@@ -272,7 +369,6 @@ In dem vorliegendem Praktikumsbericht...
 		
 	- Accessibility 	von Haus aus etwas... dank swiftui
 	- wie benutze ich die App wie installiere ich die
-	- programmier sprachen, IDEs, 
 	- 
 		\\ \\ \\
 	Weitere Punkte die in Kapitel 6 rein könnten/sollten: 
@@ -299,7 +395,9 @@ In dem vorliegendem Praktikumsbericht...
 		- auf die API eingehen? oder nur Tobias?
 	
 	\section{}
-		- 
+		- Keyboards
+		- Accsessebility
+		
 %%%%%%%%%%%%%%% - GRENZEN - %%%%%%%%%%%%%%%
 
 \chapter{Grenzen der App}
@@ -354,6 +452,10 @@ In dem vorliegendem Praktikumsbericht...
 	- QR-Code-Idee um Vorlagen weg zu lassen -> Programm oder Plugin (Word/LaTeX) was die QR-Codes dann automatisch erstellt und richtig einfügt. (Wichtige Daten sind da hinterlegt, Vor- und Nachteile von QR-Codes, ...)
 	
 	- Ist die App nun schneller als der normale Umgang bleibt offen -> Bachelorarbeit knüpft da an...
+	
+	- ImageCaptureCore für macOS
+	
+	- neuer Workflow. Klausur hat immer Name, Matrikel Nummer, etc. (Nicht extra Regionen-Namen vergeben)
 	
 
 \Anhang
@@ -413,6 +515,10 @@ In dem vorliegendem Praktikumsbericht...
 	\textbf{14.04. - 19.04.}
 	Ein kritisches Problem mit den Sessions aus der vorherigen Woche konnte in dieser endlich gelöst werden. Dazu konnte ich die Anwendung etwas optimieren und einen sehr großen Teil des Beleges fertig stellen. Dabei half auch die Beantwortung vieler Fragen während eines Meetings mit dem Betreuer. Allerdings entstanden Probleme mit der Datenbank, die die Funktionalität der App einschränkt.
 	
+	\textbf{20.04. - 26.04.}
+	
+	\textbf{27.04. - ??.05.}
+
 
 \bibliography{Beleg}
 \bibliographystyle{iso690.bst}
