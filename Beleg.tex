@@ -1,4 +1,5 @@
 \newcommand{\cmmnt}[1]{}
+\newcommand{\footurl}[2]{\footnote{#1 \href{#2}{\url{#2}}}}
 % Bei Abgabe löschen
 \documentclass[nomenclature, oneside, 150]{HSMW-Thesis}
 
@@ -155,10 +156,10 @@ In dem vorliegendem Praktikumsbericht...
 
 %%%%%%%%%%%%%%% - PROTOTYP - %%%%%%%%%%%%%%%
 
-\chapter{Entwicklung des ersten Prototyps}
+\chapter{Entwicklung des ersten Prototyps}\label{ch:prototyp}
 	Dieses Kapitel beschreibt die Entwicklung der iOS-App in einer ähnlichen Reihenfolge, wie das bekannte Wasserfall-Model über die Verwaltung der Entwicklung großer Softwaresysteme nach Winston W. Royce. - Quelle:...
 	
-	\section{Anforderungsplanung}
+	\section{Anforderungsplanung}\label{sc:anforderungsplanung}
 	Vor Beginn des Praktikums wurde diskutiert und kalkuliert, welches Thema aus dem Projekt Memo Space für ein zwölfwöchiges Praktikum geeignet ist. Dabei entstand eine Art Durchführbarkeits- / Machbarkeitsstudie, welche zur Entscheidung führte, ein Dokumenten-Scanner-Softwaresystem umzusetzen. Aufgrund der Kenntnisse und Erfahrung, soll ein Backend mit entsprechenden Schnittstellen und einer Android-App von Tobias Kallauke umgesetzt werden, währende vom Verfasser eine iOS-App gefordert ist. Die Anwendung soll den Anforderungen, die im gleichnamigen Kapitel \ref{ch:anforderungen} zu finden sind, erfüllen. Für weitere Details über den Server und die Android-App siehe im Praktikumsbericht von Tobias Kallauke.
 
 	\section{Planung und Vorbereitung bzw. Analyse und Definition}
@@ -170,9 +171,9 @@ In dem vorliegendem Praktikumsbericht...
 			\item das Entwickeln eines ersten Prototyps, als Machbarkeitsnachweis.
 		\end{enumerate}
 		
-		Bei der Entstehung des Konzepts, welches im Kapitel \ref{ch:konzept} zu finden ist, spielen die Dokumentationen der Frameworks \textit{Vision}, \textit{VisionKit} und \textit{PhotoKit} von \textit{Apple} eine entscheidende Rolle. Aus ihnen wird klar, welche Funktionen der App noch zu entwickeln und welche in Frameworks schon vorhanden sind. Z. B. ist das Erkennen und das gerade Ziehen von Dokumenten in Echtzeit, sowie die Texterkennung auf Bildern in \textit{Vision} und \textit{VisionKit} enthalten. Bei der Entwicklung des ersten Prototyps half eine Beispiel-App von \textit{Apple} \cite{noauthor_detecting_nodate}, die das Erkennen von Objekten in Standbildern mithilfe der genannten Frameworks umsetzt.
+		Bei der Entstehung des Konzepts, welches im Kapitel \ref{ch:konzept} zu finden ist, spielen die Dokumentationen der Frameworks \textit{Vision}\footurl{Dokumentation von Vision -}{https://developer.apple.com/documentation/vision} , \textit{VisionKit}\footurl{Dokumentation von VisionKit -}{https://developer.apple.com/documentation/visionkit} und \textit{PhotoKit}\footurl{Dokumentation von PhotoKit -}{https://developer.apple.com/documentation/photokit} von \textit{Apple} eine entscheidende Rolle. Aus ihnen wird klar, welche Funktionen der App noch zu entwickeln und welche in Frameworks schon vorhanden sind. Z. B. ist das Erkennen und das gerade Ziehen von Dokumenten in Echtzeit, sowie die Texterkennung auf Bildern in \textit{Vision} und \textit{VisionKit} enthalten. Bei der Entwicklung des ersten Prototyps half eine Beispiel-App von \textit{Apple} \cite{noauthor_detecting_nodate}, die das Erkennen von Objekten in Standbildern mithilfe der genannten Frameworks umsetzt.
 		
-		Durch die Auseinandersetzung mit den Bibliotheken konnte festgestellt werden, dass die zu entwickelnde App nur Geräte mit iOS 13.0 oder neuer unterstützen werden kann. Grund dafür sind die \textit{Apple} Frameworks \textit{SwiftUI} und \textit{VisionKit}. \textit{SwiftUI} bietet die Möglichkeit, Benutzeroberflächen für alle \textit{Apple}-Plattformen in \textit{Swift} zu erstellen. Die deklarative \textit{Swift}-Syntax ist einfach zu lesen und schnell zu schreiben, so dass es möglich ist, die App in wenigen Wochen für iPhone und iPad zu schreiben. Als Alternative gibt es noch \textit{UIKit} oder auch \textit{AppKit}, die unter alle iOS Versionen funktioniere. Diese Frameworks sind allerdings nicht deklarativ sodass, Views sowohl im Code als auch in Interface-Dateien getrennt voneinander erstellt und konfiguriert werden müssen \cite{sillmann_einstieg_nodate}. Dadurch dauert die Entwicklung einer App, im Gegensatz zu SwiftUI deutlich länger, wie man auch hier in dem Video \footnote{SwiftUI vs UIKit – Comparison of building the same app in each framework - \href{https://www.youtube.com/watch?v=qk2y-TiLDZo}{\url{https://www.youtube.com/watch?v=qk2y-TiLDZo}} } von Paul Hudson einem in der Swift-Community sehr bekannten Programmiere und Autor sieht. Sehr ähnliche Erfahrung hat der Verfasser vor dem Praktikum mit den beiden Frameworks gemacht. \textit{VisionKit} dagegen, ist das Framework zum Scannen der Dokumente. Auch hierfür gibt es eine Alternative. Das Framework ist von den Entwicklern von \textit{WeTransfer} und funktioniert auch auf älteren iOS Versionen. Allerdings unterstützt \textit{WeScan} \footnote{WeScan GitHub Repository - \href{https://github.com/WeTransfer/WeScan}{\url{https://github.com/WeTransfer/WeScan}}} noch kein stapelweises Scannen. Das bedeutet, man kann immer nur ein Foto machen, welches erst abgespeichert werden muss, bevor man das nächste machen kann. Das ist für den Benutzer nicht bequem und spart wahrscheinlich auch keine Zeit.
+		Durch die Auseinandersetzung mit den Bibliotheken konnte festgestellt werden, dass die zu entwickelnde App nur Geräte mit iOS 13.0 oder neuer unterstützen werden kann. Grund dafür sind die \textit{Apple} Frameworks \textit{SwiftUI} und \textit{VisionKit}. \textit{SwiftUI} bietet die Möglichkeit, Benutzeroberflächen für alle \textit{Apple}-Plattformen in \textit{Swift} zu erstellen. Die deklarative \textit{Swift}-Syntax ist einfach zu lesen und schnell zu schreiben, so dass es möglich ist, die App in wenigen Wochen für iPhone und iPad zu schreiben. Als Alternative gibt es noch \textit{UIKit} oder auch \textit{AppKit}, die unter alle iOS Versionen funktioniere. Diese Frameworks sind allerdings nicht deklarativ sodass, Views sowohl im Code als auch in Interface-Dateien getrennt voneinander erstellt und konfiguriert werden müssen \cite{sillmann_einstieg_nodate}. Dadurch dauert die Entwicklung einer App, im Gegensatz zu SwiftUI deutlich länger, wie man auch hier in dem Video \footurl{SwiftUI vs UIKit – Comparison of building the same app in each framework -}{https://www.youtube.com/watch?v=qk2y-TiLDZo} von Paul Hudson einem in der Swift-Community sehr bekannten Programmiere und Autor sieht. Sehr ähnliche Erfahrung hat der Verfasser vor dem Praktikum mit den beiden Frameworks gemacht. \textit{VisionKit} dagegen, ist das Framework zum Scannen der Dokumente. Auch hierfür gibt es eine Alternative. Das Framework ist von den Entwicklern von \textit{WeTransfer} und funktioniert auch auf älteren iOS Versionen. Allerdings unterstützt \textit{WeScan}\footurl{WeScan GitHub Repository -}{https://github.com/WeTransfer/WeScan} noch kein stapelweises Scannen. Das bedeutet, man kann immer nur ein Foto machen, welches erst abgespeichert werden muss, bevor man das nächste machen kann. Das ist für den Benutzer nicht bequem und spart wahrscheinlich auch keine Zeit. Zu Informationen zu anderen verwendeten Frameworks siehe im Kapitel \ref{ch:prototyp} Abschnitt \ref{sc:implementierung}.
 
 		Abschließend zu dieser Phase ist zu erwähnen, dass das Scrum-Konzept, welches sich für agile Softwareentwicklung anbietet, zur Projektplanung und zum Projektmanagement verwendet wurde. Als Versionsverwaltung der Software wurde Git in Kombination mit GitHub Issues und GitHub Projects als Planungstools benutzt. So konnte der Verfasser selbständig jedem Sprint Aufgaben zuordnen und den Fortschritt nachvollziehen.
 
@@ -183,8 +184,8 @@ In dem vorliegendem Praktikumsbericht...
 			Das Entwurfsmuster Model View ViewModel (MVVM)\nomenclature{MVVM}{Model View ViewModel} entstand bei \textit{Microsoft} im Jahr 2005 mit der \textit{Windows Presentation Foundation} (WPF) und \textit{Silverlight-Technologien}. MVVM verwendet das Konzept eines Schichtmodells und ist eine abstrakte Darstellung einer Benutzeroberfläche, in Form einer Klasse, wie man sie unter objektorientierten Programmiersprachen kennt. Diese Klasse enthält Daten, die auf der Benutzeroberfläche angezeigt werden sollen und Anweisungen, die auf der Benutzeroberfläche aufgerufen werden können. Dieses sogenannte ViewModel, weiß nichts von Views, wie es sonst bei anderen Entwurfsmustern üblich ist, um Daten auf der Benutzeroberfläche anzuzeigen. Stattdessen verwendet eine MVVM-View eine Bindungsfunktion (data binging) zur bidirektionalen Zuordnung von Daten aus dem ViewModel zu den jeweiligen Eigenschaften auf der View. Z. B. Einträge in einer Dropdown-Menü. Aber auch das binden von Daten aus dem Model zu Benutzereingaben durch Maus, Tastatur oder Touch-Screens ist möglich. Beispielsweise kann ein Mausklick eine Anweisung in dem ViewModel auslösen. Diese verändert einen Wert im Model, wodurch die View durch data binding aktualisiert wird. \cite{freeman_pro_2017} \cite{bragge_model-view-controller_2013}
 
 		\paragraph{Redux.js:}
-			Redux.js ist eine Bibliothek\footnote{Redux.js Github Repository - \href{https://github.com/reduxjs/redux}{\url{https://github.com/reduxjs/redux}}} für die Programmiersprache JavaScript. Diese stellt einen sogenannten vorhersehbaren Zustandscontainer\footnote{Core Concepts - \href{https://redux.js.org/introduction/core-concepts}{\url{https://redux.js.org/introduction/core-concepts}}} für JavaScript Anwendungen bereit. In diesem Container wird der Zustand der gesamten Anwendung in einem Objektbaum innerhalb eines einzigen Speichers gespeichert. Diesen Baum kann man sich vorstellen, wie eine Matrjoschka die weitere Puppen in sich hat. Der wichtige Unterschied zwischen einer Matrjoschka und einem Baum ist jedoch, dass in eine Puppe genau nur eine andere gesteckt werden kann. Beim einem Objektbaum hingegen können mehrere Objekte in ein Objekt ''gesteckt'' werden und so weiter. Im Bezug auf einen Zustandscontainer enthält dieser dann States (Objekte) auf deutsch Zustände und Daten, die unteranderem auf der Benutzeroberfläche angezeigt werden sollen. Diese Aufteilung in die States ist dazu gedacht, einer View oder mehrere zusammenhängende Views nur die wirklich benötigten Daten bereit zustellen. Diese Struktur erleichtert das Testen oder Untersuchen der Anwendung und ermöglicht es, durch hinzufügen eines neuen States den aktuellen Entwicklungsstand der Anwendung beizubehalten und dadurch den Entwicklungsprozess zu beschleunigen. \\
-			Ein weiteres wichtiges Prinzip\footnote{Three Principles - \href{https://redux.js.org/introduction/three-principles}{\url{https://redux.js.org/introduction/three-principles}}} von Redux ist, dass die Daten in den States Schreibgeschütz sind. Die einzige Möglichkeit den Zustand zu ändern, besteht darin, eine Aktion auszulösen, die beschreibt, was passiert. Dadurch wird sichergestellt, dass weder die Views noch Netzwerk-Rückrufe jemals direkt an den Zustand schreiben werden. Stattdessen bringen sie nur die Absicht zum Ausdruck, den Zustand zu verändern und lösen eine Aktion aus. Da alle Änderungen zentralisiert sind und eine nach der anderen in einer strikten Reihenfolge erfolgen, gibt es weniger Programmfehler-Quellen.
+			Redux.js ist eine Bibliothek\footurl{Redux.js Github Repository -}{https://github.com/reduxjs/redux} für die Programmiersprache JavaScript. Diese stellt einen sogenannten vorhersehbaren Zustandscontainer\footurl{Redux Core Concepts -}{https://redux.js.org/introduction/core-concepts} für JavaScript Anwendungen bereit. In diesem Container wird der Zustand der gesamten Anwendung in einem Objektbaum innerhalb eines einzigen Speichers gespeichert. Diesen Baum kann man sich vorstellen, wie eine Matrjoschka die weitere Puppen in sich hat. Der wichtige Unterschied zwischen einer Matrjoschka und einem Baum ist jedoch, dass in eine Puppe genau nur eine andere gesteckt werden kann. Beim einem Objektbaum hingegen können mehrere Objekte in ein Objekt ''gesteckt'' werden und so weiter. Im Bezug auf einen Zustandscontainer enthält dieser dann States (Objekte) auf deutsch Zustände und Daten, die unteranderem auf der Benutzeroberfläche angezeigt werden sollen. Diese Aufteilung in die States ist dazu gedacht, einer View oder mehrere zusammenhängende Views nur die wirklich benötigten Daten bereit zustellen. Diese Struktur erleichtert das Testen oder Untersuchen der Anwendung und ermöglicht es, durch hinzufügen eines neuen States den aktuellen Entwicklungsstand der Anwendung beizubehalten und dadurch den Entwicklungsprozess zu beschleunigen. \\
+			Ein weiteres wichtiges Prinzip\footurl{Redux Three Principles -}{https://redux.js.org/introduction/three-principles} von Redux ist, dass die Daten in den States Schreibgeschütz sind. Die einzige Möglichkeit den Zustand zu ändern, besteht darin, eine Aktion auszulösen, die beschreibt, was passiert. Dadurch wird sichergestellt, dass weder die Views noch Netzwerk-Rückrufe jemals direkt an den Zustand schreiben werden. Stattdessen bringen sie nur die Absicht zum Ausdruck, den Zustand zu verändern und lösen eine Aktion aus. Da alle Änderungen zentralisiert sind und eine nach der anderen in einer strikten Reihenfolge erfolgen, gibt es weniger Programmfehler-Quellen.
 
 	\section{Entwurf und Design}
 
@@ -228,33 +229,38 @@ In dem vorliegendem Praktikumsbericht...
 
 		Ein weiterer wichtiger Punkt sind die Server-Aufrufe. Für diese gibt es einen eigenen Reducer und eine besondere Schnittstelle, welche in der Abbildung \ref{fig:redux} grau markiert und mit API \nomenclature{API}{application programming interface, auf deutsch Programmierschnittstelle} beschriftet ist. Diese hat die Besonderheit selbst Aktionen an den Container zu senden. Beispielsweise löst ein Knopfdruck in einer View die Aktion aus, alle Vorlagen vom Server zu laden. Diese Aktion gelangt über den vorgesehenen Reducer zu der Schnittstelle. Dort wird ein entsprechender Server-Aufruf gestartet und ohne andere Prozesse anzuhalten auf den Server-Rückruf gewartet. Sobald die Antwort des Servers angekommen ist, wird diese in einer Aktion wieder zum Container gesendet. Dort wird sich wieder ein entsprechender Reducer um eventuelle Fehlerbehandlung oder das Ablegen der Vorlagen kümmern.
 		
-	\section{Implementierung}
+	\section{Implementierung}\label{sc:implementierung}
 		
-		Zur Realisierung der entworfenen Systemkomponenten wurde ausschließlich, die von Apple entwickelte IDE\nomenclature{IDE}{integrated development environment, auf deutsch Integrierte Entwicklungsumgebung} Xcode, verwendet. Diese stellt Geräte-Simulatoren zur Verfügung, auf denen die App getestet werden kann. Die Simulatoren bieten unteranderem auch die Möglichkeit an, die Anwendung schnell auf verschiedenen iOS bzw. iPadOS Versionen zu testen. Auch ist das Testen der App auf echten Geräten durch Xcode möglich, was bei der Entwicklung unumgänglich war. Grund dafür ist die Benutzung der Kamera, die bei den Simulatoren zu gewollten Abstürzen führt, da diese keinen Zugriff auf eine Kamerasystem besitzen. 
+		Zur Realisierung der entworfenen Systemkomponenten wurde ausschließlich, die von Apple entwickelte IDE\nomenclature{IDE}{integrated development environment, auf deutsch Integrierte Entwicklungsumgebung} Xcode, verwendet. Diese stellt Geräte-Simulatoren zur Verfügung, auf denen die App getestet werden kann. Die Simulatoren bieten unteranderem auch die Möglichkeit an, die Anwendung schnell auf verschiedenen iOS bzw. iPadOS Versionen zu testen. Auch ist das Testen der App auf echten Geräten durch Xcode möglich, was bei der Entwicklung unumgänglich war. Grund dafür ist die Benutzung der Kamera, die bei den Simulatoren zu gewollten Abstürzen führt, da diese keinen Zugriff auf eine Kamerasystem besitzen.
 		
-		Zum Ändern und Testen des Backends wurde außerdem Visual Studio Community bzw. Visual Studio Code\footnote{\href{https://visualstudio.microsoft.com/de/}{\url{https://visualstudio.microsoft.com/de/}}} mit dem REST Client Plugin\footnote{\href{https://marketplace.visualstudio.com/items?itemName=humao.rest-client}{\url{https://marketplace.visualstudio.com/items?itemName=humao.rest-client}}} , zum Testen der Server-Schnittstellen verwendet. Das Backend konnte dann als lokaler Server auf dem Entwicklungscomputer gestartet und über die IP-Adresse 0.0.0.0 sogar im lokalen Netzwerk aufgerufen werden. Für die Verwaltung der PostgreSQL-Datenbank genügte das Tool PgAdmin4\footnote{\href{https://www.pgadmin.org/}{\url{https://www.pgadmin.org/}}} . Damit ist es möglich einzelne Einträge oder auch ganze Tabellen zu bearbeiten.
-			
+		Die App wurde ausschließlich in der Programmiersprache Swift geschrieben. Zusätzlich wurden die Frameworks SwiftUI, Vision und VisionKit von Apple, sowie das Framework Kingfisher\footurl{Kingfisher GitHub Repository -}{https://github.com/onevcat/Kingfisher}, zum Downloaden und Cachen von Bildern verwendet. Das Vision-Framework führt Erkennung von Gesichts- und Gesichtsmarkierungen, Texterkennung, Barcode-Erkennung, Bildregistrierung und allgemeine Merkmalsverfolgung durch. Jedoch wurde in der App nur die integrierte Texterkennung benutzt. Es ist aber anzunehmen, das VisionKit Algorithmen von Vision zur Dokumenten-Erkennung verwendet.
+		
+		Für mehr Informationen über die Frameworks SwiftUI und VisionKit siehe im Kapitel \ref{ch:anforderungen} Abschnitt \ref{sc:anforderungsplanung}.
+		
+		
+		Zum Ändern und Testen des Backends wurde außerdem Visual Studio Community bzw. Visual Studio Code\footurl{Visual Studio Internetseite -}{https://visualstudio.microsoft.com/de/} mit dem REST Client Plugin\footurl{REST Client, ein Visual Studio Code Plugin -}{https://marketplace.visualstudio.com/items?itemName=humao.rest-client} , zum Testen der Server-Schnittstellen verwendet. Das Backend konnte dann als lokaler Server auf dem Entwicklungscomputer gestartet und über die IP-Adresse 0.0.0.0 sogar im lokalen Netzwerk aufgerufen werden. Für die Verwaltung der PostgreSQL-Datenbank genügte das Tool PgAdmin4\footurl{PgAdmin Internetseite -}{https://www.pgadmin.org/} . Damit ist es möglich einzelne Einträge oder auch ganze Tabellen zu bearbeiten.
+		
+		\begin{figure}[th]
+    		\centering
+   			\begin{subfigure}[t]{0.3\textwidth}
+       			\frame{\includegraphics[width=0.96\textwidth]{img/1willkommen.png}}
+       			\caption{Willkommen View}
+       			\label{fig:willkommen}
+       		\end{subfigure}
+    		\begin{subfigure}[t]{0.3\textwidth}
+        		\frame{\includegraphics[width=0.96\textwidth]{img/7reg_full_see.png}}
+      			\caption{Registrierung mit sicheren Eingabefeldern}
+       			\label{fig:register}
+   			\end{subfigure}
+   			\begin{subfigure}[t]{0.3\textwidth}
+      			\frame{\includegraphics[width=0.96\textwidth]{img/12an_full_pass.png}}
+        		\caption{Anmeldung mit AutoFill-Funktion}
+	       		\label{fig:anmelden}
+    		\end{subfigure}
+   			\caption{Willkommen- Registrier- und Anmelde-View}\label{fig:start}
+		\end{figure}
+		
 		\subsection{Registrieren und Anmelden}
-			\begin{figure}[th]
-    			\centering
-    			\begin{subfigure}[t]{0.3\textwidth}
-        			\frame{\includegraphics[width=0.96\textwidth]{img/1willkommen.png}}
-        			\caption{Willkommen View}
-        			\label{fig:willkommen}
-    			\end{subfigure}
-    			\begin{subfigure}[t]{0.3\textwidth}
-        			\frame{\includegraphics[width=0.96\textwidth]{img/7reg_full_see.png}}
-        			\caption{Registrierung mit sicheren Eingabefeldern}
-        			\label{fig:register}
-    			\end{subfigure}
-    			\begin{subfigure}[t]{0.3\textwidth}
-       				\frame{\includegraphics[width=0.96\textwidth]{img/12an_full_pass.png}}
-        			\caption{Anmeldung mit AutoFill-Funktion}
-        			\label{fig:anmelden}
-    			\end{subfigure}
-    			\caption{Willkommen- Registrier- und Anmelde-View}\label{fig:start}
-			\end{figure}
-			
 			Die technische Implementierung der Registrierung und Anmeldung beinhaltet typische Charakteristiken von Anmelde- und Registrier-Formularen. Die E-Mail-Textfelder besitzen, wie auch das Passwort-Feld der Anmeldung eine AutoFill-Funktion. Dadurch kann das iOS-Gerät Registrier- und Anmelde-Daten vorschlagen und automatisch in die entsprechenden Felder einsetzten. Dies sieht man im dritten Bild \ref{fig:anmelden} anhand des ''Passwörter''-Knopfes über der Tastatur.  Weiter sind alle Passwort-Felder gesichert. Das bedeutet, dass der Inhalt zum Schutz der Privatsphäre standardmäßig ausgeblendet und mit Punkten ersetzt wird. Durch das drücken des Auges rechts des Textfeldes kann der Inhalt jedoch eingesehen werden. Im mittlerem Bild \ref{fig:register} sind wegen der Sicherheitsstandards von iOS, bei einer Aufnahme des Bildschirms nicht einmal die Punkte des ersten Passwort-Textfelds zu sehen. Zusätzlich validieren alle Text-Felder ihren Inhalt mithilfe von regulären Ausdrücken. Beispielsweiße muss ein Passwort aus 8 Zeichen bestehen und zwei von den drei Folgenden Eigenschaften erfüllen:
 			\begin{enumerate}
 				\item Es ist mindestens ein Sonderzeichen enthalten.
@@ -286,6 +292,7 @@ In dem vorliegendem Praktikumsbericht...
     			\end{subfigure}
     			\caption{Die ersten Views zur Erstellung einer Scan-Vorlage}\label{fig:erstellung1}
 			\end{figure}
+			
 			Im ersten Schritt sind ein Name und weitere Informationen, zu der Vorlage an zugegeben (\ref{fig:v2}), um im Anschluss die Fotos aufzunehmen. Bei der Kamera-View (\ref{fig:v3}) handelt es sich um die Scan-View des Frameworks VisionKit. Mithilfe von Kantenerkennung und anderen Algorithmen, die Tobias Kallauke in seinem Bericht beschreibt, kann dass Dokument sobald es erkannt ist, automatisch fotografiert werden. In Echtzeit wird das erkannte Dokument aus dem Bild ausgeschnitten und gerade gezogen. Ein manuelles Auslösen des Fotos und Anpassen der Dokumenten-Kanten im Bild, ist ebenfalls möglich. Des Weiterem werden alle erstellten Bilder zu einer Gruppe gesammelt. Diese können vor dem Abspeichern angeschaut und nochmal bearbeitet werden. 
 			
 			\subsubsection{Regionen erstellen}
@@ -309,7 +316,7 @@ In dem vorliegendem Praktikumsbericht...
     			\caption{Views zur Erstellung von Regionen}
     			\label{fig:erstellung2}
 			\end{figure}
-			Im nächsten Schritt sind die Regionen auf den Dokumenten-Seiten zu markieren, deren Inhalt beim Einscannen digitalisiert werden soll. Zu erst wird die gewünschte Seite aus einer Übersicht (\ref{fig:v4}) ausgewählt. Anschließend ist eine Vorschau der Seite mit alle eingetragenen Regionen zu sehen (\ref{fig:v8} bzw. \ref{fig:v9}). Über einen Button können weitere Regionen hinzugefügt werden. Dazu legt man einen Namen (\ref{fig:v5}) und einen Datentyp (\ref{fig:v6}) fest. Die Datentypen sind für die Texterkennung und für die Erstellung der Tabelle für die Notenfreigabe wichtig. Dazu später mehr. Wenn die Eigenschaften der Region festgelegt sind, muss diese noch auf dem Bild markiert werden. Dazu zieht man mit einem Finger ein Rechteck in einer beliebigen Größe ein (\ref{fig:v7}). Die markierte Region kann anschließend noch bewegt oder neu gemacht werden. Um kleinere Regionen präzise zu markieren kann mit einer Zwei-Finger-Geste auch an die Seite heran bzw. auch heraus gezoomt werden. Dieses Vorgehen muss dann für alle nötigen Regionen auf den jeweiligen Seiten wiederholt werden. 
+			
 			\begin{figure}[th]
     			\centering
 				\begin{subfigure}[t]{0.3\textwidth}
@@ -331,8 +338,7 @@ In dem vorliegendem Praktikumsbericht...
 				\label{fig:erstellung3}
 			\end{figure}
 			
-			\subsubsection{Links erstellen}
-			Zum Schluss können noch die sogenannte Links erstellt werden. Diese Funktion ist allerdings noch nicht sehr weit fortgeschritten und beinhaltet aktuell nur den Link-Typ zum Vergleichen von Regionen, wie im Kapitel \ref{ch:konzept} Konzept beschrieben ist. Beim Erstellen eines Vergleich-Links wählt man zwei Regionen aus, deren Inhalt nach der Texterkennung auf Gleichheit überprüft wird. 
+			Im nächsten Schritt sind die Regionen auf den Dokumenten-Seiten zu markieren, deren Inhalt beim Einscannen digitalisiert werden soll. Zu erst wird die gewünschte Seite aus einer Übersicht (\ref{fig:v4}) ausgewählt. Anschließend ist eine Vorschau der Seite mit alle eingetragenen Regionen zu sehen (\ref{fig:v8} bzw. \ref{fig:v9}). Über einen Button können weitere Regionen hinzugefügt werden. Dazu legt man einen Namen (\ref{fig:v5}) und einen Datentyp (\ref{fig:v6}) fest. Die Datentypen sind für die Texterkennung und für die Erstellung der Tabelle für die Notenfreigabe wichtig. Dazu später mehr. Wenn die Eigenschaften der Region festgelegt sind, muss diese noch auf dem Bild markiert werden. Dazu zieht man mit einem Finger ein Rechteck in einer beliebigen Größe ein (\ref{fig:v7}). Die markierte Region kann anschließend noch bewegt oder neu gemacht werden. Um kleinere Regionen präzise zu markieren kann mit einer Zwei-Finger-Geste auch an die Seite heran bzw. auch heraus gezoomt werden. Dieses Vorgehen muss dann für alle nötigen Regionen auf den jeweiligen Seiten wiederholt werden. 
 			
 			\begin{figure}[th]
     			\centering
@@ -351,28 +357,36 @@ In dem vorliegendem Praktikumsbericht...
         			\caption{View zur Auswahl einer Region}
         			\label{fig:l3}
     			\end{subfigure}
-    			\caption{Seiten-Vorschau-View}
+    			\caption{Views zur Erstellung von Links}
 				\label{fig:link1}
 			\end{figure}
+			
+			\subsubsection{Links erstellen}
+			Zum Schluss können noch die sogenannte Links erstellt werden. Diese Funktion ist allerdings noch nicht sehr weit fortgeschritten und beinhaltet aktuell nur den Link-Typ zum Vergleichen von Regionen, wie im Kapitel \ref{ch:konzept} Konzept beschrieben ist. Beim Erstellen eines Vergleich-Links wählt man zwei Regionen aus, deren Inhalt nach der Texterkennung auf Gleichheit überprüft wird. Genauer werden nur die IDs der Regionen in einem Link gespeichert. Diese werden dann, beim Einscannen benötigt, um den Inhalt der Regionen zu den IDs zu Analysieren. 
 		
 			\subsubsection{Vorlage speichern}
-			Wenn eine Vorlage gespeichert werden soll, passiert das in mehreren Schritten. 
+			Wenn eine Vorlage gespeichert werden soll, passiert das in mehreren Schritten. Dazu werden die entsprechenden Server-Schnittstellen aufgerufen und auf die Server-Rückrufe gewartet. Für genauere Details zur API des Servers siehe im Praktikumsbericht von Tobias Kallauke.
+			
+			Im folgenden Abschnitt, ist beschrieben, in welcher Reihenfolge das Hochladen einer Vorlage zum Server geschieht. Dabei werden mögliche Fehler von Seiten des Server, der Internetverbindung und des Clients ignoriert. Jedoch ist im aktuellen Stand der App das Abfangen des Fehler schon integriert, die Fehlerbehandlung aber noch nicht.
 			\begin{enumerate}
 				\item Der Name und die Beschreibung der Vorlage sowie die Liste an Links wird gesendet. In der Antwort des Servers befindet sich dann die Vorlagen-ID, die in den nächsten Schritten benötigt wird. 
-				\item Die Bilder der Seiten werden gesendet. Als Antwort zu jedem Bild wird der Pfad geschickt, wo das Bild gespeichert wurde. Dieser Pfad wird im nächsten Schritt benötigt.
+				\item Die Bilder der Seiten werden gesendet. Als Antwort zu jedem Bild wird der Pfad geschickt, wo das Bild gespeichert wurde. Dieser Pfad wird im nächsten Schritt benötigt. Grund dafür ist, dass
 				\item Die Seiten mit einer Seiten Nummer und dem Pfad zu dem Bild, wird mit der Vorlagen-ID gesendet. Als Antwort wird eine ID zurückgegeben, die im nächsten Schritt verwendet wird.
-				\item Die Regionen der Seiten werden gesendet. Eine Region, auch Attribut genannt hat X- und Y-Koordinaten. Diese repräsentieren den Abstand vom Bildursprung, der sich in jedem Bild oben links befindet. Außerdem besitzt eine Attribut eine Höhe und Breite, einen Namen und einen Datentyp. Zusammen mit der Seiten-ID wird das Attribute an den Server gesendet.
+				\item Die Regionen der Seiten werden gesendet. Eine Region, auch Attribut genannt hat X- und Y-Koordinaten. Diese repräsentieren den Abstand vom Bildursprung, der sich in jedem Bild oben links befindet. Außerdem besitzt eine Attribut eine Höhe und Breite, einen Namen und einen Datentyp. Die Koordinaten, sowie die Höhe und Breite sind alle in Pixel angegeben. Zusammen mit der Seiten-ID wird das Attribute an den Server gesendet.
 			\end{enumerate}
-		
+			
 		\subsection{Vorlage verwenden}
-		
+			Um eine Klausur zu digitalisieren, muss die vorher erstellte Vorlage ausgewählt werden. Danach bietet die Benutzeroberfläche über einen Button die Möglichkeit an, eine Klausur einzuscannen. Wichtig dabei ist, dass die Seiten beim Fotografiert die selbe Reihenfolge, wie in der Vorlage haben. Auch muss die Anzahl der Eingescannten Seiten mit denen in der Vorlage übereinstimmen. Bei der Implementierung der Scan-View wurde auf die Selbe zurückgegriffen, wie sie auch beim Vorlagen Erstellen zu finden ist. Allgemein konnten viele Komponenten der gesamten Benutzeroberfläche dank SwiftUI immer wieder verwendet werden. Durch die Scan-View werden die Seiten wieder aus dem Bild rausgeschnitten, geglättet und der Kontrast des Bildes wird ebenfalls leicht angepasst, damit Buchstaben leichter zu erkennen sind und Schatten bzw. Falten verschwinden.
+			
+			Nach dem Einscannen der Klausur-Seiten beginnt die Texterkennung. Durch Aktivitätsanzeigen wird dem Benutzer mitgeteilt, dass die Anwendung gerade beschäftigt ist. Zuerst werden die Positionen der Regionen im neuen Bild berechnet. Das hat den Hintergrund, da die Regionen in der Vorlage absolut zum Bildursprung liegen. Jedoch hat die neue eingescannte Seite mit hoher Wahrscheinlichkeit, nicht die selben Pixel-Maße, wie das Bild der Seite aus der Vorlage. Das liegt dann daran, dass sich der Winkel und der Abstand der Kamera zum Dokument geändert hat. Diese Besonderheit lässt sich auch in den Abbildungen \ref{fig:seite1} und \ref{fig:seite2} beobachten. Beide Bilder sind beim Einscannen einer Scan-Vorlage entstanden. Jedoch haben sie unterschiedliche Maße, was an dem Größenunterschied zu erkennen ist. Die Abbildung \ref{fig:seite1} ist leicht größer, als die Abbildung \ref{fig:seite2}, da dieses Bild von näher dran und in einem geeigneterem Winkel aufgenommen wurde. Würde man immer den selben Abstand und Winkel garantieren, wie das beispielsweise in einem richtigen Kopiergerät oder Scanner der Fall ist, könnte man die Neuberechnung der Positionen der Regionen weglassen. 
+			
+			Mit der Berechnung der relativen Position der Region, an Hand der Maße der Vorlagen-Seite und der neuen Seite, wird außerdem noch die relative Höhe und Breite der Region berechnet. Durch das Umrechnen von absoluten in relative Positionen ist auch möglich, verschiedensten Auflösungen von Kameras zu kompensieren. Nachdem die neue Position und Maße aller Regionen einer Seite bestimmt sind, entstehen daraus Bildausschnitte für die Texterkennung. Die Regionen dienen als eine Art Schablone, so dass alles, was sich außerhalb der Regionen befindet, nicht verwendet wird. Das bedeutet auch, dass es vorkommen kann, dass zu digitalisierende Teile weggeschnitten werden können. Bei richtiger Erstellung der Vorlagen und bei richtigem Einscannen der Klausur passiert das jedoch nicht. 
 
-		
-		- keine Unit Tests etc. keine Zeit
 		
 	\section{''Abnahme''}	
 		Abnahme ... 
 		
+	- was wurde umgesetzt was nicht
 	- Accessibility 	von Haus aus etwas... dank swiftui
 	- wie benutze ich die App wie installiere ich die
 	- 
