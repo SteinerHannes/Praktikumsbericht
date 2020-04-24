@@ -372,13 +372,13 @@ In dem vorliegendem Praktikumsbericht...
 			\end{enumerate}
 			
 		\subsection{Vorlage verwenden}
-			Um eine Klausur zu digitalisieren, muss die vorher erstellte Vorlage ausgewählt werden. Danach bietet die Benutzeroberfläche über einen Button die Möglichkeit an, eine Klausur einzuscannen.  Bevor die Bilder aufgenommen werden können, erscheint ein Dialogfenster, in dem der Benutzer sich entscheiden muss, welche OCR-Engine benutzt werden soll. Aktuell gibt es zwei Möglichkeiten.
+			Um eine Klausur zu digitalisieren, muss die vorher erstellte Vorlage ausgewählt werden (\ref{fig:liste1}). Danach bietet die Benutzeroberfläche über einen Button die Möglichkeit an, eine Klausur einzuscannen (\ref{fig:liste2}). Bevor die Bilder aufgenommen werden können, erscheint ein Dialogfenster (\ref{fig:ocr1}), in dem der Benutzer sich entscheiden muss, welche OCR-Engine benutzt werden soll. Aktuell gibt es zwei Möglichkeiten.
 				\begin{itemize}
 					\item Die OCR-Engine des Vision Framworks von Apple, welche direkt auf dem Gerät und ohne eine Internetverbindung die Texterkennung durchführt,  
 					\item oder die OCR-Engine Tesseract, die über eine Schnittstelle des Servers aufzurufen ist.
 				\end{itemize}
 			
-			 Nach der Auswahl öffnet sich die Kamera und die Bilder können aufgenommen werden. Wichtig dabei ist, dass die Seiten beim Fotografiert die selbe Reihenfolge, wie in der Vorlage haben. Auch muss die Anzahl der Eingescannten Seiten mit denen in der Vorlage übereinstimmen. Bei der Implementierung der Scan-View wurde auf die Selbe zurückgegriffen, wie sie auch beim Vorlagen Erstellen zu finden ist. Grundsätzlich konnten viele Komponenten der gesamten Benutzeroberfläche dank SwiftUI immer wieder verwendet werden. Durch die Scan-View werden die Seiten wieder aus dem Bild ausgeschnitten, geglättet und der Kontrast des Bildes wird ebenfalls leicht angepasst, damit Buchstaben leichter zu erkennen sind und Schatten bzw. Falten verschwinden.
+			 Nach der Auswahl öffnet sich die Kamera und die Bilder können aufgenommen werden. Wichtig dabei ist, dass die Seiten beim Fotografiert die selbe Reihenfolge, wie in der Vorlage haben. Auch muss die Anzahl der Eingescannten Seiten mit denen in der Vorlage übereinstimmen. Bei der Implementierung der Scan-View wurde auf die Selbe zurückgegriffen, wie sie auch beim Vorlagen Erstellen zu finden ist (\ref{fig:v3}). Grundsätzlich konnten viele Komponenten der gesamten Benutzeroberfläche dank SwiftUI immer wieder verwendet werden. Durch die Scan-View werden die Seiten wieder aus dem Bild ausgeschnitten, geglättet und der Kontrast des Bildes wird ebenfalls leicht angepasst, damit Buchstaben leichter zu erkennen sind und Schatten bzw. Falten verschwinden.
 			
 			Nach dem Einscannen der Klausur-Seiten beginnt der Prozess der Texterkennung. Durch Aktivitätsanzeigen wird dem Benutzer mitgeteilt, dass die Anwendung gerade beschäftigt ist. Die Abläufe bei der online OCR-Engine sind jedoch leicht anders, als die, des Vision Frameworks.
 			
@@ -402,8 +402,7 @@ In dem vorliegendem Praktikumsbericht...
     			\caption{Listen- und Detail-Ansicht von Scan-Vorlagen}
 				\label{fig:vorlagen}
 			\end{figure}
-			
-			
+
 			\begin{figure}[th]
     			\centering
 				\begin{subfigure}[t]{0.3\textwidth}
@@ -452,10 +451,10 @@ In dem vorliegendem Praktikumsbericht...
 				Danach werden die erkennten Texte bzw. Worte und deren confidencen an den State-Container der App gesendet. Für die Ergebnisse der Texterkennung ist ein eigener State vorgesehen, in dem auch die Server-Ergebnisse von Tesseract gesichert werden. Somit ist das Anzeigen der Ergebnisse bei beiden OCR-Egines gleich.  
 				
 				\paragraph{Zu 4.: Texterkennungs-Ergebnisse darstellen}
-				Die Ergebnissen der Texterkennung und die jeweilige confidence werden auf der Benutzeroberfläche, nach Seiten geordnet, angezeigt. Alle OCR-Ergebnisse können zudem noch angepasst werden. Abhängig vom Datentyp der Region passt sich die Tastatur beim Ändern der Texte an. Beispielsweise sind die Tastaturen beim Anpassen von Noten und Punkte auf Zahlen und Dezimalpunkte spezialisiert. Zudem kann die confidence farblich aber auch als Zahlenwert angezeigt werden. Wurde kein Text erkannt, ist dementsprechend ein Warnsymbol an der stelle der confidence zu sehen.    
+				Die Ergebnissen der Texterkennung und die jeweilige confidence werden auf der Benutzeroberfläche, nach Seiten geordnet, angezeigt (\ref{fig:ocr2}). Alle OCR-Ergebnisse können zudem noch angepasst werden. Abhängig vom Datentyp der Region passt sich die Tastatur beim Ändern der Texte an (\ref{fig:ocr3}). Beispielsweise sind die Tastaturen beim Anpassen von Noten und Punkte auf Zahlen und Dezimalpunkte spezialisiert. Zudem kann die confidence farblich (\ref{fig:ocr2}) aber auch als Zahlenwert (\ref{fig:ocr3}) angezeigt werden. Wurde kein Text erkannt, ist dementsprechend ein Warnsymbol an der stelle der confidence zu sehen.    
  
 			\subsubsection{Ablauf mit Tesseract}
-				Anders ist es, wenn man die Texterkennung Tesseract auf dem Server verwendet:
+				Etwas anders ist der Ablauf, wenn man die Texterkennung Tesseract auf dem Server verwendet:
 				\begin{enumerate}
 					\item Bilder an den Server senden
 					\item Auftrag zur Texterkennung an den Server senden
