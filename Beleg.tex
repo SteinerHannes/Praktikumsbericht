@@ -97,7 +97,7 @@ In dem vorliegendem Praktikumsbericht...
     			\label{fig:klausur}
 			\end{figure}
 	
-	Eine Klausuren-Vorlage bzw.\nomenclature{bzw.}{beziehungsweise} ein Gestaltungsleitfaden für Klausuren der Fakultät \textit{Angewandte Computer- und Biowissenschaften} bietet außerdem die Möglichkeit der Kontrolle des Prüfers an. Genauer ist es durch das vorgegebene Layout der Klausur möglich, einen Teil der Arbeit des Prüfenden auf Fehler zu untersuchen. Auf dem Deckblatt der Klausur ist eine Tabelle, mit drei Zeilen und für jede Aufgabe eine Spalte. In der ersten Zeile befinden sich die Nummern der Aufgaben. In der zweiten, die zu erreichenden Punkte der Aufgabe. Und in der dritten Zeile trägt der Prüfer die erbrachten Punkte des Studenten ein. Unter der Tabelle befindet sich ein Feld für die erreichte Gesamtpunktzahl, sowie ein Feld für die aus den Punkten resultierende Note. Die Punkte pro Aufgabe, die Gesamtpunktzahl und die Zensur stehen in Relation zu einander, sodass aus den Punkten der Aufgaben die beiden anderen Felder errechnet werden und mit den Ergebnissen des Prüfers abgeglichen werden könnten. Eine weiteres Merkmal der Klausuren-Vorlage ist ein Feld, für die vom Studenten erreichten Punkte über jeder Aufgabenstellung. Die dortige Angabe sollte mit der, in der Tabelle auf dem Deckblatt übereinstimmen und bietet somit noch eine weitere Möglichkeit der Kontrolle an.
+	Eine Klausuren-Vorlage bzw.\nomenclature{bzw.}{beziehungsweise} ein Gestaltungsleitfaden für Klausuren der Fakultät \textit{Angewandte Computer- und Biowissenschaften}\ref{fig:klausur} bietet außerdem die Möglichkeit der Kontrolle des Prüfers an. Genauer ist es durch das vorgegebene Layout der Klausur möglich, einen Teil der Arbeit des Prüfenden auf Fehler zu untersuchen. Auf dem Deckblatt (\ref{fig:seite1}) der Klausur ist eine Tabelle, mit drei Zeilen und für jede Aufgabe eine Spalte. In der ersten Zeile befinden sich die Nummern der Aufgaben. In der zweiten, die zu erreichenden Punkte der Aufgabe. Und in der dritten Zeile trägt der Prüfer die erbrachten Punkte des Studenten ein. Unter der Tabelle befindet sich ein Feld für die erreichte Gesamtpunktzahl, sowie ein Feld für die aus den Punkten resultierende Note. Die Punkte pro Aufgabe, die Gesamtpunktzahl und die Zensur stehen in Relation zu einander, sodass aus den Punkten der Aufgaben die beiden anderen Felder errechnet werden und mit den Ergebnissen des Prüfers abgeglichen werden könnten. Eine weiteres Merkmal der Klausuren-Vorlage ist ein Feld, für die vom Studenten erreichten Punkte über jeder Aufgabenstellung. Die dortige Angabe sollte mit der, in der Tabelle auf dem Deckblatt übereinstimmen und bietet somit noch eine weitere Möglichkeit der Kontrolle an.
 	
 	\section{Vorlage verbessern}
 	Nachdem ein erster Prototyp zur Digitalisieren der Klausur-Daten entstanden ist, soll außerdem Prüfungsvorlagen entstehen, die für die Digitalisierung optimiert ist. Dabei sollen Probleme die beim Einscannen der aktuellen Vorlage erkannt wurden, behoben werden. 
@@ -108,27 +108,25 @@ In dem vorliegendem Praktikumsbericht...
 %%%%%%%%%%%%%%% - ANFORDERUNGEN - %%%%%%%%%%%%%%%
 
 \chapter{Anforderungen}\label{ch:anforderungen}
-	Es soll eine iOS-App entstehen mit der Klausuren digitalisiert werden können. Genauer müssen die, für die Notenfreigabe relevanten Daten der Klausur, in ein tabellarisches Format gebracht werden. Um unterschiedliche Klausuren oder auch andere Dokumente zu unterstützen, soll das Anlegen von Scan-Vorlagen in der App möglich sein. Hierfür (aber auch zum Einscannen) benötigt die App die Berechtigung für das Kamera-System. Diese muss, bei der ersten Benutzung einmalig erteilt werden.
+	Es soll eine iOS-App entstehen mit der Klausuren digitalisiert werden können. Genauer müssen die, für die Notenfreigabe relevanten Daten der Klausur, in ein tabellarisches Format gebracht werden. Um unterschiedliche Klausuren oder auch andere Dokumente zu unterstützen, soll das Anlegen von Scan-Vorlagen in der App möglich sein. Hierfür, aber auch zum Einscannen benötigt die App die Berechtigung für das Kamera-System. Diese muss, bei der ersten Benutzung einmalig erteilt werden.
 	
-	- Bild Scan-Vorlage: Aus Foto wird Dokument extrahiert und Auf der Seite werden Regionen markiert. -> Sammlung an Seiten mit Regionen
+	Eine Scan-Vorlagen bestehen aus zwei Komponenten. Die eine sind zugeschnittene Fotos der Seiten eines Dokuments, wie die Abbildung \ref{fig:klausur} zeigt. Und die zweite sind die Regionen auf den Bildern, wo sich die zu digitalisierenden Informationen befinden. In der Abbildung \ref{fig:v9} sind die Regionen blau und in ihnen steht ein Text, um welche Region es sich handelt. Dem Benutzer muss es möglich sein, zuerst die Fotos auf zu nehmen und anschließend Regionen auf den Seiten zu markieren. Weiter benötigen die Regionen Namen bzw. Typen, die der Benutzer angeben muss. Die Angabe des Typs ist wichtig, da dadurch eindeutig wird, ob es sich um die Note oder die Matrikelnummer des Studenten handelt. Diese Eindeutigkeit wird nicht nur für die automatische Erstellung der Tabelle benötigt, sondern auch für die Optimierung der Texterkennung. 
 	
-	Eine Scan-Vorlagen bestehen aus zwei Komponenten. Die eine sind zugeschnittene Fotos der Seiten eines Dokuments (\ref{fig:klausur}). Und die zweite sind die Regionen auf den Bildern, wo sich die zu digitalisierenden Informationen befinden. Dem Benutzer muss es möglich sein, zuerst die Fotos zu machen und anschließend Regionen auf den Seiten zu markieren. Weiter benötigen die Regionen Namen bzw. Typen, die der Benutzer angeben muss. Die Angabe des Typs ist wichtig, da dadurch eindeutig wird, ob es sich um die Note oder die Matrikelnummer des Studenten handelt. Diese Eindeutigkeit wird nicht nur für die automatische Erstellung der Tabelle benötigt, sondern auch für die Texterkennung. 
-	
-	Optical character recognition (OCR)\nomenclature{OCR}{optical character recognition, deutsch: optische Zeichen Erkennung und im deutschen Synonym für Texterkennung}, auf deutsch optische Zeichen Erkennung, soll dazu benutzt werden, die Informationen der Regionen zu digitalisieren. Um die Texterkennung zu verbessern, soll der Typ der Regionen verwendet werden. Damit könne dem OCR mögliche Ergebnisse mitgeteilt oder die Ergebnisse angepasst werden. Beispielsweise bestehen Zensuren immer aus Dezimalzahlen von Eins bis Sechs und mit nur einer Nachkommastelle. Wird der Buchstabe O anstelle der Ziffer Null erkannt, kann so der Fehler korrigiert werden.
+	Optical character recognition (OCR)\nomenclature{OCR}{optical character recognition, deutsch: optische Zeichen Erkennung und im deutschen Synonym für Texterkennung}, auf deutsch optische Zeichen Erkennung, soll dazu benutzt werden, die Informationen der Regionen zu digitalisieren. Um die Texterkennung zu verbessern, soll wie schon erwähnt der Typ der Regionen verwendet werden. Damit könne dem OCR mögliche Ergebnisse mitgeteilt oder die Ergebnisse angepasst werden. Beispielsweise bestehen Zensuren immer aus Dezimalzahlen von Eins bis Sechs und mit nur einer Nachkommastelle. Wird der Buchstabe O anstelle der Ziffer Null erkannt, kann so der Fehler korrigiert werden. 
 	
 	Zudem muss die Texterkennung auf dem Gerät selbst statt finden. Allerdings darf die App auch Texterkennung auf externen Servern unterstützen. Hierfür müssen dann die entsprechenden API-Schnittstellen implementiert oder für einen eigenen Server entwickelt werden.
 
-	Die digitalisierten Daten, die für die Texterkennung entstandenen Dokumenten-Bilder und die erstellten Scan-Vorlagen, soll außerhalb der App auf einem Server gespeichert werden. Somit ist die Möglichkeit gegeben, die Vorlagen wieder zu verwenden und anderen Benutzern der App zur Verfügung zu stellen. Des Weiteren hat diese zentralen Stelle den Vorteil alle anfallenden Daten zu verwalten, was die Benutzung der App trotz vieler Benutzer vereinfacht.
+	Die digitalisierten Daten, die für die Texterkennung entstandenen Dokumenten-Bilder und die erstellten Scan-Vorlagen, soll außerhalb der App auf einem Server gespeichert werden. Somit ist die Möglichkeit gegeben, die Vorlagen wieder zu verwenden und anderen Benutzern der App zur Verfügung zu stellen. 
 	
 	Damit Synchronität der Daten auf den Geräten und dem Server gewährleistet werden kann, benötig die App hierfür ebenfalls Schnittstellen. Diese sollten den standardmäßigen \textit{CRUD}\nomenclature{CRUD}{Das Akronym CRUD steht für Create/Erstellen, Read/Lesen, Update/Aktualisieren und Delete/Löschen und umfasst die vier grundlegenden Operationen persistenter Speicher}-Operationen entsprechen. 
 	
-	Da die gesamte Kommunikation über das Internet geschieht, muss das Softwaresystem die üblichen Datenschutz- und Datensicherheit-Richtlinien entsprechen, bzw. implementieren. 
+	Da die gesamte Kommunikation über das Internet geschieht, muss das Softwaresystem den üblichen Datenschutz- und Datensicherheit-Richtlinien entsprechen, bzw. sie in der technischen Implementierung umsetzten. Für genauere Details zu den Sicherheitsmechanismen zum Server siehe im Praktikumsbericht von Tobias Kallauke. 
 
 %%%%%%%%%%%%%%% - GRUND IDEE ZUM LÖSEN DES PROBLEMS - %%%%%%%%%%%%%%%
 
 \chapter{Konzept der Dokumenten-Scanner-App}\label{ch:konzept}
 
-	Wie in der Problemstellung und Anforderung beschreiben, soll die Dokumenten-Scanner App wichtigen Daten auf dem Deckblatt einer Klausur, wie Vor- und Nachname des Studenten, seine Matrikelnummer sowie die Note erkennen, digitalisieren und in ein für die Notenfreigabe geeignetes Format bringen. Die digitalisierten Daten sollen anschließend an einen Server gesendet werde, wo sie und die beim Einscannen entstandenen Bilder gespeichert werden. Verwendet eine einzuscannende Klausur die Klausuren-Vorlage der Fakultät CB oder ähnliche, die eine Punkteübersicht haben, dann soll es außerdem möglich sein, die Punkte sowie die Note auf Richtigkeit zu überprüfen. 
+	Wie in der Problemstellung und Anforderung beschreiben, soll die Dokumenten-Scanner App wichtigen Daten auf dem Deckblatt einer Klausur, wie Vor- und Nachname des Studenten, seine Matrikelnummer sowie die Note erkennen, digitalisieren und in ein für die Notenfreigabe geeignetes Format bringen. Die digitalisierten Daten sollen anschließend an einen Server gesendet werde, wo sie und die beim Einscannen entstandenen Bilder gespeichert werden. Verwendet eine einzuscannende Klausur die Klausuren-Vorlage (\ref{fig:klausur}) der Fakultät CB oder ähnliche, die eine Punkteübersicht haben, dann soll es außerdem möglich sein, die Punkte sowie die Note auf Richtigkeit zu überprüfen. 
 
 	Zur Digitalisierung und Kontrolle der Daten werden Scan-Vorlagen verwendet. Diese muss vor dem Einscannen der ausgefüllten Klausuren erstellt werden, um zu gewährleisten, dass die richtigen Daten digitalisiert werden. Beim Erstellen einer Scan-Vorlage geht man wie folgt vor:
 	\begin{itemize}
@@ -141,7 +139,7 @@ In dem vorliegendem Praktikumsbericht...
 		\item Als letztes speichert man die Vorlage ab, welche dann automatisch an einen Server gesendet wird, so dass andere diese Vorlage ebenfalls nutzen können.
 	\end{itemize}
 	
-	Nach der Erstellung einer Vorlage kann das Dokument digitalisiert werden. Dazu scannt man die Seiten in derselben Reihenfolge, wie in der Scan-Vorlage ein. Die App digitalisiert mithilfe von OCR den Inhalt, in den vordefinierten Regionen. Der Typ der Region nimmt nun Einfluss auf das Ergebnis. Durch ihn wird während der Worterkennungsphase eine Liste an vordefinierten möglichen Ergebnissen eingespeist. Diese Liste hat Vorrang vor dem Standard-Lexikon und verbessert dadurch die Texterkennung. Ein Beispiel für solch eine Liste könnten, alle möglichen Noten sein, wie schon in dem Kapitel \ref{ch:anforderungen} Anforderungen beschrieben. Auch vorstellbar ist, dass alle Seminargruppen oder Namen von Personen, die an der Klausur teilgenommen haben, dort verwendet werden. 
+	Nach der Erstellung einer Vorlage kann das Dokument digitalisiert werden. Dazu scannt man die Seiten in derselben Reihenfolge, wie in der Scan-Vorlage ein. Die App digitalisiert mithilfe von OCR den Inhalt, in den vordefinierten Regionen. Der Typ der Region nimmt nun Einfluss auf das Ergebnis. Durch ihn wird während der Worterkennungsphase eine Liste an vordefinierten möglichen Ergebnissen eingespeist. Diese Liste hat Vorrang vor dem sogenannten Standard-Wörterbuch und verbessert dadurch die Texterkennung. Ein Beispiel für solch eine Liste könnten, alle möglichen Noten sein, wie schon in dem Kapitel \ref{ch:anforderungen} Anforderungen beschrieben. Auch vorstellbar ist, dass alle Seminargruppen oder Namen von Personen, die an der Klausur teilgenommen haben, dort verwendet werden. 
 	
 	Weiter wäre eine zusätzliche Möglichkeit der Korrektur erdenklich. Angenommen, jemand verschreibt sich bei seiner Seminargruppe und vergisst ein Zeichen. Die Texterkennung erkennt zwar jedes Zeichen richtig, jedoch ist das Ergebnis keine korrekte Seminargruppe. Deshalb könnte man auch im Nachhinein das Ergebnis mit einer Seminargruppe ersetzt, die die größte Übereinstimmung mit dem erkannten Wort hat. Bei diesem Vorgehen sollten natürlich auch nur die Seminargruppen verwendet werden, die tatsächlich die Klausur geschrieben haben. Ähnliches gilt wieder für die Namen oder Matrikelnummern der Studenten.
 	
@@ -152,7 +150,7 @@ In dem vorliegendem Praktikumsbericht...
 		\end{itemize} 
 		Mithilfe der beiden Typen, wird dem Benutzer nach der Texterkennung mitgeteilt, wo Fehler vorliegen.
 		
-	Allerdings heißt das nicht, dass das OCR selbst keine Fehler macht. Aus diesem Grund ist die sogenannte confidence des OCR bei jeder Region sichtbar. Diese sagt aus, wie sicher sich die Texterkennung ist, das das Ergebnis stimmt. Jedoch kann es auch hier falsche Positiv-Ergebnisse geben, weshalb auch das kein perfekter Indikator für die Richtigkeit ist. Deshalb wird im Anschluss an die Texterkennung die Möglichkeit geboten, die Resultate noch einmal zu überprüfen und zu korrigieren, bevor sie an den Server zum Abspeichern gesendet werden. Genauer können die Ergebnisse der Texterkennung zu jeder Region einzeln bearbeitet werden, wodurch sich die Fehlermeldung durch einen Link ändern kann.
+	Allerdings heißt das nicht, dass das OCR selbst keine Fehler macht. Aus diesem Grund ist die sogenannte confidence des OCR bei jeder Region sichtbar. Diese sagt aus, wie sicher sich die Texterkennung ist, dass das Ergebnis stimmt. Jedoch kann es auch hier falsche Positiv-Ergebnisse geben, weshalb auch das kein perfekter Indikator für die Richtigkeit ist. Deshalb wird im Anschluss an die Texterkennung die Möglichkeit geboten, die Resultate noch einmal zu überprüfen und zu korrigieren, bevor sie an den Server zum Abspeichern gesendet werden. Genauer können die Ergebnisse der Texterkennung zu jeder Region einzeln bearbeitet werden, wodurch sich die Fehlermeldung durch einen Link ändern kann.
 
 %%%%%%%%%%%%%%% - PROTOTYP - %%%%%%%%%%%%%%%
 
@@ -233,9 +231,7 @@ In dem vorliegendem Praktikumsbericht...
 		
 		Zur Realisierung der entworfenen Systemkomponenten wurde ausschließlich, die von Apple entwickelte IDE\nomenclature{IDE}{integrated development environment, auf deutsch Integrierte Entwicklungsumgebung} Xcode, verwendet. Diese stellt Geräte-Simulatoren zur Verfügung, auf denen die App getestet werden kann. Die Simulatoren bieten unteranderem auch die Möglichkeit an, die Anwendung schnell auf verschiedenen iOS bzw. iPadOS Versionen zu testen. Auch ist das Testen der App auf echten Geräten durch Xcode möglich, was bei der Entwicklung unumgänglich war. Grund dafür ist die Benutzung der Kamera, die bei den Simulatoren zu gewollten Abstürzen führt, da diese keinen Zugriff auf eine Kamerasystem besitzen.
 		
-		Die App wurde ausschließlich in der Programmiersprache Swift geschrieben. Zusätzlich wurden die Frameworks SwiftUI, Vision und VisionKit von Apple, sowie das Framework Kingfisher\footurl{Kingfisher GitHub Repository -}{https://github.com/onevcat/Kingfisher}, zum Downloaden und Cachen von Bildern verwendet. Das Vision-Framework führt Erkennung von Gesichts- und Gesichtsmarkierungen, Texterkennung, Barcode-Erkennung, Bildregistrierung und allgemeine Merkmalsverfolgung durch. Jedoch wurde in der App nur die integrierte Texterkennung benutzt. Es ist aber anzunehmen, das VisionKit Algorithmen von Vision zur Dokumenten-Erkennung verwendet.
-		
-		Für mehr Informationen über die Frameworks SwiftUI und VisionKit siehe im Kapitel \ref{ch:anforderungen} Abschnitt \ref{sc:anforderungsplanung}.
+		Die App wurde ausschließlich in der Programmiersprache Swift geschrieben. Zusätzlich wurden die Frameworks SwiftUI, Vision und VisionKit von Apple, sowie das Framework Kingfisher\footurl{Kingfisher GitHub Repository -}{https://github.com/onevcat/Kingfisher}, zum Downloaden und Cachen von Bildern verwendet. Das Vision-Framework führt Erkennung von Gesichts- und Gesichtsmarkierungen, Texterkennung, Barcode-Erkennung, Bildregistrierung und allgemeine Merkmalsverfolgung durch. Jedoch wurde in der App nur die integrierte Texterkennung benutzt. Es ist aber anzunehmen, das VisionKit Algorithmen von Vision zur Dokumenten-Erkennung verwendet. Für mehr Informationen über die Frameworks SwiftUI und VisionKit siehe im Kapitel \ref{ch:anforderungen} Abschnitt \ref{sc:anforderungsplanung}.
 		
 		
 		Zum Ändern und Testen des Backends wurde außerdem Visual Studio Community bzw. Visual Studio Code\footurl{Visual Studio Internetseite -}{https://visualstudio.microsoft.com/de/} mit dem REST Client Plugin\footurl{REST Client, ein Visual Studio Code Plugin -}{https://marketplace.visualstudio.com/items?itemName=humao.rest-client} , zum Testen der Server-Schnittstellen verwendet. Das Backend konnte dann als lokaler Server auf dem Entwicklungscomputer gestartet und über die IP-Adresse 0.0.0.0 sogar im lokalen Netzwerk aufgerufen werden. Für die Verwaltung der PostgreSQL-Datenbank genügte das Tool PgAdmin4\footurl{PgAdmin Internetseite -}{https://www.pgadmin.org/} . Damit ist es möglich einzelne Einträge oder auch ganze Tabellen zu bearbeiten.
@@ -376,14 +372,67 @@ In dem vorliegendem Praktikumsbericht...
 			\end{enumerate}
 			
 		\subsection{Vorlage verwenden}
-			Um eine Klausur zu digitalisieren, muss die vorher erstellte Vorlage ausgewählt werden. Danach bietet die Benutzeroberfläche über einen Button die Möglichkeit an, eine Klausur einzuscannen. Wichtig dabei ist, dass die Seiten beim Fotografiert die selbe Reihenfolge, wie in der Vorlage haben. Auch muss die Anzahl der Eingescannten Seiten mit denen in der Vorlage übereinstimmen. Bei der Implementierung der Scan-View wurde auf die Selbe zurückgegriffen, wie sie auch beim Vorlagen Erstellen zu finden ist. Allgemein konnten viele Komponenten der gesamten Benutzeroberfläche dank SwiftUI immer wieder verwendet werden. Durch die Scan-View werden die Seiten wieder aus dem Bild rausgeschnitten, geglättet und der Kontrast des Bildes wird ebenfalls leicht angepasst, damit Buchstaben leichter zu erkennen sind und Schatten bzw. Falten verschwinden.
+			Um eine Klausur zu digitalisieren, muss die vorher erstellte Vorlage ausgewählt werden. Danach bietet die Benutzeroberfläche über einen Button die Möglichkeit an, eine Klausur einzuscannen.  Bevor die Bilder aufgenommen werden können, erscheint ein Dialogfenster, in dem der Benutzer sich entscheiden muss, welche OCR-Engine benutzt werden soll. Aktuell gibt es zwei Möglichkeiten.
+				\begin{itemize}
+					\item Die OCR-Engine des Vision Framworks von Apple, welche direkt auf dem Gerät und ohne eine Internetverbindung die Texterkennung durchführt,  
+					\item oder die OCR-Engine Tesseract, die über eine Schnittstelle des Servers aufzurufen ist.
+				\end{itemize}
 			
-			Nach dem Einscannen der Klausur-Seiten beginnt die Texterkennung. Durch Aktivitätsanzeigen wird dem Benutzer mitgeteilt, dass die Anwendung gerade beschäftigt ist. Zuerst werden die Positionen der Regionen im neuen Bild berechnet. Das hat den Hintergrund, da die Regionen in der Vorlage absolut zum Bildursprung liegen. Jedoch hat die neue eingescannte Seite mit hoher Wahrscheinlichkeit, nicht die selben Pixel-Maße, wie das Bild der Seite aus der Vorlage. Das liegt dann daran, dass sich der Winkel und der Abstand der Kamera zum Dokument geändert hat. Diese Besonderheit lässt sich auch in den Abbildungen \ref{fig:seite1} und \ref{fig:seite2} beobachten. Beide Bilder sind beim Einscannen einer Scan-Vorlage entstanden. Jedoch haben sie unterschiedliche Maße, was an dem Größenunterschied zu erkennen ist. Die Abbildung \ref{fig:seite1} ist leicht größer, als die Abbildung \ref{fig:seite2}, da dieses Bild von näher dran und in einem geeigneterem Winkel aufgenommen wurde. Würde man immer den selben Abstand und Winkel garantieren, wie das beispielsweise in einem richtigen Kopiergerät oder Scanner der Fall ist, könnte man die Neuberechnung der Positionen der Regionen weglassen. 
+			 Nach der Auswahl öffnet sich die Kamera und die Bilder können aufgenommen werden. Wichtig dabei ist, dass die Seiten beim Fotografiert die selbe Reihenfolge, wie in der Vorlage haben. Auch muss die Anzahl der Eingescannten Seiten mit denen in der Vorlage übereinstimmen. Bei der Implementierung der Scan-View wurde auf die Selbe zurückgegriffen, wie sie auch beim Vorlagen Erstellen zu finden ist. Grundsätzlich konnten viele Komponenten der gesamten Benutzeroberfläche dank SwiftUI immer wieder verwendet werden. Durch die Scan-View werden die Seiten wieder aus dem Bild ausgeschnitten, geglättet und der Kontrast des Bildes wird ebenfalls leicht angepasst, damit Buchstaben leichter zu erkennen sind und Schatten bzw. Falten verschwinden.
 			
-			Mit der Berechnung der relativen Position der Region, an Hand der Maße der Vorlagen-Seite und der neuen Seite, wird außerdem noch die relative Höhe und Breite der Region berechnet. Durch das Umrechnen von absoluten in relative Positionen ist auch möglich, verschiedensten Auflösungen von Kameras zu kompensieren. Nachdem die neue Position und Maße aller Regionen einer Seite bestimmt sind, entstehen daraus Bildausschnitte für die Texterkennung. Die Regionen dienen als eine Art Schablone, so dass alles, was sich außerhalb der Regionen befindet, nicht verwendet wird. Das bedeutet auch, dass es vorkommen kann, dass zu digitalisierende Teile weggeschnitten werden können. Bei richtiger Erstellung der Vorlagen und bei richtigem Einscannen der Klausur passiert das jedoch nicht. 
+			Nach dem Einscannen der Klausur-Seiten beginnt der Prozess der Texterkennung. Durch Aktivitätsanzeigen wird dem Benutzer mitgeteilt, dass die Anwendung gerade beschäftigt ist. Die Abläufe bei der online OCR-Engine sind jedoch leicht anders, als die, des Vision Frameworks.
+			
+			\subsubsection{Ablauf mit Vision}
+				Bei der Verwendung von Vision gibt es folgende grobe Schritte:
+				\begin{enumerate}
+					\item Die markierten Regionen in der Vorlage auf die neuen Bilder anwenden
+					\item Mit den Regionen jedes Bilds Bildausschnitten erstellen
+					\item Die Ausschnitte in die OCR-Engine geben
+					\item Texterkennungs-Ergebnisse darstellen
+				\end{enumerate}
+			
+				\paragraph{Zu 1.: Die markierten Regionen in der Vorlage auf die neuen Bilder anwenden}
+				Damit ist gemeint, dass nun das erste Bild des neuen Scans mit den Regionen der ersten Seite der Vorlage verarbeitet wird. Das Ziel ist es, die markierten Regionen in der Vorlage auf die zu digitalisierende Seite anzuwenden und minimale Bildausschnitte zu erstellen, in denen der zu digitalisierende Text steht. Diese Ausschnitte werden dann von der Texterkennung verarbeitet. Diesen Vorgang wird für jede Seite wiederholt. Jedoch ergibt sich hierbei ein Problem.
+				
+				Wie man in den Abbildungen \ref{fig:seite1} und \ref{fig:seite2} sieht, haben beide unterschiedliche Maße. Die Abbildung \ref{fig:seite1} ist größer und etwas breiter als die Abbildung \ref{fig:seite2}. Das liegt daran, dass sich der Winkel und der Abstand der Kamera zum Dokument bei den Aufnahme geändert hat, da das Gerät, während des Fotografierens in den Händen gehalten wurde. Das bedeutet also, wenn die Bilder in der Vorlage nicht genau so groß sind, wie die Bilder des neuen Scans, können im schlechtesten Fall wichtige Informationen durch die absoluten Positionen des Regionen abgeschnitten werden. Würde man immer den selben Abstand und Winkel garantieren, wie das beispielsweise in einem richtigen Kopiergerät oder Scanner der Fall ist, könnte man nun die Berechnung der absoluten Positionen in relative Positionen der Regionen weglassen. Zusätzlich sind die relative Höhe und Breite der Regionn ebenfalls zu berechnen. 
 
+				\paragraph{Zu 2.: Mit den Regionen jedes Bilds Bildausschnitten erstellen}
+				Nachdem die neue Position und Maße aller Regionen einer Seite bestimmt sind, entstehen daraus Bildausschnitte für die Texterkennung. Die Regionen dienen als eine Art Schablone, so dass alles, was sich außerhalb dieser befindet, nicht verwendet wird. Auch trotz der Umrechnung in relative Positionen kann es bei falscher Erstellung der Vorlagen oder bei falschem Einscannen der Klausur passieren, dass trotzdem Teile der Regionen wegfallen. Für mehr Details über falsches Erstellen oder Einscannen siehe im Kapitel \ref{ch:grenzen}.
+				
+				\paragraph{Zu 3.: Die Ausschnitte in die OCR-Engine geben}
+				Zu jedem Bildausschnitt wird eine sogenannte Texterkennungs-Anfrage konfiguriert. Auch hierfür wird immer noch die jeweilige Region des Ausschnitts benötigt. In der Konfiguration werden an Hand des Region-Datentyps (\ref{fig:v6}) unterschiedliche Einstellungen getroffen. Beispielsweise bekommt die Anfrage einer Region, vom Typ Note, eine Liste an möglichen Noten. Die Liste hat, wie schon im Kapitel \ref{ch:konzept} erwähnt, Vorrang vor dem Standard-Wörterbuch, in der Worterkennungsphase und sorgt für bessere Ergebnisse\footurl{Vision costumWords Dokumentation}{https://developer.apple.com/documentation/vision/vnrecognizetextrequest/3152640-customwords}. Auch könnte hier die Sprache des zu erkennenden Texts angegeben oder die  Texterkennungs-Stufe eingestellt werden. Diese bestimmt, welche Techniken bei der Texterkennung verwendet werden. Entweder man gibt der Geschwindigkeit Vorrang vor der Genauigkeit oder aber man setzt auf eine längere, rechenintensivere Erkennung. In der Anwendung ist die Genauigkeit entscheidend und auf die Einstellung der Sprache wurde verzichtet, da es sich in keinem Fall um normalen Text handelt, sondern um Eigennamen, Abkürzungen und Ziffern.
+						
+				Standardmäßig werden bei einer Texterkennungs-Anfrage zunächst alle möglichen Glyphen oder Zeichen im Eingabebild lokalisiert und dann jede Zeichenfolge analysiert\footurl{Quelle: VNRecognizeTextRequest Dokumentation}{https://developer.apple.com/documentation/vision/vnrecognizetextrequest}. Anschließend wird eine Korrektur an den erkannter Wörter auf der Grundlage eines Wörterbuchs und anderer Wahrscheinlichkeitsheuristiken für Zeichenpaare durchgeführt \cite{noauthor_text_2019}. Der genaue Ablauf der Texterkennung oder die verwendeten Algorithmen von Vision sind allerdings nicht bekannt. 
+				
+				Anschließend an die Texterkennung durch Vision erfolgt in einigen Fällen noch eine Korrektur. Auch hier spielt der Regionen-Datentyp (\ref{fig:v6}) wieder eine Rolle. Beispielsweise wird der Text einer vermeidlichen Seminargruppe mit allen in der App hinterlegten Seminargruppen verglichen. Der Seminargruppen-Name mit der größten Übereinstimmung wird dann angezeigt. Die confidence wird ebenfalls angepasst. Zur Erinnerung, diese sagt aus, wie sicher sich die Texterkennung ist, dass das Ergebnis stimmt. Ähnliche Korrekturen gibt es für die Note und Punkte.
+				
+				Danach werden die erkennten Texte bzw. Worte und deren confidencen an den State-Container der App gesendet. Für die Ergebnisse der Texterkennung ist ein eigener State vorgesehen, in dem auch die Server-Ergebnisse von Tesseract gesichert werden. Somit ist das Anzeigen der Ergebnisse bei beiden OCR-Egines gleich.  
+				
+				\paragraph{Zu 4.: Texterkennungs-Ergebnisse darstellen}
+				Die Ergebnissen der Texterkennung und die jeweilige confidence werden auf der Benutzeroberfläche, nach Seiten geordnet, angezeigt. Alle OCR-Ergebnisse können zudem noch angepasst werden. Abhängig vom Datentyp der Region passt sich die Tastatur beim Ändern der Texte an. Beispielsweise sind die Tastaturen beim Anpassen von Noten und Punkte auf Zahlen und Dezimalpunkte spezialisiert. Zudem kann die confidence farblich aber auch als Zahlenwert angezeigt werden. Wurde kein Text erkannt, ist dementsprechend ein Warnsymbol an der stelle der confidence zu sehen.    
+ 
+			\subsubsection{Ablauf mit Tesseract}
+				Anders ist es, wenn man die Texterkennung Tesseract auf dem Server verwendet:
+				\begin{enumerate}
+					\item Bilder an den Server senden
+					\item Auftrag zur Texterkennung an den Server senden
+					\item Serverseitige Texterkennung
+					\item Texterkennungs-Ergebnisse darstellen
+				\end{enumerate}
+				
+				\paragraph{Zu 1.: Bilder an den Server senden}
+				Nachdem das Dokument fotografiert wurden, werden die Aufnahmen an den Server gesendet. Dieser gibt wieder die Pfade der Bilder als Antwort zurück. 
+				
+				\paragraph{Zu 2.: Auftrag zur Texterkennung an den Server senden}
+				Anschließend wird für jeden Pfad eine Auftrag zur Texterkennung an  die OCR-Schnittstelle des Servers gestellt. In der Anfrage wird der Pfad des Bildes und die passende Seiten-ID der ausgewählten Vorlage gesendet. Nun übernimmt der Server die Arbeit der Texterkennung. 
+				
+				\paragraph{Zu 3.: Serverseitige Texterkennung}
+				Mithilfe der Seiten-ID, die in der Datenbank des Servers hinterlegt ist, werden dann die Regionen der Seite auf das Bild, welches sich an dem gesendet Pfad befindet, angewendet. Für mehr Details siehe im Praktikumsbericht von Tobias Kallauke. 
+				
+				\paragraph{Zu 4.: Texterkennungs-Ergebnisse darstellen}
+				Nach der Texterkennung sendet der Server die Ergebnisse der Seiten als Antwort zurück. Diese werden dann im selben State des State-Container gesichert, wie es auch bei Vision der Fall ist. Die Ergebnisse bestehen aus der Regions-ID, zur Zuordnung, dem erkannten Text, sowie der confidence des OCR, zu dem jeweiligem Wort. Auch ähnlich, wie es bei Vision der Fall ist. Die Darstellung der Ergebnisse und das verhalten der Benutzeroberfläche ist ebenfalls die selbe.
 		
-	\section{''Abnahme''}	
+	\section{Abnahme}	
 		Abnahme ... 
 		
 	- was wurde umgesetzt was nicht
@@ -392,18 +441,6 @@ In dem vorliegendem Praktikumsbericht...
 	- 
 		\\ \\ \\
 	Weitere Punkte die in Kapitel 6 rein könnten/sollten: 
-	
-	- beschreiben wie die einzelnen Views/Seiten nun aussehen und funktionieren? oder eher den Prozess der Entwicklung?
-	
-	- Bild mit Wireframe aller Views und deren Workflow?
-	
-	- erklären deskew / Dokument ausrichten?
-	
-	- Umrechnung der Bilder vom Template aus und zuschneiden der neuen Regionen erklären
-	
-	- Attribute hinzufügen (den Vorgang) -> Rechteck einzeichnen...
-	
-	- Verwendete Programme, Sprache, etc. 
 	
 	- ein paar Worte, wie gut die Entwicklung lief (Simulator vs. echtes Gerät), wo sind die Grenzen des Simulators (Keine Kamera), wo waren Probleme mit dem echten Gerät...
 
@@ -420,7 +457,7 @@ In dem vorliegendem Praktikumsbericht...
 		
 %%%%%%%%%%%%%%% - GRENZEN - %%%%%%%%%%%%%%%
 
-\chapter{Grenzen der App}
+\chapter{Grenzen der App}\label{ch:grenzen}
 	\section{Probleme beim Erkennen von Dokumenten}
 		- Gleich-farbiger Hintergrund
 			
@@ -443,7 +480,7 @@ In dem vorliegendem Praktikumsbericht...
 		
 		- Überschneidungen
 		
-		- ...
+		- Für mehr Details über falsches Erstellen oder Einscannen siehe im Kapitel \ref{ch:grenzen}. \ref{sc:implementierung}
 		
 	\section{Weitere ...}
 		- Abstürze, Memory Leaks, 
@@ -476,6 +513,14 @@ In dem vorliegendem Praktikumsbericht...
 	- ImageCaptureCore für macOS
 	
 	- neuer Workflow. Klausur hat immer Name, Matrikel Nummer, etc. (Nicht extra Regionen-Namen vergeben)
+	
+	- mehr OCR engines
+	
+	- relative position in Prozent angeben? Weniger Berechnungen...
+	
+	- State speichern
+	
+	- Idee des Scan erstellen -> speichern Scan != Vorlage
 	
 
 \Anhang
@@ -536,86 +581,15 @@ In dem vorliegendem Praktikumsbericht...
 	Ein kritisches Problem mit den Sessions aus der vorherigen Woche konnte in dieser endlich gelöst werden. Dazu konnte ich die Anwendung etwas optimieren und einen sehr großen Teil des Beleges fertig stellen. Dabei half auch die Beantwortung vieler Fragen während eines Meetings mit dem Betreuer. Allerdings entstanden Probleme mit der Datenbank, die die Funktionalität der App einschränkt.
 	
 	\textbf{20.04. - 26.04.}
-	Ziel dieser Woche war es so viel wie möglich des Belegs zu schreiben. Dafür fertigte ich einige Schemata und Bilder an. Zusätzlich konnte ich einige Fehler der App entdecken und lösen, so dass die Performance verbessert und Server-Aufrufe eingespart wurden. Auch in dieser Woche konnte einige Fragen zum Aufbau des Berichts in einem Meeting geklärt werden. 
+	Ziel dieser Woche war es so viel wie möglich des Belegs zu schreiben. Dafür fertigte ich einige Schemata und Bilder an. Zusätzlich konnte ich einige Fehler der App entdecken und lösen, so dass die Performance verbessert und Server-Aufrufe eingespart wurden. Außerdem kam die Online-Texterkennung über den Server hinzu, sowie die zweite Korrektur in der Texterkennung mit Vision. Auch in dieser Woche konnte einige Fragen zum Aufbau des Berichts in einem Meeting geklärt werden. 
 	
-	\textbf{27.04. - ??.05.}
+	\textbf{27.04. - 03.05.}
 	
-	\textbf{??.05. - ??.05.}
+	\textbf{04.05. - 10.05.}
 	
-	\textbf{??.05. - ??.05.}
-	
-	\textbf{??.05. - ??.0?.}
+	\textbf{11.05. - 15.05.}
 
 
 \bibliography{Beleg}
 \bibliographystyle{iso690.bst}
 \end{document}
-
-%\begin{thebibliography}{99}
-%	
-%	\bibitem{hsmwPortrait}
-%	Hochschule Mittweida, Portrait[online]. URL https://www.hs-mittweida.de/hochschule/portrait.html? . - abgerufen am 2020-04-15
-%
-%	\bibitem{digital}
-%		% nochmal genauer nachschauen, guten Link finden, und genauen Namen...
-%		Graf, Michael Partner bei PwC
-%		\\\url{http://www-cs-faculty.stanford.edu/~{}uno/abcde.html}
-%		
-%	\bibitem{visionBasicApp}
-%		Detecting Objects in Still Images | Apple Developer Documentation. URL \href{https://developer.apple.com/documentation/vision/detecting_objects_in_still_images}{\url{https://developer.apple.com/documentation/vision/detecting_objects_in_still_images}} . - abgerufen am 12.04.2020
-%
-%	
-%	\bibitem{bragge2013model}
-%		Bragge, Matti: Model-View-Controller architectural pattern and its evolution in graphical user interface frameworks (2013), S. 34
-%		
-%	\bibitem{freeman}
-%		Freeman, Adam: Pro ASP.NET Core MVC 2, Expert’s Voice in .NET. Apress, 2017 — ISBN 978-1-4842-3150-0
-%
-%		
-%	\bibitem{heise2019einsitegInSwiftUI}
-%		Sillmann, Thomas: Einstieg in SwiftUI. URL \href{https://www.heise.de/developer/artikel/Einstieg-in-SwiftUI-4594018.html}{\url{https://www.heise.de/developer/artikel/Einstieg-in-SwiftUI-4594018.html}}. - abgerufen am 12.04.2020. — Developer
-%		
-%	
-%\end{thebibliography}
-
-
-
-%	Gemeinsam mit den Betreuern des Praktikums und Tobias Kallauke entstand eine typische Client-Server-Architektur. Mit Hilfe von verschiedenen Apps, auf der Basis von Android, iOS oder auch im Browser sollen.
-	
-%	Die Grund Idee des Dokumentenscanner ist es den Vorgang der Klausuren-Kontrolle und deren Noteneintragung zu vereinfachen. Genauer soll es möglich sein die wichtigen Daten auf der ersten Seite einer Klausur, wie Vor- und Nachname des Studenten, seine Matrikelnummer sowie die Note zu erkennen, digitalisieren und in ein geeignetes Format zu bringen, um es anschließend der Notenfreigabe der Hochschule zu übermitteln. 
-
-%	Des Weiteren ist es für die Prüfer der Klausur hilfreich, wenn die Punkte der Klausur kontrolliert bzw. überprüft werden. Konkret bezieht sich die Überprüfung der Punkte auf eine Klausuren-Format-Vorlage, die im Bereich der Fakultät Angewandte Computer- und Biowissenschaften genutzt wird. Diese Vorlage hat auf dem Deckblatt der Klausur zu jeder Aufgabe ein Feld für die erreichten und die zu erreichenden Punkte. Sowie die Summe der erreichten Punkte. Hier könnte der Dokumentenscanner die erreichte Gesamtpunktezahl sowie die daraus resultierende Note überprüfen. Des Weiteren befinden sich auf den nachfolgenden Seite der Klausur über jeder Aufgabe ein Feld für die erreichten und die zu erreichenden Punkte der jeweiligen Aufgabe. Die dort vom Prüfer eingetragenen Punkte könnten ebenfalls mit denen auf dem Deckblatt verglichen werden. 
-%
-%	Durch die Erweiterung der Grundidee um Scan-Vorlagen wurde es auch möglich Daten anderer Dokumente zu digitalisieren und in ein geeignetes Format zu bringen. Genauer soll es dem Benutzer möglich sein von jedem beliebigen Dokument eine Vorlage zu erstellen, in der er Stellen auf dem Dokument markiert, wo sich die zu digitalisierenden Daten befinden.
-
-%	\begin{longtable}[h!]{ p{4em} | p{356pt} }
-%		Datum & Tätigkeit \\ \hline
-%		\endfirsthead
-%		Datum & Tätigkeit \\ \hline
-% 		\endhead
-%
-% 		\hline
-% 		\endfoot
-%		
-%		24.02. - 01.03. & 
-%			Ich habe mich mit der Problemstellung auseinander gesetzt, Ideen gesammelt, Problemanalyse betrieben und einen kleinen Prototypen entwickelt. Dazu erstellte ich einen minimalen Projektplanung, arbeitete mich in die Frameworks \textit{Vision} und \textit{VisionKit} ein und setzte eine Versionsverwaltung auf. Zusätzlich suchte ich nach einer passenden App-Architektur, die geeignet für das deklarative GUI-Framework SwiftUI, sowie für asynchrone Aufgaben, wie z. B. API-Aufrufe ist. Dabei stieß ich auf \textit{Cleancode Architecture} und \textit{Redux}.
-%				
-%			Am Ende der Woche konnte man in der App Vorlagen mit einer Seite erstellen. Das heißt man konnte ein Foto machen, aus welchem das Dokument rausgeschnitten und anschließend ausgerichtet wurde. Weiter war es möglich Regionen auf dem Dokument zu markieren und diese in der Vorlage abspeichern. Ansonsten konnten die Vorlage schon dazu benutzt werden, um die Regionen auf dem neuen Foto heraus zu schneiden.
-%			\\ \hline
-%		02.03. - 08.03. &
-%			In dieser Woche habe ich die Texterkennung auf den berechneten Regionen eines neuen Fotos implementiert, den Workflow sowie viele andere Kleinigkeiten in der App verbessert und alle Fehler der letzten Woche behoben, sodass ich neue Dinge implementieren konnte. Zudem probierte ich CI sowie Lint für das Projekt aus. Da CI für eine iOS-App mit \textit{GitHub Actions} schwer aufzusetzen war und ab April etwas kosten würde, lies ich es sein. Des Weiteren pflegte ich das Projekt Management durch \textit{Issues} und \textit{Project-Boards} in GitHub. Anschließend programmierte ich den App-Workflow so um, dass nun mehr als eine Seite aufgenommen und analysiert werden konnte. 
-%				
-%			Abgesehen von neuem Quellcode fing ich an den Praktikumsbericht zu schreiben und arbeitet mich dafür in \LaTeX \xspace und die Bachelorarbeits-Vorlage für \LaTeX \xspace der Hochschule Mittweida ein.
-%			\\ \hline
-%	 	09.03. - 15.03. &
-%	 		Zu Beginn der dritten Woche schaute ich mir Möglichkeiten für serverseitiges OCR an. Genauer sammelte ich Informationen zu dem Framework Vapor und Swift unter Linux. Jedoch funktionieren die Frameworks \textit{Vision} und \textit{CoreML} von \textit{Apple} unter Linux nicht, weshalb sich IronOCR als beste Option herausstellte. Ich entwickelte ein Datenbankmodell, mithilfe der in der App verwendeten Datentypen und erstellte dazu noch eine JSON-Struktur die später für die APIs verwendet werden könnte. Außerdem gab es ein Meeting, in dem wir unseren aktuellen Stand präsentieren sollten, um weitere Schritte und Aufgaben zu planen.Bis zum Ende der Woche arbeitete ich weiter an meinem Beleg und schrieb den Datenfluss in der App um. Nun ähnelt er sehr dem Redux-Model.
-%	 		\\ \hline
-%	 	16.03. - 22.03. & 
-%	 		Anfangs habe ich weiter an meinem Praktikumsbericht geschrieben, neue Issues hinzugefügt und bearbeitet. Außerdem gepflegte ich die Dokumentation und betrieben Projekt Management, um nun Links zwischen Regionen hinzuzufügen. Dabei entstanden neue Views und der Redux-Store musste dadurch angapsst werden. Es kam eine Erweiterung für die Texterkennung hinzu, so dass man durch die Auswahl eines Datentyps, das Resultat der Erkennung verbessern konnte. Des Weiteren habe ich bis zum Ende der Woche die Vergleich-Links vollständig implementiert und die App auf Fehler und Abstürze kontrolliert, sowie den Beleg um einige Kapitel erweitert.
-%	 		\\ \hline
-%	 	23.03. - 30.03. &
-%	 		...
-%	 		\\ \hline
-%	\end{longtable}
-
-
