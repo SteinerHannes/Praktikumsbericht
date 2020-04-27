@@ -511,8 +511,8 @@ In dem vorliegendem Praktikumsbericht...
 			\item Auch wenn bei guter Belichtung, die Wahrscheinlichkeit für falsche Kantenerkennung reduziert worden ist, kommt es bei schnellen Bewegungen der Kamera oder zu spitzem Winkel zum Dokument sowie ungeeignetem Hintergrund trotzdem dazu, dass ein falscher Bildausschnitt als Dokument gewählt wird. Deshalb ist es möglich das Bild noch einmal aufzunehmen, oder aber das Dokument im Bild selbst zu markieren. Dafür stellt VisionKit eine besondere View zur Verfügung, die es einem ermöglicht, die Ecken des Dokuments per Hand auszuwählen. Das hilft auch gegen die Problematik, wenn die Ecken des Papiers umgekickt oder abgerissen sind, da man selbst die Position der Ecke approximiert angeben kann. 
 		\end{itemize}
 		
-	\section{Probleme der Klausur-Vorlage beim Scannen}
-		Dieser Abschnitt bezieht sich ausschließlich auf entstandene Probleme mit der Klausuren-Vorlage, welche in Abbildung \ref{fig:klausur} zu sehen ist. Diese stand während des Praktikums als Beispiel-Klausur zur Verfügung. Im nächsten Kapitel \ref{ch:vorlage}, werden mögliche Änderungen und Lösungen zu den hier aufgeführten Problemen diskutiert.
+	\section{Probleme der Klausur-Vorlage beim Scannen}\label{sc:problemevorlage}
+		Dieser Abschnitt bezieht sich ausschließlich auf entstandene Probleme mit der Klausur, welche in Abbildung \ref{fig:klausur} zu sehen ist. Diese stand während des Praktikums als Beispiel-Klausur zur Verfügung und ist stellvertretend für alle Klausuren-Vorlagen der Fakultät CB. Im Kapitel \ref{ch:vorlage}, werden mögliche Änderungen und Lösungen zu den hier aufgeführten Problemen diskutiert.
 		
 		Wie in der Abbildung \ref{fig:seite1} zu sehen ist, besitzt die Klausur ein Deckblatt mit Feldern, die der Student auszufüllen hat. Darunter Name, Artikelnummer und Seminargruppe. Diese Informationen sind essentiell bei der Digitalisierung und doch wird nicht klar zwischen einem Feld für den Vornamen und einem Feld für den Nachnamen differenziert. In den Abbildungen \ref{fig:erstellung2} und \ref{fig:erstellung3} wird diese Problematik nochmal dargestellt. Bei den Datentypen der Regionen (\ref{fig:v6}) wird zwischen Vornamen und Nachnamen unterschieden, auf der Klausur (\ref{fig:v7}) jedoch nicht. In der abgebildeten Vorlage (\ref{fig:v9}) wurde der Vorname auf den ersten und der Nachname auf dem zweiten Strich des Feldes Namen gesetzt. Auch verleitet ein einzelner Strich dazu, über die Länge hinaus zu schreiben. Wenn die Regionen der Scan-Vorlage dann zu klein gewählt ist, können Informationen fehlen. Bei dem Feld für die Note wird dies noch extremer. Da nicht mal ein Markierung für die Note vorhanden ist, müsste man einen sehr viel größeren Bereich markieren (\ref{fig:v9}). Allerdings wird hinter der Note auch die Unterschrift des Prüfers gesetzt, welche bei der Digitalisierung nicht mit auftauchen sollte. Im Gegensatz dazu sind die Felder in der Tabelle für die Punkte zu jeder Aufgabe zu klein. Die geringe Größe verleitet dazu, dass Feld komplett aus zu nutzen und die Ziffer möglichst groß rein zu schreiben. Dazu kommt dass solch kleinen Regionen kaum Spielraum für Toleranz lassen und somit entstehen hier immer wieder Fehler. Entweder die Ziffer ist abgeschnitten, wenn man die Region zu klein wählt oder aber die Ränder des Feldes werden als eine Eins oder als der Buchstabe l erkannt, wenn man die Region zu groß wählt.
 
@@ -521,15 +521,19 @@ In dem vorliegendem Praktikumsbericht...
 		
 %%%%%%%%%%%%%%% - TEMPLATES - %%%%%%%%%%%%%%%
 
-\chapter{Scan-Vorlagen}\label{ch:vorlage}
-	- Template und den Entwicklungsprozess vorstellen, 
+\chapter{Verbesserung der Klausuren-Vorlage}\label{ch:vorlage}
+	Dieses Kapitel beschäftigt sich mit Verbesserungen und Änderungen an Hand der Klausur in Abbildung \ref{fig:klausur}. Sie steht jedoch stellvertretend für die Klausuren-Vorlage der Fakultät CB. Alle folgenden Vorschläge haben den Hintergrund die App bei der Digitalisierung zu unterstützen und basieren auf der gesammelten Erfahrung mit der Anwendung, während der Entwicklung sowie den angegeben Problemen aus Kapitel \ref{ch:grenzen}.
 	
-	- wieso weshalb warum muss das nun so aussehen?
+	Der erste Vorschlag bezieht sich auf die Problematik, dass die Ecken und Kanten bei der Erkennung des Dokuments entscheidend sind. Sie sind die wichtigsten Referenz-Punkte bei der Objekt-Erkennung, können aber unter bestimmten Bedienungen, wie im Kapitel \ref{ch:grenzen} erklärt, nicht immer erkannt werden. Aus diesem Grund empfiehlt es sich eigene Referenzpunkt auf dem Dokument anzubringen. Beispielsweise durch einen Rahmen, wie es schon auf der Klausur (\ref{fig:seite1}) gemacht wurde, oder durch QR-Code ähnliche Muster. Der Vorteil bei eigenen Referenzpunkt ist, dass sie so gestaltet werden können, dass sie sich immer vom Blatt abheben. So mit ist die Dokumenten-Erkennung nur noch vom Licht abhängig. Ein weiterer Vorteil ist, dass dadurch die Kamera noch näher an den Text heran kann und die Auflösung noch besser wird. Der größte Nachteil daran ist allerdings, dass die Erkennung nicht mehr allein von Frameworks übernommen werden kann. Es müsste ein neuronales Netz trainiert werden, welche diese Referenzpunkte in Bildern erkennt. 
 	
-	- Was kann an der neuen Vorlage immer noch optimiert werden?	
-	
-	- Welche Probleme konnten behoben werden?
-	
+	Der zweite Vorschlag bezieht sich auf den Abschnitt \ref{sc:problemevorlage} des Kapitels \ref{ch:grenzen}. Einige dort angesprochenen Probleme bezogen sich auf die Ungewissheit, wie groß eine Region abzustecken ist. Die einfachste Lösung ist es, einen genauen Rahmen für alle Felder fest zu legen. Auch müssen alle Felder ausreichend beschriftet sein, so dass jedem klar ist, wo was hineinzutragen ist. Und um das Problem zu vermeiden, dass der Rahmen als ein Buchstabe oder eine Zahl erkannt wird, kann dieser nur schwach eingezogen werden. Mithilfe von Bildverarbeitung-Algorithmen könnten diese feinen Linien dann auch ohne Verlust der wichtigen Daten heraus gerechnet werden.     
+
+%%%%%%%%%%%%%%% - FAZIT - %%%%%%%%%%%%%%%
+
+\chapter{Fazit}
+	Die Abnahme reflektieren 
+
+
 %%%%%%%%%%%%%%% - AUSBLICK - %%%%%%%%%%%%%%%
 		
 \chapter{Ausblick}
@@ -554,6 +558,9 @@ In dem vorliegendem Praktikumsbericht...
 	
 	- Idee des Scan erstellen -> speichern Scan != Vorlage
 	
+	- Tatsächlich eine Vorlage entwickeln
+	
+	- noch mehr automatisieren und Daten in den Referenzpunkte QR-Code zu hinterlegen dort steht dann drin, wo welches Feld ist und wie breit etc. 
 
 \Anhang
 
