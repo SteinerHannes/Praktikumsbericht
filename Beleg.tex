@@ -439,7 +439,7 @@ In dem vorliegendem Praktikumsbericht...
 				Wie man in den Abbildungen \ref{fig:seite1} und \ref{fig:seite2} sieht, haben beide unterschiedliche Maße. Die Abbildung \ref{fig:seite1} ist größer und etwas breiter als die Abbildung \ref{fig:seite2}. Das liegt daran, dass sich der Winkel und der Abstand der Kamera zum Dokument bei den Aufnahme geändert hat, da das Gerät, während des Fotografierens in den Händen gehalten wurde. Das bedeutet also, wenn die Bilder in der Vorlage nicht genau so groß sind, wie die Bilder des neuen Scans, können im schlechtesten Fall wichtige Informationen durch die absoluten Positionen des Regionen abgeschnitten werden. Würde man immer den selben Abstand und Winkel garantieren, wie das beispielsweise in einem richtigen Kopiergerät oder Scanner der Fall ist, könnte man nun die Berechnung der absoluten Positionen in relative Positionen der Regionen weglassen. Zusätzlich sind die relative Höhe und Breite der Regionn ebenfalls zu berechnen. 
 
 				\paragraph{Zu 2.: Mit den Regionen jedes Bilds Bildausschnitten erstellen}
-				Nachdem die neue Position und Maße aller Regionen einer Seite bestimmt sind, entstehen daraus Bildausschnitte für die Texterkennung. Die Regionen dienen als eine Art Schablone, so dass alles, was sich außerhalb dieser befindet, nicht verwendet wird. Auch trotz der Umrechnung in relative Positionen kann es bei falscher Erstellung der Vorlagen oder bei falschem Einscannen der Klausur passieren, dass trotzdem Teile der Regionen wegfallen. Für mehr Details über falsches Erstellen oder Einscannen siehe im Kapitel \ref{ch:grenzen}.
+				Nachdem die neue Position und Maße aller Regionen einer Seite bestimmt sind, entstehen daraus Bildausschnitte für die Texterkennung. Die Regionen dienen als eine Art Schablone, so dass alles, was sich außerhalb dieser befindet, nicht verwendet wird. Auch trotz der Umrechnung in relative Positionen kann es bei falscher Erstellung der Vorlagen oder bei falschem Einscannen der Klausur passieren, dass trotzdem Teile der Regionen wegfallen. Für mehr Details über falsches Erstellen oder Einscannen siehe im Kapitel \ref{ch:grenzen} Abschnitt \ref{sc:erkennen}.
 				
 				\paragraph{Zu 3.: Die Ausschnitte in die OCR-Engine geben}
 				Zu jedem Bildausschnitt wird eine sogenannte Texterkennungs-Anfrage konfiguriert. Auch hierfür wird immer noch die jeweilige Region des Ausschnitts benötigt. In der Konfiguration werden an Hand des Region-Datentyps (\ref{fig:v6}) unterschiedliche Einstellungen getroffen. Beispielsweise bekommt die Anfrage einer Region, vom Typ Note, eine Liste an möglichen Noten. Die Liste hat, wie schon im Kapitel \ref{ch:konzept} erwähnt, Vorrang vor dem Standard-Wörterbuch, in der Worterkennungsphase und sorgt für bessere Ergebnisse\footurl{Vision costumWords Dokumentation}{https://developer.apple.com/documentation/vision/vnrecognizetextrequest/3152640-customwords}. Auch könnte hier die Sprache des zu erkennenden Texts angegeben oder die  Texterkennungs-Stufe eingestellt werden. Diese bestimmt, welche Techniken bei der Texterkennung verwendet werden. Entweder man gibt der Geschwindigkeit Vorrang vor der Genauigkeit oder aber man setzt auf eine längere, rechenintensivere Erkennung. In der Anwendung ist die Genauigkeit entscheidend und auf die Einstellung der Sprache wurde verzichtet, da es sich in keinem Fall um normalen Text handelt, sondern um Eigennamen, Abkürzungen und Ziffern.
@@ -499,39 +499,29 @@ In dem vorliegendem Praktikumsbericht...
 		
 %%%%%%%%%%%%%%% - GRENZEN - %%%%%%%%%%%%%%%
 
-\chapter{Grenzen der App}\label{ch:grenzen}
-	\section{Probleme beim Erkennen von Dokumenten}
-		- Gleich-farbiger Hintergrund
-			
-		- Wenig Licht
+\chapter{Probleme und Grenzen der App}\label{ch:grenzen}
+	In diesem Kapitel werden Probleme aufgeführt, die beim Verwenden der App beobachtet werden können. Auch wird hier über mögliche Lösungen zu einigen Problemen diskutiert.
+
+	\section{Probleme beim Erkennen von Dokumenten}\label{sc:erkennen}
+		Bei der Erkennung von Dokumenten in einem Bild wird in der Bildverarbeitung auf Algorithmen der Segmentierung zurück gegriffen. Im Praktikumsbericht von Tobias Kallauke wird ein gängiger Ablauf zum Erkennen von Dokumenten dargestellt. Die genaueren Hintergrund und Schwächen der Algorithmen, welche die grundlegenden Probleme und Grenzen der App begründen, würden den Rahmen des Praktikumsberichts sprengen, weshalb darauf nicht weiter eingegangen wird. Allerdings muss klar sein, dass für die Erkennung des Dokuments es wichtig ist, dass die Ecken sowie die Seiten sich gut vom Hintergrund abheben.
 		
-		- Hintergrund mit starken Kanten
-		
-		- Runde Ecken, keine Ecken
-		
-		- Starke Kanten im Bild (schwarzer Kreditkartenstreifen)
-		
-		- zu jedem möglichem vlt. dann ein Beispiel Bild
+		Das bedeutet im Umkehrschluss, dass wenn die Seiten und Ecken sich nicht gut abheben, kann das Dokument nicht oder nur schlecht erkannt werden. Allerdings gibt es für diese Probleme zwei effiziente Lösungen. 
+		\begin{itemize}
+			\item Die erste Lösung besteht darin, einen Blitz zu verwenden. Meistens schaltet sich bei zu wenig Licht die zusätzliche Belichtung automatisch ein. Grundsätzlich empfiehlt es sich aber, immer eine Blitz zu verwenden, da dadurch das Dokument gleichmäßig belichtet wird. Außerdem werden Schatten vom Benutzer oder durch kleinere Falten beseitigt, welche durch eine Deckenbeleuchtung entstehen könnten. Bei einer zu starken Grundbelichtung verschlechtert ein Blitz jedoch nur das Ergebnis, da dadurch Text und Kanten unkenntlich gemacht werden könnten. Nach eigener Erfahrung ist es am geeignetsten, bei Tageslicht und mit Blitz die Dokumente aufzunehmen. 
+			\item Auch wenn bei guter Belichtung, die Wahrscheinlichkeit für falsche Kantenerkennung reduziert worden ist, kommt es bei schnellen Bewegungen der Kamera oder zu spitzem Winkel zum Dokument sowie ungeeignetem Hintergrund trotzdem dazu, dass ein falscher Bildausschnitt als Dokument gewählt wird. Deshalb ist es möglich das Bild noch einmal aufzunehmen, oder aber das Dokument im Bild selbst zu markieren. Dafür stellt VisionKit eine besondere View zur Verfügung, die es einem ermöglicht, die Ecken des Dokuments per Hand auszuwählen. Das hilft auch gegen die Problematik, wenn die Ecken des Papiers umgekickt oder abgerissen sind, da man selbst die Position der Ecke approximiert angeben kann. 
+		\end{itemize}
 		
 	\section{Probleme der Klausur-Vorlage beim Scannen}
-		- Schrift zu klein
+		Dieser Abschnitt bezieht sich ausschließlich auf entstandene Probleme mit der Klausuren-Vorlage, welche in Abbildung \ref{fig:klausur} zu sehen ist. Diese stand während des Praktikums als Beispiel-Klausur zur Verfügung. Im nächsten Kapitel \ref{ch:vorlage}, werden mögliche Änderungen und Lösungen zu den hier aufgeführten Problemen diskutiert.
 		
-		- zu wenig Platz
-		
-		- zu viel Platz
-		
-		- Überschneidungen
-		
-		- Für mehr Details über falsches Erstellen oder Einscannen siehe im Kapitel \ref{ch:grenzen}. \ref{sc:implementierung}
-		
-	\section{Weitere ...}
-		- Abstürze, Memory Leaks, 
+		Wie in der Abbildung \ref{fig:seite1} zu sehen ist, besitzt die Klausur ein Deckblatt mit Feldern, die der Student auszufüllen hat. Darunter Name, Artikelnummer und Seminargruppe. Diese Informationen sind essentiell bei der Digitalisierung und doch wird nicht klar zwischen einem Feld für den Vornamen und einem Feld für den Nachnamen differenziert. In den Abbildungen \ref{fig:erstellung2} und \ref{fig:erstellung3} wird diese Problematik nochmal dargestellt. Bei den Datentypen der Regionen (\ref{fig:v6}) wird zwischen Vornamen und Nachnamen unterschieden, auf der Klausur (\ref{fig:v7}) jedoch nicht. In der abgebildeten Vorlage (\ref{fig:v9}) wurde der Vorname auf den ersten und der Nachname auf dem zweiten Strich des Feldes Namen gesetzt. Auch verleitet ein einzelner Strich dazu, über die Länge hinaus zu schreiben. Wenn die Regionen der Scan-Vorlage dann zu klein gewählt ist, können Informationen fehlen. Bei dem Feld für die Note wird dies noch extremer. Da nicht mal ein Markierung für die Note vorhanden ist, müsste man einen sehr viel größeren Bereich markieren (\ref{fig:v9}). Allerdings wird hinter der Note auch die Unterschrift des Prüfers gesetzt, welche bei der Digitalisierung nicht mit auftauchen sollte. Im Gegensatz dazu sind die Felder in der Tabelle für die Punkte zu jeder Aufgabe zu klein. Die geringe Größe verleitet dazu, dass Feld komplett aus zu nutzen und die Ziffer möglichst groß rein zu schreiben. Dazu kommt dass solch kleinen Regionen kaum Spielraum für Toleranz lassen und somit entstehen hier immer wieder Fehler. Entweder die Ziffer ist abgeschnitten, wenn man die Region zu klein wählt oder aber die Ränder des Feldes werden als eine Eins oder als der Buchstabe l erkannt, wenn man die Region zu groß wählt.
 
-
-
+	\section{Weitere Probleme der App}
+		Obwohl SwiftUI die Entwicklung der App erst möglich gemacht hat, bringt das Framework von Juni 2019 einige Schwierigkeiten mit sich. Seit der Veröffentlichung gibt es nur eine sehr kleine Dokumentation und der Schnitstellen-Umfang, kann auch noch lange nicht mit dem des Frameworks von UIKit mithalten, welches seit Jahren in der iOS-Entwicklung als Standard benutzt wird. Grund für den geringen Umfang und schlechter Dokumentation ist vermutlich, die ständige Weiterentwicklung Seitens Apple. Das führt jedoch zu einigen provisorischen Lösungen und macht das Auffinden von Fehlern besonders schwierig. Deshalb kann es bei der Benutzung der App zu unerwarteten Abstürzen oder Aufhängern kommen.
+		
 %%%%%%%%%%%%%%% - TEMPLATES - %%%%%%%%%%%%%%%
 
-\chapter{Templates}
+\chapter{Scan-Vorlagen}\label{ch:vorlage}
 	- Template und den Entwicklungsprozess vorstellen, 
 	
 	- wieso weshalb warum muss das nun so aussehen?
@@ -635,3 +625,19 @@ In dem vorliegendem Praktikumsbericht...
 \bibliography{Beleg}
 \bibliographystyle{iso690.bst}
 \end{document}
+
+
+		
+%		Auf der Grundlage von Gradienten, welche Grauwertänderungen im Bild approximieren, werden Dokumenten-Katen erkannt (siehe Abbildung 4.1a im Praktikums Bericht von Tobias Kallauke). Das bedeutet, sind keine Grauwertänderungen an den Kanten vorhanden, ist die Erkennung durch die Anwendung unmöglich. Das kann der Fall sein, wenn der Hintergrund den gleichen Farbton hat, wie das Dokument. Sind allerdings andere Gradienten-Kanten im Bild, beispielsweise durch ein karierten Hintergrund kann es zu keiner richtigen Zuordnung zu
+%		
+%		Approximation der Ecken
+%	
+%	
+%		Beim Erkennen von Dokumenten kann es vorkommen, dass falsche oder gar kein Kanten des Dokument erkannt werden. Wenn falsche Kanten erkannt werden hat das viele mögliche Gründe. Zum einen weißt der Hintergrund bzw. der Untergrund selbst Kanten auf. Das kann vorkommen, wenn Seiten versetzt übereinander liegen und die Dokumenten-Kanten nicht mehr eindeutig sind. Zum anderen kann das Dokument selbst starke Kanten beinhalten, durch Abbildungen oder Tabellen beispielsweise. Je nach dem wird der Bildausschnitt zu groß oder zu klein gewählt.
+%		
+%		Werden keine Kanten auf dem Bild erkannt kann das auch an mehreren Gründen liegen. Die häufigsten sind jedoch zu wenig Licht, umgeknickte Ecken des Dokuments, oder auch ein Hintergrund, der einen sehr ähnlichen Farbton, wie das Dokument selbst hat. 
+%		
+%		
+%		Dies ist der Fall, wenn der Hintergrund einen ähnlichen Farbton hat, wie das Dokument oder aber bei zu wenig Licht.
+%		
+%		wenn der Untergrund einen ähnlichen Farbton hat, dass die Kanten der Seiten nicht erkannt werden. Das Selbe kann auch bei wenig Licht der Fall sein. Im Gegensatz dazu können aber auch falsche Kanten erkannt werden. Wenn beispielsweise zwei Seiten übereinander versetzt sind, oder das Dokument sich auf einem kariertem Untergrund befindet, kommt es vor, dass das ein zu großer oder falscher Bildausschnitt durch von VisionKit bzw. den Algorithmen von Vision gewählt wird. Auch Kanten auf dem Dokument selbst, die durch Abbildungen oder durch Rahmen um Texte entstehen oder umgeknickte Ecken des Blatts, können ein Problem beim Erkennen von Dokumenten sein.
