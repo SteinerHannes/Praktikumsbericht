@@ -482,10 +482,6 @@ In dem vorliegendem Praktikumsbericht...
 	- Accessibility 	von Haus aus etwas... dank swiftui
 	- wie benutze ich die App wie installiere ich die
 	- 
-		\\ \\ \\
-	Weitere Punkte die in Kapitel 6 rein könnten/sollten: 
-	
-	- ein paar Worte, wie gut die Entwicklung lief (Simulator vs. echtes Gerät), wo sind die Grenzen des Simulators (Keine Kamera), wo waren Probleme mit dem echten Gerät...
 
 %%%%%%%%%%%%%%% - WEITERENTWICKLUNG - %%%%%%%%%%%%%%%
 
@@ -500,7 +496,7 @@ In dem vorliegendem Praktikumsbericht...
 		
 %%%%%%%%%%%%%%% - GRENZEN - %%%%%%%%%%%%%%%
 
-\chapter{Probleme und Grenzen der App}\label{ch:grenzen}
+\chapter{Probleme und Grenzen der App - KOMMT INS FAZIT}\label{ch:grenzen}
 	In diesem Kapitel werden Probleme aufgeführt, die beim Verwenden der App beobachtet werden können. Auch wird hier über mögliche Lösungen zu einigen Problemen diskutiert.
 
 	\section{Probleme beim Erkennen von Dokumenten}\label{sc:erkennen}
@@ -518,13 +514,13 @@ In dem vorliegendem Praktikumsbericht...
 		Wie in der Abbildung \ref{fig:seite1} zu sehen ist, besitzt die Klausur ein Deckblatt mit Feldern, die der Student auszufüllen hat. Darunter Name, Artikelnummer und Seminargruppe. Diese Informationen sind essentiell bei der Digitalisierung und doch wird nicht klar zwischen einem Feld für den Vornamen und einem Feld für den Nachnamen differenziert. In den Abbildungen \ref{fig:erstellung2} und \ref{fig:erstellung3} wird diese Problematik nochmal dargestellt. Bei den Datentypen der Regionen (\ref{fig:v6}) wird zwischen Vornamen und Nachnamen unterschieden, auf der Klausur (\ref{fig:v7}) jedoch nicht. In der abgebildeten Vorlage (\ref{fig:v9}) wurde der Vorname auf den ersten und der Nachname auf dem zweiten Strich des Feldes Namen gesetzt. Auch verleitet ein einzelner Strich dazu, über die Länge hinaus zu schreiben. Wenn die Regionen der Scan-Vorlage dann zu klein gewählt ist, können Informationen fehlen. Bei dem Feld für die Note wird dies noch extremer. Da nicht mal ein Markierung für die Note vorhanden ist, müsste man einen sehr viel größeren Bereich markieren (\ref{fig:v9}). Allerdings wird hinter der Note auch die Unterschrift des Prüfers gesetzt, welche bei der Digitalisierung nicht mit auftauchen sollte. Im Gegensatz dazu sind die Felder in der Tabelle für die Punkte zu jeder Aufgabe zu klein. Die geringe Größe verleitet dazu, dass Feld komplett aus zu nutzen und die Ziffer möglichst groß rein zu schreiben. Dazu kommt dass solch kleinen Regionen kaum Spielraum für Toleranz lassen und somit entstehen hier immer wieder Fehler. Entweder die Ziffer ist abgeschnitten, wenn man die Region zu klein wählt oder aber die Ränder des Feldes werden als eine Eins oder als der Buchstabe l erkannt, wenn man die Region zu groß wählt.
 
 	\section{Weitere Probleme der App}
-		Obwohl SwiftUI die Entwicklung der App erst möglich gemacht hat, bringt das Framework von Juni 2019 einige Schwierigkeiten mit sich. Seit der Veröffentlichung gibt es nur eine sehr kleine Dokumentation und der Schnitstellen-Umfang, kann auch noch lange nicht mit dem des Frameworks von UIKit mithalten, welches seit Jahren in der iOS-Entwicklung als Standard benutzt wird. Grund für den geringen Umfang und schlechter Dokumentation ist vermutlich, die ständige Weiterentwicklung Seitens Apple. Das führt jedoch zu einigen provisorischen Lösungen und macht das Auffinden von Fehlern besonders schwierig. Deshalb kann es bei der Benutzung der App zu unerwarteten Abstürzen oder Aufhängern kommen.
-		
-		Unter der Haube Links nicht gut gelöst. Sie haben keine Auswirkung...
+		Obwohl SwiftUI die Entwicklung der App erst möglich gemacht hat, bringt das Framework von Juni 2019 einige Schwierigkeiten mit sich. Seit der Veröffentlichung gibt es nur eine sehr kleine Dokumentation und der Schnitstellen-Umfang, kann auch noch lange nicht mit dem des Frameworks von UIKit mithalten, welches seit Jahren in der iOS-Entwicklung als Standard benutzt wird. Grund für den geringen Umfang und schlechter Dokumentation ist vermutlich, die ständige Weiterentwicklung Seitens Apple. Das führt jedoch zu einigen provisorischen Lösungen und macht das Auffinden von Fehlern besonders schwierig. Deshalb kann es bei der Benutzung der App zu unerwarteten Abstürzen oder Aufhängern kommen. Des Weiteren sind die verwendeten Texterkennung-Engines nur für gedruckte Schrift ausgelegt. Handschriftliche Zeichen werden nur dann gut erkannt, wenn sie in Druckschrift geschrieben sind. Bei Ziffern ist es besonders auffällig, da z. B. eine gedruckte 4 oder 7 ganz andere Charakteristiken haben, als wenn sie geschrieben wurde.  
+
+		Unter der Haube: Links nicht gut gelöst. Sie haben keine Auswirkung...
 		
 %%%%%%%%%%%%%%% - TEMPLATES - %%%%%%%%%%%%%%%
 
-\chapter{Verbesserung der Klausuren-Vorlage}\label{ch:vorlage}
+\chapter{Verbesserung der Klausuren-Vorlage - IN AUSBLICK?}\label{ch:vorlage}
 	Dieses Kapitel beschäftigt sich mit Verbesserungen und Änderungen an Hand der Klausur in Abbildung \ref{fig:klausur}. Sie steht jedoch stellvertretend für die Klausuren-Vorlage der Fakultät CB. Alle folgenden Vorschläge haben den Hintergrund die App bei der Digitalisierung zu unterstützen und basieren auf der gesammelten Erfahrung mit der Anwendung, während der Entwicklung sowie den angegeben Problemen aus Kapitel \ref{ch:grenzen}.
 	
 	Der erste Vorschlag bezieht sich auf die Problematik, dass die Ecken und Kanten bei der Erkennung des Dokuments entscheidend sind. Sie sind die wichtigsten Referenz-Punkte bei der Objekt-Erkennung, können aber unter bestimmten Bedienungen, wie im Kapitel \ref{ch:grenzen} erklärt, nicht immer erkannt werden. Aus diesem Grund empfiehlt es sich eigene Referenzpunkt auf dem Dokument anzubringen. Beispielsweise durch einen Rahmen, wie es schon auf der Klausur (\ref{fig:seite1}) gemacht wurde, oder durch QR-Code ähnliche Muster. Der Vorteil bei eigenen Referenzpunkt ist, dass sie so gestaltet werden können, dass sie sich immer vom Blatt abheben. So mit ist die Dokumenten-Erkennung nur noch vom Licht abhängig. Ein weiterer Vorteil ist, dass dadurch die Kamera noch näher an den Text heran kann und die Auflösung noch besser wird. Der größte Nachteil daran ist allerdings, dass die Erkennung nicht mehr allein von Frameworks übernommen werden kann. Es müsste ein neuronales Netz trainiert werden, welche diese Referenzpunkte in Bildern erkennt. 
@@ -535,17 +531,25 @@ In dem vorliegendem Praktikumsbericht...
 
 \chapter{Fazit}
 	Die Abnahme reflektieren 
+	
+	- ein paar Worte, wie gut die Entwicklung lief (Simulator vs. echtes Gerät), wo sind die Grenzen des Simulators (Keine Kamera), wo waren Probleme mit dem echten Gerät...
 
 
 %%%%%%%%%%%%%%% - AUSBLICK - %%%%%%%%%%%%%%%
 		
 % Jedoch sollten auch einige angesprochenen Probleme aus Kapitel \ref{ch:grenzen} behoben werden, wenn die App in Zukunft tatsächlich von Hochschulmitarbeitern benutzt werden soll.
 \chapter{Ausblick}
-	Der aktuelle Stand der App bietet eine gute Grundlage für mögliche Weiterentwicklungen. In diesem Kapitel werden einige Ideen erläutert, wie die App und das gesamte Softwaresystem weiter entwickelt werden kann.
+	Der aktuelle Stand der App bietet eine gute Grundlage für mögliche Weiterentwicklungen. In diesem Kapitel werden einige Ideen erläutert, wie die App und das gesamte Softwaresystem weiter entwickelt und verbessert werden kann.
 	
-	Durch die Verwendung von Scan-Vorlagen ist es möglich, auch andere Dokumente, wie  Krankenscheine, Arbeitsverträge oder Urlaubsanträge ein zu scannen. Damit die Texterkennung noch besser wird, sollten jedoch noch weiter Regionen-Datentypen implementiert werden. Auch die Datenbank empfiehlt es zu überarbeitet, aber grundsätzlich funktioniert die Digitalisierung jetzt schon.
+	\paragraph{Texterkennung} Wie im Kapitel \ref{ch:grenzen} erwähnt unterstützten Vision und Tesseract Handschrift nicht. Jedoch wäre es möglich eigne Neuronale-Netze zu trainieren und implementieren, die diese Aufgabe übernehmen. Beispielsweise existiert ein Datensatz an handgeschriebene Ziffern \footurl{MNIST-Datensatz -}{http://yann.lecun.com/exdb/mnist/}, mit dem solch ein Netz trainiert werden könnte. 
 	
-	Wie schon in früheren Kapiteln erwähnt sollen die Bilder zum Archivieren gespeichert werden. Mit den gesammelten Prüfungen könnten so ein online Klausuren-Einsichten entstehen, so dass keine Termine mit den jeweiligen Professoren oder Mitarbeitern mehr gemacht werden müssen. Ein großes Problem was jedoch dabei entsteht, ist die Möglichkeit der schnellen Verbreitung von Klausuren. Die Lehrenden müssten dann jedes Jahr bzw. Semester neue Klausuren erstellen, da die alten Klausuren weiter geleitet wurden. Aber auch dafür könnte es in Zukunft eventuell eine Lösung geben.
+		Außerdem bietet die Server Architektur die Möglichkeit, weitere oder mehr OCR-Engines zu implementieren. Für mehr Details siehe im Praktikumsbericht von Tobias Kallauke.
+	
+	\paragraph{Klausuren-Einsicht} Die archivierten Klausuren-Bilder könnten über ein Web-Portal dazu genutzt werden, eine online Einsicht der Prüfungen zu gestalten. Jedoch bringt solch eine Plattform auch ein Problem mit sich. Durch sie ist die Verbreitung von Klausuren noch einfacher als zuvor, wodurch die Professoren dazu angehalten werden, immer wieder neue Aufgaben auszudenken. Aber auch dafür könnte es in Zukunft eine Lösung geben. 
+	
+	\paragraph{Verbesserter App Workflow} Aktuell muss zu jeder Region ein Name vergeben werden. Allerdings gibt auch der Datentyp (\ref{fig:v6}) der Region in den meisten Fällen darüber Auskunft, wie die Region heißen sollte. Handelt es sich um den Vor- bzw. Nachnamen, die Matrikel-Nummer, Seminar-Gruppe oder die Note, taucht diese Region genau einmal in einer Scan-Vorlage auf. Nur der Datentyp Punkte sollte mehrmals vergeben werden können. 
+	
+	\paragraph{Weitere Plattformen} Neben der iOS-App bemühte sich Tobias Kallauke um die Entwicklung der App für Android-Geräte. Allerdings könnte die Software auf noch mehr Plattformen Anwendung finden. Neben einem Programm für Linux, MacOS und Windows ist einen Web-Plattform auch erdenklich. Das Erstellen der Bilder kann über Scan- oder Kopiergeräte erfolgen, oder 
 	
 	
 	- QR-Code-Idee um Vorlagen weg zu lassen -> Programm oder Plugin (Word/LaTeX) was die QR-Codes dann automatisch erstellt und richtig einfügt. (Wichtige Daten sind da hinterlegt, Vor- und Nachteile von QR-Codes, ...)
