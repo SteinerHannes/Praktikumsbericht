@@ -82,21 +82,21 @@ In dem vorliegendem Praktikumsbericht...
 	\section{Klausuren-Vorlage}
 	
 	\begin{figure}[th]
-    			\centering
-    			\begin{subfigure}[t]{0.4\textwidth}
-        			\frame{\includegraphics[width=0.96\textwidth]{img/seite1}}
-        			\caption{Deckblatt der Klausur}
-        			\label{fig:seite1}
-    			\end{subfigure}
-    			\begin{subfigure}[t]{0.4\textwidth}
-        			\frame{\includegraphics[width=0.96\textwidth]{img/seite2}}
-        			\caption{1. Seite der Klausur}
-        			\label{fig:seite2}
-    			\end{subfigure}
-    			\caption{Umsetzung der Klausuren-Vorlage der Fakultät CB.}
-    			\caption*{\textit{Die Bilder sind beim Erstellen einer Scan-Vorlage mit der App entstanden.}}
-    			\label{fig:klausur}
-			\end{figure}
+    	\centering
+   		\begin{subfigure}[t]{0.4\textwidth}
+        	\frame{\includegraphics[width=0.96\textwidth]{img/seite1}}
+       		\caption{Deckblatt der Klausur}
+        	\label{fig:seite1}
+    	\end{subfigure}
+    	\begin{subfigure}[t]{0.4\textwidth}
+        	\frame{\includegraphics[width=0.96\textwidth]{img/seite2}}
+        	\caption{1. Seite der Klausur}
+        	\label{fig:seite2}
+    	\end{subfigure}
+    	\caption{Umsetzung der Klausuren-Vorlage der Fakultät CB.}
+    	\caption*{\textit{Die Bilder sind beim Erstellen einer Scan-Vorlage mit der App entstanden.}}
+    	\label{fig:klausur}
+	\end{figure}
 	
 	Eine Klausuren-Vorlage bzw. ein Gestaltungsleitfaden für Klausuren der Fakultät \textit{Angewandte Computer- und Biowissenschaften}\ref{fig:klausur} bietet außerdem die Möglichkeit der Kontrolle des Prüfers an. Durch das vorgegebene Layout der Klausur ist es möglich, einen Teil der Arbeit des Prüfenden auf Fehler zu untersuchen. Auf dem Deckblatt (\ref{fig:seite1}) der Klausur ist eine Tabelle, mit drei Zeilen und für jede Aufgabe eine Spalte. In der ersten Zeile befinden sich die Nummern der Aufgaben, in der zweiten die zu erreichenden Punkte der Aufgabe. Und in der dritten Zeile trägt der Prüfer die erbrachten Punkte des Studenten ein. Unter der Tabelle befindet sich ein Feld für die erreichte Gesamtpunktzahl, sowie ein Feld für die aus den Punkten resultierende Note. Die Punkte pro Aufgabe, die Gesamtpunktzahl und die Zensur stehen in Relation zu einander, sodass aus den Punkten der Aufgaben die beiden anderen Felder errechnet werden und mit den Ergebnissen des Prüfers abgeglichen werden könnten. Eine weiteres Merkmal der Klausuren-Vorlage ist ein Feld, für die vom Studenten erreichten Punkte über jeder Aufgabenstellung. Die dortige Angabe sollte mit der, in der Tabelle auf dem Deckblatt übereinstimmen und bietet somit noch eine weitere Möglichkeit der Kontrolle an.
 	
@@ -113,7 +113,7 @@ In dem vorliegendem Praktikumsbericht...
 	
 	Eine Scan-Vorlagen bestehen aus zwei Komponenten. Die eine sind zugeschnittene Fotos der Seiten eines Dokuments, wie die Abbildung \ref{fig:klausur} zeigt. Und die zweite sind die Regionen auf den Bildern, wo sich die zu digitalisierenden Informationen befinden. In der Abbildung \ref{fig:v9} sind die Regionen blau und in ihnen steht ein Text, um welche Region es sich handelt. Dem Benutzer muss es möglich sein, zuerst die Fotos auf zu nehmen und anschließend Regionen auf den Seiten zu markieren. Weiter benötigen die Regionen Namen bzw. Typen, die der Benutzer angeben muss. Die Angabe des Typs ist wichtig, da dadurch eindeutig wird, ob es sich um die Note oder die Matrikelnummer des Studenten handelt. Diese Eindeutigkeit wird nicht nur für die automatische Erstellung der Tabelle benötigt, sondern auch für die Optimierung der Texterkennung. 
 	
-	Optical character recognition (OCR)\nomenclature{OCR}{optical character recognition, deutsch: optische Zeichen Erkennung und im deutschen Synonym für Texterkennung}, auf deutsch optische Zeichen Erkennung, soll dazu benutzt werden, die Informationen der Regionen zu digitalisieren. Um die Texterkennung zu verbessern, soll wie schon erwähnt der Typ der Regionen verwendet werden. Damit könne dem OCR mögliche Ergebnisse mitgeteilt oder die Ergebnisse angepasst werden. Beispielsweise bestehen Zensuren immer aus Dezimalzahlen von Eins bis Sechs und mit nur einer Nachkommastelle. Wird der Buchstabe O anstelle der Ziffer Null erkannt, kann so der Fehler korrigiert werden. 
+	Optical character recognition (OCR)\nomenclature{OCR}{optical character recognition, deutsch: optische Zeichenerkennung und im deutschen Synonym für Texterkennung}, auf deutsch optische Zeichen Erkennung, soll dazu benutzt werden, die Informationen der Regionen zu digitalisieren. Um die Texterkennung zu verbessern, soll wie schon erwähnt der Typ der Regionen verwendet werden. Damit könne dem OCR mögliche Ergebnisse mitgeteilt oder die Ergebnisse angepasst werden. Beispielsweise bestehen Zensuren immer aus Dezimalzahlen von Eins bis Sechs und mit nur einer Nachkommastelle. Wird der Buchstabe O anstelle der Ziffer Null erkannt, kann so der Fehler korrigiert werden. 
 	
 	Zudem muss die Texterkennung auf dem Gerät selbst statt finden. Allerdings darf die App auch Texterkennung auf externen Servern unterstützen. Hierfür müssen dann die entsprechenden API-Schnittstellen implementiert oder für einen eigenen Server entwickelt werden.
 
@@ -126,12 +126,18 @@ In dem vorliegendem Praktikumsbericht...
 %%%%%%%%%%%%%%% - GRUND IDEE ZUM LÖSEN DES PROBLEMS - %%%%%%%%%%%%%%%
 
 \chapter{Konzept der Dokumenten-Scanner-App}\label{ch:konzept}
-
-	Wie in der Problemstellung und Anforderung beschreiben, soll die Dokumenten-Scanner App wichtigen Daten auf dem Deckblatt einer Klausur, wie Vor- und Nachname des Studenten, seine Matrikelnummer sowie die Note erkennen, digitalisieren und in ein für die Notenfreigabe geeignetes Format bringen. Die digitalisierten Daten sollen anschließend an einen Server gesendet werde, wo sie und die beim Einscannen entstandenen Bilder gespeichert werden. Verwendet eine einzuscannende Klausur die Klausuren-Vorlage (\ref{fig:klausur}) der Fakultät CB oder ähnliche, die eine Punkteübersicht haben, dann soll es außerdem möglich sein, die Punkte sowie die Note auf Richtigkeit zu überprüfen. 
+	Wie in der Problemstellung und Anforderung beschreiben, soll die Dokumenten-Scanner App wichtigen Daten auf dem Deckblatt (\ref{fig:seite1}) einer Klausur, wie Vor- und Nachname des Studenten, seine Matrikelnummer sowie die Note erkennen, digitalisieren und in ein für die Notenfreigabe geeignetes Format bringen. Die digitalisierten Daten sollen anschließend an einen Server gesendet werden, wo sie und die beim Einscannen entstandenen Bilder gespeichert werden. Verwendet eine einzuscannende Klausur die Klausuren-Vorlage (\ref{fig:klausur}) der Fakultät CB oder ähnliche, die eine Punkteübersicht haben, dann soll es außerdem möglich sein, die Punkte sowie die Note auf Richtigkeit zu überprüfen. 
+	
+	\begin{figure}[th]
+    	\centering
+    	\includegraphics[width=\textwidth]{img/schema1}
+    	\caption{Scan-Vorlage erstellen und auf dem Server speichern}
+    	\label{fig:schema1}
+    \end{figure}
 
 	Zur Digitalisierung und Kontrolle der Daten werden Scan-Vorlagen verwendet. Diese muss vor dem Einscannen der ausgefüllten Klausuren erstellt werden, um zu gewährleisten, dass die richtigen Daten digitalisiert werden. Beim Erstellen einer Scan-Vorlage geht man wie folgt vor:
 	\begin{itemize}
-		\item Zuerst wird jede Seite der Klausur fotografiert (\ref{fig:v3}). Dabei wird in jedem Bild das Dokument erkannt, vom Hintergrund getrennt oder genauer gesagt ausgeschnitten und perfekt ausgerichtet (\ref{fig:klausur}). Zudem wird der Kontrast erhöht, so dass die Schrift leichter lesbarer wird.
+		\item Zuerst wird jede Seite der Klausur fotografiert (\ref{fig:v3}). Dabei wird in jedem Bild das Dokument erkannt, vom Hintergrund getrennt oder genauer gesagt ausgeschnitten und perfekt ausgerichtet (\ref{fig:klausur}). Zudem wird der Kontrast erhöht, sodass die Schrift leichter lesbar wird.
 		
 		\item Anschließend markiert man diejenigen Regionen auf jeder Seite, die zu digitalisieren und/oder kontrollieren sind (\ref{fig:v9}). Zusätzlich muss jeder Region ein Name und einer der folgenden Typen zugeordnet werden: Unbekannt, Name, Matrikelnummer, Seminargruppe, Punkte und Note. Mithilfe des Typs wird die Texterkennung verbessert und falsche Ergebnisse automatisch korrigiert. Dazu später mehr.
 			
@@ -139,6 +145,13 @@ In dem vorliegendem Praktikumsbericht...
 		
 		\item Als letztes speichert man die Vorlage ab, welche dann automatisch an einen Server gesendet wird, so dass andere diese Vorlage ebenfalls nutzen können.
 	\end{itemize}
+	
+	\begin{figure}[th]
+    	\centering
+    	\includegraphics[width=\textwidth]{img/schema2}
+    	\caption{Scan-Vorlage verwenden}
+    	\label{fig:schema2}
+    \end{figure}
 	
 	Nach der Erstellung einer Vorlage kann das Dokument digitalisiert werden. Dazu scannt man die Seiten in derselben Reihenfolge, wie in der Scan-Vorlage ein. Die App digitalisiert mithilfe von OCR den Inhalt, in den vordefinierten Regionen. Der Typ der Region nimmt nun Einfluss auf das Ergebnis. Durch ihn wird während der Worterkennungsphase eine Liste an vordefinierten möglichen Ergebnissen eingespeist. Diese Liste hat Vorrang vor dem sogenannten Standard-Wörterbuch und verbessert dadurch die Texterkennung. Ein Beispiel für solch eine Liste könnten, alle möglichen Noten sein, wie schon in dem Kapitel \ref{ch:anforderungen} Anforderungen beschrieben. Auch vorstellbar ist, dass alle Seminargruppen oder Namen von Personen, die an der Klausur teilgenommen haben, dort verwendet werden. 
 	
@@ -226,11 +239,11 @@ In dem vorliegendem Praktikumsbericht...
 		
 		Das Schema \ref{fig:redux} zeigt, die in der App umgesetzte Redux ähnliche Struktur. Über eine View (rot) können Aktionen (blau) aufgerufen werden. Diese gelangt zuerst in einen sogenannten Dispatcher (lila), welcher als Verteiler dient. Anhand der Art einer Aktion, wird der entsprechende Reducer (grün) vom Dispatcher beauftragt, die Aktion auszuführen. Ein Reducer ist für genau eine Art von Aktionen zuständig. Allerdings ist, wie in der Abbildung \ref{fig:tree} zu sehen ist, eine Schachtellung von Reducern (grün) möglich. Dies bedeutet auch, dass Aktions-Arten ineinander geschachtelt werden können. Das hat den Hintergrund, dass die States wie ein Objektbaum aufgebaut sind. So hat jeder State seinen eigenen Reducer, was für die oben erwähnte Modularität sorgt. Möchte man beispielsweise eine Änderung im Link State (siehe \ref{fig:tree}) vornehmen, muss die eigentliche Aktion in einer Link Reducer Aktion gekapselt und diese wiederum in einer Vorlagen Reducer Aktion. Zum ausführen der Aktion, werden dann die entsprechenden Reducer die Kapselung von außen nach innen auflösen. Nachdem die Aktion ausgeführt und eine State-Änderung herbeigeführt wurde, aktualisiert sich durch das data binding von MVVM die View. Genauer werden alle Views, die eine Bindung zu dem geänderten Datum haben, über die Änderung benachrichtigt und daraufhin aktualisieren diese sich.
 
-		Ein weiterer wichtiger Punkt sind die Server-Aufrufe. Für diese gibt es einen eigenen Reducer und eine besondere Schnittstelle, welche in der Abbildung \ref{fig:redux} grau markiert und mit API \nomenclature{API}{application programming interface, auf deutsch Programmierschnittstelle} beschriftet ist. Diese hat die Besonderheit selbst Aktionen an den Container zu senden. Beispielsweise löst ein Knopfdruck in einer View die Aktion aus, alle Vorlagen vom Server zu laden. Diese Aktion gelangt über den vorgesehenen Reducer zu der Schnittstelle. Dort wird ein entsprechender Server-Aufruf gestartet und ohne andere Prozesse anzuhalten auf den Server-Rückruf gewartet. Sobald die Antwort des Servers angekommen ist, wird diese in einer Aktion wieder zum Container gesendet. Dort wird sich wieder ein entsprechender Reducer um eventuelle Fehlerbehandlung oder das Ablegen der Vorlagen kümmern.
+		Ein weiterer wichtiger Punkt sind die Server-Aufrufe. Für diese gibt es einen eigenen Reducer und eine besondere Schnittstelle, welche in der Abbildung \ref{fig:redux} grau markiert und mit API \nomenclature{API}{application programming interface, deutsch: Programmierschnittstelle} beschriftet ist. Diese hat die Besonderheit selbst Aktionen an den Container zu senden. Beispielsweise löst ein Knopfdruck in einer View die Aktion aus, alle Vorlagen vom Server zu laden. Diese Aktion gelangt über den vorgesehenen Reducer zu der Schnittstelle. Dort wird ein entsprechender Server-Aufruf gestartet und ohne andere Prozesse anzuhalten auf den Server-Rückruf gewartet. Sobald die Antwort des Servers angekommen ist, wird diese in einer Aktion wieder zum Container gesendet. Dort wird sich wieder ein entsprechender Reducer um eventuelle Fehlerbehandlung oder das Ablegen der Vorlagen kümmern.
 		
 	\section{Implementierung}\label{sc:implementierung}
 		
-		Zur Realisierung der entworfenen Systemkomponenten wurde ausschließlich, die von Apple entwickelte IDE\nomenclature{IDE}{integrated development environment, auf deutsch Integrierte Entwicklungsumgebung} Xcode, verwendet. Diese stellt Geräte-Simulatoren zur Verfügung, auf denen die App getestet werden kann. Die Simulatoren bieten unteranderem auch die Möglichkeit an, die Anwendung schnell auf verschiedenen iOS bzw. iPadOS Versionen zu testen. Auch ist das Testen der App auf echten Geräten durch Xcode möglich, was bei der Entwicklung unumgänglich war. Grund dafür ist die Benutzung der Kamera, die bei den Simulatoren zu gewollten Abstürzen führt, da diese keinen Zugriff auf eine Kamerasystem besitzen.
+		Zur Realisierung der entworfenen Systemkomponenten wurde ausschließlich, die von Apple entwickelte IDE\nomenclature{IDE}{integrated development environment, deutsch: Integrierte Entwicklungsumgebung} Xcode, verwendet. Diese stellt Geräte-Simulatoren zur Verfügung, auf denen die App getestet werden kann. Die Simulatoren bieten unteranderem auch die Möglichkeit an, die Anwendung schnell auf verschiedenen iOS bzw. iPadOS Versionen zu testen. Auch ist das Testen der App auf echten Geräten durch Xcode möglich, was bei der Entwicklung unumgänglich war. Grund dafür ist die Benutzung der Kamera, die bei den Simulatoren zu gewollten Abstürzen führt, da diese keinen Zugriff auf eine Kamerasystem besitzen.
 		
 		Die App wurde ausschließlich in der Programmiersprache Swift geschrieben. Zusätzlich wurden die Frameworks SwiftUI, Vision und VisionKit von Apple, sowie das Framework Kingfisher\footurl{Kingfisher GitHub Repository -}{https://github.com/onevcat/Kingfisher}, zum Downloaden und Cachen von Bildern verwendet. Das Vision-Framework führt Erkennung von Gesichts- und Gesichtsmarkierungen, Texterkennung, Barcode-Erkennung, Bildregistrierung und allgemeine Merkmalsverfolgung durch. Jedoch wurde in der App nur die integrierte Texterkennung benutzt. Es ist aber anzunehmen, das VisionKit Algorithmen von Vision zur Dokumenten-Erkennung verwendet. Für mehr Informationen über die Frameworks SwiftUI und VisionKit siehe im Kapitel \ref{ch:anforderungen} Abschnitt \ref{sc:anforderungsplanung}.
 		
@@ -475,26 +488,7 @@ In dem vorliegendem Praktikumsbericht...
 				\paragraph{Zu 4.: Texterkennungs-Ergebnisse darstellen}
 				Nach der Texterkennung sendet der Server die Ergebnisse der Seiten als Antwort zurück. Diese werden dann im selben State des State-Container gesichert, wie es auch bei Vision der Fall ist. Die Ergebnisse bestehen aus der Regions-ID, zur Zuordnung, dem erkannten Text, sowie der confidence des OCR, zu dem jeweiligem Wort. Auch ähnlich, wie es bei Vision der Fall ist. Die Darstellung der Ergebnisse und das verhalten der Benutzeroberfläche ist ebenfalls die selbe.
 		
-	\section{Abnahme}	
-		Abnahme ... 
-		
-	- was wurde umgesetzt was nicht
-	- Accessibility 	von Haus aus etwas... dank swiftui
-	- wie benutze ich die App wie installiere ich die
-	- 
-
-%%%%%%%%%%%%%%% - WEITERENTWICKLUNG - %%%%%%%%%%%%%%%
-
-\chapter{Weitere Entwicklung und Besonderheiten}
-	
-	\section{API}
-		- auf die API eingehen? oder nur Tobias?
-	
-	\section{}
-		- Keyboards
-		- Accsessebility
-		
-%%%%%%%%%%%%%%% - GRENZEN - %%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%% - GRENZEN - %%%%%%%%%%%%%%%
 
 \chapter{Probleme und Grenzen der App - KOMMT INS FAZIT}\label{ch:grenzen}
 	In diesem Kapitel werden Probleme aufgeführt, die beim Verwenden der App beobachtet werden können. Auch wird hier über mögliche Lösungen zu einigen Problemen diskutiert.
@@ -515,41 +509,59 @@ In dem vorliegendem Praktikumsbericht...
 
 	\section{Weitere Probleme der App}
 		Obwohl SwiftUI die Entwicklung der App erst möglich gemacht hat, bringt das Framework von Juni 2019 einige Schwierigkeiten mit sich. Seit der Veröffentlichung gibt es nur eine sehr kleine Dokumentation und der Schnitstellen-Umfang, kann auch noch lange nicht mit dem des Frameworks von UIKit mithalten, welches seit Jahren in der iOS-Entwicklung als Standard benutzt wird. Grund für den geringen Umfang und schlechter Dokumentation ist vermutlich, die ständige Weiterentwicklung Seitens Apple. Das führt jedoch zu einigen provisorischen Lösungen und macht das Auffinden von Fehlern besonders schwierig. Deshalb kann es bei der Benutzung der App zu unerwarteten Abstürzen oder Aufhängern kommen. Des Weiteren sind die verwendeten Texterkennung-Engines nur für gedruckte Schrift ausgelegt. Handschriftliche Zeichen werden nur dann gut erkannt, wenn sie in Druckschrift geschrieben sind. Bei Ziffern ist es besonders auffällig, da z. B. eine gedruckte 4 oder 7 ganz andere Charakteristiken haben, als wenn sie geschrieben wurde.  
-
-		Unter der Haube: Links nicht gut gelöst. Sie haben keine Auswirkung...
 		
-%%%%%%%%%%%%%%% - TEMPLATES - %%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%% - TEMPLATES - %%%%%%%%%%%%%%%
 
-\chapter{Verbesserung der Klausuren-Vorlage - IN AUSBLICK?}\label{ch:vorlage}
+\chapter{Verbesserung der Klausuren-Vorlage}\label{ch:vorlage}
 	Dieses Kapitel beschäftigt sich mit Verbesserungen und Änderungen an Hand der Klausur in Abbildung \ref{fig:klausur}. Sie steht jedoch stellvertretend für die Klausuren-Vorlage der Fakultät CB. Alle folgenden Vorschläge haben den Hintergrund die App bei der Digitalisierung zu unterstützen und basieren auf der gesammelten Erfahrung mit der Anwendung, während der Entwicklung sowie den angegeben Problemen aus Kapitel \ref{ch:grenzen}.
 	
 	Der erste Vorschlag bezieht sich auf die Problematik, dass die Ecken und Kanten bei der Erkennung des Dokuments entscheidend sind. Sie sind die wichtigsten Referenz-Punkte bei der Objekt-Erkennung, können aber unter bestimmten Bedienungen, wie im Kapitel \ref{ch:grenzen} erklärt, nicht immer erkannt werden. Aus diesem Grund empfiehlt es sich eigene Referenzpunkt auf dem Dokument anzubringen. Beispielsweise durch einen Rahmen, wie es schon auf der Klausur (\ref{fig:seite1}) gemacht wurde, oder durch QR-Code ähnliche Muster. Der Vorteil bei eigenen Referenzpunkt ist, dass sie so gestaltet werden können, dass sie sich immer vom Blatt abheben. So mit ist die Dokumenten-Erkennung nur noch vom Licht abhängig. Ein weiterer Vorteil ist, dass dadurch die Kamera noch näher an den Text heran kann und die Auflösung noch besser wird. Der größte Nachteil daran ist allerdings, dass die Erkennung nicht mehr allein von Frameworks übernommen werden kann. Es müsste ein neuronales Netz trainiert werden, welche diese Referenzpunkte in Bildern erkennt. 
 	
 	Der zweite Vorschlag bezieht sich auf den Abschnitt \ref{sc:problemevorlage} des Kapitels \ref{ch:grenzen}. Einige dort angesprochenen Probleme bezogen sich auf die Ungewissheit, wie groß eine Region abzustecken ist. Die einfachste Lösung ist es, einen genauen Rahmen für alle Felder fest zu legen. Auch müssen alle Felder ausreichend beschriftet sein, so dass jedem klar ist, wo was hineinzutragen ist. Und um das Problem zu vermeiden, dass der Rahmen als ein Buchstabe oder eine Zahl erkannt wird, kann dieser nur schwach eingezogen werden. Mithilfe von Bildverarbeitung-Algorithmen könnten diese feinen Linien dann auch ohne Verlust der wichtigen Daten heraus gerechnet werden.     
 
-%%%%%%%%%%%%%%% - FAZIT - %%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%% - FAZIT - %%%%%%%%%%%%%%%
 
-\chapter{Fazit}
-	Die Abnahme reflektieren 
+\chapter{Fazit}\label{ch:fazit}
+	Diese Kapitel reflektiert....
+	
+	Speichern der Ergebnisse nicht geschafft 
 	
 	- ein paar Worte, wie gut die Entwicklung lief (Simulator vs. echtes Gerät), wo sind die Grenzen des Simulators (Keine Kamera), wo waren Probleme mit dem echten Gerät...
 
 
-%%%%%%%%%%%%%%% - AUSBLICK - %%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%% - AUSBLICK - %%%%%%%%%%%%%%%
 		
 % Jedoch sollten auch einige angesprochenen Probleme aus Kapitel \ref{ch:grenzen} behoben werden, wenn die App in Zukunft tatsächlich von Hochschulmitarbeitern benutzt werden soll.
 \chapter{Ausblick}
-	Der aktuelle Stand der App bietet eine gute Grundlage für mögliche Weiterentwicklungen. In diesem Kapitel werden einige Ideen erläutert, wie die App und das gesamte Softwaresystem weiter entwickelt und verbessert werden kann.
+	Der aktuelle Stand der App bietet eine gute Grundlage für mögliche Weiterentwicklungen. Jedoch fehlen einige wichtige Elemente zur Inbetriebnahme des Software-Systems, wie schon im Kapitel \ref{ch:fazit} verdeutlicht. In den folgenden Abschnitten wird von dem Zustand der Software abgesehen und einige Ideen erläutert, wie die App und das gesamte Software-System weiter entwickelt und verbessert werden kann.
+
+	\paragraph{Verbesserung der Benutzerfreundlichkeit und des Workflows} Gerade weil die App noch ein Prototyp ist, sollten bei einer Weiterentwicklung zu allererst Dinge implementiert werden, die die Benutzung verbessern. Beispielsweise werden Login-Daten und schon gedownloadete Vorlagen nicht gespeichert. Auch muss zu jeder Region ein Name vergeben werden. Allerdings gibt auch der Datentyp (\ref{fig:v6}) der Region in den meisten Fällen darüber Auskunft, wie die Region heißen sollte. Handelt es sich um den Vor- bzw. Nachnamen, die Matrikel-Nummer, Seminar-Gruppe oder die Note, taucht diese Region genau einmal in einer Scan-Vorlage auf. Nur der Datentyp Punkte sollte mehrmals vergeben werden können. Aus diesen Aspekten sollte der Workflow beim erstellen von Regionen angepasst werden.
 	
-	\paragraph{Texterkennung} Wie im Kapitel \ref{ch:grenzen} erwähnt unterstützten Vision und Tesseract Handschrift nicht. Jedoch wäre es möglich eigne Neuronale-Netze zu trainieren und implementieren, die diese Aufgabe übernehmen. Beispielsweise existiert ein Datensatz an handgeschriebene Ziffern \footurl{MNIST-Datensatz -}{http://yann.lecun.com/exdb/mnist/}, mit dem solch ein Netz trainiert werden könnte. 
+	\paragraph{Server-Schnittstellen} Zum Zeitpunkt der Abgabe sind in der iOS-App nicht alle verfügbaren Server-Schnittstellen implementiert. Es fehlen noch das Ändern und Löschen ganzer Vorlagen und deren Einzelteile, wie Seiten und Regionen. Dafür müssten Views entwickelt werden, die das Ändern und Löschen umsetzten. Durch SwiftUI ist es aber möglich Views und View-Komponenten wiederzuverwenden, so dass nicht von vorne begonnen werden muss. 		
+	
+	\paragraph{Erweiterung der Texterkennung} Wie im Kapitel \ref{ch:grenzen} erwähnt unterstützten Vision und Tesseract das Erkennen von Handschrift nicht. Jedoch wäre es möglich eigne Neuronale-Netze zu trainieren und implementieren, die diese Aufgabe übernehmen. Beispielsweise existiert ein Datensatz an handgeschriebene Ziffern \footurl{MNIST-Datensatz -}{http://yann.lecun.com/exdb/mnist/}, mit dem solch ein einfaches Netz für das Erkennen von Ziffern, trainiert werden könnte. 
 	
 		Außerdem bietet die Server Architektur die Möglichkeit, weitere oder mehr OCR-Engines zu implementieren. Für mehr Details siehe im Praktikumsbericht von Tobias Kallauke.
 	
 	\paragraph{Klausuren-Einsicht} Die archivierten Klausuren-Bilder könnten über ein Web-Portal dazu genutzt werden, eine online Einsicht der Prüfungen zu gestalten. Jedoch bringt solch eine Plattform auch ein Problem mit sich. Durch sie ist die Verbreitung von Klausuren noch einfacher als zuvor, wodurch die Professoren dazu angehalten werden, immer wieder neue Aufgaben auszudenken. Aber auch dafür könnte es in Zukunft eine Lösung geben. 
 	
-	\paragraph{Verbesserter App Workflow} Aktuell muss zu jeder Region ein Name vergeben werden. Allerdings gibt auch der Datentyp (\ref{fig:v6}) der Region in den meisten Fällen darüber Auskunft, wie die Region heißen sollte. Handelt es sich um den Vor- bzw. Nachnamen, die Matrikel-Nummer, Seminar-Gruppe oder die Note, taucht diese Region genau einmal in einer Scan-Vorlage auf. Nur der Datentyp Punkte sollte mehrmals vergeben werden können. 
+	\paragraph{Weitere Plattformen} Neben der iOS-App sollte Tobias Kallauke die selbe für Android Geräte entwickeln. Jedoch existierten zum Zeitpunkt der Entwicklung keine Frameworks, die das Erkennen von Dokumenten in der Kamera übernimmt. Deshalb entwickelte Tobias ein Prototyp, der sich mit diesem Problem beschäftigt. 
 	
-	\paragraph{Weitere Plattformen} Neben der iOS-App bemühte sich Tobias Kallauke um die Entwicklung der App für Android-Geräte. Allerdings könnte die Software auf noch mehr Plattformen Anwendung finden. Neben einem Programm für Linux, MacOS und Windows ist einen Web-Plattform auch erdenklich. Das Erstellen der Bilder kann über Scan- oder Kopiergeräte erfolgen, oder 
+	Allerdings könnte das Software-System auf noch mehr Plattformen Anwendung finden. Neben einem Programm für Linux, MacOS und Windows ist auch einen Web-Plattform  erdenklich. Alle könnten den selben Umfang besitzen nur das Erstellen der Scans erfolgt über Scan- oder Kopiergeräte.
+	
+	\paragraph{Weitere Dokumenttypen} Durch die generischen Vorlagen ist es möglich neben Klausuren auch andere Dokumente nach diesem Schema zu digitalisieren. Beispielsweise Krankenscheinen, Urlaubsanträgen oder Arbeitsverträgen. Lediglich sollten weitere Regionen-Datentypen hinzukommen, wie z.B. Datum, IBAN-Nummern, E-Mail-Adressen und Telefonnummern.
+	
+	
+	\paragraph{Intelligente Referenzpunkte} In Kapitel \ref{ch:vorlage} wurde erwähnt, dass eigene Referenzpunkte auf den Klausuren Vorteile mit sich bringen. Möglich wäre auch, dass die Referenzpunkte ähnlich wie QR-Codes aufgebaut sind. Diese enthalten die nötigen Informationen zu den Regionen auf der Seite und ermöglichen das Digitalisieren, ohne die Auswahl der richtigen Vorlage. Darauf aufbauend könnten ein \LaTeX \xspace Paket oder Word-PlugIn entwickelt werden, wodurch die QR-Codes automatisch für jede Seite und deren Regionen generiert werden. 
+	
+	\paragraph{Qualitätsstudie} Vision vs Tesseract
+	
+	
+	\paragraph{Benutzer Akzeptanz Studie}
+	
+	GENERISCH!!!
+	
+	- REST API Implementieren
 	
 	
 	- QR-Code-Idee um Vorlagen weg zu lassen -> Programm oder Plugin (Word/LaTeX) was die QR-Codes dann automatisch erstellt und richtig einfügt. (Wichtige Daten sind da hinterlegt, Vor- und Nachteile von QR-Codes, ...)
@@ -571,6 +583,8 @@ In dem vorliegendem Praktikumsbericht...
 	- Tatsächlich eine Vorlage entwickeln
 	
 	- noch mehr automatisieren und Daten in den Referenzpunkte QR-Code zu hinterlegen dort steht dann drin, wo welches Feld ist und wie breit etc. 
+	
+	\paragraph{Versionsverwaltung von Dokumenten} Dokumente an Hochschulen gehen oft durch viele Hände. Dabei werden die Dokumente im schlechtesten Fall immer wieder eingescannt, per E-Mail versendet und wieder ausgedruckt. Das verbraucht nicht nur viele Ressourcen sondern führt hin und wieder auch dazu, das veraltete Versionen des Dokuments weiter gereicht werden. Um all diese Probleme zu vermeiden, könnte eine Versionsverwaltung für Dokumenten entstehen, die auf der App aufbaut. 
 
 \Anhang
 
