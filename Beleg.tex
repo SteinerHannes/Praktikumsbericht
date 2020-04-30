@@ -62,24 +62,23 @@ In dem vorliegendem Praktikumsbericht...
 \chapter{Einleitung}
 	Digitalisierung wird gängig als Integration von digitaler Technologie in den Alltag verstanden, und soll helfen Zeit einzusparen. Mit diesem Gedanken initiierten die Mitarbeiter Holger Langner und Falk Schmidsberger der Hochschule Mittweida, das Projekt \textit{Memo Space}. Im Zuge dessen sollen kleinere Forschungsergebnisse entstehen, die richtungsweisend für die Digitalisierung der Verwaltung von Lehr- und Forschungseinrichtung sind.
 
-	Im Rahmen eines zwölfwöchigem Forschungspraktikums an der Hochschule Mittweida arbeiteten der Student Tobias Kallauke und der Verfasser des Berichts, gemeinsam an einem Forschnungsprojekt von Memo Space. Dabei entwickelten sie ein Software-System, mit dem die Arbeit von vielen Hochschulmitarbeitern erleichtert und auch Zeit eingespart werden soll.
+	Im Rahmen eines zwölfwöchigem Forschungspraktikums an der Hochschule Mittweida arbeiteten der Student Tobias Kallauke und der Verfasser des Berichts, gemeinsam an einem Forschnungsprojekt von Memo Space. Dabei entwickelten sie ein prototypisches Software-System, mit dem die Arbeit von vielen Hochschulmitarbeitern erleichtert und auch Zeit eingespart werden soll.
 
 %%%%%%%%%%%%%%% - HSMW - %%%%%%%%%%%%%%%
 
 \chapter{Hochschule Mittweida}
 	Die Hochschule Mittweida - university of applied science (HSMW) \nomenclature{HSMW}{Hochschule Mittweida - university of applied science} wurde vor über 150 Jahren gegründet. Heute lehrt und forscht sie mit ca. 6000 Studenten in fünf Fakultäten und vier Forschungsschwerpunkten\cite{noauthor_hochschule_nodate}. Eines der Schwerpunkte ist die angewandte Informatik, in dem Memo Space angesiedelt ist.
 	
-	Nach eigener Einschätzung, schreibt jeder Student ca. 5 Prüfungen pro Semester, was bedeutet, dass im Jahr um die 60.000 Klausuren kontrolliert werden. Dazu kommt, dass nachdem die Klausuren kontrolliert wurden, die Zensur, sowie die Eckdaten der Studenten, die an der Prüfung teilgenommen haben, in ein digitales Format gebracht werden muss. Grund dafür ist die Übertragung der Noten in das Notensystem der Hochschule. Da die Mitarbeiter der Fakultät \textit{Angewandte Computer- und Biowissenschaften} (Fakultät CB)\nomenclature{Fakultät CB}{Fakultät für angewandte Computer- und Biowissenschaften} Holger Langner und Falk Schmidsberger selbst Klausuren kontrollieren und die Problematik genau kennen, entstand hier eine der ersten Ideen für Memo Space.
+	Nach eigener Einschätzung, schreibt jeder Student der HSMW ca. 5 Prüfungen pro Semester. Das bedeutet, dass im Jahr um die 60.000 Klausuren kontrolliert werden. Dazu kommt, dass die Zensuren, sowie die Eckdaten der Studenten, per Hand in ein digitales Format gebracht werden müssen. Grund dafür ist die Übertragung der Noten in das Notensystem der Hochschule. Da die Mitarbeiter der Fakultät \textit{Angewandte Computer- und Biowissenschaften} (Fakultät CB)\nomenclature{Fakultät CB}{Fakultät für angewandte Computer- und Biowissenschaften} Holger Langner und Falk Schmidsberger selbst Klausuren kontrollieren und die Problematik genau kennen, entstand hier eine der ersten Ideen für Memo Space.
 
 %%%%%%%%%%%%%%% - PROBLEMSTELLUNG - %%%%%%%%%%%%%%%
 
-\chapter{Problemstellung} 
+\chapter{Problemstellung}
+
 	An der Kontrolle von Klausuren arbeiten zum Ende eines Semesters Hochschulmitarbeiter über Tage. Diese Aufgabe muss stets mit hoher Konzentration erledigt werden und lässt sich in den meisten Fällen nur schwer durch Maschinen ersetzen. Unter keinen Umständen dürfen bei der Bewertung Fehler unterlaufen, was jedoch bei der kognitiven Belastung der Prüfer immer wieder passiert. Auch bei der anschließenden Eingabe der Noten in eine digitale Tabelle ist hohe Achtsamkeit notwendig. In diese muss die Matrikelnummer, der Vor- und Nachname sowie die Note des Studenten eingetragen werden. Hier kommt es vor allem bei der Matrikelnummer und der Zensur auf die Richtigkeit jedes Zeichens drauf an. 
 	
 	\section{Digitalisieren der Klausur-Daten}
 	Für genau diesen Vorgang des Digitalisierens wird eine Lösung gesucht. Die Prüfer sollen effektiv und möglichst zeitsparend diese Aufgabe verrichten, ohne dabei ihre Aufmerksamkeitsspanne zu überlasten. Des Weiteren müssen die Ergebnisse der Prüfungen, sowie die Eckdaten der Studenten in ein geeignetes digitales Format gebracht werden, um es der Notenfreigabe weiterzuleiten. Darüber hinaus empfiehlt es sich, digitale Kopien der Klausuren abzuspeichern, um sie nicht nur analog zu archivieren.
-	
-	\section{Klausuren-Vorlage}
 	
 	\begin{figure}[th]
     	\centering
@@ -90,7 +89,7 @@ In dem vorliegendem Praktikumsbericht...
     	\end{subfigure}
     	\begin{subfigure}[t]{0.4\textwidth}
         	\frame{\includegraphics[width=0.96\textwidth]{img/seite2}}
-        	\caption{1. Seite der Klausur}
+        	\caption{Erste Seite der Klausur mit drei Aufgaben}
         	\label{fig:seite2}
     	\end{subfigure}
     	\caption{Umsetzung der Klausuren-Vorlage der Fakultät CB.}
@@ -98,30 +97,64 @@ In dem vorliegendem Praktikumsbericht...
     	\label{fig:klausur}
 	\end{figure}
 	
-	Eine Klausuren-Vorlage bzw. ein Gestaltungsleitfaden für Klausuren der Fakultät \textit{Angewandte Computer- und Biowissenschaften}\ref{fig:klausur} bietet außerdem die Möglichkeit der Kontrolle des Prüfers an. Durch das vorgegebene Layout der Klausur ist es möglich, einen Teil der Arbeit des Prüfenden auf Fehler zu untersuchen. Auf dem Deckblatt (\ref{fig:seite1}) der Klausur ist eine Tabelle, mit drei Zeilen und für jede Aufgabe eine Spalte. In der ersten Zeile befinden sich die Nummern der Aufgaben, in der zweiten die zu erreichenden Punkte der Aufgabe. Und in der dritten Zeile trägt der Prüfer die erbrachten Punkte des Studenten ein. Unter der Tabelle befindet sich ein Feld für die erreichte Gesamtpunktzahl, sowie ein Feld für die aus den Punkten resultierende Note. Die Punkte pro Aufgabe, die Gesamtpunktzahl und die Zensur stehen in Relation zu einander, sodass aus den Punkten der Aufgaben die beiden anderen Felder errechnet werden und mit den Ergebnissen des Prüfers abgeglichen werden könnten. Eine weiteres Merkmal der Klausuren-Vorlage ist ein Feld, für die vom Studenten erreichten Punkte über jeder Aufgabenstellung. Die dortige Angabe sollte mit der, in der Tabelle auf dem Deckblatt übereinstimmen und bietet somit noch eine weitere Möglichkeit der Kontrolle an.
+	\section{Klausuren-Vorlage}
+	Eine Klausuren-Vorlage bzw. ein Gestaltungsleitfaden für Klausuren der Fakultät \textit{Angewandte Computer- und Biowissenschaften} bietet außerdem die Möglichkeit der Kontrolle des Prüfers an. Durch das vorgegebene Layout der Klausur ist es möglich, einen Teil der Arbeit des Prüfenden auf Fehler zu untersuchen. Die Klausur in Abbildung \ref{fig:klausur} ist nach dieser Klausuren-Vorlage angefertigt worden. Auf dem Deckblatt (\ref{fig:seite1}) der Prüfung ist eine Tabelle, mit drei Zeilen und für jede Aufgabe eine Spalte. In der ersten Zeile befinden sich die Nummern der Aufgaben, in der zweiten die zu erreichenden Punkte der Aufgabe. Und in der dritten Zeile trägt der Prüfer die erbrachten Punkte des Studenten ein. Unter der Tabelle befindet sich ein Feld für die erreichte Gesamtpunktzahl, sowie ein weiteres für die aus den Punkten resultierende Note. Es soll nun überprüft werden, ob die Summe der erreichten Punkte mit der Gesamtpunktzahl übereinstimmt und weiter soll auch die Note errechnet und mit dem Ergebnis der Prüfers verglichen werden. Eine weiteres Merkmal der Klausuren-Vorlage ist ein Feld, für die vom Studenten erreichten Punkte über jeder Aufgabenstellung. Zu sehen sind solche Felder in Abbildung \ref{fig:seite2} am rechten Seitenrand. Die dortige Angabe sollte mit der, in der Tabelle auf dem Deckblatt (\ref{fig:seite1}) übereinstimmen und bietet somit noch eine weitere Möglichkeit der Kontrolle an.
 	
 	\section{Vorlage verbessern}
 	Nachdem ein erster Prototyp zum Digitalisieren der Klausur-Daten entwickelt wurde, sollen außerdem Prüfungsvorlagen entstehen, die für die Digitalisierung optimiert sind. Dabei sollen Probleme, die beim Einscannen der aktuellen Vorlage erkannt wurden, behoben werden. 
 	
 	\section{Weitere Anmerkungen}
-	Ferner soll bei der Problemlösung von der Anschaffung neuer Technologien und Geräte abgesehen werden. Grund dafür sind neben den Anschaffungskosten, die Idee, dass das Ergebnis des Forschungsprojekts in weiteren Lehr- und Forschungseinrichtungen Anwendung findet. Außerdem hat so gut wie jeder Mitarbeiter an einer Lehr- und Forschungseinrichtung ein eigenes oder Zugang zu einem Smartphone oder Tablet, welche durch die eingebaute Technik in der Lage sind, diese Aufgabe zu übernehmen. 
+	Ferner soll bei der Problemlösung von der Anschaffung neuer Technologien und Geräte abgesehen werden. Grund dafür ist neben den Anschaffungskosten, die Idee, dass das Ergebnis des Forschungsprojekts in weiteren Lehr- und Forschungseinrichtungen Anwendung findet. Außerdem hat so gut wie jeder Mitarbeiter an einer Lehr- und Forschungseinrichtung ein eigenes oder Zugang zu einem Smartphone oder Tablet, welche durch die eingebaute Technik in der Lage sind, diese Aufgabe zu übernehmen. 
 
 %%%%%%%%%%%%%%% - ANFORDERUNGEN - %%%%%%%%%%%%%%%
 
 \chapter{Anforderungen}\label{ch:anforderungen}
-	Es soll eine iOS-App entstehen mit der Klausuren digitalisiert werden können. Genauer müssen die, für die Notenfreigabe relevanten Daten der Klausur, in ein tabellarisches Format gebracht werden. Um unterschiedliche Klausuren oder auch andere Dokumente zu unterstützen, soll das Anlegen von Scan-Vorlagen in der App möglich sein. Hierfür, aber auch zum Einscannen benötigt die App die Berechtigung für das Kamera-System. Diese muss, bei der ersten Benutzung einmalig erteilt werden.
+	In diesem Kapitel wird erläutert, was die Anforderungen an das Software-System sind. Die hier aufgeführten Ideen entstanden während der Anforderungsplanung, wie im Kapitel \ref{ch:prototyp} nach zu lesen ist.
+
+	Es soll eine iOS-App entstehen mit der Klausuren digitalisiert werden können. Genauer müssen die, für die Notenfreigabe relevanten Daten der Klausur, in ein tabellarisches Format gebracht werden. Um wirklich nur die relevanten Daten zu digitalisieren, benötig es Scan-Vorlagen, die in der App angelegt werden können. 
 	
-	Eine Scan-Vorlagen bestehen aus zwei Komponenten. Die eine sind zugeschnittene Fotos der Seiten eines Dokuments, wie die Abbildung \ref{fig:klausur} zeigt. Und die zweite sind die Regionen auf den Bildern, wo sich die zu digitalisierenden Informationen befinden. In der Abbildung \ref{fig:v9} sind die Regionen blau und in ihnen steht ein Text, um welche Region es sich handelt. Dem Benutzer muss es möglich sein, zuerst die Fotos auf zu nehmen und anschließend Regionen auf den Seiten zu markieren. Weiter benötigen die Regionen Namen bzw. Typen, die der Benutzer angeben muss. Die Angabe des Typs ist wichtig, da dadurch eindeutig wird, ob es sich um die Note oder die Matrikelnummer des Studenten handelt. Diese Eindeutigkeit wird nicht nur für die automatische Erstellung der Tabelle benötigt, sondern auch für die Optimierung der Texterkennung. 
+	\begin{figure}[th]
+    	\centering
+    	\includegraphics[width=\textwidth]{img/schablone1}
+    	\caption{Schema zum Erstellen einer Scan-Vorlage}
+    	\label{fig:schablone1}
+    \end{figure}
+
+	Eine Scan-Vorlagen funktioniert ähnliche, wie eine Schablone. Diese wird beispielsweise auf das Deckblatt gelegt, sodass nur noch die wichtigen Informationen, die digitalisiert werden sollen, zu sehen sind. Alles andere, was nicht von Interesse ist, wird von der Schablone überdeckt. In der Abbildung \ref{fig:schablone1} ist dieses Konzept schemahaft zu sehen.  Aus dem analogen Beispiel abgeleitet, benötigt es zwei Schritte, um eine digitale Schablonen anzufertigen. Zuerst muss ein Foto von der Seite aufgenommen werden und anschließend müssen die Regionen eingezeichnet werden, die digitalisiert werden sollen. Eine Scan-Vorlage ist jedoch nicht nur eine digitale Schablone sondern einer Sammlung aller digitalen Schablonen zu einem Dokument. Denn jede Seite braucht meistens eine eigene individuelle. 
 	
-	Optical character recognition (OCR)\nomenclature{OCR}{optical character recognition, deutsch: optische Zeichenerkennung und im deutschen Synonym für Texterkennung}, auf deutsch optische Zeichen Erkennung, soll dazu benutzt werden, die Informationen der Regionen zu digitalisieren. Um die Texterkennung zu verbessern, soll wie schon erwähnt der Typ der Regionen verwendet werden. Damit könne dem OCR mögliche Ergebnisse mitgeteilt oder die Ergebnisse angepasst werden. Beispielsweise bestehen Zensuren immer aus Dezimalzahlen von Eins bis Sechs und mit nur einer Nachkommastelle. Wird der Buchstabe O anstelle der Ziffer Null erkannt, kann so der Fehler korrigiert werden. 
-	
+ 	Weiter benötigen die eingezeichneten Regionen eine Bezeichnung bzw. Typen. Die Angabe des Typs ist wichtig, da dadurch eindeutig wird, ob es sich um die Note oder den Namen des Studenten handelt. Diese Eindeutigkeit wird nicht nur für die automatische Erstellung der Tabelle benötigt, sondern auch für die Optimierung der Texterkennung. 
+ 	
+ 	\begin{figure}[th]
+    	\centering
+    	\includegraphics[width=\textwidth]{img/schablone2}
+    	\caption{Schematischer Ablauf beim Verwenden einer Scan-Vorlage}
+    	\label{fig:schablone2}
+    \end{figure}
+ 	
+ 	Nach dem Erstellen einer Scan-Vorlage kann diese auf ausgefüllten Klausuren angewandt werden. In Abbildung \ref{fig:schablone2} wird der Ablauf schematisch dargestellt. Zuerst müssen die ausgefüllten Prüfungs-Seiten einer Klausur fotografiert werden können. Anschließend soll die digitalen Schablonen die relevanten Informationen jeder Seite für den nächsten Schritt bereitstellen. Optical character recognition (OCR)\nomenclature{OCR}{optical character recognition, deutsch: optische Zeichenerkennung und im deutschen Synonym für Texterkennung}, auf deutsch optische Zeichenerkennung, soll dazu benutzt werden, die Daten in den Regionen zu digitalisieren. Um die Texterkennung zu verbessern, soll wie schon erwähnt der Typ der Regionen verwendet werden. Damit könne dem OCR zu erwartende Ergebnisse mitgeteilt oder die Ergebnisse angepasst werden. Beispielsweise bestehen Zensuren immer aus Dezimalzahlen von Eins bis Sechs und mit nur einer Nachkommastelle. Wird der Buchstabe O anstelle der Ziffer Null erkannt, kann so der Fehler korrigiert werden. 
+ 	
 	Zudem muss die Texterkennung auf dem Gerät selbst statt finden. Allerdings darf die App auch Texterkennung auf externen Servern unterstützen. Hierfür müssen dann die entsprechenden API-Schnittstellen implementiert oder für einen eigenen Server entwickelt werden.
 
-	Die digitalisierten Daten, die für die Texterkennung entstandenen Dokumenten-Bilder und die erstellten Scan-Vorlagen, soll außerhalb der App auf einem Server gespeichert werden. Somit ist die Möglichkeit gegeben, die Vorlagen wieder zu verwenden und anderen Benutzern der App zur Verfügung zu stellen. 
+	Die digitalisierten Daten, die für die Texterkennung entstandenen Klausuren-Bilder und die erstellten Scan-Vorlagen, soll außerhalb der App auf einem Server gespeichert werden. Somit ist die Möglichkeit gegeben, die Vorlagen wieder zu verwenden und anderen Benutzern der App zur Verfügung zu stellen. 
 	
 	Damit Synchronität der Daten auf den Geräten und dem Server gewährleistet werden kann, benötig die App hierfür ebenfalls Schnittstellen. Diese sollten den standardmäßigen \textit{CRUD}\nomenclature{CRUD}{Das Akronym CRUD steht für Create/Erstellen, Read/Lesen, Update/Aktualisieren und Delete/Löschen und umfasst die vier grundlegenden Operationen persistenter Speicher}-Operationen entsprechen. 
 	
 	Da die gesamte Kommunikation über das Internet geschieht, muss das Softwaresystem den üblichen Datenschutz- und Datensicherheit-Richtlinien entsprechen, bzw. sie in der technischen Implementierung umsetzten. Für genauere Details zu den Sicherheitsmechanismen zum Server siehe im Praktikumsbericht von Tobias Kallauke. 
+	
+		% unterschiedliche Klausuren oder auch andere Dokumente zu unterstützen, soll das Anlegen von
+	% Hierfür, aber auch zum Einscannen benötigt die App die Berechtigung für das Kamera-System. Diese muss, bei der ersten Benutzung einmalig erteilt werden.
+	
+	%	Wichtig ist auch noch, dass
+%	
+%	Durch die generische Erstellung von Scan-Vorlagen sollen alle erdenklichen Klausuren oder auch andere Dokumente digitalisiert werden.  
+	
+	
+	
+%	Zum einen müssen die einzelnen Seiten der Klausur, als Bild vorliegen und zum anderen die Regionen, welche auf den Seiten frei bleiben sollen. Daraus kann zu jeder Seite eine entsprechende digitale \"Schablonen\" erstellt werden. 
+		
+%	Die eine sind zugeschnittene Fotos der Seiten eines Dokuments, wie die Abbildung \ref{fig:klausur} zeigt. Und die zweite sind die Regionen auf den Bildern, wo sich die zu digitalisierenden Informationen befinden.
+	
+%	In der Abbildung \ref{fig:v9} sind die Regionen blau und in ihnen steht ein Text, um welche Region es sich handelt. Dem Benutzer muss es möglich sein, zuerst die Fotos auf zu nehmen und anschließend Regionen auf den Seiten zu markieren.
 
 %%%%%%%%%%%%%%% - GRUND IDEE ZUM LÖSEN DES PROBLEMS - %%%%%%%%%%%%%%%
 
@@ -526,6 +559,8 @@ In dem vorliegendem Praktikumsbericht...
 	
 	Speichern der Ergebnisse nicht geschafft 
 	
+	Kontrolle der Ergebnisse vernachlässigt
+	
 	- ein paar Worte, wie gut die Entwicklung lief (Simulator vs. echtes Gerät), wo sind die Grenzen des Simulators (Keine Kamera), wo waren Probleme mit dem echten Gerät...
 
 
@@ -539,9 +574,7 @@ In dem vorliegendem Praktikumsbericht...
 	
 	\paragraph{Server-Schnittstellen} Zum Zeitpunkt der Abgabe sind in der iOS-App nicht alle verfügbaren Server-Schnittstellen implementiert. Es fehlen noch das Ändern und Löschen ganzer Vorlagen und deren Einzelteile, wie Seiten und Regionen. Dafür müssten Views entwickelt werden, die das Ändern und Löschen umsetzten. Durch SwiftUI ist es aber möglich Views und View-Komponenten wiederzuverwenden, so dass nicht von vorne begonnen werden muss. 		
 	
-	\paragraph{Erweiterung der Texterkennung} Wie im Kapitel \ref{ch:grenzen} erwähnt unterstützten Vision und Tesseract das Erkennen von Handschrift nicht. Jedoch wäre es möglich eigne Neuronale-Netze zu trainieren und implementieren, die diese Aufgabe übernehmen. Beispielsweise existiert ein Datensatz an handgeschriebene Ziffern \footurl{MNIST-Datensatz -}{http://yann.lecun.com/exdb/mnist/}, mit dem solch ein einfaches Netz für das Erkennen von Ziffern, trainiert werden könnte. 
-	
-		Außerdem bietet die Server Architektur die Möglichkeit, weitere oder mehr OCR-Engines zu implementieren. Für mehr Details siehe im Praktikumsbericht von Tobias Kallauke.
+	\paragraph{Erweiterung der Texterkennung} Wie im Kapitel \ref{ch:grenzen} erwähnt unterstützten Vision und Tesseract das Erkennen von Handschrift nicht. Jedoch wäre es möglich eigne Neuronale-Netze zu trainieren und implementieren, die diese Aufgabe übernehmen. Beispielsweise existiert ein Datensatz an handgeschriebene Ziffern \footurl{MNIST-Datensatz -}{http://yann.lecun.com/exdb/mnist/}, mit dem solch ein einfaches Netz für das Erkennen von Ziffern, trainiert werden könnte. Außerdem bietet die Server Architektur die Möglichkeit, weitere oder mehr OCR-Engines zu implementieren. Für mehr Details siehe im Praktikumsbericht von Tobias Kallauke.
 	
 	\paragraph{Klausuren-Einsicht} Die archivierten Klausuren-Bilder könnten über ein Web-Portal dazu genutzt werden, eine online Einsicht der Prüfungen zu gestalten. Jedoch bringt solch eine Plattform auch ein Problem mit sich. Durch sie ist die Verbreitung von Klausuren noch einfacher als zuvor, wodurch die Professoren dazu angehalten werden, immer wieder neue Aufgaben auszudenken. Aber auch dafür könnte es in Zukunft eine Lösung geben. 
 	
