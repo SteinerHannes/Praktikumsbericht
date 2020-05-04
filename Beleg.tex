@@ -73,7 +73,7 @@ In dem vorliegendem Praktikumsbericht...
 
 %%%%%%%%%%%%%%% - PROBLEMSTELLUNG - %%%%%%%%%%%%%%%
 
-\chapter{Problemstellung}
+\chapter{Problemstellung}\label{ch:problemstellung}
 
 	An der Kontrolle von Klausuren arbeiten zum Ende eines Semesters Hochschulmitarbeiter über Tage. Diese Aufgabe muss stets mit hoher Konzentration erledigt werden und lässt sich in den meisten Fällen nur schwer durch Maschinen ersetzen. Unter keinen Umständen dürfen bei der Bewertung Fehler unterlaufen, was jedoch bei der kognitiven Belastung der Prüfer immer wieder passiert. Auch bei der anschließenden Eingabe der Noten in eine digitale Tabelle ist hohe Achtsamkeit notwendig. In diese muss die Matrikelnummer, der Vor- und Nachname sowie die Note des Studenten eingetragen werden. Hier kommt es vor allem bei der Matrikelnummer und der Zensur auf die Richtigkeit jedes Zeichens drauf an. 
 	
@@ -97,7 +97,7 @@ In dem vorliegendem Praktikumsbericht...
     	\label{fig:klausur}
 	\end{figure}
 	
-	\section{Klausuren-Vorlage}
+	\section{Klausuren-Vorlage}\label{sc:klausuren-vorlage}
 	Eine Klausuren-Vorlage bzw. ein Gestaltungsleitfaden für Klausuren der Fakultät \textit{Angewandte Computer- und Biowissenschaften} bietet außerdem die Möglichkeit der Kontrolle des Prüfers an. Durch das vorgegebene Layout der Klausur ist es möglich, einen Teil der Arbeit des Prüfenden auf Fehler zu untersuchen. Die Klausur in Abbildung \ref{fig:klausur} ist nach dieser Klausuren-Vorlage angefertigt worden. Auf dem Deckblatt (\ref{fig:seite1}) der Prüfung ist eine Tabelle, mit drei Zeilen und für jede Aufgabe eine Spalte. In der ersten Zeile befinden sich die Nummern der Aufgaben, in der zweiten die zu erreichenden Punkte der Aufgabe. Und in der dritten Zeile trägt der Prüfer die erbrachten Punkte des Studenten ein. Unter der Tabelle befindet sich ein Feld für die erreichte Gesamtpunktzahl, sowie ein weiteres für die aus den Punkten resultierende Note. Es soll nun überprüft werden, ob die Summe der erreichten Punkte mit der Gesamtpunktzahl übereinstimmt und weiter soll auch die Note errechnet und mit dem Ergebnis der Prüfers verglichen werden. Eine weiteres Merkmal der Klausuren-Vorlage ist ein Feld, für die vom Studenten erreichten Punkte über jeder Aufgabenstellung. Zu sehen sind solche Felder in Abbildung \ref{fig:seite2} am rechten Seitenrand. Die dortige Angabe sollte mit der, in der Tabelle auf dem Deckblatt (\ref{fig:seite1}) übereinstimmen und bietet somit noch eine weitere Möglichkeit der Kontrolle an.
 	
 	\section{Vorlage verbessern}
@@ -109,95 +109,102 @@ In dem vorliegendem Praktikumsbericht...
 %%%%%%%%%%%%%%% - ANFORDERUNGEN - %%%%%%%%%%%%%%%
 
 \chapter{Anforderungen}\label{ch:anforderungen}
-	In diesem Kapitel wird erläutert, was die Anforderungen an das Software-System sind. Die hier aufgeführten Ideen entstanden während der Anforderungsplanung, wie im Kapitel \ref{ch:prototyp} nach zu lesen ist.
+	In diesem Kapitel wird erläutert, was die Anforderungen an das Software-System sind. 
+%	Die hier aufgeführten Ideen entstanden während der Anforderungsplanung, wie im Kapitel \ref{ch:prototyp} nach zu lesen ist.
 
-	Es soll eine iOS-App entstehen mit der Klausuren digitalisiert werden können. Genauer müssen die, für die Notenfreigabe relevanten Daten der Klausur, in ein tabellarisches Format gebracht werden. Um wirklich nur die relevanten Daten zu digitalisieren, benötig es Scan-Vorlagen, die in der App angelegt werden können. 
+	Es soll eine iOS-App entstehen mit der Klausuren digitalisiert werden können. Genauer müssen die, für die Notenfreigabe relevanten Daten der Klausur, in ein tabellarisches Format gebracht werden. Dazu soll die App Bilder von ausgefüllten Prüfungen aufnehmen können und den Inhalt mithilfe von Texterkennung digitalisieren. 
 	
-	\begin{figure}[th]
-    	\centering
-    	\includegraphics[width=0.6\textwidth]{img/schablone1}
-    	\caption{Schematisches Schaubild zum Verständnis des Schablonen-Konzepts}
-    	\label{fig:schablone1}
-    \end{figure}
-
-	Eine Scan-Vorlagen funktioniert ähnliche, wie eine Schablone. Diese wird beispielsweise auf das Deckblatt gelegt, sodass nur noch die wichtigen Informationen, die digitalisiert werden sollen, zu sehen sind. Alles andere, was nicht von Interesse ist, wird von der Schablone überdeckt. In der Abbildung \ref{fig:schablone1} ist dieses Konzept schemahaft zu sehen. Aus dem analogen Beispiel abgeleitet, benötigt es zwei Schritte, um eine Art digitale Schablonen anzufertigen. Zuerst muss ein Foto von der Seite aufgenommen werden und anschließend müssen die Regionen eingezeichnet werden, die digitalisiert werden sollen. Eine Scan-Vorlage ist jedoch nicht nur eine digitale Schablone sondern einer Sammlung aller digitalen Schablonen zu einem Dokument. Denn jede Seite braucht eine eigene individuelle. 
+	Trotzdem nicht jede Klausur ein identisches Layout hat, soll die App in der Lage sein, alle relevanten Informationen, wie z. B. Name, Matrikelnummer und Note, richtig zu identifizieren und anschließend zu digitalisieren. Dafür soll der Benutzer digitale Vorlagen, sogenannte Scan-Vorlagen erstellen, durch die die App, die Informationen leichter findet und schneller digitalisiert als wenn, eine komplette Seite digitalisiert und analysiert werden müsste. 
 	
- 	Weiter benötigen die eingezeichneten Regionen eine Bezeichnung bzw. einen Typen. Die Angabe des Typs ist wichtig, da dadurch eindeutig wird, ob es sich um die Note oder den Namen des Studenten handelt. Diese Eindeutigkeit wird nicht nur für die automatische Erstellung der Tabelle benötigt, sondern auch für die Optimierung der Texterkennung. 
- 	
- 	\begin{figure}[th]
-    	\centering
-    	\includegraphics[width=\textwidth]{img/schablone2}
-    	\caption{Schematischer Ablauf beim Verwenden einer Scan-Vorlage}
-    	\label{fig:schablone2}
-    \end{figure}
- 	
- 	Nach dem Erstellen einer Scan-Vorlage kann diese auf ausgefüllten Klausuren angewandt werden. In Abbildung \ref{fig:schablone2} wird der Ablauf schematisch dargestellt. Zuerst müssen die ausgefüllten Prüfungs-Seiten einer Klausur fotografiert werden können. Anschließend soll die digitalen Schablonen die relevanten Informationen jeder Seite für den nächsten Schritt bereitstellen. Optical character recognition (OCR)\nomenclature{OCR}{optical character recognition, deutsch: optische Zeichenerkennung und im deutschen Synonym für Texterkennung}, auf deutsch optische Zeichenerkennung, soll dazu benutzt werden, die Daten in den Regionen zu digitalisieren. Um die Texterkennung zu verbessern, soll wie schon erwähnt der Typ der Regionen verwendet werden. Damit könne dem OCR zu erwartende Ergebnisse mitgeteilt oder die Ergebnisse angepasst werden. Beispielsweise bestehen Zensuren immer aus Dezimalzahlen von Eins bis Sechs und mit nur einer Nachkommastelle. Wird der Buchstabe O anstelle der Ziffer Null erkannt, kann so der Fehler korrigiert werden. 
- 	
- 	Zudem muss die Texterkennung auf dem Gerät selbst statt finden. Allerdings darf die App auch Texterkennung auf externen Servern unterstützen. Hierfür müssen dann die entsprechenden API-Schnittstellen implementiert oder für einen eigenen Server entwickelt werden.
+	Zusätzlich soll es dem Benutzer möglich sein, Kontrollmechanismen fest zu legen. Wie im Abschnitt \ref{sc:klausuren-vorlage} beschrieben, kann überprüft werden, ob die Punkte auf dem Deckblatt mit den Punkten auf den hinteren Seiten übereinstimmen und ob die Gesamtpunktzahl korrekt summiert wurde sowie die daraus resultierende Note richtig ist. Ein Kontrollmechanismus soll so gestaltet sein, dass die eben genannten Überprüfungsmöglichkeiten vom Benutzer selbst umgesetzte werden können. Beim Digitalisieren einer Klausur sollen so dem Benutzer Fehlermeldungen angezeigt werden, wenn bei der Überprüfung durch einen Kontrollmechanismus etwas falsch ist. Beispielsweise hat der Prüfer auf dem Deckblatt fünf Punkte eingetragen, bei der Aufgabenstellung auf den hinteren Seiten jedoch eine sechs. Die App  soll dann eine Fehlermeldung ausgeben, dass die Punktezahlen bei der Aufgabe nicht übereinstimmen und nochmals kontrolliert werden müssen. 
+ 
+ 	Zur Digitalisierung von Buchstaben soll Zeichen bzw. Texterkennung verwendet werden. Diese soll auf dem Gerät selbst statt finden. Allerdings darf die App auch Texterkennung auf externen Servern unterstützen. Hierfür müssen dann die entsprechenden Server-Schnittstellen zur Kommuniktation implementiert oder für einen eigenen Server entwickelt werden.
 
-	Die digitalisierten Daten, die für die Texterkennung entstandenen Klausuren-Bilder und die erstellten Scan-Vorlagen, soll außerhalb der App auf einem Server gespeichert werden. Somit ist die Möglichkeit gegeben, die Vorlagen wieder zu verwenden und anderen Benutzern der App zur Verfügung zu stellen. 
+	Die digitalisierten Daten, die für die Texterkennung entstandenen Klausuren-Bilder und die erstellten digitalen Scan-Vorlagen soll außerhalb der App auf einem Server gespeichert werden. Somit ist die Möglichkeit gegeben, die  Vorlagen wieder zu verwenden und anderen Benutzern der App zur Verfügung zu stellen. Aus den digitalisierten Daten sollen wiederum Tabellen entstehen, die an die Notenfreigabe weiter geben werden können.
 	
 	Damit Synchronität der Daten auf den Geräten und dem Server gewährleistet werden kann, benötig die App hierfür ebenfalls Schnittstellen. Diese sollten den standardmäßigen \textit{CRUD}\nomenclature{CRUD}{Das Akronym CRUD steht für Create/Erstellen, Read/Lesen, Update/Aktualisieren und Delete/Löschen und umfasst die vier grundlegenden Operationen persistenter Speicher}-Operationen entsprechen. 
 	
 	Da die gesamte Kommunikation über das Internet geschieht, muss das Softwaresystem den üblichen Datenschutz- und Datensicherheit-Richtlinien entsprechen, bzw. sie in der technischen Implementierung umsetzten. Für genauere Details zu den Sicherheitsmechanismen zum Server siehe im Praktikumsbericht von Tobias Kallauke. 
-	
-		% unterschiedliche Klausuren oder auch andere Dokumente zu unterstützen, soll das Anlegen von
-	% Hierfür, aber auch zum Einscannen benötigt die App die Berechtigung für das Kamera-System. Diese muss, bei der ersten Benutzung einmalig erteilt werden.
-	
-	%	Wichtig ist auch noch, dass
-%	
-%	Durch die generische Erstellung von Scan-Vorlagen sollen alle erdenklichen Klausuren oder auch andere Dokumente digitalisiert werden.  
-	
-	
-	
-%	Zum einen müssen die einzelnen Seiten der Klausur, als Bild vorliegen und zum anderen die Regionen, welche auf den Seiten frei bleiben sollen. Daraus kann zu jeder Seite eine entsprechende digitale \"Schablonen\" erstellt werden. 
-		
-%	Die eine sind zugeschnittene Fotos der Seiten eines Dokuments, wie die Abbildung \ref{fig:klausur} zeigt. Und die zweite sind die Regionen auf den Bildern, wo sich die zu digitalisierenden Informationen befinden.
-	
-%	In der Abbildung \ref{fig:v9} sind die Regionen blau und in ihnen steht ein Text, um welche Region es sich handelt. Dem Benutzer muss es möglich sein, zuerst die Fotos auf zu nehmen und anschließend Regionen auf den Seiten zu markieren.
 
 %%%%%%%%%%%%%%% - GRUND IDEE ZUM LÖSEN DES PROBLEMS - %%%%%%%%%%%%%%%
 
 \chapter{Konzept der Dokumenten-Scanner-App}\label{ch:konzept}
-	Wie in der Problemstellung und Anforderung beschreiben, soll die Dokumenten-Scanner App wichtigen Daten auf dem Deckblatt (\ref{fig:seite1}) einer Klausur, wie Vor- und Nachname des Studenten, seine Matrikelnummer sowie die Note erkennen, digitalisieren und in ein für die Notenfreigabe geeignetes Format bringen. Die digitalisierten Daten sollen anschließend an einen Server gesendet werden, wo sie und die beim Einscannen entstandenen Bilder gespeichert werden. Verwendet eine einzuscannende Klausur die Klausuren-Vorlage (\ref{fig:klausur}) der Fakultät CB oder ähnliche, die eine Punkteübersicht haben, dann soll es außerdem möglich sein, die Punkte sowie die Note auf Richtigkeit zu überprüfen. 
+	In diesem Kapitel wird beschrieben, wie das Softwaresystem die Anforderungen umsetzt. Zur Erinnerung, die Dokumenten-Scanner App soll wichtige Daten auf dem Deckblatt (\ref{fig:seite1}) einer Klausur, wie Vor- und Nachname des Studenten, seine Matrikelnummer sowie die Note erkennen, digitalisieren und in ein für die Notenfreigabe geeignetes Format bringen. Die digitalisierten Daten sollen anschließend an einen Server gesendet werden, wo sie und die beim Einscannen entstandenen Bilder gespeichert werden. Verwendet eine einzuscannende Klausur die Klausuren-Vorlage (\ref{fig:klausur}) der Fakultät CB oder ähnliche, die eine Punkteübersicht haben, dann soll es außerdem möglich sein, die Punkte sowie die Note auf Richtigkeit zu überprüfen. 
 	
-	\begin{figure}[th]
-    	\centering
-    	\includegraphics[width=\textwidth]{img/schema1}
-    	\caption{Scan-Vorlage erstellen und auf dem Server speichern}
-    	\label{fig:schema1}
-    \end{figure}
-
-	Zur Digitalisierung und Kontrolle der Daten werden Scan-Vorlagen verwendet. Diese muss vor dem Einscannen der ausgefüllten Klausuren erstellt werden, um zu gewährleisten, dass die richtigen Daten digitalisiert werden. In Abbildung \ref{fig:schema1} wird der Vorgang, des Erstellens einer Scan-Vorlage schematisch dargestellt. Dabei geht man wie folgt vor:
-	\begin{itemize}
-		\item Zuerst wird jede Seite der Klausur fotografiert (siehe auch Abb. \ref{fig:v3}). Dabei wird in jedem Bild das Dokument erkannt, vom Hintergrund getrennt bzw. ausgeschnitten und perfekt ausgerichtet. Zudem wird der Kontrast erhöht, sodass die Schrift leichter lesbar wird. Die Abbildung \ref{fig:klausur} resultierte aus dem Prozess. 
+	\section{Scan-Vorlage erstellen und speichern}
+	
+		Im folgenden Abschnitt wird zuerst verkürzt und anschließend detailliert geschildert, wie eine Scan-Vorlage zu erstellen ist.
+	
+		\begin{figure}[th]
+    		\centering
+    		\includegraphics[width=0.6\textwidth]{img/schablone1}
+    		\caption{Schematisches Schaubild zum Verständnis des Schablonen-Konzepts}
+    		\label{fig:schablone1}
+    	\end{figure}
+    
+		Um wirklich nur relevante Daten zu digitalisieren, benötig es die sogenannte Scan-Vorlage, die in der App angelegt werden kann. Eine Scan-Vorlagen funktioniert ähnliche, wie eine Schablone. Diese wird beispielsweise auf das Deckblatt gelegt, sodass nur noch die wichtigen Informationen, die digitalisiert werden sollen, zu sehen sind. Alles andere, was nicht von Interesse ist, wird von der Schablone (so zu sagen) überdeckt. In der Abbildung \ref{fig:schablone1} ist dieses Konzept schemahaft zu sehen. Aus dem analogen Beispiel abgeleitet, benötigt es zwei grobe Schritte, um eine  digitale Schablonen anzufertigen. Zuerst muss ein Foto von der Seite aufgenommen werden und anschließend müssen die Regionen eingezeichnet werden, die digitalisiert werden sollen. Eine Scan-Vorlage ist jedoch nicht nur eine einzige digitale Schablone sondern einer Sammlung aller zu einem Dokument. Denn jede Seite braucht eine eigene individuelle.
+	
+		\begin{figure}[th]
+    		\centering
+    		\includegraphics[width=\textwidth]{img/schema1}
+    		\caption{Scan-Vorlage erstellen und auf dem Server speichern}
+    		\label{fig:schema1}
+    	\end{figure}
+	
+		In der folgenden Aufzählung wird nun detailliert beschrieben, wie die Abfolge beim Erstellen einer Scan-Vorlage ist. Der Vorgang ist in Abbildung \ref{fig:schema1} schematisch dargestellt.
+	
+		\begin{enumerate}
+			\item Zu Beginn wird jede Seite der Klausur fotografiert (siehe auch Abb. \ref{fig:v3}). Dabei wird in jedem Bild das Dokument erkannt, vom Hintergrund getrennt bzw. ausgeschnitten und perfekt ausgerichtet. Zudem wird der Kontrast erhöht, sodass die Schrift leichter lesbar wird. Die Abbildung \ref{fig:klausur} resultierte aus dem Prozess. 
 		
-		\item Anschließend markiert man diejenigen Regionen auf jeder Seite, die zu digitalisieren und/oder kontrollieren sind. In der Abbildung \ref{fig:schema1} sind die Regionen blau hervorgehoben (siehe auch Abb. \ref{fig:v9}). Zusätzlich muss jeder Region ein Name und einer der folgenden Typen zugeordnet werden: Unbekannt, Name, Matrikelnummer, Seminargruppe, Punkte und Note (siehe auch Abb. \ref{fig:v8} und \ref{fig:v9}). Mithilfe des Typs wird die Texterkennung verbessert und falsche Ergebnisse automatisch korrigiert. Dazu später mehr.
+			\item Anschließend markiert man diejenigen Regionen auf jeder Seite, die zu digitalisieren und/oder zu kontrollieren sind. In dem Schema \ref{fig:schema1} sind die Regionen blau hervorgehoben (siehe auch Abb. \ref{fig:v9}). Zusätzlich muss jeder Region eine Bezeichnung und einer der folgenden Datentypen zugeordnet werden: Unbekannt, Vorname, Nachname, Matrikelnummer, Seminargruppe, Punkte und Note (siehe auch Abb. \ref{fig:v8} und \ref{fig:v9}). Die Angabe des Datentyps ist wichtig, da dadurch eindeutig wird, ob es sich um die Note oder den Vornamen des Studenten handelt. Diese Eindeutigkeit wird nicht nur für die automatische Erstellung der Tabelle benötigt, sondern auch für die Optimierung der Texterkennung. \label{it:zwei}
 			
-		\item Des Weiteren kann man aus allen markierten Regionen diese auswählen, die in Relation stehen. Diesen Relationen werden danach noch weitere Eigenschaften zugeteilt, um sie später bei der Kontrolle richtig zu analysieren. So eine Eigenschaft könnte sein, dass es sich um einen Vergleich zwischen zwei in Relation stehenden Regionen handelt. Z. B. ist die eine Region die Zelle in der Punkteübersichts-Tabelle, in der die erreichten Punkte zu Aufgabe 1 rein geschrieben werden sollen. Und die zweite Region die Stelle über der Aufgabenstellung von Aufgabe 1, in der ebenfalls die erreichten Punkte eingetragen werden sollen. Weitere Beispiele für solche Relationen und Eigenschaften sind die Summanden für die erreichte Gesamtpunktzahl und die Summe selbst, oder auch noch die daraus resultierende Note.
+			\item Als letztes wird die Vorlage abgespeichert, welche dann automatisch an einen Server gesendet wird, so dass andere diese Vorlage ebenfalls benutzen können.
+		\end{enumerate}
+		%Kontrolle
+ 		Zusätzlich können in der Phase der Erstellung einer Scan-Vorlage die in Kapitel \ref{ch:anforderungen} beschriebenen Kontrollmechanismen festgelegt werden. Dies geschieht nach Punkt \ref{it:zwei}, also nachdem alle Regionen angelegt wurden. Diese Kontrollmechanismen beruhen auf zwei simplen Konzepten. 
+ 	
+ 		Das erste Konzept ist der Vergleich. Zur Erinnerung, es sollen die eigetragenen Punkte auf dem Deckblatt mit den Punkten neben der Aufgabenstellung auf den hinteren Seiten auf Gleichheit überprüft werden. Das zweite Konzept baut auf dem ersten auf. Statt einfach zwei Regionen bzw. Komponenten zu vergleichen, wird eine oder werden beide zuvor berechnet. Beispielsweise soll die Summe der Teilaufgaben mit Gesamtpunktzahl übereinstimmen. Das bedeutet, es wird erst die Summe berechnet und anschließend mit der vom Prüfer eingetragenen Punktzahl verglichen. Oder aber die Gesamtpunktzahl wird in die Note umgerechnet und mit der vom Prüfer eingetragen Note verglichen. 
+ 	
+ 		Beim festlegen der Kontrollmechanismen wird wie folgt vorgegangen:
+ 		\begin{enumerate}
+ 			\item Der Benutzer wählt ein Kontrollmechanismus aus. Zur Auswahl stehen, entweder zwei Regionen, die Gesamtpunktzahl oder die Note vergleichen. 
+ 			\item Aus den zuvor angelegten Regionen müssen nun die passenden Regionen ausgewählt werden. Abhängig von dem ausgewählten Kontrollmechanismus geben die beiden zu vergleichende Komponente dem Benutzer Auskunft darüber, welche und wie viele Regionen auszuwählen sind.
+ 			\item Der Kontrollmechanismus kann gespeichert werden, sobald in jeder zu vergleichenden Komponente die Mindestzahl an auszuwählenden Regionen erreicht wurde. Diese werden in der Scan-Vorlage hinterlegt und mit an den Server gesendet, sodass alle Benutzer bei den Vorlagen die selben Kontrollmechanismen besitzen.
+ 		\end{enumerate}
+ 		
+ 	\section{Scan-Vorlage verwenden}
+ 	
+ 		Im folgenden Abschnitt wird zuerst verkürzt und anschließend detailliert geschildert, wie eine erstellte Scan-Vorlage zu verwenden ist.
+ 	
+ 		\begin{figure}[th]
+    		\centering
+    		\includegraphics[width=\textwidth]{img/schablone2}
+    		\caption{Schematischer Ablauf beim Verwenden einer Scan-Vorlage}
+    		\label{fig:schablone2}
+    	\end{figure}
+ 
+ 		Nach dem Erstellen einer Scan-Vorlage kann diese auf ausgefüllten Klausuren angewandt werden. In Abbildung \ref{fig:schablone2} wird der Ablauf schematisch dargestellt. Zuerst werden die ausgefüllten Prüfungs-Seiten einer Klausur fotografiert. Anschließend stellen die digitalen Schablonen die relevanten Informationen jeder Seite für den nächsten Schritt bereit. Optical character recognition (OCR)\nomenclature{OCR}{optical character recognition, deutsch: optische Zeichenerkennung und im deutschen Synonym für Texterkennung}, auf deutsch optische Zeichenerkennung, wird dazu benutzt, die Daten aus den Schablonen zu digitalisieren. 
 		
-		\item Als letztes speichert man die Vorlage ab, welche dann automatisch an einen Server gesendet wird, so dass andere diese Vorlage ebenfalls nutzen können.
-	\end{itemize}
+		\begin{figure}[th]
+    		\centering
+    		\includegraphics[width=\textwidth]{img/schema2}
+    		\caption{Scan-Vorlage verwenden}
+    		\label{fig:schema2}
+    	\end{figure}
+    	
+    	In der folgenden Aufzählung wird detailliert beschrieben, wie die Abfolge beim Verwenden einer Scan-Vorlage ist. Der Vorgang ist in Abbildung \ref{fig:schema2} schematisch dargestellt.
 	
-	\begin{figure}[th]
-    	\centering
-    	\includegraphics[width=\textwidth]{img/schema2}
-    	\caption{Scan-Vorlage verwenden}
-    	\label{fig:schema2}
-    \end{figure}
-	
-	Nach der Erstellung einer Vorlage kann das Dokument bzw. Die ausgefüllte Klausur digitalisiert werden. In Abbildung \ref{fig:schema2} wird dieser Vorgang schematisch dargestellt. Dazu fotografiert man die Seiten in derselben Reihenfolge, wie in der Scan-Vorlage. Anschließend werden die Regionen der Scan-Vorlage auf das jeweilige Bild angewendet. Bei dem Prozess entstehen Bildausschnitte, die für die Texterkennung benötigt werden. Die App digitalisiert mithilfe von OCR den Inhalt der Ausschnitte. Der Typ der Region nimmt nun Einfluss auf das Ergebnis. Durch ihn wird während der Worterkennungsphase eine Liste an vordefinierten möglichen Ergebnissen eingespeist. Diese Liste hat Vorrang vor dem sogenannten Standard-Wörterbuch und verbessert dadurch die Texterkennung. Ein Beispiel für solch eine Liste könnten, alle möglichen Noten sein, wie schon in dem Kapitel \ref{ch:anforderungen} beschrieben. Auch vorstellbar ist, dass alle Seminargruppen oder Namen von Personen, die an der Klausur teilgenommen haben, dort verwendet werden. 
-	
-	Weiter wäre eine zusätzliche Möglichkeit der Korrektur erdenklich. Angenommen, jemand verschreibt sich bei seiner Seminargruppe und vergisst ein Zeichen. Die Texterkennung erkennt zwar jedes Zeichen richtig, jedoch ist das Ergebnis keine korrekte Seminargruppe. Deshalb könnte man auch im Nachhinein das Ergebnis mit einer Seminargruppe ersetzt, die die größte Übereinstimmung mit dem erkannten Wort hat. Bei diesem Vorgehen sollten natürlich auch nur die Seminargruppen verwendet werden, die tatsächlich die Klausur geschrieben haben. Ähnliches gilt wieder für die Namen oder Matrikelnummern der Studenten.
-	
-	Zudem kommt noch, dass die eingetragenen Punkte kontrolliert werden. Möglich wäre auch, die Note zu kontrollieren, jedoch müsste dafür der jeweilige Notenspiegel integriert werden. Für die Umsetzung dieser Kontrollinstanz werden die angelegten Relationen zwischen den Regionen verwendet. Genauer soll es zwei Typen von Links bzw. Relationen geben.
-		\begin{itemize}
-			\item Der erste Typ ist zum Vergleichen. Dafür benötigt es genau zwei Regionen und wie der Name des Typs ahnen lässt, wird der Inhalt der beiden Regionen auf Gleichheit überprüft. Wie schon vorher erwähnt, sollen so die Punkte auf dem Deckblatt mit den Punkte über den Aufgaben verglichen werden.
-			\item Der zweite Typ ist zum Summieren. Genauer ist dieser Typ nur für die Punkte auf dem Deckblatt der Klausur gedacht. Dabei wählt man alle Regionen aus, deren Inhalt summiert werden sollen und die Region, in die der Prüfer die berechnete Gesamtpunktzahl rein schreibt. Somit kann die Berechnung des Prüfers überprüft werden.
-		\end{itemize} 
-		Mithilfe der beiden Typen, wird dem Benutzer nach der Texterkennung mitgeteilt, wo Fehler vorliegen.
+		\begin{enumerate}
+			\item Die Seiten der Klausur müssen zuerst in derselben Reihenfolge, wie in der Scan-Vorlage fotografiert werden. Anschließend werden die Regionen der Scan-Vorlage auf das jeweilige Bild angewendet. Bei dem Prozess entstehen Bildausschnitte, in denen die relevanten Informationen enthalten sind.
+			\item Die entstandenen Bildausschnitte werden Seitenweise in die Texterkennung überführt.
+			\item Die App digitalisiert mithilfe von OCR den Inhalt der Ausschnitte. Der Datentyp der zugehörigen Region aus der Scan-Vorlage nimmt nun Einfluss auf das Ergebnis. Durch ihn wird während der Worterkennungsphase eine Liste an vordefinierten möglichen Ergebnissen eingespeist. Diese Liste hat Vorrang vor dem sogenannten Standard-Wörterbuch und verbessert dadurch die Texterkennung. Ein Beispiel für solch eine Liste könnten, alle möglichen Noten sein, wie schon in dem Kapitel \ref{ch:anforderungen} beschrieben. Auch vorstellbar ist, dass alle Seminargruppen oder Namen von Personen, die an der Klausur teilgenommen haben, dort verwendet werden.
+			\item Die Ergebnisse können im Anschluss an der Server gesendet. Zuvor kann der Benutzer jedoch die Ergebnisse anpassen bzw. korrigieren, falls es bei der Texterkennung zu Fehlern kam. Auch die Kontrollmechanismen finden vor dem Upload zum Server statt und geben dem Nutzer durch die Fehlermeldungen Hinweise. 
+		\end{enumerate}
 		
-	Allerdings heißt das nicht, dass das OCR selbst keine Fehler macht. Aus diesem Grund ist die sogenannte confidence des OCR bei jeder Region sichtbar. Diese sagt aus, wie sicher sich die Texterkennung ist, dass das Ergebnis stimmt. Jedoch kann es auch hier falsche Positiv-Ergebnisse geben, weshalb auch das kein perfekter Indikator für die Richtigkeit ist. Deshalb wird im Anschluss an die Texterkennung die Möglichkeit geboten, die Resultate noch einmal zu überprüfen und zu korrigieren, bevor sie an den Server zum Abspeichern gesendet werden. Genauer können die Ergebnisse der Texterkennung zu jeder Region einzeln bearbeitet werden, wodurch sich die Fehlermeldung durch einen Link ändern kann.
+	\section{Erweiterung des Konzepts}
+		Weiter ist eine zusätzliche Möglichkeit der Korrektur sinnvoll. Angenommen, jemand verschreibt sich bei seiner Seminargruppe und vergisst ein Zeichen. Die Texterkennung erkennt zwar jedes Zeichen richtig, jedoch ist das Ergebnis keine korrekte Seminargruppe. Deshalb sollte im Nachhinein an die Texterkennung das Ergebnis mit einer richtigen Seminargruppe, die die größte Übereinstimmung mit dem erkannten Wort hat, ersetzt werden. Bei diesem Vorgehen ist zu beachten, dass nur die Seminargruppen verwendet werden, die tatsächlich die Klausur geschrieben haben. Ähnliches gilt wieder für die Namen oder Matrikelnummern der Studenten.
+		
+		Allerdings entstehen auch durch das OCR Fehler. Aus diesem Grund ist die sogenannte confidence neben jedem Ergebnis sichtbar. Diese sagt aus, wie sicher sich die Texterkennung bei dem Ergebnis ist. Jedoch kann es auch hier falsche Positiv-Ergebnisse geben, weshalb auch das kein perfekter Indikator für die Richtigkeit ist. Deshalb gibt es, wie in dem Ablauf schon beschreiben die Möglichkeit, die Ergebnisse noch einmal zu überprüfen und zu korrigieren, bevor sie an den Server zum Abspeichern gesendet werden. Auch die Kontrollmechanismen reagieren auf die Änderungen der Ergebnisse, sodass Fehlermeldungen aufgehoben werden können. 
 
 %%%%%%%%%%%%%%% - PROTOTYP - %%%%%%%%%%%%%%%
 
@@ -680,6 +687,7 @@ In dem vorliegendem Praktikumsbericht...
 	Ziel dieser Woche war es so viel wie möglich des Belegs zu schreiben. Dafür fertigte ich einige Schemata und Bilder an. Zusätzlich konnte ich einige Fehler der App entdecken und lösen, so dass die Performance verbessert und Server-Aufrufe eingespart wurden. Außerdem kam die Online-Texterkennung über den Server hinzu, sowie die zweite Korrektur in der Texterkennung mit Vision. Jedoch konnte die Online-Texterkennung auf Grund von Server-Problemen nicht getestet werden. Auch in dieser Woche konnte einige Fragen zum Aufbau des Berichts in einem Meeting geklärt werden. 
 	
 	\textbf{27.04. - 03.05.}
+	Im Mittelpunkt der Woche stand der Bericht, an dem ich täglich arbeitet. Ich erstellte einige Bilder für ihn und den Vortrag. Auch gab es diese Woche wieder ein Meeting.
 	
 	\textbf{04.05. - 10.05.}
 	
