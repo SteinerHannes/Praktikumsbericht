@@ -316,7 +316,7 @@ In dem vorliegendem Praktikumsbericht...
 			Die Validierung ist jedoch nicht standardmäßig, sondern wurde selbst entwickelt.
 			
 		\subsection{Scan-Vorlagen erstellen und speichern}
-			Bei der Implementierung des ersten Arbeitsschritts der Scan-Vorlagen wurde das schriftliche Flussdiagramm, welches im Anhang \ref{ch:workflow} zu finden ist, leicht verändert benutzt.
+			Bei der Implementierung des ersten Arbeitsschritts der Scan-Vorlagen wurde das schriftliche Flussdiagramm, welches im \autoref{ch:workflow} zu finden ist, leicht verändert benutzt.
 			
 			\subsubsection*{Scan-Vorlage erstellen}
 			\begin{figure}[th]
@@ -486,7 +486,7 @@ In dem vorliegendem Praktikumsbericht...
 				\end{enumerate}
 			
 				\paragraph*{Zu 1.: Die markierten Regionen in der Vorlage auf die neuen Bilder anwenden}
-				Damit ist gemeint, dass nun das erste Bild des neuen Scans mit den Regionen der ersten Seite der Vorlage verarbeitet wird. Zur Erinnerung aus \ref{ch:konzept}: Das Ziel ist es, die markierten Regionen in der Vorlage auf die zu digitalisierende Seite anzuwenden und minimale Bildausschnitte zu erstellen, in denen der zu digitalisierende Text steht (siehe \autoref{fig:schema2}). Diese Ausschnitte werden dann von der Texterkennung verarbeitet. Diesen Vorgang wird für jede Seite wiederholt. Jedoch ergibt sich hierbei ein Problem.
+				Damit ist gemeint, dass nun das erste Bild des neuen Scans mit den Regionen der ersten Seite der Vorlage verarbeitet wird. Zur Erinnerung aus \autoref{ch:konzept}: Das Ziel ist es, die markierten Regionen in der Vorlage auf die zu digitalisierende Seite anzuwenden und minimale Bildausschnitte zu erstellen, in denen der zu digitalisierende Text steht (siehe \autoref{fig:schema2}). Diese Ausschnitte werden dann von der Texterkennung verarbeitet. Diesen Vorgang wird für jede Seite wiederholt. Jedoch ergibt sich hierbei ein Problem.
 				
 				Wie man in den Abbildungen \ref{fig:seite1} und \ref{fig:seite2} sieht, haben beide, durch die App entstandenen Bilder, unterschiedliche Maße. Die \autoref{fig:seite1} ist größer und etwas breiter als die \autoref{fig:seite2}. Das liegt daran, dass sich der Winkel und der Abstand der Kamera zum Dokument bei den Aufnahme geändert hat, da das Gerät, während des Fotografierens in den Händen gehalten wurde. Das bedeutet also, wenn die Bilder in der Vorlage nicht genau so groß sind, wie die Bilder des neuen Scans, können im schlechtesten Fall wichtige Informationen durch die absoluten Positionen des Regionen abgeschnitten werden. Würde man immer den selben Abstand und Winkel garantieren, wie das beispielsweise in einem richtigen Kopiergerät oder Scanner der Fall ist, könnte man nun die Berechnung der absoluten Positionen in relative Positionen der Regionen weglassen. Zusätzlich sind die relative Höhe und Breite der Regionen ebenfalls zu berechnen. 
 
@@ -532,45 +532,20 @@ In dem vorliegendem Praktikumsbericht...
 	Dieses Kapitel reflektiert den aktuellen Stand der App und zieht einen Vergleich mit den Anforderungen aus \autoref{ch:anforderungen}.
 	
 	\section{Stand des Prototyps}
+		Während der Entwicklung konnten viele Anforderungen umgesetzte werden. Jedoch gibt es aktuell keine Möglichkeit die Ergebnisse der Texterkennung an den Server zu senden und somit ist es auch nicht möglich die Daten in ein tabellarisches Format für die Notenfreigabe zu überführen. Dieser essentieller Bestandteil des Software-Systems benötigt mehr Zeit als angenommen und konnte deshalb nicht umgesetzt werden. Außerdem wurde nur einer der Kontrollmechanismen umgesetzt. Grund dafür ist, dass dafür zu wenig Zeit in der Planung investiert wurde. Grundsätzlich könnten die fehlenden Mechanismen recht schnell implementiert werden, allerdings ist der aktuelle Ansatz der dahinter liegenden Datenstruktur nicht zum Speichern in der Datenbank geeignet. Sobald Änderungen an der Datenstruktur vorgenommen werden könnten, kann es zu Fehlern kommen. Es existiert jedoch schon eine Idee zur Umsetzung einer besseren Datenstruktur. Dafür müssten allerdings neben der App auch der Server und die Datenbank angepasst werden. Des Weiteren wurden Fehlermeldungen und/oder -behandlungen bezüglich des Servers nur sporadisch implementiert. Aber auch hierfür sind die Grundlagen schon gelegt, da Fehler stets aufgefangen und zentral abgelegt werden. 
 	
-	Anforderungen: 
-	
-	- iOS die Klausuren digitalisiert 
-	
-	- tabellarisches Format
-	
-	- Texterkennung off und online
-	
-	- generischer Aufbau
-	
-	- Kontrollmechanismen /referenz zur implamentation, dort schon angesprochen
-	
-	- Anbindung an server -> nicht alles implentiert (ACHTUNG AUSBLICK)
-	
-	- Datenschutz und Datensicherheit-Richtlinien 
-
-	Diese Kapitel reflektiert....
-	
-	Speichern der Ergebnisse nicht geschafft 
-	
-	Kontrolle der Ergebnisse vernachlässigt
-	
-	Fehlerbehandlung API
-	
-	\section{Hürden während der Entwicklung}
-	
-	- ein paar Worte, wie gut die Entwicklung lief (Simulator vs. echtes Gerät), wo sind die Grenzen des Simulators (Keine Kamera), wo waren Probleme mit dem echten Gerät...
-	
-	
-	- jwt in KeyChain gesichert speichern 
-	
-	- GitHub actions
-	
-	- Debugging bei nicht statischen Daten schwer, Mock erstellen
-	
-	- Umfang von SwiftUI viele Umwege 
-
-
+%	\section{Hürden während der Entwicklung}
+%	
+%	- ein paar Worte, wie gut die Entwicklung lief (Simulator vs. echtes Gerät), wo sind die Grenzen des Simulators (Keine Kamera), wo waren Probleme mit dem echten Gerät...
+%	
+%	
+%	- jwt in KeyChain gesichert speichern 
+%	
+%	- GitHub actions
+%	
+%	- Debugging bei nicht statischen Daten schwer, Mock erstellen
+%	
+%	- Umfang von SwiftUI viele Umwege 
 	\section{Probleme und Grenzen der App}\label{sc:grenzen}
 		In diesem Abschnitt werden Probleme aufgeführt, die beim Verwenden der App beobachtet werden können. Auch wird hier über mögliche Lösungen zu einigen Problemen diskutiert.
 
@@ -594,68 +569,52 @@ In dem vorliegendem Praktikumsbericht...
 	%%%%%%%%%%%%%%%% - TEMPLATES - %%%%%%%%%%%%%%%
 
 	\section{Verbesserung der Klausuren-Vorlage}\label{sc:vorlage}
-		% War in der Problemstellung drin... konnte nicht begonnen werden -> Ausblick BA
-	
 		Dieser Abschnitt beschäftigt sich mit Verbesserungen und Änderungen an Hand der Klausur in \autoref{fig:klausur}. Sie steht jedoch stellvertretend für die Klausuren-Vorlage der Fakultät CB. Alle folgenden Vorschläge haben den Hintergrund die App bei der Digitalisierung zu unterstützen und basieren auf der gesammelten Erfahrung mit der Anwendung, während der Entwicklung sowie den angegeben Problemen aus \autoref{sc:grenzen}.
 	
 		Der erste Vorschlag bezieht sich auf die Problematik, dass die Ecken und Kanten bei der Erkennung des Dokuments entscheidend sind. Sie sind die wichtigsten Referenz-Punkte bei der Objekt-Erkennung, können aber unter bestimmten Bedienungen, wie im \autoref{ssc:erkennen} erklärt, nicht immer erkannt werden. Aus diesem Grund empfiehlt es sich eigene Referenzpunkt auf dem Dokument anzubringen. Beispielsweise durch einen Rahmen, wie es schon auf der Klausur (\ref{fig:seite1}) gemacht wurde, oder durch QR-Code ähnliche Muster. Der Vorteil bei eigenen Referenzpunkt ist, dass sie so gestaltet werden können, dass sie sich immer vom Blatt abheben. So mit ist die Dokumenten-Erkennung nur noch vom Licht abhängig. Ein weiterer Vorteil ist, dass dadurch die Kamera noch näher an den Text heran kann und die Auflösung noch besser wird. Der größte Nachteil daran ist allerdings, dass die Erkennung nicht mehr allein von Frameworks übernommen werden kann. Es müsste ein neuronales Netz trainiert werden, welche diese Referenzpunkte in Bildern erkennt. 
 	
 		Der zweite Vorschlag bezieht sich auf den \autoref{ssc:problemevorlage}. Einige dort angesprochenen Probleme bezogen sich auf die Ungewissheit, wie groß eine Region abzustecken ist. Die einfachste Lösung ist es, einen genauen Rahmen für alle Felder fest zu legen. Auch müssen alle Felder ausreichend beschriftet sein, so dass jedem klar ist, wo was hineinzutragen ist. Und um das Problem zu vermeiden, dass der Rahmen als ein Buchstabe oder eine Zahl erkannt wird, kann dieser nur schwach eingezogen werden. Mithilfe von Bildverarbeitung-Algorithmen könnten diese feinen Linien dann auch ohne Verlust der wichtigen Daten heraus gerechnet werden. 
+		
+		Abschließend ist zu erwähnen, dass laut der Problemstellung aus \autoref{ch:problemstellung} eine Klausuren-Vorlage entwickelt werden sollte. Auf Grund mangelnder Zeit war das jedoch nicht möglich. 
 
 
 %%%%%%%%%%%%%%%% - AUSBLICK - %%%%%%%%%%%%%%%
 		
 % Jedoch sollten auch einige angesprochenen Probleme aus Kapitel \ref{ch:grenzen} behoben werden, wenn die App in Zukunft tatsächlich von Hochschulmitarbeitern benutzt werden soll.
-\chapter{Ausblick}
-	Der aktuelle Stand der App bietet eine gute Grundlage für mögliche Weiterentwicklungen. Jedoch fehlen einige wichtige Elemente zur Inbetriebnahme des Software-Systems, wie schon im \autoref{ch:fazit} verdeutlicht. In den folgenden Abschnitten wird von dem Zustand der Software abgesehen und einige Ideen erläutert, wie die App und das gesamte Software-System weiter entwickelt und verbessert werden kann.
+\chapter{Ausblick}\label{ch:ausblick}
+	Der aktuelle Stand der App bietet eine gute Grundlage für mögliche Weiterentwicklungen. Jedoch fehlen einige wichtige Elemente zur Inbetriebnahme des Software-Systems, wie schon im \autoref{ch:fazit} verdeutlicht. In den folgenden Abschnitten werden einige Ideen erläutert, wie die App und das gesamte Software-System weiter entwickelt und verbessert werden kann.
 
-	\paragraph*{Verbesserung der Benutzerfreundlichkeit und des Workflows} Gerade weil die App noch ein Prototyp ist, sollten bei einer Weiterentwicklung zu allererst Dinge implementiert werden, die die Benutzung verbessern. Beispielsweise werden Login-Daten und schon gedownloadete Vorlagen nicht gespeichert. Auch muss zu jeder Region ein Name vergeben werden. Allerdings gibt auch der Datentyp (\ref{fig:v6}) der Region in den meisten Fällen darüber Auskunft, wie die Region heißen sollte. Handelt es sich um den Vor- bzw. Nachnamen, die Matrikel-Nummer, Seminar-Gruppe oder die Note, taucht diese Region genau einmal in einer Scan-Vorlage auf. Nur der Datentyp Punkte sollte mehrmals vergeben werden können. Aus diesen Aspekten sollte der Workflow beim erstellen von Regionen angepasst werden.
+	\paragraph*{Verbesserung der Benutzerfreundlichkeit und des Workflows} \label{pa:benutzer} 
+		Gerade weil die App noch ein Prototyp ist, sollten bei einer Weiterentwicklung zu allererst Dinge implementiert werden, die die Benutzung verbessern. Beispielsweise werden Login-Daten und schon gedownloadete Vorlagen nicht gespeichert. Auch muss zu jeder Region ein Name vergeben werden. Allerdings gibt auch der Datentyp (\ref{fig:v6}) der Region in den meisten Fällen darüber Auskunft, wie die Region heißen sollte (siehe dazu \autoref{fig:v5}). Handelt es sich um den Vor- bzw. Nachnamen, die Matrikel-Nummer, Seminar-Gruppe oder die Note, taucht diese Region auch nur genau einmal in einer Scan-Vorlage auf. Ausschließlich der Datentyp Punkte sollte mehrmals vergeben werden können. Aus diesen Aspekten sollte der Workflow beim erstellen von Regionen angepasst werden. 
 	
-	\paragraph*{Server-Schnittstellen} Zum Zeitpunkt der Abgabe sind in der iOS-App nicht alle verfügbaren Server-Schnittstellen implementiert. Es fehlen noch das Ändern und Löschen ganzer Vorlagen und deren Einzelteile, wie Seiten und Regionen. Dafür müssten Views entwickelt werden, die das Ändern und Löschen umsetzten. Durch SwiftUI ist es aber möglich Views und View-Komponenten wiederzuverwenden, so dass nicht von vorne begonnen werden muss. 		
+	\paragraph*{Weitere Dokument- und Datentypen} 
+		Auf dem \hyperref[pa:benutzer]{Abschnitt \textit{Verbesserung der Benutzerfreundlichkeit und des Workflows}} \xspace aufbauend, ist folgende Idee entstanden. Durch die generischen Vorlagen ist es möglich neben Klausuren auch andere Dokumente nach diesem Schema zu digitalisieren. Beispielsweise Krankenscheinen, Urlaubsanträgen oder Arbeitsverträgen. Dafür könnten spezielle Workflows zum Erstellen einer Vorlage implementiert werden und weitere Regionen-Datentypen hinzukommen, wie z. B. Datum, IBAN-Nummern, E-Mail-Adressen und Telefonnummern.
 	
-	\paragraph*{Erweiterung der Texterkennung} Wie im \autoref{sc:grenzen} erwähnt unterstützten Vision und Tesseract das Erkennen von Handschrift nicht. Jedoch wäre es möglich eigne Neuronale-Netze zu trainieren und implementieren, die diese Aufgabe übernehmen. Beispielsweise existiert ein Datensatz an handgeschriebene Ziffern \footurl{MNIST-Datensatz -}{http://yann.lecun.com/exdb/mnist/}, mit dem solch ein einfaches Netz für das Erkennen von Ziffern, trainiert werden könnte. Außerdem bietet die Server Architektur die Möglichkeit, weitere oder mehr OCR-Engines zu implementieren. Für mehr Details siehe im Praktikumsbericht von Tobias Kallauke.
+	\paragraph*{Server-Schnittstellen} 
+		Zum Zeitpunkt der Abgabe sind in der iOS-App nicht alle verfügbaren Server-Schnittstellen implementiert. Es fehlen noch das Ändern und Löschen ganzer Vorlagen und deren Einzelteile, wie Seiten und Regionen. Dafür müssten Views entwickelt werden, die das Ändern und Löschen umsetzten. Durch SwiftUI ist es aber möglich Views und View-Komponenten wiederzuverwenden, so dass nicht von vorne begonnen werden muss. 		
 	
-	\paragraph*{Klausuren-Einsicht} Die archivierten Klausuren-Bilder könnten über ein Web-Portal dazu genutzt werden, eine online Einsicht der Prüfungen zu gestalten. Jedoch bringt solch eine Plattform auch ein Problem mit sich. Durch sie ist die Verbreitung von Klausuren noch einfacher als zuvor, wodurch die Professoren dazu angehalten werden, immer wieder neue Aufgaben auszudenken. Aber auch dafür könnte es in Zukunft eine Lösung geben. 
+	\paragraph*{Erweiterung der Texterkennung} 
+		Wie im \autoref{sc:grenzen} erwähnt unterstützten Vision und Tesseract das Erkennen von Handschrift nicht. Jedoch wäre es möglich eigne Neuronale-Netze zu trainieren und implementieren, die diese Aufgabe übernehmen. Beispielsweise existiert ein Datensatz an handgeschriebene Ziffern \footurl{MNIST-Datensatz -}{http://yann.lecun.com/exdb/mnist/}, mit dem solch ein einfaches Netz für das Erkennen von Ziffern, trainiert werden könnte. Außerdem bietet die Server Architektur die Möglichkeit, weitere oder mehr OCR-Engines zu implementieren. Für mehr Details siehe im Praktikumsbericht von Tobias Kallauke.
 	
-	\paragraph*{Weitere Plattformen} Neben der iOS-App sollte Tobias Kallauke die selbe für Android Geräte entwickeln. Jedoch existierten zum Zeitpunkt der Entwicklung keine Frameworks, die das Erkennen von Dokumenten in der Kamera übernimmt. Deshalb entwickelte Tobias ein Prototyp, der sich mit diesem Problem beschäftigt. \\
-	Allerdings könnte das Software-System auf noch mehr Plattformen Anwendung finden. Neben einem Programm für Linux, MacOS und Windows ist auch einen Web-Plattform  erdenklich. Alle könnten den selben Umfang besitzen nur das Erstellen der Scans erfolgt über Scan- oder Kopiergeräte.
+	\paragraph*{Klausuren-Einsicht} 
+		Die archivierten Klausuren-Bilder könnten über ein Web-Portal dazu genutzt werden, eine online Einsicht der Prüfungen zu gestalten. Jedoch bringt solch eine Plattform auch ein Problem mit sich. Durch sie ist die Verbreitung von Klausuren noch einfacher als zuvor, wodurch die Professoren dazu angehalten werden, immer wieder neue Aufgaben auszudenken. Aber auch dafür könnte es in Zukunft eine Lösung geben. 
 	
-	\paragraph*{Weitere Dokumenttypen} Durch die generischen Vorlagen ist es möglich neben Klausuren auch andere Dokumente nach diesem Schema zu digitalisieren. Beispielsweise Krankenscheinen, Urlaubsanträgen oder Arbeitsverträgen. Lediglich sollten weitere Regionen-Datentypen hinzukommen, wie z.B. Datum, IBAN-Nummern, E-Mail-Adressen und Telefonnummern.
+	\paragraph*{Weitere Plattformen} 
+		Neben der iOS-App sollte Tobias Kallauke die selbe für Android Geräte entwickeln. Jedoch existierten zum Zeitpunkt der Entwicklung keine Frameworks, die das Erkennen von Dokumenten in der Kamera übernimmt. Deshalb entwickelte Tobias ein Prototyp, der sich mit diesem Problem beschäftigt. Allerdings könnte das Software-System auf noch mehr Plattformen Anwendung finden. Neben einem Programm für Linux, MacOS und Windows ist auch einen Web-Plattform  erdenklich. Alle könnten den selben Umfang besitzen nur das Erstellen der Scans erfolgt beispielsweise über Scan- oder Kopiergeräte.
 	
+	\paragraph*{Intelligente Referenzpunkte}\label{pa:referenzpunkte}
+		In \autoref{sc:vorlage} wurde erwähnt, dass eigene Referenzpunkte auf den Klausuren Vorteile mit sich bringen. Möglich wäre auch, dass die Referenzpunkte ähnlich wie QR-Codes aufgebaut sind. Diese enthalten die nötigen Informationen zu den Regionen auf der Seite und ermöglichen das Digitalisieren, ohne die Auswahl der richtigen Vorlage. Daran angelehnt könnten ein \LaTeX -Paket oder Word-PlugIn entwickelt werden, wodurch die QR-Codes automatisch für jede Seite und deren Regionen generiert werden. 
 	
-	\paragraph*{Intelligente Referenzpunkte} In \autoref{sc:vorlage} wurde erwähnt, dass eigene Referenzpunkte auf den Klausuren Vorteile mit sich bringen. Möglich wäre auch, dass die Referenzpunkte ähnlich wie QR-Codes aufgebaut sind. Diese enthalten die nötigen Informationen zu den Regionen auf der Seite und ermöglichen das Digitalisieren, ohne die Auswahl der richtigen Vorlage. Darauf aufbauend könnten ein \LaTeX \xspace Paket oder Word-PlugIn entwickelt werden, wodurch die QR-Codes automatisch für jede Seite und deren Regionen generiert werden. 
+	\paragraph*{Klausuren-Vorlage entwickeln}
+		Auf \autoref{sc:vorlage} und den \hyperref[pa:referenzpunkte]{\textit{intelligenten Referenzpunkten}} aufbauen könnten Klausuren-Vorlagen umgesetzte und getestet werden. Auch die App müsste angepasst werden, so dass die Referenzpunkte erkannt werden, wie im \autoref{sc:vorlage} beschrieben.
+		
+	\paragraph*{Benutzer Akzeptanz Studie}\label{pa:akzeptanz}
+		Aktuell ist unklar, ob die App tatsächlich Zeit einspart. Aus diesem Grund bietet es sich an eine umfangreiche Benutzer Akzeptanz Studie anzusehen legen. Außerdem könnten so weitere Probleme entdeckt und Lösungen entwickelt werden, bevor die App benutzt werden kann.
 	
-	\paragraph*{Qualitätsstudie} Vision vs Tesseract
+	%\paragraph*{Qualitätsstudie} 
+		%Neben einer \hyperref[pa:akzeptanz]{\textit{Benutzer Akzeptanz Studie}} könnte außerdem eine Qualitätsstudie der aktuellen oder auch anderer OCR-Engines erstellt werden. Es gibt viele online OCR-Engines Beispielsweise von Microsoft und Google
 	
-	
-	\paragraph*{Benutzer Akzeptanz Studie}
-	
-	GENERISCH!!!
-	
-	- REST API Implementieren
-	
-	
-	- QR-Code-Idee um Vorlagen weg zu lassen -> Programm oder Plugin (Word/LaTeX) was die QR-Codes dann automatisch erstellt und richtig einfügt. (Wichtige Daten sind da hinterlegt, Vor- und Nachteile von QR-Codes, ...)
-	
-	- Ist die App nun schneller als der normale Umgang bleibt offen -> Bachelorarbeit knüpft da an...
-	
-	- ImageCaptureCore für macOS, Android, Windows, Linux
-	
-	- neuer Workflow. Klausur hat immer Name, Matrikel Nummer, etc. (Nicht extra Regionen-Namen vergeben)
-	
-	- mehr OCR engines
-	
-	- relative position in Prozent angeben? Weniger Berechnungen...
-	
-	- State speichern
-	
-	- Idee des Scan erstellen -> speichern Scan != Vorlage
-	
-	- Tatsächlich eine Vorlage entwickeln
-	
-	- noch mehr automatisieren und Daten in den Referenzpunkte QR-Code zu hinterlegen dort steht dann drin, wo welches Feld ist und wie breit etc. 
-	
-	\paragraph*{Versionsverwaltung von Dokumenten} Dokumente an Hochschulen gehen oft durch viele Hände. Dabei werden die Dokumente im schlechtesten Fall immer wieder eingescannt, per E-Mail versendet und wieder ausgedruckt. Das verbraucht nicht nur viele Ressourcen sondern führt hin und wieder auch dazu, das veraltete Versionen des Dokuments weiter gereicht werden. Um all diese Probleme zu vermeiden, könnte eine Versionsverwaltung für Dokumenten entstehen, die auf der App aufbaut. 
+	%\paragraph*{Versionsverwaltung von Dokumenten} Dokumente an Hochschulen gehen oft durch viele Hände. Dabei werden die Dokumente im schlechtesten Fall immer wieder eingescannt, per E-Mail versendet und wieder ausgedruckt. Das verbraucht nicht nur viele Ressourcen sondern führt hin und wieder auch dazu, das veraltete Versionen des Dokuments weiter gereicht werden. Um all diese Probleme zu vermeiden, könnte eine Versionsverwaltung für Dokumenten entstehen, die auf der App aufbaut. 
 
 \Anhang
 
@@ -690,35 +649,38 @@ In dem vorliegendem Praktikumsbericht...
 
 \chapter{Tätigkeitsbericht}
 	\textbf{24.02. - 01.03.}
-	Ich habe mich mit der Problemstellung auseinander gesetzt, Ideen gesammelt, Problemanalyse betrieben und einen kleinen Prototypen entwickelt. Dazu erstellte ich einen minimalen Projektplanung, arbeitete mich in die Frameworks \textit{Vision} und \textit{VisionKit} ein und setzte eine Versionsverwaltung auf. Zusätzlich suchte ich nach einer passenden App-Architektur, die geeignet für das deklarative GUI-Framework SwiftUI, sowie für asynchrone Aufgaben, wie z. B. API-Aufrufe ist. Dabei stieß ich auf \textit{Cleancode Architecture} und \textit{Redux}.
+	Zunächst habe ich mich mit der Problemstellung auseinander gesetzt, Ideen gesammelt, Problemanalyse betrieben und einen kleinen Prototypen entwickelt. Dazu erstellte ich eine minimale Projektplanung, arbeitete mich in die Frameworks \textit{Vision} und \textit{VisionKit} ein und setzte eine Versionsverwaltung auf. Zusätzlich suchte ich nach einer passenden App-Architektur, die für das deklarative GUI-Framework SwiftUI sowie für asynchrone Aufgaben, wie z. B. API-Aufrufe geeignet ist. Dabei stieß ich auf \textit{Cleancode Architecture} und \textit{Redux}.
 	
 	\textbf{02.03. - 08.03.} 
-	In dieser Woche habe ich die Texterkennung auf den berechneten Regionen eines neuen Fotos implementiert, den Workflow sowie viele andere Kleinigkeiten in der App verbessert und alle Fehler der letzten Woche behoben, sodass ich neue Dinge implementieren konnte. Zudem probierte ich CI sowie Lint für das Projekt aus. Da CI für eine iOS-App mit \textit{GitHub Actions} schwer aufzusetzen war und ab April etwas kosten würde, lies ich es sein. Des Weiteren pflegte ich das Projekt Management durch \textit{Issues} und \textit{Project-Boards} in GitHub. Anschließend programmierte ich den App-Workflow so um, dass nun mehr als eine Seite aufgenommen und analysiert werden konnte. \\ 			
-	Abgesehen von neuem Quellcode fing ich an den Praktikumsbericht zu schreiben und arbeitet mich dafür in \LaTeX \xspace und die Bachelorarbeit-Vorlage für \LaTeX \xspace der Hochschule Mittweida ein.
+	In dieser Woche habe ich die Texterkennung auf den berechneten Regionen eines neuen Fotos implementiert, den Workflow sowie viele andere Kleinigkeiten in der App verbessert und alle Fehler der letzten Woche behoben, sodass ich neue Dinge implementieren konnte. Zudem probierte ich CI sowie Lint für das Projekt aus. Da CI für eine iOS-App mit \textit{GitHub Actions} schwer aufzusetzen war und ab April kostenpflichtig wurde, verwarf ich meine Pläne. Des Weiteren pflegte ich das Projekt Management durch \textit{Issues} und \textit{Project Boards} in GitHub. Anschließend programmierte ich den App-Workflow so um, dass nun mehr als eine Seite aufgenommen und analysiert werden konnte. \\ 			
+	Abgesehen von neuen Quellcode began ich mit dem Schreiben des Praktikumsberichts und arbeitete mich dazu in \LaTeX \xspace und die Bachelorarbeit-Vorlage für \LaTeX \xspace der Hochschule Mittweida ein.
 	
 	\textbf{09.03. - 15.03.} 
-	Zu Beginn der dritten Woche schaute ich mir Möglichkeiten für serverseitiges OCR an. Genauer sammelte ich Informationen zu dem Framework Vapor und Swift unter Linux. Jedoch funktionieren die Frameworks \textit{Vision} und \textit{CoreML} von \textit{Apple} unter Linux nicht, weshalb sich IronOCR als beste Option herausstellte. Ich entwickelte ein Datenbankmodell, mithilfe der in der App verwendeten Datentypen und erstellte dazu noch eine JSON-Struktur die später für die APIs verwendet werden könnte. Außerdem gab es ein Meeting, in dem wir unseren aktuellen Stand präsentieren sollten, um weitere Schritte und Aufgaben zu planen.Bis zum Ende der Woche arbeitete ich weiter an meinem Beleg und schrieb den Datenfluss in der App um. Nun ähnelt er sehr dem Redux-Model.
+	Zu Beginn der dritten Woche schaute ich mir Möglichkeiten für serverseitiges OCR an. Dabei sammelte ich Informationen zu dem Framework Vapor und Swift unter Linux. Da die Frameworks \textit{Vision} und \textit{CoreML} von \textit{Apple} unter Linux nicht funktionierten, stellte sich IronOCR als beste Option herausstellte. Mithilfe der in der App verwendeten Datentypen entwickelte ich ein Datenbankmodell und erstellte dazu noch eine JSON-Struktur, die später für die APIs verwendet werden könnte. Außerdem gab es ein Meeting, in dem Tobias Kallauke und ich unseren aktuellen Stand präsentierten, um weitere Schritte und Aufgaben zu planen. Bis zum Ende der Woche arbeitete ich fortlaufend an meinem Beleg und schrieb den Datenfluss in der App um. Nun ähnelte er sehr dem Redux-Model.
 	
 	\textbf{16.03. - 22.03.} 
-	Anfangs habe ich weiter an meinem Praktikumsbericht geschrieben, neue Issues hinzugefügt und bearbeitet. Außerdem gepflegte ich die Dokumentation und betrieben Projekt Management, um nun Links zwischen Regionen hinzuzufügen. Dabei entstanden neue Views und der Redux-Store musste dadurch angepasst werden. Es kam eine Erweiterung für die Texterkennung hinzu, so dass man durch die Auswahl eines Datentyps, das Resultat der Erkennung verbessern konnte. Des Weiteren habe ich bis zum Ende der Woche die Vergleich-Links vollständig implementiert und die App auf Fehler und Abstürze kontrolliert, sowie den Beleg um einige Kapitel erweitert.
+	Anfangs schrieb ich meinen Praktikumsbericht weiter, bearbeitete alte Issues und fügte neue dem Project Board hinzu. Außerdem gepflegte ich die Dokumentation, um anschließend Links zwischen Regionen hinzuzufügen. Dabei entstanden neue Views. Der Redux-Store musste dadurch angepasst werden. Es kam eine Erweiterung für die Texterkennung hinzu, so dass man durch die Auswahl eines Datentyps, das Resultat der Erkennung verbessern konnte. Des Weiteren habe ich bis zum Ende der Woche die Vergleich-Links vollständig implementiert und die App auf Fehler und Abstürze kontrolliert sowie den Beleg um einige Kapitel erweitert.
+	
+	%%%%%%%%%%%%% LINKS
 	
 	\textbf{23.03. - 29.03.} 
-	Ich begann den Workflow und die Navigation in der App, zu verbessern und vereinfachen. Dabei beseitigte ich Quellcode des Prototyps, erweiterte die Dokumentation und behob einige Fehler. Anschließend überarbeitet ich einige Views, so dass sie übersichtlicher und einfacher zu benutzen sind. Nach dem iOS 13.4 Update in der Mitte der Woche, funktionierte ein Teil der App nicht, da sich das Verhalten von Views geändert hat. Ich behob die Fehler, testete ausgiebig die App und fügte iPad Unterstützung hinzu. Des Weiteren entstand eine neue verbesserte permanente Scan-Vorlgae und ich schrieb einen großen Teil am Bericht.
+	Ich begann den Workflow und die Navigation in der App zu verbessern und vereinfachen. Dabei beseitigte ich einigen Quellcode des Prototyps, erweiterte die Dokumentation und behob einige Fehler. Anschließend überarbeitete ich einige Views, sodass sie übersichtlicher und einfacher zu benutzen sind. Nach dem iOS 13.4 Update Mitte der Woche funktionierte ein Teil der App nicht, da sich das Verhalten von Views geändert hatte. Ich behob die Fehler, testete ausgiebig die App und fügte iPad Unterstützung hinzu. Des Weiteren entstand eine neue verbesserte permanente Scan-Vorlgae und ich schrieb einen großen Teil des Berichts.
 	
 	\textbf{30.03. - 05.04.} 
-	Das Backend für die App war soweit, dass ich es aufsetzten und die API-Schnittstellen implementieren konnte. Dazu erstellte ich Views für Registrieren und Anmelden, die mithilfe von regulären Ausdrücken, die Eingaben überprüfen. Außerdem entwickelte ich einen Schicht im App-Store, für die anfallenden asynchronen Aufgaben. Dabei laß ich mich in das Framework Combine ein und überlegte mir einen geeigneten Aufbau. Da der Ansatz von Combine sehr neu für mich war, dauerte es zwei Tage, bis ein erster API-Service mit Fehler-Handling funktionierte. Zum Ende der Woche waren alle der Create-Schnittstellen implementiert, getestet und dokumentiert. Nebenbei erstellte ein paar Issues für das Backend und sprach mich mit Tobias über OCR auf dem Server ab.
+	Das Backend für die App war soweit, dass ich es aufsetzten und die API-Schnittstellen implementieren konnte. Dazu erstellte ich Views für Registrieren und Anmelden, die mithilfe von regulären Ausdrücken, die Eingaben überprüfen. Außerdem entwickelte ich für die anfallenden asynchronen Aufgaben einen Schicht im App-Store. Dabei las ich mich in das Framework Combine ein und überlegte mir einen geeigneten Aufbau. Da der Ansatz von Combine sehr neu für mich war, dauerte es zwei Tage, bis ein erster API-Service mit Fehler-Handling funktionierte. Zum Ende der Woche waren alle der Create-Schnittstellen implementiert, getestet und dokumentiert. Nebenbei erstellte ein paar Issues für das Backend und sprach mich mit Tobias über OCR auf dem Server ab.
 	
 	\textbf{06.04. - 12.04.}
-	Diese Woche startete mit dem Umschreiben der Regionen-Links und deren Analyse. Anschließend integrierte ich die Neuerungen vom Backend und erstellte die API für den Upload von Bildern. Nachdem das fertig war fügte ich die APIs zusammen, um Vorlagen vollständig auf dem Server zu speichern und abzurufen. Dazu schrieb ich einen eigenen JSON Decoder-Funktion, um die App internen Datentypen zu unterstützen. Zusätzlich wurde die App etwas benutzerfreundlicher und ein Problem mit dem Start der iPad Version wurde behoben. Nach einem Meeting folgten noch weitere Absprachen mit Tobias und ich arbeitete weiter an dem Bericht.
+	Diese Woche startete mit dem Umschreiben der Regionen-Links und deren Analyse. Anschließend integrierte ich die Neuerungen vom Backend und erstellte die API für den Upload von Bildern. Danach fügte ich die APIs zusammen, um Vorlagen vollständig auf dem Server zu speichern und ab zu rufen. Dazu schrieb ich eine eigene JSON-Decoder-Funktion, um die App internen Datentypen zu unterstützen. Zusätzlich wurde die App etwas benutzerfreundlicher und ein Problem mit dem Start der iPad Version wurde behoben. Nach einem Meeting folgten noch weitere Absprachen mit Tobias und ich arbeitete weiter an dem Bericht.
+	%%%%%%%%%%%% Links
 	
 	\textbf{14.04. - 19.04.}
-	Ein kritisches Problem mit den Sessions aus der vorherigen Woche konnte in dieser endlich gelöst werden. Dazu konnte ich die Anwendung etwas optimieren und einen sehr großen Teil des Beleges fertig stellen. Dabei half auch die Beantwortung vieler Fragen während eines Meetings mit dem Betreuer. Allerdings entstanden Probleme mit der Datenbank, die die Funktionalität der App einschränkt.
+	Ein kritisches Problem mit den Sessions der vorherigen Woche konnte in dieser endlich gelöst werden. Dazu konnte ich die Anwendung etwas optimieren und einen sehr großen Teil des Beleges fertig stellen. Dabei half auch die Beantwortung vieler Fragen während eines Meetings mit dem Betreuer. Allerdings entstanden Probleme mit der Datenbank, die die Funktionalität der App einschränkten.
 	
 	\textbf{20.04. - 26.04.}
-	Ziel dieser Woche war es so viel wie möglich des Belegs zu schreiben. Dafür fertigte ich einige Schemata und Bilder an. Zusätzlich konnte ich einige Fehler der App entdecken und lösen, so dass die Performance verbessert und Server-Aufrufe eingespart wurden. Außerdem kam die Online-Texterkennung über den Server hinzu, sowie die zweite Korrektur in der Texterkennung mit Vision. Jedoch konnte die Online-Texterkennung auf Grund von Server-Problemen nicht getestet werden. Auch in dieser Woche konnte einige Fragen zum Aufbau des Berichts in einem Meeting geklärt werden. 
+	Ziel dieser Woche war es, so viel wie möglich des Belegs zu schreiben. Dafür fertigte ich einige Schemata und Bilder an. Zusätzlich konnte ich einige Fehler der App analysieren und beheben, sodass die Performance verbessert und Server-Aufrufe eingespart wurden. Außerdem kam die Online-Texterkennung über den Server hinzu sowie die zweite Korrektur in der Texterkennung mit Vision. Jedoch konnte die Online-Texterkennung auf Grund von Server-Problemen nicht getestet werden. Auch in dieser Woche konnten einige Fragen zum Aufbau des Berichts in einem Meeting geklärt werden. 
 	
 	\textbf{27.04. - 03.05.}
-	Im Mittelpunkt der Woche stand der Bericht, an dem ich täglich arbeitet. Ich erstellte einige Bilder für ihn und den Vortrag. Auch gab es diese Woche wieder ein Meeting.
+	Im Mittelpunkt der Woche stand der Bericht, an dem ich täglich arbeitete. Ich erstellte einige Bilder für ihn und den Vortrag. Auch gab es diese Woche wieder ein Meeting.
 	
 	\textbf{04.05. - 10.05.}
 	
