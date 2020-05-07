@@ -2,10 +2,18 @@
 \newcommand{\footurl}[2]{\footnote{#1 \href{#2}{\url{#2}}}}
 % Bei Abgabe löschen
 \documentclass[notables, nomenclature, oneside, 150]{HSMW-Thesis}
-
+\usepackage{setspace}
 \usepackage{hyperref}
 \hypersetup{
-	urlcolor=black
+	urlcolor			= black ,
+	hidelinks		= true	,
+	hyperfootnotes	= false ,
+	pdftitle    		= {Entwicklung einer Dokumenten-Scanner-App},
+  	pdfsubject  		= {Digitalisierung der Verwaltung an der Hochschule Mittweida},
+  	pdfauthor   		= {Hannes Steiner},
+  	pdfkeywords 		= {},
+  	pdfcreator  		= {pdflatex},
+  	pdfproducer 		= {LaTeX with hyperref}
 }
 
 \usepackage{subcaption}
@@ -45,23 +53,17 @@
 \begin{document}
 
 \begin{Referat}
-% Referat
-Im Rahmen eines zwölfwöchigem Forschungspraktikums an der Hochschule Mittweida arbeiteten der Student Tobias Kallauke und der Verfasser des Berichts gemeinsam an einem Projekt mit dem Hintergrund der Digitalisierung der Verwaltung von Lehr- und Forschungseinrichtung. Dabei entwickelten sie ein prototypisches Software-System, womit Hochschulmitarbeiter kontrollierte Klausuren einscannen und digitalisieren können, sodass das Übertragen der Noten in das Notensystem nicht mehr per Hand erledigt werden muss. 
+Im Rahmen eines zwölfwöchigem Forschungspraktikums an der Hochschule Mittweida arbeiteten der Student Tobias Kallauke und der Verfasser des Berichts gemeinsam an einem Projekt mit dem Hintergrund der Digitalisierung der Verwaltung von Lehr- und Forschungseinrichtung. Dabei entwickelten sie ein prototypisches Software-System, womit kontrollierte Klausuren eingescannt und digitalisiert werden können.
 \end{Referat}
 
-%\begin{Vorwort}
-%% Vorwort
-%\end{Vorwort}
-
 \Hauptteil
-% Diese Anweisung nicht loeschen!
 
 %%%%%%%%%%%%%%% - EINLEITUNG - %%%%%%%%%%%%%%%
 
 \chapter{Einleitung}
 	Digitalisierung wird gängig als Integration von digitaler Technologie in den Alltag verstanden und soll helfen Zeit einzusparen. Mit diesem Gedanken initiierten die Mitarbeiter Holger Langner und Falk Schmidsberger der Hochschule Mittweida das Projekt \textit{Memo Space}. Im Zuge dessen sollen kleinere Forschungsergebnisse entstehen, die richtungsweisend für die Digitalisierung der Verwaltung von Lehr- und Forschungseinrichtung sind.
 
-	Im Rahmen eines zwölfwöchigem Forschungspraktikums an der Hochschule Mittweida arbeiteten der Student Tobias Kallauke und der Verfasser des Berichts gemeinsam an einem Forschnungsprojekt von Memo Space. Dabei entwickelten sie ein prototypisches Software-System, mit dem die Arbeit von vielen Hochschulmitarbeitern erleichtert und auch Zeit eingespart werden soll.
+	Im Rahmen eines zwölfwöchigem Forschungspraktikums an der Hochschule Mittweida arbeiteten der Student Tobias Kallauke und der Verfasser des Berichts gemeinsam an einem Forschungsprojekt von Memo Space. Dabei entwickelten sie ein prototypisches Software-System zum Einscannen und Digitalisieren von kontrollierten Klausuren.
 
 %%%%%%%%%%%%%%% - HSMW - %%%%%%%%%%%%%%%
 
@@ -241,7 +243,7 @@ Im Rahmen eines zwölfwöchigem Forschungspraktikums an der Hochschule Mittweida
 		
 		Eine typische Aufgabe dieser Entwurfsphase ist die Entscheidung über die Datenhaltung, die Verteilung im Netz und die Benutzeroberfläche des Software-Systems\footurl{Vorlesung 9, Folie 27 aus Softwaretechnik Grundlagen von Prof. Dr.-Ing. Wilfried Schubert (2019) -}{https://www.staff.hs-mittweida.de/~wschub/intranet/ss19/Fach_SWT/Fach_SWT_Zeitplan.htm}. Jedoch standen diese Grundsatzentscheidungen schon zu Beginn des Praktikums, durch die Kenntnisse von Tobias Kallauke und dem Verfasser fest. Der Server verwendet zur Datenspeicherung PostgreSQL\footurl{PostgreSQL Internetseite -}{https://www.postgresql.org/}, eine relationale Datenbank, sowie das Dateiverzeichnis für Bilder, während die App keine Daten persistent speichert. Durch die Aufteilung von App und Server handelt es sich um eine sogenannte Client/Server-Architektur. Für die Benutzeroberfläche der iOS-App wird, wie schon erwähnt, das deklarative SwiftUI verwendet. Weitere Informationen zum Backend und der Android-App befinden sich im Praktikumsbericht von Tobias Kallauke.
 		
-		Jedoch mussten noch Arbeit in den Workflow und in die Architektur der App gesteckt werden. Zur Definition einzelner Teil-Workflows, die zusammenhängende Aufgaben umfassen, wurden eine Art Zustandsautomaten bzw. Flussdiagramm beschrieben. Ein Beispiel, was noch einmal geändert in der App verwendet wurde befindet sich im \autoref{ch:workflow}. Die Modelle halfen dabei Views zu entwickeln und deren Design festzulegen. Das Aussehen der App sollten sich jedoch im Laufe der Zeit noch ändern, denn ersteinmal stand die Umsetzung des Konzepts im Vordergrund.
+		Jedoch mussten noch Arbeit in den Workflow und in die Architektur der App gesteckt werden. Zur Definition einzelner Teil-Workflows, die zusammenhängende Aufgaben umfassen, wurden eine Art Zustandsautomaten bzw. Flussdiagramm beschrieben. Ein Beispiel, was noch einmal geändert in der App verwendet wurde befindet sich im \autoref{ch:workflow}. Die Modelle halfen dabei Views zu entwickeln und deren Design festzulegen. Das Aussehen der App sollten sich jedoch im Laufe der Zeit noch ändern, denn erst einmal stand die Umsetzung des Konzepts im Vordergrund.
 
 		Aus den Designs und den Teil-Workflows heraus entstand ein grober Plan, wie die Daten in der App gehandhabt werden sollten. Da \textit{SwiftUI} das Entwurfsmuster MVVM umsetzt, benötigt es eine Struktur für das ViewModel und für den Datenfluss der asynchronen Server-Rückrufe. Jedoch stellte sich die Entwicklung dieser Strukturen, auch schon während des allerersten Prototyps, als problematisch heraus. Denn auch bei steigender Komplexität soll das ViewModel noch übersichtlich bleiben, um eine schnelle Weiterentwicklung zu gewährleisten. Aus diesen Gründen begann die Suche nach einer besseren Lösung, bei der die JavaScript-Bibliothek \textit{Redux.js} zur Verwaltung von Zustandsinformationen in Webanwendung entdeckt wurde. 
 
@@ -283,7 +285,7 @@ Im Rahmen eines zwölfwöchigem Forschungspraktikums an der Hochschule Mittweida
 		
 		Die App wurde ausschließlich in der Programmiersprache Swift geschrieben. Zusätzlich wurden die Frameworks SwiftUI, Vision und VisionKit von Apple, sowie das Framework Kingfisher\footurl{Kingfisher GitHub Repository -}{https://github.com/onevcat/Kingfisher}, zum Downloaden und Cachen von Bildern verwendet. Das Vision-Framework führt Erkennung von Gesichts- und Gesichtsmarkierungen, Texterkennung, Barcode-Erkennung, Bildregistrierung und allgemeine Merkmalsverfolgung durch. Jedoch wurde in der App nur die integrierte Texterkennung benutzt. Es ist aber anzunehmen, das Algorithmen aus VisionKit von Vision zur Dokumenten-Erkennung verwendet. Für mehr Informationen über die Frameworks SwiftUI und VisionKit siehe im \autoref{ch:prototyp} \autoref{sc:analyse}.
 		
-		Zum Ändern und Testen des Backends wurde außerdem Visual Studio Community bzw. Visual Studio Code\footurl{Visual Studio Internetseite -}{https://visualstudio.microsoft.com/de/} mit dem REST Client Plugin\footurl{REST Client -}{https://marketplace.visualstudio.com/items?itemName=humao.rest-client} , zum Testen der Server-Schnittstellen verwendet. Das Backend konnte dann als lokaler Server auf dem Entwicklungscomputer gestartet und über die IP-Adresse 0.0.0.0 sogar im lokalen Netzwerk aufgerufen werden. Für die Verwaltung der PostgreSQL-Datenbank genügte das Tool PgAdmin4\footurl{PgAdmin Internetseite -}{https://www.pgadmin.org/}. Damit ist es möglich einzelne Einträge oder auch ganze Tabellen der Datenbank zu bearbeiten.
+		Zum Ändern und Testen des Backends wurde außerdem Visual Studio Community bzw. Visual Studio Code\footurl{Visual Studio Internetseite -}{https://visualstudio.microsoft.com/de/} mit dem REST Client Plugin\footurl{REST Client Repository -}{https://github.com/Huachao/vscode-restclient} , zum Testen der Server-Schnittstellen verwendet. Das Backend konnte dann als lokaler Server auf dem Entwicklungscomputer gestartet und über die IP-Adresse 0.0.0.0 sogar im lokalen Netzwerk aufgerufen werden. Für die Verwaltung der PostgreSQL-Datenbank genügte das Tool PgAdmin4\footurl{PgAdmin Internetseite -}{https://www.pgadmin.org/}. Damit ist es möglich einzelne Einträge oder auch ganze Tabellen der Datenbank zu bearbeiten.
 		
 		\begin{figure}[th]
     		\centering
@@ -568,7 +570,7 @@ Im Rahmen eines zwölfwöchigem Forschungspraktikums an der Hochschule Mittweida
 	\section{Verbesserung der Klausuren-Vorlage}\label{sc:vorlage}
 		Dieser Abschnitt beschäftigt sich mit Verbesserungen und Änderungen an Hand der Klausur in \autoref{fig:klausur}. Sie steht jedoch stellvertretend für die Klausuren-Vorlage der Fakultät CB. Alle folgenden Vorschläge haben den Hintergrund die App bei der Digitalisierung zu unterstützen und basieren auf der gesammelten Erfahrung mit der Anwendung, während der Entwicklung sowie den angegeben Problemen aus \autoref{sc:grenzen}.
 	
-		Der erste Vorschlag bezieht sich auf die Problematik, dass die Ecken und Kanten bei der Erkennung des Dokuments entscheidend sind. Sie sind die wichtigsten Referenz-Punkte bei der Objekt-Erkennung, können aber unter bestimmten Bedienungen, wie im \autoref{ssc:erkennen} erklärt, nicht immer erkannt werden. Aus diesem Grund empfiehlt es sich eigene Referenzpunkt auf dem Dokument anzubringen. Beispielsweise durch einen Rahmen, wie es schon auf der Klausur (\ref{fig:seite1}) gemacht wurde, oder durch QR-Code ähnliche Muster. Der Vorteil bei eigenen Referenzpunkt ist, dass sie so gestaltet werden können, dass sie sich immer vom Blatt abheben. So mit ist die Dokumenten-Erkennung nur noch vom Licht abhängig. Ein weiterer Vorteil ist, dass dadurch die Kamera noch näher an den Text heran kann und die Auflösung noch besser wird. Der größte Nachteil daran ist allerdings, dass die Erkennung nicht mehr allein von Frameworks übernommen werden kann. Es müsste ein neuronales Netz trainiert werden, welche diese Referenzpunkte in Bildern erkennt. 
+		Der erste Vorschlag bezieht sich auf die Problematik, dass die Ecken und Kanten bei der Erkennung des Dokuments entscheidend sind. Sie sind die wichtigsten Referenz-Punkte bei der Objekt-Erkennung, können aber unter bestimmten Bedienungen, wie im \autoref{ssc:erkennen} erklärt, nicht immer erkannt werden. Aus diesem Grund empfiehlt es sich eigene Referenzpunkt auf dem Dokument anzubringen. Beispielsweise durch einen Rahmen, wie es schon auf der Klausur (\ref{fig:seite1}) gemacht wurde, oder durch QR-Code ähnliche Muster. Der Vorteil bei eigenen Referenzpunkt ist, dass sie so gestaltet werden können, dass sie sich immer vom Blatt abheben. So mit ist die Dokumenten-Erkennung nur noch vom Licht abhängig. Ein weiterer Vorteil ist, dass dadurch die Kamera noch näher an den Text heran kann und die Auflösung noch besser wird. Der größte Nachteil daran ist allerdings, dass die Erkennung nicht mehr allein von Frameworks übernommen werden kann. Es müsste ein künstliches neuronales Netz trainiert werden, welche diese Referenzpunkte in Bildern erkennt. 
 	
 		Der zweite Vorschlag bezieht sich auf den \autoref{ssc:problemevorlage}. Einige dort angesprochenen Probleme bezogen sich auf die Ungewissheit, wie groß eine Region abzustecken ist. Die einfachste Lösung ist es, einen genauen Rahmen für alle Felder fest zu legen. Auch müssen alle Felder ausreichend beschriftet sein, so dass jedem klar ist, wo was hineinzutragen ist. Und um das Problem zu vermeiden, dass der Rahmen als ein Buchstabe oder eine Zahl erkannt wird, kann dieser nur schwach eingezogen werden. Mithilfe von Bildverarbeitung-Algorithmen könnten diese feinen Linien dann auch ohne Verlust der wichtigen Daten heraus gerechnet werden. 
 		
@@ -588,7 +590,7 @@ Im Rahmen eines zwölfwöchigem Forschungspraktikums an der Hochschule Mittweida
 		Auf dem \hyperref[pa:benutzer]{Abschnitt \textit{Verbesserung der Benutzerfreundlichkeit und des Workflows}} \xspace aufbauend, ist folgende Idee entstanden. Durch die generischen Vorlagen ist es möglich neben Klausuren auch andere Dokumente nach diesem Schema zu digitalisieren. Beispielsweise Krankenscheinen, Urlaubsanträgen oder Arbeitsverträgen. Dafür könnten spezielle Workflows zum Erstellen einer Vorlage implementiert werden und weitere Regionen-Datentypen hinzukommen, wie z. B. Datum, IBAN-Nummern, E-Mail-Adressen und Telefonnummern.
 	
 	\paragraph*{Server-Schnittstellen} 
-		Zum Zeitpunkt der Abgabe sind in der iOS-App nicht alle verfügbaren Server-Schnittstellen implementiert. Es fehlen noch das Ändern und Löschen ganzer Vorlagen und deren Einzelteile, wie Seiten und Regionen. Dafür müssten Views entwickelt werden, die das Ändern und Löschen umsetzten. Durch SwiftUI ist es aber möglich Views und View-Komponenten wiederzuverwenden, so dass nicht von vorne begonnen werden muss. 		
+		Zum Zeitpunkt der Abgabe sind in der iOS-App nicht alle verfügbaren Server-Schnittstellen implementiert. Es fehlt noch das Ändern ganzer Vorlagen und deren Einzelteile, wie Seiten und Regionen. Die Views zum Ändern einer Scan-Vorlage sind schon implementiert, da die Views vom Erstellen einer Scan-Vorlage an der Stelle wieder verwendet werden konnte. Es fehlt lediglich die interne Logik sowie Schnittstellen zum Server.	
 	
 	\paragraph*{Erweiterung der Texterkennung} 
 		Wie im \autoref{sc:grenzen} erwähnt unterstützten Vision und Tesseract das Erkennen von Handschrift nicht. Jedoch wäre es möglich eigne Neuronale-Netze zu trainieren und implementieren, die diese Aufgabe übernehmen. Beispielsweise existiert ein Datensatz an handgeschriebene Ziffern \footurl{MNIST-Datensatz -}{http://yann.lecun.com/exdb/mnist/}, mit dem solch ein einfaches Netz für das Erkennen von Ziffern, trainiert werden könnte. Außerdem bietet die Server Architektur die Möglichkeit, weitere oder mehr OCR-Engines zu implementieren. Für mehr Details siehe im Praktikumsbericht von Tobias Kallauke.
@@ -643,6 +645,34 @@ Im Rahmen eines zwölfwöchigem Forschungspraktikums an der Hochschule Mittweida
 		\item Vorlage an Server senden
 	\end{enumerate}
 	
+\chapter{Zusätzliche Funktionalität} \label{ch:accses}
+	
+\chapter{Installation der iOS App}\label{ch:installation}
+	Im folgenden Kapitel ist beschrieben, wie die App auf einem iPhone oder iPad zu installieren ist.
+	
+	\textbf{Vorraussetzungen:}
+	\begin{itemize}
+		\item macOS 10.15.4 oder neuer
+		\item Xcode 11.4.1 oder neuer installiert
+		\item iPhone mit iOS 13.0 / iPad mit iPadOS 13.4 oder neuer
+		\item Internetverbindung
+	\end{itemize}
+	
+	\textbf{Installation:}
+	Stellen sie sicher, dass Xcode installiert und das iPhone/iPad mit dem Mac über ein USB-Kabel verbunden sind.
+	\begin{enumerate}
+		\item Lade das Projekt herunter. (.zip anschließend entpacken)
+		\item Öffne die Datei \textit{DocumentenScanner.xcodeproj}. Xcode öffnet sich.
+		\item Klicke in der Ordnerübersicht von Xcode ganz oben auf das Xcode Projekt \textit{DocumentenScanner}.
+		\item Wähle im mittleren Fenster nun \textit{Targets} \textit{DocumentenScanner} aus. (Entweder links oben als Dropdown-Menu oder in dem geöffneten Menü links im mittleren Fenster.)
+		\item Wähle den Reiter \textit{Signing & Capabilities} aus. Es erscheint im mittleren Fenster ein Unterpunkt Signing.
+		\item Wähle ein passendes Team aus oder lege ein an
+		\item Ändere Bundle Identifier passend zu dem ausgewählten Team. Z. B. \textit{com.<TeamName>.DocumentenScanner}. Es taucht ein Button auf, mit dem die App signiert werden kann. Falls kein Button erscheint mache mit den nächsten Schritten weiter und kommen bei einer auftretenden Fehlermeldung bezüglich der Signierung hier her zurück. Der Button ist dann zu sehen.
+		\item Wähle nun ein Simulator oder dein angeschlossenes Gerät am oberen Bildrand, links der Mitte aus.
+		\item Drücke den Start bzw. Run Button links neben der Auswahl der Simulatoren/Geräte.
+		\item Folge den Anweisungen von Xcode und auf dem iPhone/iPad. Beim Verwenden eines Simulators tauchen keine weiteren Anweisungen auf. Die App startet automatisch. 
+	\end{enumerate}
+	
 
 \chapter{Tätigkeitsbericht}
 	\textbf{24.02. - 01.03.}
@@ -677,6 +707,8 @@ Im Rahmen eines zwölfwöchigem Forschungspraktikums an der Hochschule Mittweida
 	Im Mittelpunkt der Woche stand der Bericht, an dem ich täglich arbeitete. Ich erstellte einige Bilder für ihn und den Vortrag. Auch gab es diese Woche wieder ein Meeting.
 	
 	\textbf{04.05. - 10.05.}
+	Online OCR geschafft, Beleg so gut wie fertig, 
+	
 	
 	\textbf{11.05. - 15.05.}
 
