@@ -2,6 +2,8 @@
 \newcommand{\footurl}[2]{\footnote{#1 \href{#2}{\url{#2}}}}
 % Bei Abgabe löschen
 \documentclass[notables, nomenclature, oneside, 150]{HSMW-Thesis}
+
+\usepackage{enumitem}
 \usepackage{setspace}
 \usepackage{hyperref}
 \hypersetup{
@@ -82,14 +84,17 @@ Im Rahmen eines zwölfwöchigem Forschungspraktikums an der Hochschule Mittweida
 	\section{Digitalisieren der Klausur-Daten}
 	Für genau diesen Vorgang wird nach einer effizienteren Lösung gesucht. Die Prüfer sollen effektiv und möglichst zeitsparend diese Aufgabe verrichten, ohne dabei ihre Aufmerksamkeitsspanne zu überlasten. Dazu sollen die für das Eintragen der Note relevanten Daten auf der Klausur digitalisiert und ein digitales tabellerisches Format gebracht werden. Grund dafür ist, dass durch solch eine Tabelle das Eintragen automatisiert werden kann. Darüber hinaus empfiehlt es sich, digitale Kopien der Klausuren abzuspeichern, um sie nicht nur analog zu archivieren.
 	
+	\section{Klausuren-Vorlage}\label{sc:klausuren-vorlage}
+	Eine Klausuren-Vorlage bzw. ein Gestaltungsleitfaden für Klausuren der Fakultät \textit{Angewandte Computer- und Biowissenschaften} bietet außerdem die Möglichkeit der Kontrolle des Prüfers. Durch das vorgegebene Layout der Klausur ist es möglich, Fehler des Prüfers zu erkennen. Die Klausur in \autoref{fig:klausur} ist nach dieser Klausuren-Vorlage angefertigt worden. Auf dem Deckblatt (\ref{fig:seite1}) der Prüfung ist eine Tabelle, mit drei Zeilen und für jede Aufgabe eine Spalte. In der ersten Zeile befinden sich die Nummern der Aufgaben, in der zweiten die zu erreichenden Punkte der Aufgabe. Und in der dritten Zeile trägt der Prüfer die erbrachten Punkte des Studenten ein. Unter der Tabelle befindet sich ein Feld für die erreichte Gesamtpunktzahl sowie ein weiteres für die aus den Punkten resultierende Note. Es soll nun überprüft werden, ob die Summe der erreichten Punkte mit der Gesamtpunktzahl übereinstimmt und weiter soll auch die Note errechnet und mit dem Ergebnis der Prüfers verglichen werden. Eine weiteres Merkmal der Klausuren-Vorlage ist ein Feld, für die vom Studenten erreichten Punkte über jeder Aufgabenstellung auf den hinteren Seiten. Zu sehen sind solche Felder in \autoref{fig:seite2} am rechten Seitenrand. Die dortige Angabe sollte mit der, in der Tabelle auf dem Deckblatt (\ref{fig:seite1}) übereinstimmen und bietet somit noch eine weitere Möglichkeit der Kontrolle an.
+	
 	\begin{figure}[th]
     	\centering
-   		\begin{subfigure}[t]{0.4\textwidth}
+   		\begin{subfigure}[t]{0.48\textwidth}
         	\frame{\includegraphics[width=0.96\textwidth]{img/seite1}}
        		\caption{Deckblatt der Klausur}
         	\label{fig:seite1}
     	\end{subfigure}
-    	\begin{subfigure}[t]{0.4\textwidth}
+    	\begin{subfigure}[t]{0.48\textwidth}
         	\frame{\includegraphics[width=0.96\textwidth]{img/seite2}}
         	\caption{Erste Seite der Klausur mit drei Aufgaben}
         	\label{fig:seite2}
@@ -98,9 +103,6 @@ Im Rahmen eines zwölfwöchigem Forschungspraktikums an der Hochschule Mittweida
     	\caption*{\textit{Die Bilder sind beim Erstellen einer Scan-Vorlage mit der App entstanden.}}
     	\label{fig:klausur}
 	\end{figure}
-	
-	\section{Klausuren-Vorlage}\label{sc:klausuren-vorlage}
-	Eine Klausuren-Vorlage bzw. ein Gestaltungsleitfaden für Klausuren der Fakultät \textit{Angewandte Computer- und Biowissenschaften} bietet außerdem die Möglichkeit der Kontrolle des Prüfers. Durch das vorgegebene Layout der Klausur ist es möglich, Fehler des Prüfers zu erkennen. Die Klausur in \autoref{fig:klausur} ist nach dieser Klausuren-Vorlage angefertigt worden. Auf dem Deckblatt (\ref{fig:seite1}) der Prüfung ist eine Tabelle, mit drei Zeilen und für jede Aufgabe eine Spalte. In der ersten Zeile befinden sich die Nummern der Aufgaben, in der zweiten die zu erreichenden Punkte der Aufgabe. Und in der dritten Zeile trägt der Prüfer die erbrachten Punkte des Studenten ein. Unter der Tabelle befindet sich ein Feld für die erreichte Gesamtpunktzahl sowie ein weiteres für die aus den Punkten resultierende Note. Es soll nun überprüft werden, ob die Summe der erreichten Punkte mit der Gesamtpunktzahl übereinstimmt und weiter soll auch die Note errechnet und mit dem Ergebnis der Prüfers verglichen werden. Eine weiteres Merkmal der Klausuren-Vorlage ist ein Feld, für die vom Studenten erreichten Punkte über jeder Aufgabenstellung auf den hinteren Seiten. Zu sehen sind solche Felder in \autoref{fig:seite2} am rechten Seitenrand. Die dortige Angabe sollte mit der, in der Tabelle auf dem Deckblatt (\ref{fig:seite1}) übereinstimmen und bietet somit noch eine weitere Möglichkeit der Kontrolle an.
 	
 	\section{Klausuren-Vorlage verbessern}
 	Nachdem ein erster Prototyp zum Digitalisieren der Klausur-Daten entwickelt wurde, sollen außerdem Prüfungs-Vorlagen entstehen, die für die Digitalisierung optimiert sind. Dabei sollen Probleme, die beim Einscannen der aktuellen Vorlage erkannt wurden, behoben werden. 
@@ -112,7 +114,6 @@ Im Rahmen eines zwölfwöchigem Forschungspraktikums an der Hochschule Mittweida
 
 \chapter{Anforderungen}\label{ch:anforderungen}
 	In diesem Kapitel wird erläutert, was die Anforderungen an das Software-System sind. 
-%	Die hier aufgeführten Ideen entstanden während der Anforderungsplanung, wie im Kapitel \ref{ch:prototyp} nach zu lesen ist.
 
 	Es soll eine App für das Betriebsystem iOS entstehen, mit der Klausuren digitalisiert werden können. Genauer müssen die, für die Notenfreigabe relevanten Daten der Klausur, in ein tabellarisches Format gebracht werden. Dazu soll die iOS-Anwendung Bilder von ausgefüllten Prüfungen aufnehmen können und den Inhalt mithilfe von Texterkennung digitalisieren. 
 	
@@ -158,7 +159,17 @@ Im Rahmen eines zwölfwöchigem Forschungspraktikums an der Hochschule Mittweida
 		\begin{enumerate}
 			\item Zu Beginn wird jede Seite der Klausur fotografiert. Dabei wird in jedem Bild das Dokument erkannt, vom Hintergrund getrennt bzw. ausgeschnitten und perfekt ausgerichtet. Zudem wird der Kontrast erhöht, sodass die Schrift leichter lesbar wird. Die \autoref{fig:klausur} resultierte aus dem Prozess (siehe auch \autoref{fig:v3}). 
 		
-			\item Anschließend markiert der Benutzer diejenigen Regionen auf jeder Seite, die zu digitalisieren und/oder zu kontrollieren sind. In dem Schema \ref{fig:schema1} sind die Regionen blau hinterlegt (siehe auch \autoref{fig:v9}). Zusätzlich muss jeder Region eine Bezeichnung und einer der folgenden Datentypen zugeordnet werden: Unbekannt, Vorname, Nachname, Matrikelnummer, Seminargruppe, Punkte und Note (siehe auch \autoref{fig:v8} und \ref{fig:v9}). Die Angabe des Datentyps ist wichtig, da dadurch eindeutig wird, ob es sich um die Note oder den Vornamen des Studenten handelt. Diese Eindeutigkeit wird nicht nur für die automatische Erstellung der Tabelle benötigt, sondern auch für die Optimierung der Texterkennung. \label{it:zwei}
+			\item Anschließend markiert der Benutzer diejenigen Regionen auf jeder Seite, die zu digitalisieren und/oder zu kontrollieren sind. In dem Schema \ref{fig:schema1} sind die Regionen blau hinterlegt (siehe auch \autoref{fig:v9}). Zusätzlich muss jeder Region eine Bezeichnung und einer der folgenden Datentypen zugeordnet werden (siehe auch \autoref{fig:v8} und \ref{fig:v9}): 
+				\begin{itemize}
+					\item Unbekannt,
+					\item Vorname,
+					\item Nachname,
+					\item Matrikelnummer,
+					\item Seminargruppe,
+					\item Punkte und
+					\item Note
+				\end{itemize}
+				Die Angabe des Datentyps ist wichtig, da dadurch eindeutig wird, ob es sich um die Note oder den Vornamen des Studenten handelt. Diese Eindeutigkeit wird nicht nur für die automatische Erstellung der Tabelle benötigt, sondern auch für die Optimierung der Texterkennung. \label{it:zwei}
 			
 			\item Als letztes wird die Vorlage abgespeichert, welche dann automatisch an einen Server gesendet wird, so dass andere diese Vorlage ebenfalls benutzen können.
 		\end{enumerate}
@@ -169,13 +180,17 @@ Im Rahmen eines zwölfwöchigem Forschungspraktikums an der Hochschule Mittweida
  	
  		Beim festlegen der Kontrollmechanismen wird wie folgt vorgegangen:
  		\begin{enumerate}
- 			\item Der Benutzer wählt ein Kontrollmechanismus aus. Zur Auswahl stehen, entweder \textit{zwei Regionen}, \textit{die Gesamtpunktzahl} oder \textit{die Note} vergleichen. 
- 			\item Aus den zuvor angelegten Regionen müssen nun die passenden Regionen ausgewählt werden. Abhängig von dem ausgewählten Kontrollmechanismus geben die beiden zu vergleichende Komponente dem Benutzer Auskunft darüber, welche und wie viele Regionen auszuwählen sind.
- 			\item Der Kontrollmechanismus kann gespeichert werden, sobald in jeder zu vergleichenden Komponente die Mindestzahl an auszuwählenden Regionen erreicht wurde. Diese werden in der Scan-Vorlage hinterlegt und mit an den Server gesendet, sodass alle Benutzer bei den Vorlagen die selben Kontrollmechanismen besitzen.
+ 			\item Der Benutzer wählt ein Kontrollmechanismus aus. Zur Auswahl stehen:
+ 				\begin{itemize}
+ 					\item zwei Regionen vergleichen,
+ 					\item die Gesamtpunktzahl berechnen und mit der eingetragenen Gesamtpunktzahl vergleichen,
+ 					\item oder die Note aus der Gesamtpunktzahl berechnen und mit der eingetragenen vergleichen.
+ 				\end{itemize}
+ 			\item Aus den zuvor angelegten Regionen müssen nun die passenden Regionen ausgewählt werden. Abhängig von dem zuvor gewählten Kontrollmechanismus wird dem Benutzer Auskunft darüber gegeben, welche und wie viele Regionen auszuwählen sind.
+ 			\item Der Kontrollmechanismus kann gespeichert werden, sobald in jeder zu vergleichenden Komponente die Mindestanzahl an auszuwählenden Regionen erreicht wurde. Diese werden in der Scan-Vorlage hinterlegt und mit an den Server zum Speichern gesendet. So werden alle Benutzer zu den Scan-Vorlagen die selben Kontrollmechanismen besitzen.
  		\end{enumerate}
  		
  	\section{Scan-Vorlage verwenden}
- 	
  		Im folgenden Abschnitt wird zuerst verkürzt und anschließend detailliert geschildert, wie eine erstellte Scan-Vorlage zu verwenden ist und wie diese funktioniert.
  	
  		\begin{figure}[th]
@@ -185,7 +200,7 @@ Im Rahmen eines zwölfwöchigem Forschungspraktikums an der Hochschule Mittweida
     		\label{fig:schablone2}
     	\end{figure}
  
- 		Nach dem Erstellen einer Scan-Vorlage kann diese auf ausgefüllten Klausuren angewandt werden. In \autoref{fig:schablone2} wird der Ablauf schematisch dargestellt. Zuerst werden die ausgefüllten Prüfungs-Seiten einer Klausur fotografiert. Anschließend stellen die digitalen Schablonen die relevanten Informationen jeder Seite für den nächsten Schritt bereit. Optical character recognition (OCR)\nomenclature{OCR}{optical character recognition, deutsch: optische Zeichenerkennung und im deutschen Synonym für Texterkennung}, auf deutsch optische Zeichenerkennung, wird dazu benutzt, die Daten aus den Schablonen zu digitalisieren. 
+ 		Nach dem Erstellen einer Scan-Vorlage kann diese auf ausgefüllten Klausuren angewandt werden. In \autoref{fig:schablone2} wird der Ablauf schematisch dargestellt. Zuerst werden die ausgefüllten Prüfungs-Seiten einer Klausur fotografiert. Anschließend stellen die digitalen Schablonen die relevanten Informationen jeder Seite für den nächsten Schritt zur Verfügung. Optical character recognition (OCR)\nomenclature{OCR}{optical character recognition, deutsch: optische Zeichenerkennung und im deutschen Synonym für Texterkennung}, auf deutsch optische Zeichenerkennung, wird dazu benutzt, die Daten aus den Schablonen zu digitalisieren. 
 		
 		\begin{figure}[th]
     		\centering
@@ -197,22 +212,22 @@ Im Rahmen eines zwölfwöchigem Forschungspraktikums an der Hochschule Mittweida
     	In der folgenden Aufzählung wird detailliert beschrieben, wie die Abfolge beim Verwenden einer Scan-Vorlage ist. Der Vorgang ist in \autoref{fig:schema2} schematisch dargestellt.
 	
 		\begin{enumerate}
-			\item Die Seiten der Klausur müssen zuerst in derselben Reihenfolge, wie in der Scan-Vorlage fotografiert werden. Anschließend werden die Regionen der Scan-Vorlage auf das jeweilige Bild angewendet. Bei dem Prozess entstehen Bildausschnitte, in denen die relevanten Informationen enthalten sind.
+			\item Die Seiten der Klausur müssen dazu in derselben Reihenfolge, wie in der Scan-Vorlage fotografiert werden. Anschließend werden die Regionen der Scan-Vorlage auf das jeweilige Bild angewendet. Bei dem Prozess entstehen Bildausschnitte, in denen die relevanten Informationen enthalten sind.
 			\item Die entstandenen Bildausschnitte werden Seitenweise in die Texterkennung überführt.
-			\item Die App digitalisiert mithilfe von OCR den Inhalt der Ausschnitte. Der Datentyp der zugehörigen Region aus der Scan-Vorlage nimmt nun Einfluss auf das Ergebnis. Durch ihn wird während der Worterkennungsphase eine Liste an vordefinierten möglichen Ergebnissen eingespeist. Diese Liste hat Vorrang vor dem sogenannten Standard-Wörterbuch und verbessert dadurch die Texterkennung. Ein Beispiel für solch eine Liste könnten, alle möglichen Noten sein. Auch vorstellbar ist, dass alle Seminargruppen oder Namen von Personen, die an der Klausur teilgenommen haben, dort verwendet werden.
+			\item \label{it:ocr} Die App digitalisiert mithilfe von OCR den Inhalt der Ausschnitte. Der Datentyp der zugehörigen Region aus der Scan-Vorlage nimmt nun Einfluss auf das Ergebnis. Durch ihn wird während der Worterkennungsphase eine Liste an vordefinierten möglichen Ergebnissen eingespeist. Diese Liste hat Vorrang vor dem sogenannten Standard-Wörterbuch und verbessert dadurch die Texterkennung. Ein Beispiel für solch eine Liste könnten, alle möglichen Noten sein. Auch vorstellbar ist, dass alle Seminargruppen oder Namen von Personen, die an der Klausur teilgenommen haben, dort verwendet werden.
 			\item Die Ergebnisse werden im Anschluss an den Server gesendet. Zuvor kann der Benutzer jedoch die Ergebnisse anpassen bzw. korrigieren, falls es bei der Texterkennung zu Fehlern kam. Auch die Kontrollmechanismen finden vor dem Upload zum Server statt und geben dem Nutzer durch Fehlermeldungen Hinweise. \label{it:senden}
 		\end{enumerate}
 		
 	\section{Erweiterung des Konzepts}\label{sc:erweiterungkonzept}
-		Weiter ist eine zusätzliche Möglichkeit der Korrektur sinnvoll. Angenommen, jemand verschreibt sich bei seiner Seminargruppe und vergisst ein Zeichen. Die Texterkennung erkennt zwar jedes Zeichen richtig, jedoch ist das Ergebnis keine korrekte Seminargruppe. Deshalb sollte im Nachhinein an die Texterkennung das Ergebnis mit einer richtigen Seminargruppe, die die größte Übereinstimmung mit dem erkannten Wort hat, ersetzt werden. Bei diesem Vorgehen ist zu beachten, dass nur die Seminargruppen verwendet werden, die tatsächlich die Klausur geschrieben haben. Ähnliches gilt wieder für die Namen oder Matrikelnummern der Studenten.
+		Weiter ist eine zusätzliche Möglichkeit der Korrektur sinnvoll. Angenommen, ein Student verschreibt sich bei seiner Seminargruppe und vergisst ein Zeichen. Die Texterkennung erkennt zwar jedes Zeichen richtig, jedoch ist das Ergebnis keine korrekte Seminargruppe. Deshalb sollte im Nachhinein an die Texterkennung das Ergebnis mit einer richtigen Seminargruppe, die die größte Übereinstimmung mit dem erkannten Wort hat, ersetzt werden. Bei diesem Vorgehen ist zu beachten, dass nur die Seminargruppen verwendet werden sollten, die tatsächlich die Klausur geschrieben haben. Ähnliches ist auch für die Namen oder Matrikelnummern der Studenten möglich.
 		
-		Allerdings entstehen auch durch das OCR Fehler. Aus diesem Grund ist die sogenannte confidence neben jedem Ergebnis sichtbar. Diese sagt aus, wie sicher sich die Texterkennung bei dem Ergebnis ist. Jedoch kann es auch hier falsche Positiv-Ergebnisse geben, weshalb auch das kein perfekter Indikator für die Richtigkeit ist. Deshalb gibt es, wie im \autoref{ch:konzept} \autoref{it:senden} schon beschreiben, die Möglichkeit, die Ergebnisse noch einmal zu überprüfen und zu korrigieren, bevor sie an den Server zum Abspeichern gesendet werden. Auch die Kontrollmechanismen reagieren auf die Änderungen der Ergebnisse, sodass Fehlermeldungen behoben werden können. 
+		Allerdings entstehen auch durch das OCR Fehler. Aus diesem Grund ist die sogenannte confidence neben jedem Ergebnis sichtbar. Diese sagt aus, wie sicher sich die Texterkennung bei dem Ergebnis ist. Jedoch kann es auch hier falsche Positiv-Ergebnisse geben. Deshalb ist auch das kein perfekter Indikator für die Richtigkeit. Deswegen gibt es, wie im \autoref{ch:konzept} \autoref{it:senden} schon beschreiben, die Möglichkeit, die Ergebnisse noch einmal zu überprüfen und zu korrigieren, bevor sie an den Server zum Abspeichern gesendet werden. Auch die Kontrollmechanismen reagieren auf die Änderungen der Ergebnisse, sodass Fehlermeldungen behoben werden können. 
 
 %%%%%%%%%%%%%%% - PROTOTYP - %%%%%%%%%%%%%%%
 
 \chapter{Entwicklung des ersten Prototyps}\label{ch:prototyp}
-	Dieses Kapitel beschreibt die Entwicklung der iOS-App in einer ähnlichen Reihenfolge, wie das bekannte Wasserfall-Model über die Verwaltung der Entwicklung großer Softwaresysteme nach Winston W. Royce \cite{royce_managing_1970}.
-	
+	Dieses Kapitel beschreibt einzelne Phasen der Entwicklung der iOS-App in einer ähnlichen Reihenfolge, wie das bekannte Wasserfall-Model (siehe \autoref{fig:waterfall}) über die Verwaltung der Entwicklung großer Softwaresysteme nach Winston W. Royce \cite{royce_managing_1970}.
+    	
 	\section{Anforderungsplanung}\label{sc:anforderungsplanung}
 	Vor Beginn des Praktikums wurde diskutiert und kalkuliert, welches Thema aus dem Projekt Memo Space für ein zwölfwöchiges Praktikum geeignet ist. Dabei entstand eine Art Durchführbarkeits- / Machbarkeitsstudie, welche zur Entscheidung führte, ein Dokumenten-Scanner-Softwaresystem umzusetzen. Aufgrund der Kenntnisse und Erfahrung, soll ein Backend mit entsprechenden Schnittstellen und eine Android-App von Tobias Kallauke umgesetzt werden, währende vom Verfasser eine iOS-App gefordert ist. Die iOS-Anwendung soll den Anforderungen, die im gleichnamigen \autoref{ch:anforderungen} zu finden sind, erfüllen. Für weitere Details über den Server und die Android-App siehe im Praktikumsbericht von Tobias Kallauke.
 
@@ -244,7 +259,7 @@ Im Rahmen eines zwölfwöchigem Forschungspraktikums an der Hochschule Mittweida
 		
 		Eine typische Aufgabe dieser Entwurfsphase ist die Entscheidung über die Datenhaltung, die Verteilung im Netz und die Benutzeroberfläche des Software-Systems\footurl{Vorlesung 9, Folie 27 aus Softwaretechnik Grundlagen von Prof. Dr.-Ing. Wilfried Schubert (2019) -}{https://www.staff.hs-mittweida.de/~wschub/intranet/ss19/Fach_SWT/Fach_SWT_Zeitplan.htm}. Jedoch standen diese Grundsatzentscheidungen schon zu Beginn des Praktikums, durch die Kenntnisse von Tobias Kallauke und dem Verfasser fest. Der Server verwendet zur Datenspeicherung PostgreSQL\footurl{PostgreSQL Internetseite -}{https://www.postgresql.org/}, eine relationale Datenbank, sowie das Dateiverzeichnis für Bilder, während die App keine Daten persistent speichert. Durch die Aufteilung von App und Server handelt es sich um eine sogenannte Client/Server-Architektur. Für die Benutzeroberfläche der iOS-App wird, wie schon erwähnt, das deklarative SwiftUI verwendet. Weitere Informationen zum Backend und der Android-App befinden sich im Praktikumsbericht von Tobias Kallauke.
 		
-		Jedoch mussten noch Arbeit in den Workflow und in die Architektur der App gesteckt werden. Zur Definition einzelner Teil-Workflows, die zusammenhängende Aufgaben umfassen, wurden eine Art Zustandsautomaten bzw. Flussdiagramm beschrieben. Ein Beispiel, was noch einmal geändert in der App verwendet wurde befindet sich im \autoref{ch:workflow}. Die Modelle halfen dabei Views zu entwickeln und deren Design festzulegen. Das Aussehen der App sollten sich jedoch im Laufe der Zeit noch ändern, denn erst einmal stand die Umsetzung des Konzepts im Vordergrund.
+		Jedoch mussten noch Arbeit in den Workflow und in die Architektur der App gesteckt werden. Zur Definition einzelner Teil-Workflows, die zusammenhängende Aufgaben umfassen, wurden eine Art Zustandsautomaten bzw. Flussdiagramme angefertigt. Der schriftliche Zustandsautomat, galt als Vorlage für das in \autoref{fig:erstellen_flow} zu sehende Flussdiagramm. Die Modelle halfen dabei Views zu entwickeln und deren Design festzulegen. Das Aussehen der App sollten sich jedoch im Laufe der Zeit noch ändern, denn erst einmal stand die Umsetzung des Konzepts im Vordergrund.
 
 		Aus den Designs und den Teil-Workflows heraus entstand ein grober Plan, wie die Daten in der App gehandhabt werden sollten. Da \textit{SwiftUI} das Entwurfsmuster MVVM umsetzt, benötigt es eine Struktur für das ViewModel und für den Datenfluss der asynchronen Server-Rückrufe. Jedoch stellte sich die Entwicklung dieser Strukturen, auch schon während des allerersten Prototyps, als problematisch heraus. Denn auch bei steigender Komplexität soll das ViewModel noch übersichtlich bleiben, um eine schnelle Weiterentwicklung zu gewährleisten. Aus diesen Gründen begann die Suche nach einer besseren Lösung, bei der die JavaScript-Bibliothek \textit{Redux.js} zur Verwaltung von Zustandsinformationen in Webanwendung entdeckt wurde. 
 
@@ -318,7 +333,7 @@ Im Rahmen eines zwölfwöchigem Forschungspraktikums an der Hochschule Mittweida
 			Die Validierung ist jedoch nicht standardmäßig, sondern wurde selbst entwickelt.
 			
 		\subsection{Scan-Vorlagen erstellen und speichern}
-			Bei der Implementierung des ersten Arbeitsschritts der Scan-Vorlagen wurde das schriftliche Flussdiagramm, welches im \autoref{ch:workflow} zu finden ist, leicht verändert benutzt.
+			Bei der Implementierung des ersten Arbeitsschritts der Scan-Vorlagen wurde das Flussdiagramm \ref{fig:erstellen_flow}, welches im \autoref{ch:workflow} zu finden sind, benutzt.
 			
 			\subsubsection*{Scan-Vorlage erstellen}
 			\begin{figure}[th]
@@ -424,6 +439,8 @@ Im Rahmen eines zwölfwöchigem Forschungspraktikums an der Hochschule Mittweida
 			\end{enumerate}
 			
 		\subsection{Scan-Vorlage verwenden}
+			Bei der Implementierung dieses Arbeitsschritts wurde das Flussdiagramm \ref{fig:verwenden_flow}, welches im \autoref{ch:workflow} zu finden sind, benutzt.
+			
 			Um eine Klausur zu digitalisieren, muss die vorher erstellte Scan-Vorlage ausgewählt werden (\ref{fig:liste1}). Danach bietet die Benutzeroberfläche über einen Button die Möglichkeit an, eine Klausur ein zu scannen (\ref{fig:liste2}). Bevor die Bilder aufgenommen werden können, erscheint ein Dialogfenster (\ref{fig:ocr1}), in dem der Benutzer sich entscheiden muss, welche OCR-Engine benutzt werden soll. Aktuell gibt es zwei Möglichkeiten.
 			\begin{itemize}
 				\item Die OCR-Engine des Vision Frameworks von Apple, welche direkt auf dem Gerät und ohne eine Internetverbindung die Texterkennung durchführt,  
@@ -622,8 +639,16 @@ Im Rahmen eines zwölfwöchigem Forschungspraktikums an der Hochschule Mittweida
 
 \Anhang
 
+\chapter{Wasserfall-Modell}
+	\begin{figure}[th]
+   		\centering
+   		\includegraphics[width=0.7\textwidth]{img/waterfall}
+   		\caption{Das Wasserfall-Model nach Winston W. Royce}
+   		\label{fig:waterfall}
+   \end{figure}
+
 \chapter{Workflow} \label{ch:workflow}
-	\section*{Vorlage erstellen}
+	\section*{Scan-Vorlage erstellen}
 	\begin{enumerate}
 		\item ''Neue Vorlage erstellen''
 		\item Foto machen
@@ -649,6 +674,21 @@ Im Rahmen eines zwölfwöchigem Forschungspraktikums an der Hochschule Mittweida
 		\item Fertig
 		\item Vorlage an Server senden
 	\end{enumerate}
+	
+	\begin{figure}[th]
+   		\centering
+   		\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{img/erstellen_flow}
+   		\caption{Gekürztes Flussdiagramm zum Erstellen einer Scan-Vorlage}
+   		\label{fig:erstellen_flow}
+   	\end{figure}
+   	
+   	\begin{figure}[th]
+   		\centering
+   		\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{img/verwenden_flow}
+   		\caption{Gekürztes Flussdiagramm zum Verwenden einer Scan-Vorlage}
+   		\label{fig:verwenden_flow}
+   	\end{figure}
+
 	
 \chapter{Zusätzliche Funktionalität} \label{ch:accses}
 	
@@ -677,13 +717,13 @@ Im Rahmen eines zwölfwöchigem Forschungspraktikums an der Hochschule Mittweida
 	\begin{enumerate}
 		\item Lade das Projekt herunter. (.zip anschließend entpacken)
 		\item Öffne die Datei \textit{DocumentenScanner.xcodeproj}. Xcode öffnet sich.
-		\item Klicke in der Ordnerübersicht von Xcode ganz oben auf das Xcode Projekt \textit{DocumentenScanner}.
-		\item Wähle im mittleren Fenster nun \textit{Targets} \textit{DocumentenScanner} aus. (Entweder links oben als Dropdown-Menu oder in dem geöffneten Menü links im mittleren Fenster.)
-		\item Wähle den Reiter \textit{Signing & Capabilities} aus. Es erscheint im mittleren Fenster ein Unterpunkt Signing.
-		\item Wähle ein passendes Team aus oder lege ein an
-		\item Ändere Bundle Identifier passend zu dem ausgewählten Team. Z. B. \textit{com.<TeamName>.DocumentenScanner}. Es taucht ein Button auf, mit dem die App signiert werden kann. Falls kein Button erscheint mache mit den nächsten Schritten weiter und kommen bei einer auftretenden Fehlermeldung bezüglich der Signierung hier her zurück. Der Button ist dann zu sehen.
-		\item Wähle nun ein Simulator oder dein angeschlossenes Gerät am oberen Bildrand, links der Mitte aus.
-		\item Drücke den Start bzw. Run Button links neben der Auswahl der Simulatoren/Geräte.
+		\item Klicke in der Ordnerübersicht bzw. Navigator ganz oben auf das Xcode Projekt \textit{DocumentenScanner}.
+		\item Wähle im Editor-Fenster nun unter \textit{Targets} das Projekt \textit{DocumentenScanner} aus. (Entweder links oben als Dropdown-Menu oder in dem geöffneten Menü links innerhalb des mittleren Fenster.)
+		\item Wähle den Reiter \textit{Signing \& Capabilities} aus. Es erscheint im mittleren Fenster ein Unterpunkt \textit{Signing}.
+		\item Wähle ein passendes Team aus oder lege eins an.
+		\item Ändere den Bundle Identifier passend zu dem ausgewählten Team. Z. B. \url{com.<TeamName>.DocumentenScanner}. Es taucht ein Button auf, mit dem die App signiert werden kann. Falls kein Button erscheint mache mit den nächsten Schritten weiter und kommen bei einer auftretenden Fehlermeldung bezüglich der Signierung hier her zurück. Der Button ist dann zu sehen.
+		\item Wähle nun ein Simulator oder das angeschlossene Gerät in der Toolbar aus den \textit{Active Devices} aus.
+		\item Drücke anschließend den Start bzw. Run Button der \textit{Build Controls} oder die Tasten-Kombination \textit{cmd + R}.
 		\item Folge den Anweisungen von Xcode und auf dem iPhone/iPad. Beim Verwenden eines Simulators tauchen keine weiteren Anweisungen auf. Die App startet automatisch. 
 	\end{enumerate}
 	
@@ -721,7 +761,7 @@ Im Rahmen eines zwölfwöchigem Forschungspraktikums an der Hochschule Mittweida
 	Im Mittelpunkt der Woche stand der Bericht, an dem ich täglich arbeitete. Ich erstellte einige Bilder für ihn und den Vortrag. Auch gab es diese Woche wieder ein Meeting.
 	
 	\textbf{04.05. - 10.05.}
-	Auch diese Woche arbeitete ich hauptsächlich am Beleg und könnte ihn so weit fertig stellen, dass nur noch wenige Dinge zu erledigen sind. Zudem gelang es Tobias die Fehler der online OCR-Engine Tesseract zu beseitigen. Dadurch konnte ich die letzten fehldenen Schritte für den Umgang mit den OCR-Schnittstellen implemntieren und testen konnte. 
+	Auch diese Woche arbeitete ich hauptsächlich am Beleg und könnte ihn so weit fertig stellen, dass nur noch wenige Dinge zu erledigen sind. Zudem gelang es Tobias die Fehler der online OCR-Engine Tesseract zu beseitigen. Dadurch konnte ich die letzten fehlenden Schritte für den Umgang mit den OCR-Schnittstellen implementieren und testen.
 	
 	\textbf{11.05. - 15.05.}
 
@@ -729,19 +769,3 @@ Im Rahmen eines zwölfwöchigem Forschungspraktikums an der Hochschule Mittweida
 \bibliography{Beleg}
 \bibliographystyle{iso690.bst}
 \end{document}
-
-
-		
-%		Auf der Grundlage von Gradienten, welche Grauwertänderungen im Bild approximieren, werden Dokumenten-Katen erkannt (siehe Abbildung 4.1a im Praktikums Bericht von Tobias Kallauke). Das bedeutet, sind keine Grauwertänderungen an den Kanten vorhanden, ist die Erkennung durch die Anwendung unmöglich. Das kann der Fall sein, wenn der Hintergrund den gleichen Farbton hat, wie das Dokument. Sind allerdings andere Gradienten-Kanten im Bild, beispielsweise durch ein karierten Hintergrund kann es zu keiner richtigen Zuordnung zu
-%		
-%		Approximation der Ecken
-%	
-%	
-%		Beim Erkennen von Dokumenten kann es vorkommen, dass falsche oder gar kein Kanten des Dokument erkannt werden. Wenn falsche Kanten erkannt werden hat das viele mögliche Gründe. Zum einen weißt der Hintergrund bzw. der Untergrund selbst Kanten auf. Das kann vorkommen, wenn Seiten versetzt übereinander liegen und die Dokumenten-Kanten nicht mehr eindeutig sind. Zum anderen kann das Dokument selbst starke Kanten beinhalten, durch Abbildungen oder Tabellen beispielsweise. Je nach dem wird der Bildausschnitt zu groß oder zu klein gewählt.
-%		
-%		Werden keine Kanten auf dem Bild erkannt kann das auch an mehreren Gründen liegen. Die häufigsten sind jedoch zu wenig Licht, umgeknickte Ecken des Dokuments, oder auch ein Hintergrund, der einen sehr ähnlichen Farbton, wie das Dokument selbst hat. 
-%		
-%		
-%		Dies ist der Fall, wenn der Hintergrund einen ähnlichen Farbton hat, wie das Dokument oder aber bei zu wenig Licht.
-%		
-%		wenn der Untergrund einen ähnlichen Farbton hat, dass die Kanten der Seiten nicht erkannt werden. Das Selbe kann auch bei wenig Licht der Fall sein. Im Gegensatz dazu können aber auch falsche Kanten erkannt werden. Wenn beispielsweise zwei Seiten übereinander versetzt sind, oder das Dokument sich auf einem kariertem Untergrund befindet, kommt es vor, dass das ein zu großer oder falscher Bildausschnitt durch von VisionKit bzw. den Algorithmen von Vision gewählt wird. Auch Kanten auf dem Dokument selbst, die durch Abbildungen oder durch Rahmen um Texte entstehen oder umgeknickte Ecken des Blatts, können ein Problem beim Erkennen von Dokumenten sein.
