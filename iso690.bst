@@ -404,6 +404,15 @@ FUNCTION {bbl.chapter}
 FUNCTION {bbl.techrep}
 { "Tech. Rep." }
 
+FUNCTION {bbl.misc}
+{ "Internetseite" }
+
+FUNCTION {bbl.article}
+{ "Artikel" }
+
+FUNCTION {bbl.book}
+{ "Buch" }
+
 FUNCTION {bbl.bthesis}
 { "Bachelorarbeit" }
 
@@ -1275,6 +1284,7 @@ FUNCTION {article}
   title empty$ 'skip$ 'setup.inlinelink if$ % C:\Program Files\MiKTeX 2.8\scripts\urlbst\perl\urlbst.pl
   format.title "title" output.check
   new.block
+  bbl.article output
   crossref missing$
     {
       journal
@@ -1318,6 +1328,7 @@ FUNCTION {book}
       format.book.crossref output.nonnull
     }
   if$
+  bbl.book output
   format.edition output
   format.date "year" output.check
   format.isbn output
@@ -1516,6 +1527,7 @@ FUNCTION {misc}
   title howpublished new.block.checkb
   title empty$ 'skip$ 'setup.inlinelink if$ % C:\Program Files\MiKTeX 2.8\scripts\urlbst\perl\urlbst.pl
   format.title output
+  bbl.misc output
   howpublished new.block.checka
   howpublished "howpublished" bibinfo.check output
   format.date output
