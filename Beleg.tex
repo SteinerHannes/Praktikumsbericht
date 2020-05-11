@@ -55,7 +55,7 @@
 \begin{document}
 
 \begin{Referat}
-Im Rahmen eines zwölfwöchigem Forschungspraktikums an der Hochschule Mittweida arbeiteten der Student Tobias Kallauke und der Verfasser des Berichts gemeinsam an einem Projekt mit dem Hintergrund der Digitalisierung der Verwaltung von Lehr- und Forschungseinrichtung. Dabei entwickelten sie ein prototypisches Software-System, womit kontrollierte Klausuren eingescannt und digitalisiert werden können.
+Im Rahmen eines zwölfwöchigen Forschungspraktikums an der Hochschule Mittweida arbeiteten der Student Tobias Kallauke und der Verfasser des Berichts gemeinsam an einem Projekt mit dem Hintergrund der Digitalisierung der Verwaltung von Lehr- und Forschungseinrichtung. Dabei entwickelten sie ein prototypisches Software-System, mit dessen Hilfe kontrollierte Klausuren eingescannt und digitalisiert werden können.
 \end{Referat}
 
 \Hauptteil
@@ -65,27 +65,27 @@ Im Rahmen eines zwölfwöchigem Forschungspraktikums an der Hochschule Mittweida
 \chapter{Einleitung}
 	Digitalisierung wird gängig als Integration von digitaler Technologie in den Alltag verstanden und soll helfen Zeit einzusparen. Mit diesem Gedanken initiierten die Mitarbeiter Holger Langner und Falk Schmidsberger der Hochschule Mittweida das Projekt \textit{Memo Space}. Im Zuge dessen sollen kleinere Forschungsergebnisse entstehen, die richtungsweisend für die Digitalisierung der Verwaltung von Lehr- und Forschungseinrichtung sind.
 
-	Im Rahmen eines zwölfwöchigem Forschungspraktikums an der Hochschule Mittweida arbeiteten der Student Tobias Kallauke und der Verfasser des Berichts gemeinsam an einem Forschungsprojekt von Memo Space. Dabei entwickelten sie ein prototypisches Software-System zum Einscannen und Digitalisieren von kontrollierten Klausuren.
+	Im Rahmen eines zwölfwöchigen Forschungspraktikums an der Hochschule Mittweida arbeiteten der Student Tobias Kallauke und der Verfasser des Berichts gemeinsam an einem Forschungsprojekt von Memo Space. Dabei entwickelten sie ein prototypisches Software-System zum Einscannen und Digitalisieren von kontrollierten Klausuren.
 
 %%%%%%%%%%%%%%% - HSMW - %%%%%%%%%%%%%%%
 
 \chapter{Hochschule Mittweida}
 	Die Hochschule Mittweida - university of applied science (HSMW) \nomenclature{HSMW}{Hochschule Mittweida - university of applied science} wurde vor über 150 Jahren gegründet. Heute lehrt und forscht sie mit ca. 6000 Studenten in fünf Fakultäten und vier Forschungsschwerpunkten\cite{hochschule_mittweida_hochschule_nodate}. Eines der Schwerpunkte ist die Angewandte Informatik, in dem Memo Space angesiedelt ist.
 	
-	Nach eigener Einschätzung, schreibt jeder Student der HSMW ca. 5 Prüfungen pro Semester. Das bedeutet, dass im Jahr um die 60.000 Klausuren kontrolliert werden müssen. Dazu kommt, dass die Zensuren, in das Verwaltungs-Intranet der HSMW eingetragen werden müssen. Dieser Vorgang ist ebenfalls aufwändig, repetitiv und deshalb sehr belastend.
+	Nach eigener Einschätzung schreibt jeder Student der HSMW ca. 5 Prüfungen pro Semester. Das bedeutet, dass im Jahr um die 60.000 Klausuren kontrolliert werden. Dazu kommt, dass die Zensuren in das Verwaltungs-Intranet der HSMW eingetragen werden müssen. Dieser Vorgang ist ebenfalls aufwendig, repetitiv und deshalb kognitiv belastend.
 	
 	Da die Mitarbeiter der Fakultät \textit{Angewandte Computer- und Biowissenschaften} (Fakultät CB)\nomenclature{Fakultät CB}{Fakultät für angewandte Computer- und Biowissenschaften} Holger Langner und Falk Schmidsberger selbst Klausuren kontrollieren und die Problematik genau kennen, entstand hier eine der ersten Ideen für Memo Space.
 
 %%%%%%%%%%%%%%% - PROBLEMSTELLUNG - %%%%%%%%%%%%%%%
 
 \chapter{Problemstellung}\label{ch:problemstellung}
-	An der Kontrolle von Klausuren arbeiten zum Ende eines Semesters Hochschulmitarbeiter über Tage. Diese Aufgabe muss stets mit hoher Konzentration erledigt werden und auch bei der anschließenden Eingabe der Noten in ein Webformular des Verwaltungs-Intranets der HSMW fällt ein kognitiv belastender Navigationsaufwand an. Denn um die Zensuren einzutragen, muss für jeden Studenten zunächst die Seminargruppe aus allen Seminargruppen und anschließend der Name herausgesucht werden. Die unübersichtlichen Listen und die hohe Anzahl an Klicks sind für die Hochschulmitarbeiter äußerst belastend. Zusätzlich wird die Suche nach der Seminargruppe durch die fast gleich lautenden Bezeichnungen erschwert, was beim Danebenklicken dazu führt, das man sich in der Navigation verirrt und von vorne beginnen muss.
+	An der Kontrolle von Klausuren arbeiten zum Ende eines Semesters Hochschulmitarbeiter über Tage. Diese Aufgabe muss stets mit hoher Konzentration erledigt werden. Auch bei der anschließenden Eingabe der Noten in ein Webformular des Verwaltungs-Intranets der HSMW ist ein kognitiv belastender Navigationsaufwand notwendig. Denn um die Zensuren einzutragen, muss für jeden Studenten zunächst die jeweilige Seminargruppe und anschließend der Studenten-Name herausgesucht werden. Die unübersichtlichen Listen und die hohe Anzahl an Klicks sind für die Hochschulmitarbeiter belastend. Zusätzlich wird die Suche nach der Seminargruppe durch die ähnlich lautenden Bezeichnungen erschwert. Das führt beim Danebenklicken in der Seminargruppen-Liste dazu, dass man sich eventuell in der Navigation verirrt und von vorne beginnen muss.
 	
 	\section{Digitalisieren der Klausur-Daten}
-	Für genau diesen Vorgang wird nach einer effizienteren Lösung gesucht. Die Prüfer sollen effektiv und möglichst zeitsparend diese Aufgabe verrichten, ohne dabei ihre Aufmerksamkeitsspanne zu überlasten. Dazu sollen die für das Eintragen der Note relevanten Daten auf der Klausur digitalisiert und ein digitales tabellerisches Format gebracht werden. Grund dafür ist, dass durch solch eine Tabelle das Eintragen automatisiert werden kann. Darüber hinaus empfiehlt es sich, digitale Kopien der Klausuren abzuspeichern, um sie nicht nur analog zu archivieren.
+	Für genau diesen Vorgang wird nach einer effizienteren Lösung gesucht. Die Prüfer sollen effektiv und möglichst zeitsparend diese Aufgabe verrichten, ohne die Überlastung ihrer Aufmerksamkeitsspanne. Zudem ist angedacht, alle relevanten Klausuren-Daten zu digitalisieren und in ein geeignetes Format zu bringen, um sie automatisiert in das Verwaltungs-Intranet überführen zu können. Darüber hinaus empfiehlt es sich, digitale Kopien der Klausuren abzuspeichern, um sie nicht nur analog zu archivieren.
 	
 	\section{Klausuren-Vorlage}\label{sc:klausuren-vorlage}
-	Eine Klausuren-Vorlage bzw. ein Gestaltungsleitfaden für Klausuren der Fakultät \textit{Angewandte Computer- und Biowissenschaften} bietet außerdem die Möglichkeit der Kontrolle des Prüfers. Durch das vorgegebene Layout der Klausur ist es möglich, Fehler des Prüfers zu erkennen. Die Klausur in \autoref{fig:klausur} ist nach dieser Klausuren-Vorlage angefertigt worden. Auf dem Deckblatt (\ref{fig:seite1}) der Prüfung ist eine Tabelle, mit drei Zeilen und für jede Aufgabe eine Spalte. In der ersten Zeile befinden sich die Nummern der Aufgaben, in der zweiten die zu erreichenden Punkte der Aufgabe. Und in der dritten Zeile trägt der Prüfer die erbrachten Punkte des Studenten ein. Unter der Tabelle befindet sich ein Feld für die erreichte Gesamtpunktzahl sowie ein weiteres für die aus den Punkten resultierende Note. Es soll nun überprüft werden, ob die Summe der erreichten Punkte mit der Gesamtpunktzahl übereinstimmt und weiter soll auch die Note errechnet und mit dem Ergebnis der Prüfers verglichen werden. Eine weiteres Merkmal der Klausuren-Vorlage ist ein Feld, für die vom Studenten erreichten Punkte über jeder Aufgabenstellung auf den hinteren Seiten. Zu sehen sind solche Felder in \autoref{fig:seite2} am rechten Seitenrand. Die dortige Angabe sollte mit der, in der Tabelle auf dem Deckblatt (\ref{fig:seite1}) übereinstimmen und bietet somit noch eine weitere Möglichkeit der Kontrolle an.
+	Eine Klausuren-Vorlage bzw. ein Gestaltungsleitfaden für Klausuren der Fakultät Angewandte Computer- und Biowissenschaften bietet außerdem die Möglichkeit der Kontrolle des Prüfers. Durch das vorgegebene Layout der Klausur ist es möglich, Fehler des Prüfers zu erkennen. Die Klausur in \autoref{fig:klausur} ist nach dieser Klausuren-Vorlage angefertigt worden. Auf dem Deckblatt (\ref{fig:seite1}) der Prüfung ist eine Tabelle mit drei Zeilen und jeweils einer Spalte pro Klausur-Aufgabe. In der ersten Zeile befinden sich die Nummern der Aufgaben, in der zweiten die zu erreichenden Punkte der Aufgabe. In der dritten Zeile trägt der Prüfer die erbrachten Punkte des Studenten ein. Unter der Tabelle befindet sich ein Feld für die erreichte Gesamtpunktzahl sowie ein weiteres für die aus den Punkten resultierende Note. Es soll nun überprüft werden, ob die Summe der erreichten Punkte mit der Gesamtpunktzahl übereinstimmt. Zudem wird auch die Note errechnet und mit dem Ergebnis des Prüfers verglichen werden. Ein weiteres Merkmal der Klausuren-Vorlage ist ein Feld, für die vom Studenten erreichten Punkte über jeder Aufgabenstellung auf den nachfolgenden Seiten. Zu sehen sind solche Felder in \autoref{fig:seite2} am rechten Seitenrand. Die dortige Angabe sollte mit der Angabe in der Tabelle auf dem Deckblatt (\ref{fig:seite1}) übereinstimmen und bietet somit noch eine weitere Möglichkeit der Kontrolle.
 	
 	\begin{figure}[th]
     	\centering
@@ -99,117 +99,116 @@ Im Rahmen eines zwölfwöchigem Forschungspraktikums an der Hochschule Mittweida
         	\caption{Erste Seite der Klausur mit drei Aufgaben}
         	\label{fig:seite2}
     	\end{subfigure}
-    	\caption{Umsetzung der Klausuren-Vorlage der Fakultät CB.}
+    	\caption{Umsetzung der Klausuren-Vorlage der Fakultät CB}
     	\caption*{\textit{Die Bilder sind beim Erstellen einer Scan-Vorlage mit der App entstanden.}}
     	\label{fig:klausur}
 	\end{figure}
 	
 	\section{Klausuren-Vorlage verbessern}
-	Nachdem ein erster Prototyp zum Digitalisieren der Klausur-Daten entwickelt wurde, sollen außerdem Prüfungs-Vorlagen entstehen, die für die Digitalisierung optimiert sind. Dabei sollen Probleme, die beim Einscannen der aktuellen Vorlage erkannt wurden, behoben werden. 
+	Nachdem ein erster Prototyp zum Digitalisieren der Klausur-Daten entwickelt wurde, sollen außerdem Klausuren-Vorlagen entstehen, die für die Digitalisierung optimiert sind. Dabei sollten Probleme, die beim Einscannen der aktuellen Vorlage erkannt wurden, behoben werden. 
 	
-	\section{Weitere Anmerkungen}
-	Ferner soll bei der Problemlösung von der Anschaffung neuer Technologien und Geräte abgesehen werden. Grund dafür ist neben den Anschaffungskosten, die Idee, dass das Ergebnis des Forschungsprojekts in weiteren Lehr- und Forschungseinrichtungen Anwendung findet. Außerdem hat so gut wie jeder Mitarbeiter an einer Lehr- und Forschungseinrichtung ein eigenes oder Zugang zu einem Smartphone oder Tablet, welche durch die eingebaute Technik in der Lage sind, diese Aufgabe zu übernehmen. 
+%	\section{Weitere Anmerkungen}
+%	Ferner soll bei der Problemlösung von der Anschaffung neuer Technologien und Geräte abgesehen werden. Grund dafür ist neben den Anschaffungskosten, die Idee, dass das Ergebnis des Forschungsprojekts in weiteren Lehr- und Forschungseinrichtungen Anwendung findet. Außerdem hat so gut wie jeder Mitarbeiter an einer Lehr- und Forschungseinrichtung ein eigenes oder Zugang zu einem Smartphone oder Tablet, welche durch die eingebaute Technik in der Lage sind, diese Aufgabe zu übernehmen. 
 
 %%%%%%%%%%%%%%% - ANFORDERUNGEN - %%%%%%%%%%%%%%%
 
 \chapter{Anforderungen}\label{ch:anforderungen}
-	In diesem Kapitel wird erläutert, was die Anforderungen an das Software-System sind. 
+	In diesem Kapitel werden die Anforderungen an das Software-System dargestellt.
 
-	Es soll eine App für das Betriebsystem iOS entstehen, mit der Klausuren digitalisiert werden können. Genauer müssen die, für die Notenfreigabe relevanten Daten der Klausur, in ein tabellarisches Format gebracht werden. Dazu soll die iOS-Anwendung Bilder von ausgefüllten Prüfungen aufnehmen können und den Inhalt mithilfe von Texterkennung digitalisieren. 
+	Es soll eine App für das Betriebssystem iOS entstehen, mit der Klausuren digitalisiert werden können. Dabei müssen die, für die Notenfreigabe relevanten Daten der Klausur, in ein tabellarisches Format gebracht werden. Ferner muss die iOS-Anwendung Bilder von ausgefüllten Prüfungen aufnehmen können und den Inhalt mithilfe von Texterkennung digitalisieren. 
 	
-	Trotzdem nicht jede Klausur ein identisches Layout hat, soll die App in der Lage sein, alle relevanten Informationen, wie z. B. Name, Matrikelnummer und Note, richtig zu identifizieren und anschließend zu digitalisieren. Dafür soll der Benutzer digitale Vorlagen, sogenannte Scan-Vorlagen erstellen, durch die die App, die Informationen leichter findet und schneller digitalisiert, als wenn eine komplette Seite digitalisiert und analysiert werden müsste. 
-	
-	Zusätzlich soll es dem Benutzer möglich sein, Kontrollmechanismen fest zu legen. Wie im \autoref{sc:klausuren-vorlage} beschrieben, soll überprüft werden, ob die Punkte auf dem Deckblatt mit den Punkten auf den hinteren Seiten übereinstimmen und ob die Gesamtpunktzahl korrekt summiert wurde sowie die daraus resultierende Note richtig ist. Ein Kontrollmechanismus soll so gestaltet sein, dass die eben genannten Überprüfungsmöglichkeiten vom Benutzer selbst umgesetzte werden können. Beim Digitalisieren einer Klausur sollen so dem Benutzer Fehlermeldungen angezeigt werden, wenn bei der Überprüfung durch einen Kontrollmechanismus etwas falsch ist. Beispielsweise hat der Prüfer auf dem Deckblatt fünf Punkte eingetragen, bei der Aufgabenstellung auf den hinteren Seiten jedoch eine sechs. Die App  soll dann eine Fehlermeldung ausgeben, dass die Punktezahlen bei der Aufgabe nicht übereinstimmen und nochmals kontrolliert werden müssen. 
+	Auch bei unterschiedlicher Seitengestaltung der Klausuren, soll die App in der Lage sein, alle relevanten Informationen, wie z. B. Name, Matrikelnummer und Note richtig zu lokalisieren und anschließend zu digitalisieren. Dafür muss der Benutzer digitale Vorlagen, sogenannte Scan-Vorlagen erstellen. Mit deren Hilfe können, die Informationen sofort gefunden und schneller digitalisiert werden, ohne die gesamte Klausuren-Seite zu verarbeiten. 
+
+	Zusätzlich soll es dem Benutzer möglich sein, Kontrollmechanismen festzulegen. Wie im \autoref{sc:klausuren-vorlage} beschrieben, kann überprüft werden, ob die Punkte auf dem Deckblatt mit den Punkten auf den nachfolgenden Seiten übereinstimmen. Des Weiteren wird kontrolliert, ob die Gesamtpunktzahl korrekt summiert sowie die daraus resultierende Note richtig errechnet wurde. Ein Kontrollmechanismus soll so gestaltet sein, dass diese Überprüfungsmöglichkeiten vom Benutzer bestimmt werden können. Bei Nichtübereinstimmung der genannten Kriterien erhält der Benutzer eine entsprechende Fehlermeldung. % Beispielsweise hat der Prüfer auf dem Deckblatt fünf Punkte eingetragen, bei der Aufgabenstellung auf den nachfolgenden Seiten jedoch eine sechs. Die App muss dann eine Fehlermeldung ausgeben, dass die Punktezahlen bei der Aufgabe nicht übereinstimmen und nochmals kontrolliert werden müssen. 
  
- 	Zur Digitalisierung von Buchstaben soll Zeichen bzw. Texterkennung verwendet werden, die auf dem Gerät statt findet. Allerdings darf die App auch Texterkennung auf externen Servern unterstützen. Hierfür müssen dann die entsprechenden Server-Schnittstellen zur Kommunikation implementiert oder für einen eigenen Server entwickelt werden.
-
-	Die digitalisierten Daten, die für die Texterkennung entstandenen Klausuren-Bilder und die erstellten digitalen Scan-Vorlagen sollen außerhalb der App auf einem Server gespeichert werden. Somit ist die Möglichkeit gegeben, die  Vorlagen wieder zu verwenden und anderen Benutzern der App zur Verfügung zu stellen. Aus den digitalisierten Daten sollen wiederum Tabellen entstehen, die an die Notenfreigabe weiter geben werden können.
+	Um alle relevanten Daten zu erfassen werden die kontrollierten Klausuren zunächst fotografiert. Bei der anschließenden Digitalisierung aller Schriftzeichen durch die App findet optische Zeichen- bzw. Texterkennung Anwendung. Für die Texterkennung auf externen Servern müssen die entsprechenden Server-Schnittstellen zur Kommunikation implementiert werden. 
+	 
+	Die durch die Texterkennung digitalisierten Daten, die Klausuren-Fotos und die digitalen Scan-Vorlagen sollen außerhalb der App auf einem Server gespeichert werden. Somit können alle Benutzer der App die bereits erstellten Scan-Vorlagen verwenden. Wie bereits erwähnt, werden die digitalisierten Daten zudem in ein geeignetes Format gebracht, um sie, wie angedacht, automatisiert in das Verwaltungs-Intranet zu überführen.
 	
-	Damit Synchronität der Daten auf den Geräten und dem Server gewährleistet werden kann, benötig die App hierfür ebenfalls Schnittstellen. Diese sollten den standardmäßigen \textit{CRUD}\nomenclature{CRUD}{Das Akronym CRUD steht für Create/Erstellen, Read/Lesen, Update/Aktualisieren und Delete/Löschen und umfasst die vier grundlegenden Operationen persistenter Speicher}-Operationen entsprechen. 
-	
-	Da die gesamte Kommunikation über das Internet geschieht, muss das Softwaresystem den üblichen Datenschutz- und Datensicherheit-Richtlinien entsprechen, bzw. sie in der technischen Implementierung umsetzten. Für genauere Details zu den Sicherheitsmechanismen und den CRUD-Operationen zum Server siehe im Praktikumsbericht von Tobias Kallauke. 
+	Damit Synchronität der Daten zwischen allen Apps und dem Server gewährleistet werden kann, sind auf beiden Seiten Schnittstellen notwendig. Diese sollten den standardmäßigen \textit{CRUD}\nomenclature{CRUD}{Das Akronym CRUD steht für Create/Erstellen, Read/Lesen, Update/Aktualisieren und Delete/Löschen und umfasst die vier grundlegenden Operationen persistenter Speicher}-Operationen entsprechen. Für genauere Details zu den Sicherheitsmechanismen und den CRUD-Operationen zum Server siehe im Praktikumsbericht von Tobias Kallauke. 
 
 %%%%%%%%%%%%%%% - GRUND IDEE ZUM LÖSEN DES PROBLEMS - %%%%%%%%%%%%%%%
 
 \chapter{Konzept der Dokumenten-Scanner-App}\label{ch:konzept}
-	Diesem Kapitel beschriebt, wie das Softwaresystem die Anforderungen umsetzt. Zur Erinnerung, die Dokumenten-Scanner App soll wichtige Daten auf dem Deckblatt (\ref{fig:seite1}) einer Klausur, wie Vor- und Nachname des Studenten, seine Matrikelnummer sowie die Note erkennen, digitalisieren und in ein für die Notenfreigabe geeignetes Format bringen. Die digitalisierten Daten sollen anschließend an einen Server gesendet werden, auf dem sie und die beim Einscannen entstandenen Bilder gespeichert werden. Verwendet eine einzuscannende Klausur die Klausuren-Vorlage (\ref{fig:klausur}) der Fakultät CB oder ähnliche Vorlagen, die eine Punkteübersicht haben, dann ist es außerdem möglich, die Punkte sowie die Note auf Richtigkeit zu überprüfen. 
+	Diesem Kapitel beschriebt, wie das Softwaresystem die Anforderungen umsetzt.
 	
 	\section{Scan-Vorlage erstellen und speichern}
 	
 		Im folgenden Abschnitt wird zuerst verkürzt und anschließend detailliert geschildert, wie eine Scan-Vorlage zu erstellen ist.
-	
+    
+		Um wirklich nur relevante Daten zu digitalisieren, benötigt es die sogenannten Scan-Vorlagen, die in der App durch den Benutzer angelegt werden können. Eine Scan-Vorlage beinhaltet mehrere Schablonen. Solch eine Schablone wird beispielsweise auf das Deckblatt gelegt, sodass nur noch die relevanten Informationen, die digitalisiert werden sollen, zu sehen sind. Alles andere, was nicht von Interesse ist, wird von der Schablone überdeckt. In der \autoref{fig:schablone1} ist dieses Konzept schemenhaft zu sehen. Der Benutzer kann in zwei grobe Schritte, um eine digitale Schablone anzufertigen. Zuerst muss ein Foto von der Seite aufgenommen werden. Anschließend werden die Regionen auf diesem Foto manuell markiert, die digitalisiert werden sollen. Eine Scan-Vorlage ist somit eine Sammlung aller digitalen Schablonen zu einer Klausur, denn jede Seite benötigt eine eigene individuelle Schablone.
+				
 		\begin{figure}[th]
     		\centering
-    		\includegraphics[width=0.6\textwidth]{img/schablone1}
+    		\includegraphics[width=0.48\textwidth]{img/schablone1}
     		\caption{Schematisches Schaubild zum Verständnis des Schablonen-Konzepts}
     		\label{fig:schablone1}
     	\end{figure}
-    
-		Um wirklich nur relevante Daten zu digitalisieren, benötig es die sogenannte Scan-Vorlage, die in der App angelegt werden kann. Eine Scan-Vorlagen funktioniert ähnliche, wie eine Schablone. Diese wird beispielsweise auf das Deckblatt gelegt, sodass nur noch die wichtigen Informationen, die digitalisiert werden sollen, zu sehen sind. Alles andere, was nicht von Interesse ist, wird von der Schablone überdeckt. In der \autoref{fig:schablone1} ist dieses Konzept schemahaft zu sehen. Aus dem analogen Beispiel abgeleitet, benötigt es zwei grobe Schritte, um eine  digitale Schablonen anzufertigen. Zuerst muss ein Foto von der Seite aufgenommen werden und anschließend müssen die Regionen eingezeichnet werden, die digitalisiert werden sollen. Eine Scan-Vorlage ist jedoch nicht nur eine einzige digitale Schablone sondern einer Sammlung aller zu einem Dokument. Denn jede Seite benötigt eine eigene individuelle.
+		
+		Nachfolgend wird detailliert das Erstellen einer Scan-Vorlage beschrieben. Der Vorgang ist in \autoref{fig:kompakterstellen} als kompaktes Flussdiagramm und in \autoref{fig:schema1} schematisch dargestellt.
+		
+		 \begin{figure}[th]
+    		\centering
+    		\includegraphics[width=\textwidth]{img/erstellen_flow_small}
+    		\caption{Kompaktes Flussdiagramm zum Erstellen einer Scan-Vorlage}
+    		\label{fig:kompakterstellen}
+    	\end{figure}
 	
+		\begin{enumerate}
+			\item Zu Beginn wird der Scan-Vorlage ein Name und eine Beschreibung gegeben. Anschließend muss jede Seite der Klausur fotografiert werden. Dabei wird in jedem Bild das Dokument erkannt, vom Hintergrund getrennt bzw. ausgeschnitten und perfekt ausgerichtet. Zudem wird der Kontrast erhöht, sodass die Schrift leichter lesbar ist. Die \autoref{fig:klausur} resultierte aus dem Prozess (siehe auch \autoref{fig:v3}). 
+		
+			\item Anschließend markiert der Benutzer diejenigen Regionen auf jeder Seite, die zu digitalisieren und/oder zu kontrollieren sind. In dem Schema \ref{fig:schema1} sind die Regionen blau hinterlegt (siehe auch \autoref{fig:v9}). Zusätzlich muss jeder Region eine Bezeichnung und einer der folgenden Datentypen zugeordnet werden (siehe auch \autoref{fig:v8} und \ref{fig:v9}): Unbekannt, Vorname, Nachname, Matrikelnummer, Seminargruppe, Punkte und Note.\\
+				Die Angabe des Datentyps ist wichtig, da dadurch eindeutig wird, ob es sich um die Note oder den Vornamen des Studenten handelt. Diese Eindeutigkeit wird nicht nur für die automatische Erstellung der Tabelle benötigt, sondern auch für die Optimierung der Texterkennung. \label{it:zwei}
+			
+			\item Zuletzt wird die Vorlage abgespeichert, welche dann automatisch an einen Server gesendet wird, so dass andere diese Vorlage ebenfalls benutzen können.
+		\end{enumerate}
+		
 		\begin{figure}[th]
     		\centering
     		\includegraphics[width=\textwidth]{img/schema1}
-    		\caption{Scan-Vorlage erstellen und auf dem Server speichern}
+    		\caption{Schematische Darstellung des Vorgangs Scan-Vorlage erstellen und auf dem Server speichern}
     		\label{fig:schema1}
     	\end{figure}
-	
-		In der folgenden Aufzählung wird nun detailliert beschrieben, wie die Abfolge beim Erstellen einer Scan-Vorlage ist. Der Vorgang ist in  \autoref{fig:schema1} schematisch dargestellt.
-	
-		\begin{enumerate}
-			\item Zu Beginn wird jede Seite der Klausur fotografiert. Dabei wird in jedem Bild das Dokument erkannt, vom Hintergrund getrennt bzw. ausgeschnitten und perfekt ausgerichtet. Zudem wird der Kontrast erhöht, sodass die Schrift leichter lesbar wird. Die \autoref{fig:klausur} resultierte aus dem Prozess (siehe auch \autoref{fig:v3}). 
 		
-			\item Anschließend markiert der Benutzer diejenigen Regionen auf jeder Seite, die zu digitalisieren und/oder zu kontrollieren sind. In dem Schema \ref{fig:schema1} sind die Regionen blau hinterlegt (siehe auch \autoref{fig:v9}). Zusätzlich muss jeder Region eine Bezeichnung und einer der folgenden Datentypen zugeordnet werden (siehe auch \autoref{fig:v8} und \ref{fig:v9}): 
-				\begin{itemize}
-					\item Unbekannt,
-					\item Vorname,
-					\item Nachname,
-					\item Matrikelnummer,
-					\item Seminargruppe,
-					\item Punkte und
-					\item Note
-				\end{itemize}
-				Die Angabe des Datentyps ist wichtig, da dadurch eindeutig wird, ob es sich um die Note oder den Vornamen des Studenten handelt. Diese Eindeutigkeit wird nicht nur für die automatische Erstellung der Tabelle benötigt, sondern auch für die Optimierung der Texterkennung. \label{it:zwei}
-			
-			\item Als letztes wird die Vorlage abgespeichert, welche dann automatisch an einen Server gesendet wird, so dass andere diese Vorlage ebenfalls benutzen können.
-		\end{enumerate}
 		%Kontrolle
  		Zusätzlich können in der Phase der Erstellung einer Scan-Vorlage die in \autoref{ch:anforderungen} beschriebenen Kontrollmechanismen festgelegt werden. Dies geschieht nach \autoref{it:zwei}, also nachdem alle Regionen angelegt wurden. Diese Kontrollmechanismen beruhen auf zwei simplen Konzepten. 
 
- 		Das erste Konzept ist der Vergleich. Zur Erinnerung, es sollen die eigetragenen Punkte auf dem Deckblatt mit den Punkten neben der Aufgabenstellung auf den hinteren Seiten auf Gleichheit überprüft werden. Das zweite Konzept baut auf dem ersten auf. Statt einfach zwei Regionen bzw. Komponenten zu vergleichen, wird eine oder werden beide zuvor berechnet. Beispielsweise soll die Summe der Teilaufgaben mit Gesamtpunktzahl übereinstimmen. Das bedeutet, es wird erst die Summe berechnet und anschließend mit der vom Prüfer eingetragenen Punktzahl verglichen. Oder aber die Gesamtpunktzahl wird in die Note umgerechnet und mit der vom Prüfer eingetragen Note verglichen. 
+ 		Das erste Konzept ist der Vergleich. Zur Erinnerung, es sollen die eigetragenen Punkte auf dem Deckblatt mit den Punkten neben der Aufgabenstellung auf den hinteren Seiten auf Gleichheit überprüft werden. Das zweite Konzept baut auf dem ersten auf. Statt einfach zwei Regionen bzw. Komponenten zu vergleichen, wird eine oder werden beide zuvor berechnet. Beispielsweise soll die Summe der Punkte pro Aufgabe mit Gesamtpunktzahl übereinstimmen. Das bedeutet, es wird erst die Summe berechnet und anschließend mit der vom Prüfer eingetragenen Punktzahl verglichen. Oder aber die Gesamtpunktzahl wird in die Note umgerechnet und mit der vom Prüfer eingetragen Note verglichen. 
  	
- 		Beim festlegen der Kontrollmechanismen wird wie folgt vorgegangen:
+ 		Beim Festlegen der Kontrollmechanismen wird wie folgt vorgegangen:
  		\begin{enumerate}
  			\item Der Benutzer wählt ein Kontrollmechanismus aus. Zur Auswahl stehen:
  				\begin{itemize}
  					\item zwei Regionen vergleichen,
  					\item die Gesamtpunktzahl berechnen und mit der eingetragenen Gesamtpunktzahl vergleichen,
- 					\item oder die Note aus der Gesamtpunktzahl berechnen und mit der eingetragenen vergleichen.
+ 					\item oder die Note aus der Gesamtpunktzahl berechnen und mit der eingetragenen Zensur vergleichen.
  				\end{itemize}
- 			\item Aus den zuvor angelegten Regionen müssen nun die passenden Regionen ausgewählt werden. Abhängig von dem zuvor gewählten Kontrollmechanismus wird dem Benutzer Auskunft darüber gegeben, welche und wie viele Regionen auszuwählen sind.
- 			\item Der Kontrollmechanismus kann gespeichert werden, sobald in jeder zu vergleichenden Komponente die Mindestanzahl an auszuwählenden Regionen erreicht wurde. Diese werden in der Scan-Vorlage hinterlegt und mit an den Server zum Speichern gesendet. So werden alle Benutzer zu den Scan-Vorlagen die selben Kontrollmechanismen besitzen.
+ 			\item Aus den zuvor angelegten Regionen müssen nun die passenden Regionen ausgewählt werden. Abhängig von dem gewählten Kontrollmechanismus wird dem Benutzer Auskunft darüber gegeben, welche und wie viele Regionen auszuwählen sind.
+ 			\item Der Kontrollmechanismus kann gespeichert werden, sobald in jeder zu vergleichenden Komponente die Mindestanzahl an auszuwählenden Regionen erreicht wurde. Diese werden in der Scan-Vorlage hinterlegt und mit an den Server zum Speichern gesendet. So besitzen alle Benutzer die selben Kontrollmechanismen besitzen zu den jeweiligen Scan-Vorlagen.
  		\end{enumerate}
+ 		
+ 	\newpage
  		
  	\section{Scan-Vorlage verwenden}
  		Im folgenden Abschnitt wird zuerst verkürzt und anschließend detailliert geschildert, wie eine erstellte Scan-Vorlage zu verwenden ist und wie diese funktioniert.
  	
  		\begin{figure}[th]
     		\centering
-    		\includegraphics[width=\textwidth]{img/schablone2}
+    		\includegraphics[width=0.95\textwidth]{img/schablone2}
     		\caption{Schematischer Ablauf beim Verwenden einer Scan-Vorlage}
     		\label{fig:schablone2}
     	\end{figure}
  
- 		Nach dem Erstellen einer Scan-Vorlage kann diese auf ausgefüllten Klausuren angewandt werden. In \autoref{fig:schablone2} wird der Ablauf schematisch dargestellt. Zuerst werden die ausgefüllten Prüfungs-Seiten einer Klausur fotografiert. Anschließend stellen die digitalen Schablonen die relevanten Informationen jeder Seite für den nächsten Schritt zur Verfügung. Optical character recognition (OCR)\nomenclature{OCR}{optical character recognition, deutsch: optische Zeichenerkennung und im deutschen Synonym für Texterkennung}, auf deutsch optische Zeichenerkennung, wird dazu benutzt, die Daten aus den Schablonen zu digitalisieren. 
-		
-		\begin{figure}[th]
-    		\centering
-    		\includegraphics[width=\textwidth]{img/schema2}
-    		\caption{Scan-Vorlage verwenden}
-    		\label{fig:schema2}
-    	\end{figure}
+ 		Nach dem Erstellen einer Scan-Vorlage kann diese auf ausgefüllten Klausuren angewandt werden. In \autoref{fig:schablone2} wird der Ablauf schematisch dargestellt. Zuerst werden die ausgefüllten Prüfungs-Seiten einer Klausur fotografiert. Anschließend stellen die digitalen Schablonen die relevanten Informationen jeder Seite für den nächsten Schritt zur Verfügung. Optical character recognition (OCR)\nomenclature{OCR}{optical character recognition, deutsch: optische Zeichenerkennung und im deutschen Synonym für Texterkennung}, auf deutsch optische Zeichenerkennung, wird dazu benutzt, die Daten aus den übrig gebliebenen Regionen zu digitalisieren.
     	
-    	In der folgenden Aufzählung wird detailliert beschrieben, wie die Abfolge beim Verwenden einer Scan-Vorlage ist. Der Vorgang ist in \autoref{fig:schema2} schematisch dargestellt.
+    	In der folgenden Aufzählung wird detailliert beschrieben, wie die Abfolge beim Verwenden einer Scan-Vorlage ist. Der Vorgang ist in \autoref{fig:kompaktverwenden} als kompaktes Flussdiagramm und in \autoref{fig:schema2} schematisch dargestellt.
+    	
+    	\begin{figure}[th]
+    		\centering
+    		\includegraphics[width=\textwidth]{img/verwenden_flow_small}
+    		\caption{Kompaktes Flussdiagramm zum Verwenden einer Scan-Vorlage}
+    		\label{fig:kompaktverwenden}
+    	\end{figure}
 	
 		\begin{enumerate}
 			\item Die Seiten der Klausur müssen dazu in derselben Reihenfolge, wie in der Scan-Vorlage fotografiert werden. Anschließend werden die Regionen der Scan-Vorlage auf das jeweilige Bild angewendet. Bei dem Prozess entstehen Bildausschnitte, in denen die relevanten Informationen enthalten sind.
@@ -218,46 +217,63 @@ Im Rahmen eines zwölfwöchigem Forschungspraktikums an der Hochschule Mittweida
 			\item Die Ergebnisse werden im Anschluss an den Server gesendet. Zuvor kann der Benutzer jedoch die Ergebnisse anpassen bzw. korrigieren, falls es bei der Texterkennung zu Fehlern kam. Auch die Kontrollmechanismen finden vor dem Upload zum Server statt und geben dem Nutzer durch Fehlermeldungen Hinweise. \label{it:senden}
 		\end{enumerate}
 		
+		\begin{figure}[th]
+    		\centering
+    		\includegraphics[width=\textwidth]{img/schema2}
+    		\caption{Schematische Darstellung des Vorgangs beim Verwenden einer Scan-Vorlage}
+    		\label{fig:schema2}
+    	\end{figure}
+		
 	\section{Erweiterung des Konzepts}\label{sc:erweiterungkonzept}
 		Weiter ist eine zusätzliche Möglichkeit der Korrektur sinnvoll. Angenommen, ein Student verschreibt sich bei seiner Seminargruppe und vergisst ein Zeichen. Die Texterkennung erkennt zwar jedes Zeichen richtig, jedoch ist das Ergebnis keine korrekte Seminargruppe. Deshalb sollte im Nachhinein an die Texterkennung das Ergebnis mit einer richtigen Seminargruppe, die die größte Übereinstimmung mit dem erkannten Wort hat, ersetzt werden. Bei diesem Vorgehen ist zu beachten, dass nur die Seminargruppen verwendet werden sollten, die tatsächlich die Klausur geschrieben haben. Ähnliches ist auch für die Namen oder Matrikelnummern der Studenten möglich.
 		
-		Allerdings entstehen auch durch das OCR Fehler. Aus diesem Grund ist die sogenannte confidence neben jedem Ergebnis sichtbar. Diese sagt aus, wie sicher sich die Texterkennung bei dem Ergebnis ist. Jedoch kann es auch hier falsche Positiv-Ergebnisse geben. Deshalb ist auch das kein perfekter Indikator für die Richtigkeit. Deswegen gibt es, wie im \autoref{ch:konzept} \autoref{it:senden} schon beschreiben, die Möglichkeit, die Ergebnisse noch einmal zu überprüfen und zu korrigieren, bevor sie an den Server zum Abspeichern gesendet werden. Auch die Kontrollmechanismen reagieren auf die Änderungen der Ergebnisse, sodass Fehlermeldungen behoben werden können. 
+		Allerdings entstehen auch durch das OCR Fehler. Aus diesem Grund ist die sogenannte confidence neben jedem Ergebnis sichtbar. Diese sagt aus, wie sicher sich die Texterkennung bei dem Ergebnis ist. Jedoch kann es auch hier falsche Positiv-Ergebnisse geben. Deshalb ist auch das kein perfekter Indikator für die Richtigkeit. Deswegen gibt es, wie im \autoref{ch:konzept} \autoref{it:senden} beschreiben, die Möglichkeit, die Ergebnisse noch einmal zu überprüfen und zu korrigieren, bevor sie an den Server zum Abspeichern gesendet werden. Auch die Kontrollmechanismen reagieren auf die Änderungen der Ergebnisse, sodass Fehlermeldungen behoben werden können. 
 
 %%%%%%%%%%%%%%% - PROTOTYP - %%%%%%%%%%%%%%%
 
 \chapter{Entwicklung des ersten Prototyps}\label{ch:prototyp}
-	Dieses Kapitel beschreibt einzelne Phasen der Entwicklung der iOS-App in einer ähnlichen Reihenfolge, wie das bekannte Wasserfall-Model (siehe \autoref{fig:waterfall}) über die Verwaltung der Entwicklung großer Softwaresysteme nach Winston W. Royce \cite{royce_managing_1970}.
+	Dieses Kapitel beschreibt einzelne Phasen der Entwicklung der iOS-App in einer ähnlichen Reihenfolge, wie das bekannte Wasserfall-Model über die Verwaltung der Entwicklung großer Softwaresysteme nach Winston W. Royce \cite{royce_managing_1970} (siehe \autoref{fig:waterfall}).
     	
 	\section{Anforderungsplanung}\label{sc:anforderungsplanung}
-	Vor Beginn des Praktikums wurde diskutiert und kalkuliert, welches Thema aus dem Projekt Memo Space für ein zwölfwöchiges Praktikum geeignet ist. Dabei entstand eine Art Durchführbarkeits- / Machbarkeitsstudie, welche zur Entscheidung führte, ein Dokumenten-Scanner-Softwaresystem umzusetzen. Aufgrund der Kenntnisse und Erfahrung, soll ein Backend mit entsprechenden Schnittstellen und eine Android-App von Tobias Kallauke umgesetzt werden, währende vom Verfasser eine iOS-App gefordert ist. Die iOS-Anwendung soll den Anforderungen, die im gleichnamigen \autoref{ch:anforderungen} zu finden sind, erfüllen. Für weitere Details über den Server und die Android-App siehe im Praktikumsbericht von Tobias Kallauke.
+	Vor Beginn des Praktikums wurde diskutiert und kalkuliert, welches Thema aus dem Projekt Memo Space für ein zwölfwöchiges Praktikum geeignet ist. Dabei entstand eine Art Durchführbarkeits- / Machbarkeitsstudie, welche zur Entscheidung führte, ein Dokumenten-Scanner-Softwaresystem umzusetzen. Aufgrund der Kenntnisse und Erfahrung, soll ein Backend mit entsprechenden Schnittstellen und eine Android-App von Tobias Kallauke umgesetzt werden, während vom Verfasser eine iOS-App gefordert ist. Die iOS-Anwendung soll den Anforderungen, die im gleichnamigen \autoref{ch:anforderungen} zu finden sind, erfüllen. Für weitere Details über den Server und die Android-App siehe im Praktikumsbericht von Tobias Kallauke.
 
 	\section{Planung und Vorbereitung bzw. Analyse und Definition}\label{sc:analyse}
-		Die Aufgaben bzw. Ziele dieser Phase sind: \begin{enumerate}
+		Die Aufgaben bzw. Ziele dieser Phase sind: 
+		\begin{enumerate}
 			\item die Auseinandersetzung mit der Problemstellung und den Anforderungen,
 			\item das Betreiben von einer Problemanalyse,
 			\item die Entwicklung von Ideen und eines genauen Konzepts der iOS-App sowie 
 			\item das Entwickeln eines ersten minimalen Prototyps, als Machbarkeitsnachweis.
 		\end{enumerate}
 		
-		Bei der Entstehung des Konzepts, welches im \autoref{ch:konzept} zu finden ist, spielen die Dokumentationen der Frameworks \textit{Vision}\footurl{Dokumentation von Vision -}{https://developer.apple.com/documentation/vision}, \textit{VisionKit}\footurl{Dokumentation von VisionKit -}{https://developer.apple.com/documentation/visionkit} und \textit{PhotoKit}\footurl{Dokumentation von PhotoKit -}{https://developer.apple.com/documentation/photokit} von \textit{Apple} eine entscheidende Rolle. Aus ihnen wird klar, welche Funktionen der App noch zu entwickeln und welche in Frameworks schon vorhanden sind. Z. B. ist das Erkennen und das gerade Ziehen von Dokumenten in Echtzeit, sowie die Texterkennung auf Bildern in \textit{Vision} und \textit{VisionKit} enthalten. Bei der Entwicklung des ersten Prototyps half eine Beispiel-App von \textit{Apple} \cite{apple_detecting_2019}, die das Erkennen von Objekten in Standbildern mithilfe der genannten Frameworks umsetzt.
+		Bei der Entstehung des Konzepts, welches im \autoref{ch:konzept} zu finden ist, spielen die Dokumentationen der Frameworks \textit{Vision}\footurl{Dokumentation von Vision -}{https://developer.apple.com/documentation/vision}, \textit{VisionKit}\footurl{Dokumentation von VisionKit -}{https://developer.apple.com/documentation/visionkit} und \textit{PhotoKit}\footurl{Dokumentation von PhotoKit -}{https://developer.apple.com/documentation/photokit} von \textit{Apple} eine entscheidende Rolle. Aus ihnen wird klar, welche Funktionen der App noch zu entwickeln und welche in Frameworks schon vorhanden sind. Z. B. ist das Erkennen und das gerade Ziehen von Dokumenten in Echtzeit sowie die Texterkennung auf Bildern in \textit{Vision} und \textit{VisionKit} enthalten. Bei der Entwicklung des ersten minimalen Prototyps half eine Beispiel-App von \textit{Apple} \cite{apple_detecting_2019}, die das Erkennen von Objekten in Standbildern mithilfe der genannten Frameworks umsetzt.
 		
-		Durch die Auseinandersetzung mit den Bibliotheken konnte festgestellt werden, dass die zu entwickelnde App nur Geräte mit iOS 13.0 oder neuer unterstützen werden kann. Grund dafür sind die \textit{Apple} Frameworks \textit{SwiftUI} und \textit{VisionKit}. \textit{SwiftUI} bietet die Möglichkeit, Benutzeroberflächen für alle \textit{Apple}-Plattformen in der Programmiersprache \textit{Swift} zu erstellen. Die deklarative \textit{Swift}-Syntax ist einfach zu lesen und schnell zu schreiben, so dass es möglich ist, die App in wenigen Wochen für iPhone und iPad zu entwickeln. Als Alternative gibt es noch \textit{UIKit} oder auch \textit{AppKit}, die unter alle iOS Versionen funktioniere. Diese Frameworks sind allerdings nicht deklarativ sodass, Views sowohl im Code als auch in Interface-Dateien getrennt voneinander erstellt und konfiguriert werden müssen \cite{sillmann_einstieg_2019}. Dadurch dauert die Entwicklung einer App, im Gegensatz zu SwiftUI deutlich länger, wie man auch hier in dem Video\footurl{SwiftUI vs UIKit – Comparison of building the same app in each framework -}{https://www.youtube.com/watch?v=qk2y-TiLDZo} von Paul Hudson einem in der Swift-Community sehr bekannten Programmiere und Autor sieht. Sehr ähnliche Erfahrung hat der Verfasser vor dem Praktikum in seiner Freizeit mit den beiden Frameworks gemacht. \textit{VisionKit} dagegen, ist das Framework zum Scannen der Dokumente. Auch hierfür gibt es eine Alternative. Das Framework ist von den Entwicklern von \textit{WeTransfer} und funktioniert auch auf älteren iOS Versionen. Allerdings unterstützt \textit{WeScan}\footurl{WeScan GitHub Repository -}{https://github.com/WeTransfer/WeScan} noch kein stapelweises Scannen. Das bedeutet, man kann immer nur ein Foto machen, welches erst abgespeichert werden muss, bevor man das nächste machen kann. Das ist für den Benutzer nicht bequem und spart wahrscheinlich auch keine Zeit. Zu Informationen zu anderen verwendeten Frameworks siehe im \autoref{ch:prototyp} \autoref{sc:implementierung}.
+		Durch die Auseinandersetzung mit den Bibliotheken konnte festgestellt werden, dass die zu entwickelnde App nur Geräte mit der Betriebssystem-Version iOS 13.0 oder neuer unterstützen werden kann. Grund dafür sind die \textit{Apple} Frameworks \textit{SwiftUI} und \textit{VisionKit}. \\
+		\textit{SwiftUI} bietet die Möglichkeit, Benutzeroberflächen für alle \textit{Apple}-Plattformen in der Programmiersprache \textit{Swift} zu erstellen. Die deklarative \textit{Swift}-Syntax ist einfach zu lesen und schnell zu schreiben, so dass es möglich ist, die App in wenigen Wochen für iPhone und iPad zu entwickeln. Als Alternative gibt es noch \textit{UIKit} oder auch \textit{AppKit}, die unter alle iOS Versionen funktioniere. Diese Frameworks sind allerdings nicht deklarativ sodass, Views sowohl im Code als auch in Interface-Dateien getrennt voneinander erstellt und konfiguriert werden müssen \cite{sillmann_einstieg_2019}. Dadurch dauert die Entwicklung einer App, im Gegensatz zu SwiftUI deutlich länger, wie man auch in dem Video\footurl{SwiftUI vs UIKit – Comparison of building the same app in each framework -}{https://www.youtube.com/watch?v=qk2y-TiLDZo} von Paul Hudson einem in der Swift-Community sehr bekannten Programmiere und Autor sieht. Sehr ähnliche Erfahrung hat der Verfasser vor dem Praktikum in seiner Freizeit mit den beiden Frameworks gemacht. \\
+		\textit{VisionKit} dagegen, ist das Framework zum Scannen der Dokumente. Auch hierfür existiert eine Alternative, welche auch auf älteren iOS Versionen funktioniert. Allerdings unterstützt das Framework \textit{WeScan}\footurl{WeScan GitHub Repository -}{https://github.com/WeTransfer/WeScan} noch kein stapelweises Scannen. Das bedeutet, man kann immer nur ein Foto machen, welches erst abgespeichert werden muss, bevor man das nächste aufnehmen kann. Das ist für den Benutzer nicht bequem und spart wahrscheinlich auch keine Zeit. Zu Informationen zu anderen verwendeten Frameworks siehe im \autoref{ch:prototyp} \autoref{sc:implementierung}.
 
-		Abschließend zu dieser Phase ist zu erwähnen, dass das Scrum-Konzept\footurl{Der Scrum Guide™ -}{https://www.scrumguides.org/scrum-guide.html}, welches sich für agile Softwareentwicklung anbietet, zur Projektplanung und zum Projektmanagement verwendet wurde. Als Versionsverwaltung der Software wurde Git\footurl{Git Internetseite -}{https://git-scm.com/} in Kombination mit GitHub Issues\footurl{Mastering Issues -}{https://guides.github.com/features/issues/} und GitHub Project Boards als Planungstools benutzt. So konnte der Verfasser selbständig jedem so genannten Sprint Aufgaben zuordnen und den Fortschritt nachvollziehen.
+		Abschließend zu dieser Phase ist zu erwähnen, dass das Scrum-Konzept\footurl{Der Scrum Guide™ -}{https://www.scrumguides.org/scrum-guide.html}, welches sich für agile Softwareentwicklung anbietet, zur Projektplanung und zum Projektmanagement verwendet wurde. Als Versionsverwaltung der App-Software wurde Git\footurl{Git Internetseite -}{https://git-scm.com/} in Kombination mit GitHub Issues\footurl{Mastering Issues -}{https://guides.github.com/features/issues/} und GitHub Project Boards als Planungstools benutzt. Dadurch konnte der Verfasser selbständig jedem so genannten Sprint Aufgaben zuordnen und den Fortschritt nachvollziehen. Informationen über den Server und der Android-App zu diesem Thema sind im Praktikumsbericht von Tobias Kallauke zu finden.
 
 	\section{Grundlagen}
-			In den folgenden zwei Absätze werden wichtige Konzepte und Grundwissen vermittelt, die im folgenden \autoref{ch:entwurfunddesign} Entwurf und Design nochmal aufgegriffen werden.
+			In den folgenden zwei Absätze werden wichtige Konzepte und Grundwissen vermittelt, die im folgenden \autoref{ch:entwurfunddesign} nochmal aufgegriffen werden.
 
 		\paragraph*{Model-View-ViewModel}
-			Das sogenannte Entwurfsmuster Model View ViewModel (MVVM)\nomenclature{MVVM}{Model View ViewModel} entstand bei \textit{Microsoft} im Jahr 2005 mit der \textit{Windows Presentation Foundation} (WPF) und \textit{Silverlight-Technologien}. Ein Entwurfsmuster ist eine bewährte Lösungsvorlage für wiederkehrende Entwurfsprobleme. MVVM verwendet das Konzept eines Schichtmodells und ist eine abstrakte Darstellung einer Benutzeroberfläche, in Form einer Datenstruktur. Diese enthält Daten, die auf der Benutzeroberfläche angezeigt werden sollen und Anweisungen, die auf der Benutzeroberfläche aufgerufen werden können. Dieses sogenannte ViewModel, weiß nichts von Views, wie es sonst bei anderen Entwurfsmustern üblich ist, um Daten auf der Benutzeroberfläche anzuzeigen. Stattdessen verwendet eine MVVM-View eine Bindungsfunktion (data binging) zur bidirektionalen Zuordnung von Daten aus dem ViewModel zu den jeweiligen Eigenschaften auf der View. Z. B. Einträge in einer Dropdown-Menü. Aber auch das binden von Daten aus dem Model zu Benutzereingaben durch Maus, Tastatur oder Touch-Screens ist möglich. Beispielsweise kann ein Mausklick eine Anweisung in dem ViewModel auslösen. Diese verändert einen Wert im Model, wodurch die View durch data binding aktualisiert wird. \cite{papa_fundamental_2011} \cite{freeman_pro_2017} \cite{bragge_model-view-controller_2013}
+			Model-View-ViewModel (MVVM) \nomenclature{MVVM}{Model-View-ViewModel} ist ein Software-Architekturmuster, das die Trennung der Entwicklung der grafischen Benutzeroberfläche (der View) von der Entwicklung der Geschäftslogik oder der Back-End-Logik (dem Model) erleichtert. So ist die View nicht von einer bestimmten Model-Plattform abhängig. Unter einem Software-Architekturmuster oder auch Entwurfsmuster ist eine bewährte Lösungsvorlage für wiederkehrende Entwurfsprobleme zu verstehen. MVVM verwendet das Konzept eines Schichtmodells\footurl{Geschichtete Anwendung -}{https://docs.microsoft.com/en-us/previous-versions/msp-n-p/ff650258(v/\%3dpandp.10)} und ist eine abstrakte Darstellung einer Benutzeroberfläche, in Form einer Datenstruktur. Diese Struktur enthält Daten, die auf der Benutzeroberfläche angezeigt werden sollen und Anweisungen, die auf der Benutzeroberfläche aufgerufen werden können. Dieses so genannte ViewModel, besitzt keine direkte Verbindung zur View, wie es sonst bei anderen Entwurfsmustern üblich ist, um Daten auf der Benutzeroberfläche anzuzeigen. Stattdessen verwendet eine MVVM-View eine Bindungsfunktion (data binging) zur bidirektionalen Zuordnung von Daten aus dem ViewModel zu den jeweiligen Objekten auf der View. Z. B. Bildet eine Liste an Namen im ViewModel die Einträge in einer Dropdown-Menü ab. Aber auch das binden von Daten aus dem Model an Benutzereingaben durch Maus, Tastatur oder Touch-Screens ist möglich. Beispielsweise kann ein Mausklick eine Anweisung in dem ViewModel auslösen. Die Anweisung besorgt Daten aus dem Model, wodurch die View durch data binding aktualisiert wird. \cite{papa_fundamental_2011} \cite{freeman_pro_2017} \cite{bragge_model-view-controller_2013}
+			
+			\begin{figure}[th]
+    			\centering
+    			\includegraphics[width=0.7\textwidth]{img/mvvm}
+    			\caption{Schematische Darstellung des Model-View-ViewModel Konzepts}
+    			\label{fig:mvvm}
+    		\end{figure}
 
 		\paragraph*{Redux.js}
-			Redux.js ist eine Bibliothek\footurl{Redux.js Github Repository -}{https://github.com/reduxjs/redux} für die Programmiersprache JavaScript. Diese stellt einen sogenannten vorhersehbaren Zustandscontainer\footurl{Redux Core Concepts -}{https://redux.js.org/introduction/core-concepts} für JavaScript Anwendungen bereit. In diesem Container wird der Zustand der gesamten Anwendung in einem Objektbaum innerhalb eines einzigen Speichers gespeichert. Diesen Baum kann man sich vorstellen, wie eine Matrjoschka die weitere Puppen in sich hat. Der wichtige Unterschied zwischen einer Matrjoschka und einem Baum ist jedoch, dass in eine Puppe genau nur eine andere gesteckt werden kann. Bei einem Objektbaum hingegen können mehrere Objekte nebeneinander in ein Objekt ''gesteckt'' werden und so weiter. Im Bezug auf einen Zustandscontainer enthält dieser dann States (Objekte) auf deutsch Zustände und Daten, die unteranderem auf der Benutzeroberfläche angezeigt werden sollen. Diese Aufteilung in die States ist dazu gedacht, einer View oder mehrere zusammenhängende Views nur die wirklich benötigten Daten bereit zustellen. Diese Struktur erleichtert das Testen oder Untersuchen der Anwendung und ermöglicht es, durch hinzufügen eines neuen States den aktuellen Entwicklungsstand der Anwendung beizubehalten und dadurch den Entwicklungsprozess zu beschleunigen. \\
+			Redux.js ist eine Bibliothek\footurl{Redux.js Github Repository -}{https://github.com/reduxjs/redux} für die Programmiersprache JavaScript und stellt einen sogenannten vorhersehbaren Zustandscontainer\footurl{Redux Core Concepts -}{https://redux.js.org/introduction/core-concepts} für JavaScript Anwendungen bereit. In diesem Container wird der Zustand der gesamten Anwendung in einem Objektbaum innerhalb eines einzigen Speichers gespeichert. Diesen Baum kann man sich vorstellen, wie eine Matrjoschka die weitere Puppen in sich hat. Der wichtige Unterschied zwischen einer Matrjoschka und einem Baum ist jedoch, dass in eine Puppe genau nur eine andere gesteckt werden kann. Bei einem Objektbaum hingegen können mehrere Objekte nebeneinander in ein Objekt \glqq gesteckt\grqq{} werden und so weiter. Im Bezug auf einen Zustandscontainer enthält dieser dann States (Objekte) auf deutsch Zustände und Daten, die unteranderem auf der Benutzeroberfläche angezeigt werden sollen. Diese Aufteilung in die States ist dazu gedacht, einer View oder mehrere zusammenhängende Views nur die wirklich benötigten Daten bereit zustellen. Diese Struktur erleichtert das Testen oder Untersuchen der Anwendung und ermöglicht es, durch hinzufügen eines neuen States den aktuellen Entwicklungsstand der Anwendung beizubehalten und dadurch den Entwicklungsprozess zu beschleunigen. \\
 			Ein weiteres wichtiges Prinzip\footurl{Redux Three Principles -}{https://redux.js.org/introduction/three-principles} von Redux ist, dass die Daten in den States Schreibgeschütz sind. Die einzige Möglichkeit den Zustand zu ändern, besteht darin, eine Aktion auszulösen, die beschreibt, was passiert. Dadurch wird sichergestellt, dass weder die Views noch Netzwerk-Rückrufe jemals direkt an den Zustand ändern können. Stattdessen bringen sie nur die Absicht zum Ausdruck, den Zustand zu verändern und lösen eine Aktion aus. Da alle Änderungen zentralisiert sind und eine nach der anderen in einer strikten Reihenfolge erfolgen, gibt es weniger Programmfehler-Quellen.
 
 	\section{Entwurf und Design}\label{ch:entwurfunddesign}
 		
-		Eine typische Aufgabe dieser Entwurfsphase ist die Entscheidung über die Datenhaltung, die Verteilung im Netz und die Benutzeroberfläche des Software-Systems\footurl{Vorlesung 9, Folie 27 aus Softwaretechnik Grundlagen von Prof. Dr.-Ing. Wilfried Schubert (2019) -}{https://www.staff.hs-mittweida.de/~wschub/intranet/ss19/Fach_SWT/Fach_SWT_Zeitplan.htm}. Jedoch standen diese Grundsatzentscheidungen schon zu Beginn des Praktikums, durch die Kenntnisse von Tobias Kallauke und dem Verfasser fest. Der Server verwendet zur Datenspeicherung PostgreSQL\footurl{PostgreSQL Internetseite -}{https://www.postgresql.org/}, eine relationale Datenbank, sowie das Dateiverzeichnis für Bilder, während die App keine Daten persistent speichert. Durch die Aufteilung von App und Server handelt es sich um eine sogenannte Client/Server-Architektur. Für die Benutzeroberfläche der iOS-App wird, wie schon erwähnt, das deklarative SwiftUI verwendet. Weitere Informationen zum Backend und der Android-App befinden sich im Praktikumsbericht von Tobias Kallauke.
+		Eine typische Aufgabe dieser Entwurfsphase ist die Entscheidung über die Datenhaltung, die Verteilung im Netz und die Benutzeroberfläche des Software-Systems\footurl{Vorlesung 9, Folie 27 aus Softwaretechnik Grundlagen von Prof. Dr.-Ing. Wilfried Schubert (2019) -}{https://www.staff.hs-mittweida.de/~wschub/intranet/ss19/Fach_SWT/Fach_SWT_Zeitplan.htm}. Jedoch standen diese Grundsatzentscheidungen schon zu Beginn des Praktikums, durch die Kenntnisse von Tobias Kallauke und dem Verfasser fest. Der Server verwendet zur Datenspeicherung PostgreSQL\footurl{PostgreSQL Internetseite -}{https://www.postgresql.org/}, eine relationale Datenbank sowie das Dateiverzeichnis für Bilder, während die App keine Daten persistent speichert. Durch die Aufteilung von App und Server handelt es sich um eine sogenannte Client/Server-Architektur. Für die Benutzeroberfläche der iOS-App wird, wie schon erwähnt, das deklarative SwiftUI verwendet. Weitere Informationen zum Entwurf des Backends und der Android-App befinden sich im Praktikumsbericht von Tobias Kallauke.
 		
 		Jedoch mussten noch Arbeit in den Workflow und in die Architektur der App gesteckt werden. Zur Definition einzelner Teil-Workflows, die zusammenhängende Aufgaben umfassen, wurden eine Art Zustandsautomaten bzw. Flussdiagramme angefertigt. Der schriftliche Zustandsautomat, galt als Vorlage für das in \autoref{fig:erstellen_flow} zu sehende Flussdiagramm. Die Modelle halfen dabei Views zu entwickeln und deren Design festzulegen. Das Aussehen der App sollten sich jedoch im Laufe der Zeit noch ändern, denn erst einmal stand die Umsetzung des Konzepts im Vordergrund.
 
@@ -299,7 +315,7 @@ Im Rahmen eines zwölfwöchigem Forschungspraktikums an der Hochschule Mittweida
 		
 		Zur Realisierung der entworfenen Systemkomponenten wurde ausschließlich, die von Apple entwickelte IDE\nomenclature{IDE}{integrated development environment, deutsch: Integrierte Entwicklungsumgebung} Xcode\footurl{Xcode Internetseite -}{https://developer.apple.com/xcode/}, verwendet. Diese stellt Geräte-Simulatoren zur Verfügung, auf denen die App getestet werden kann. Die Simulatoren bieten unteranderem auch die Möglichkeit an, die Anwendung schnell auf verschiedenen iOS bzw. iPadOS Versionen zu testen. Auch ist das Testen der App auf echten Geräten durch Xcode möglich, was bei der Entwicklung unumgänglich war. Grund dafür ist die Benutzung der Kamera, die bei den Simulatoren zu gewollten Abstürzen führt, da diese keinen Zugriff auf eine Kamerasystem besitzen.
 		
-		Die App wurde ausschließlich in der Programmiersprache Swift geschrieben. Zusätzlich wurden die Frameworks SwiftUI, Vision und VisionKit von Apple, sowie das Framework Kingfisher\footurl{Kingfisher GitHub Repository -}{https://github.com/onevcat/Kingfisher}, zum Downloaden und Cachen von Bildern verwendet. Das Vision-Framework führt Erkennung von Gesichts- und Gesichtsmarkierungen, Texterkennung, Barcode-Erkennung, Bildregistrierung und allgemeine Merkmalsverfolgung durch. Jedoch wurde in der App nur die integrierte Texterkennung benutzt. Es ist aber anzunehmen, das Algorithmen aus VisionKit von Vision zur Dokumenten-Erkennung verwendet. Für mehr Informationen über die Frameworks SwiftUI und VisionKit siehe im \autoref{ch:prototyp} \autoref{sc:analyse}.
+		Die App wurde ausschließlich in der Programmiersprache Swift geschrieben. Zusätzlich wurden die Frameworks SwiftUI, Vision und VisionKit von Apple sowie das Framework Kingfisher\footurl{Kingfisher GitHub Repository -}{https://github.com/onevcat/Kingfisher}, zum Downloaden und Cachen von Bildern verwendet. Das Vision-Framework führt Erkennung von Gesichts- und Gesichtsmarkierungen, Texterkennung, Barcode-Erkennung, Bildregistrierung und allgemeine Merkmalsverfolgung durch. Jedoch wurde in der App nur die integrierte Texterkennung benutzt. Es ist aber anzunehmen, das Algorithmen aus VisionKit von Vision zur Dokumenten-Erkennung verwendet. Für mehr Informationen über die Frameworks SwiftUI und VisionKit siehe im \autoref{ch:prototyp} \autoref{sc:analyse}.
 		
 		Zum Ändern und Testen des Backends wurde außerdem Visual Studio Community bzw. Visual Studio Code\footurl{Visual Studio Internetseite -}{https://visualstudio.microsoft.com/de/} mit dem REST Client Plugin\footurl{REST Client Repository -}{https://github.com/Huachao/vscode-restclient} , zum Testen der Server-Schnittstellen verwendet. Das Backend konnte dann als lokaler Server auf dem Entwicklungscomputer gestartet und über die IP-Adresse 0.0.0.0 sogar im lokalen Netzwerk aufgerufen werden. Für die Verwaltung der PostgreSQL-Datenbank genügte das Tool PgAdmin4\footurl{PgAdmin Internetseite -}{https://www.pgadmin.org/}. Damit ist es möglich einzelne Einträge oder auch ganze Tabellen der Datenbank zu bearbeiten.
 		
@@ -435,7 +451,7 @@ Im Rahmen eines zwölfwöchigem Forschungspraktikums an der Hochschule Mittweida
 				\item Der Name und die Beschreibung der Vorlage sowie die Liste an Kontrollmechanismen wird gesendet. In der Antwort des Servers befindet sich  die Vorlagen-ID\nomenclature{ID}{Steht für einen einzigartigen Identifikator} , die in den nächsten Schritten benötigt wird. 
 				\item Die Bilder der Seiten werden gesendet. Als Antwort zu jedem Bild wird der Pfad zurück geschickt, wo das Bild vom Server gespeichert wurde. Dieser Pfad wird im nächsten Schritt benötigt.
 				\item Die Seiten mit einer Seiten-Nummer und dem Pfad zu dem Bild, wird mit der Vorlagen-ID gesendet. Als Antwort wird eine Seiten-ID zurückgegeben, die im nächsten Schritt verwendet wird.
-				\item Die Regionen der Seiten werden gesendet. Eine Region hat X- und Y-Koordinaten. Diese repräsentieren den Abstand vom Bildursprung, der sich in jedem Bild oben links befindet. Außerdem besitzt eine Region noch eine Höhe und Breite sowie einen Namen und einen Datentyp (\ref{fig:v5} und \ref{fig:v7}). Die Koordinaten, sowie die Höhe und Breite sind alle in Pixel angegeben. Zusammen mit der Seiten-ID wird das Attribute an den Server gesendet.
+				\item Die Regionen der Seiten werden gesendet. Eine Region hat X- und Y-Koordinaten. Diese repräsentieren den Abstand vom Bildursprung, der sich in jedem Bild oben links befindet. Außerdem besitzt eine Region noch eine Höhe und Breite sowie einen Namen und einen Datentyp (\ref{fig:v5} und \ref{fig:v7}). Die Koordinaten sowie die Höhe und Breite sind alle in Pixel angegeben. Zusammen mit der Seiten-ID wird das Attribute an den Server gesendet.
 			\end{enumerate}
 			
 		\subsection{Scan-Vorlage verwenden}
@@ -541,7 +557,7 @@ Im Rahmen eines zwölfwöchigem Forschungspraktikums an der Hochschule Mittweida
 				Mithilfe der Seiten-ID, die in der Datenbank des Servers hinterlegt ist, werden dann die Regionen der Seite auf das Bild, welches sich an dem gesendet Pfad befindet, angewendet. Für mehr Details siehe im Praktikumsbericht von Tobias Kallauke. 
 				
 				\paragraph*{Zu 4.: Texterkennungs-Ergebnisse darstellen}
-				Nach der Texterkennung sendet der Server die Ergebnisse der Seiten als Antwort zurück. Diese werden dann im selben State des State-Containers gesichert, wie es auch bei Vision der Fall ist. Die Ergebnisse bestehen aus der Region-ID, zur Zuordnung, dem erkannten Text, sowie der confidence des OCR, zu dem jeweiligem Wort. Auch ähnlich, wie es bei Vision der Fall ist. Die Darstellung der Ergebnisse und das Verhalten der Benutzeroberfläche ist ebenfalls identisch.      
+				Nach der Texterkennung sendet der Server die Ergebnisse der Seiten als Antwort zurück. Diese werden dann im selben State des State-Containers gesichert, wie es auch bei Vision der Fall ist. Die Ergebnisse bestehen aus der Region-ID, zur Zuordnung, dem erkannten Text sowie der confidence des OCR, zu dem jeweiligem Wort. Auch ähnlich, wie es bei Vision der Fall ist. Die Darstellung der Ergebnisse und das Verhalten der Benutzeroberfläche ist ebenfalls identisch.      
 
 %%%%%%%%%%%%%%%% - FAZIT - %%%%%%%%%%%%%%%
 
@@ -549,9 +565,7 @@ Im Rahmen eines zwölfwöchigem Forschungspraktikums an der Hochschule Mittweida
 	Dieses Kapitel reflektiert den aktuellen Stand der App und zieht einen Vergleich mit den Anforderungen aus \autoref{ch:anforderungen}.
 	
 	\section{Stand des Prototyps}
-		Während der Entwicklung konnten viele Anforderungen umgesetzte werden. 
-		
-		Jedoch fehlt zum Zeitpunkt der Abgabe ein essentieller Bestandteil der App. Auf Grund mangelder Zeit war es nicht mehr möglich die digitalisierten Daten aus der Texterkennung an den Server zu senden, wo sie gespeichert und in ein tabellarisches Format gebracht werden sollten. 
+		Während der Entwicklung konnten viele Anforderungen umgesetzte werden. Jedoch fehlt zum Zeitpunkt der Abgabe ein essentieller Bestandteil der App. Auf Grund mangelnder Zeit war es nicht mehr möglich die digitalisierten Daten aus der Texterkennung an den Server zu senden, wo sie gespeichert und in ein tabellarisches Format gebracht werden sollten. 
 		
 		Außerdem wurde nur einer der Kontrollmechanismen umgesetzt. Grund dafür ist, dass dafür zu wenig Zeit in der Planung investiert wurde. Grundsätzlich könnten die fehlenden Mechanismen recht schnell implementiert werden, allerdings ist der aktuelle Ansatz der dahinter liegenden Datenstruktur nicht zum Speichern in der Datenbank geeignet. Sobald Änderungen an der Datenstruktur vorgenommen werden könnten, kann es zu Fehlern kommen. Es existiert jedoch schon eine Idee zur Umsetzung einer besseren Datenstruktur. Dafür müssten allerdings neben der App auch der Server und die Datenbank angepasst werden. Des Weiteren wurden Fehlermeldungen und/oder -behandlungen bezüglich des Servers nur sporadisch implementiert. Aber auch hierfür sind die Grundlagen schon gelegt, da Fehler stets aufgefangen und zentral abgelegt werden. 
 	
