@@ -87,7 +87,7 @@ Im Rahmen eines zwölfwöchigen Forschungspraktikums an der Hochschule Mittweida
 	\section{Klausuren-Vorlage}\label{sc:klausuren-vorlage}
 	Eine Klausuren-Vorlage bzw. ein Gestaltungsleitfaden für Klausuren der Fakultät Angewandte Computer- und Biowissenschaften bietet außerdem die Möglichkeit der Kontrolle des Prüfers. Durch das vorgegebene Layout der Klausur ist es möglich, Fehler des Prüfers zu erkennen. Die Klausur in \autoref{fig:klausur} ist nach dieser Klausuren-Vorlage angefertigt worden. Auf dem Deckblatt (\ref{fig:seite1}) der Prüfung ist eine Tabelle mit drei Zeilen und jeweils einer Spalte pro Klausur-Aufgabe. In der ersten Zeile befinden sich die Nummern der Aufgaben, in der zweiten die zu erreichenden Punkte der Aufgabe. In der dritten Zeile trägt der Prüfer die erbrachten Punkte des Studenten ein. Unter der Tabelle befindet sich ein Feld für die erreichte Gesamtpunktzahl sowie ein weiteres für die aus den Punkten resultierende Note. Es soll nun überprüft werden, ob die Summe der erreichten Punkte mit der Gesamtpunktzahl übereinstimmt. Zudem wird auch die Note errechnet und mit dem Ergebnis des Prüfers verglichen werden. Ein weiteres Merkmal der Klausuren-Vorlage ist ein Feld, für die vom Studenten erreichten Punkte über jeder Aufgabenstellung auf den nachfolgenden Seiten. Zu sehen sind solche Felder in \autoref{fig:seite2} am rechten Seitenrand. Die dortige Angabe sollte mit der Angabe in der Tabelle auf dem Deckblatt (\ref{fig:seite1}) übereinstimmen und bietet somit noch eine weitere Möglichkeit der Kontrolle.
 	
-	\begin{figure}[th]
+	\begin{figure}[h!]
     	\centering
    		\begin{subfigure}[t]{0.48\textwidth}
         	\frame{\includegraphics[width=0.96\textwidth]{img/seite1}}
@@ -138,7 +138,7 @@ Im Rahmen eines zwölfwöchigen Forschungspraktikums an der Hochschule Mittweida
     
 		Um wirklich nur relevante Daten zu digitalisieren, benötigt es die sogenannten Scan-Vorlagen, die in der App durch den Benutzer angelegt werden können. Eine Scan-Vorlage beinhaltet mehrere Schablonen. Solch eine Schablone wird beispielsweise auf das Deckblatt gelegt, sodass nur noch die relevanten Informationen, die digitalisiert werden sollen, zu sehen sind. Alles andere, was nicht von Interesse ist, wird von der Schablone überdeckt. In der \autoref{fig:schablone1} ist dieses Konzept schemenhaft zu sehen. Der Benutzer kann in zwei grobe Schritte, um eine digitale Schablone anzufertigen. Zuerst muss ein Foto von der Seite aufgenommen werden. Anschließend werden die Regionen auf diesem Foto manuell markiert, die digitalisiert werden sollen. Eine Scan-Vorlage ist somit eine Sammlung aller digitalen Schablonen zu einer Klausur, denn jede Seite benötigt eine eigene individuelle Schablone.
 				
-		\begin{figure}[th]
+		\begin{figure}[h!]
     		\centering
     		\includegraphics[width=0.48\textwidth]{img/schablone1}
     		\caption{Schematisches Schaubild zum Verständnis des Schablonen-Konzepts}
@@ -164,7 +164,7 @@ Im Rahmen eines zwölfwöchigen Forschungspraktikums an der Hochschule Mittweida
 			\item Zuletzt wird die Vorlage zum Speichern an einen Server gesendet, wodurch alle Benutzer der App die bereits erstellten Scan-Vorlagen verwenden können.
 		\end{enumerate}
 		
-		\begin{figure}[th]
+		\begin{figure}[h!]
     		\centering
     		\includegraphics[width=\textwidth]{img/schema1}
     		\caption{Schematische Darstellung des Vorgangs Scan-Vorlage erstellen und auf dem Server speichern}
@@ -177,8 +177,10 @@ Im Rahmen eines zwölfwöchigen Forschungspraktikums an der Hochschule Mittweida
  		Das erste Konzept ist der Vergleich. Zur Erinnerung: Es sollen die eingetragenen Punkte auf dem Deckblatt mit den Punkten neben der Aufgabenstellung auf den nachfolgenden Seiten auf Gleichheit überprüft werden. Das zweite Konzept baut auf dem ersten auf. Statt zwei Regionen bzw. Komponenten zu vergleichen, wird eine oder werden beide Komponenten zuvor berechnet. Beispielsweise muss die Summe der Punkte pro Aufgabe mit der Gesamtpunktzahl übereinstimmen. Das bedeutet, es wird erst die Summe berechnet und anschließend mit der vom Prüfer eingetragenen Punktzahl verglichen. Oder aus der Gesamtpunktzahl wird die Note ermittelt und mit der vom Prüfer eingetragen Note verglichen. 
  	
  		Beim Festlegen der Kontrollmechanismen wird wie folgt vorgegangen:
+ 		\vspace{-5mm}
  		\begin{enumerate}
  			\item Der Benutzer wählt einen Kontrollmechanismus aus. Zur Auswahl stehen:
+ 				\vspace{-5mm}
  				\begin{itemize}
  					\item der Vergleich zweier Regionen,
  					\item die Gesamtpunktzahl berechnen und mit der eingetragenen Gesamtpunktzahl vergleichen,
@@ -191,7 +193,7 @@ Im Rahmen eines zwölfwöchigen Forschungspraktikums an der Hochschule Mittweida
  	\section{Scan-Vorlage verwenden}
  		Im folgenden Abschnitt wird zuerst verkürzt und anschließend detailliert die Verwendung und Funktionsweise einer erstellten Scan-Vorlage beschrieben. 
  	
- 		\begin{figure}[th]
+ 		\begin{figure}[h!]
     		\centering
     		\includegraphics[width=0.95\textwidth]{img/schablone2}
     		\caption{Schematischer Ablauf beim Verwenden einer Scan-Vorlage}
@@ -203,7 +205,7 @@ Im Rahmen eines zwölfwöchigen Forschungspraktikums an der Hochschule Mittweida
     	Nachfolgend wird detailliert das Verwenden einer Scan-Vorlage beschrieben. Der Vorgang ist in \autoref{fig:kompaktverwenden} als kompaktes Flussdiagramm und in \autoref{fig:schema2} schematisch dargestellt.
 
     	
-    	\begin{figure}[th]
+    	\begin{figure}[h!]
     		\centering
     		\includegraphics[width=\textwidth]{img/verwenden_flow_small}
     		\caption{Kompaktes Flussdiagramm zum Verwenden einer Scan-Vorlage}
@@ -217,8 +219,7 @@ Im Rahmen eines zwölfwöchigen Forschungspraktikums an der Hochschule Mittweida
 			\item Die Ergebnisse werden im Anschluss an den Server gesendet. Zuvor kann der Benutzer jedoch die Ergebnisse anpassen bzw. korrigieren, falls es bei der Texterkennung zu Fehlern kam. Auch die Kontrollmechanismen finden vor dem Hochladen zum Server Anwendung und geben dem Nutzer durch Fehlermeldungen Hinweise. \label{it:senden}
 		\end{enumerate}
 
-		
-		\begin{figure}[th]
+		\begin{figure}[h!]
     		\centering
     		\includegraphics[width=\textwidth]{img/schema2}
     		\caption{Schematische Darstellung des Vorgangs beim Verwenden einer Scan-Vorlage}
@@ -241,6 +242,7 @@ Im Rahmen eines zwölfwöchigen Forschungspraktikums an der Hochschule Mittweida
 
 \section{Analyse und Definition}\label{sc:analyse}
 		Die Aufgaben bzw. Ziele dieser Phase sind: 
+		\vspace{-5mm}
 		\begin{enumerate}
 			\item die Auseinandersetzung mit der Problemstellung und den Anforderungen,
 			\item die Durchführung einer Problemanalyse,
@@ -248,7 +250,6 @@ Im Rahmen eines zwölfwöchigen Forschungspraktikums an der Hochschule Mittweida
 			\item das Entwickeln eines ersten minimalen Prototyps als Machbarkeitsnachweis.
 		\end{enumerate}
 
-		
 		Bei der Entstehung des Konzepts, welches im \autoref{ch:konzept} zu finden ist, spielen die Dokumentationen der Frameworks Vision\footurl{Dokumentation von Vision -}{https://developer.apple.com/documentation/vision}, VisionKit\footurl{Dokumentation von VisionKit -}{https://developer.apple.com/documentation/visionkit} und PhotoKit\footurl{Dokumentation von PhotoKit -}{https://developer.apple.com/documentation/photokit} von Apple eine entscheidende Rolle. Aus ihnen geht hervor, welche Funktionen der App noch zu entwickeln und welche in Frameworks schon vorhanden sind. Z. B. ist das Erkennen und das Geradeziehen von Dokumenten in Echtzeit sowie die Texterkennung auf Bildern in Vision und VisionKit enthalten. Bei der Entwicklung des ersten minimalen Prototyps half eine Beispiel-App von Apple \cite{apple_detecting_2019}, die das Erkennen von Objekten in Standbildern mithilfe der genannten Frameworks umsetzt.
 		
 		Durch die Auseinandersetzung mit den Bibliotheken konnte festgestellt werden, dass die zu entwickelnde App nur Geräte ab der Betriebssystem-Version iOS 13.0 unterstützen wird. Grund dafür sind die Apple Frameworks SwiftUI und VisionKit. \\
@@ -259,21 +260,22 @@ Im Rahmen eines zwölfwöchigen Forschungspraktikums an der Hochschule Mittweida
 
 	\section{Grundlagen}
 		In den folgenden zwei Absätzen werden wichtige Konzepte erläutert und Grundwissen vermittelt, die im nachfolgendem \autoref{sc:entwurfunddesign} nochmals thematisiert werden.
-
+		
+		\vspace{-5mm}
 		\paragraph*{Model-View-ViewModel}
 			Model-View-ViewModel (MVVM) \nomenclature{MVVM}{Model-View-ViewModel} ist ein Software-Architekturmuster. Unter einem Software-Architekturmuster oder auch Entwurfsmuster ist eine bewährte Lösungsvorlage für wiederkehrende Entwurfsprobleme zu verstehen. MVVM erleichtert die Trennung der Entwicklung der grafischen Benutzeroberfläche (der View in \autoref{fig:mvvm}) von der Entwicklung der Geschäftslogik oder der Back-End-Logik (dem Model). So ist die View nicht von einer bestimmten Model-Plattform abhängig. MVVM verwendet das Konzept eines Schichtmodells\footurl{Geschichtete Anwendung -}{https://docs.microsoft.com/en-us/previous-versions/msp-n-p/ff650258(v/\%3dpandp.10)} und ist eine abstrakte Darstellung einer Benutzeroberfläche in Form einer Datenstruktur. Diese Struktur enthält Daten, die auf der Benutzeroberfläche angezeigt werden sollen und Anweisungen, die auf der Benutzeroberfläche aufgerufen werden können. Dieses sogenannte ViewModel besitzt keine direkte Verbindung zur View, wie es sonst bei anderen Entwurfsmustern üblich ist, um Daten auf der Benutzeroberfläche anzuzeigen. Stattdessen verwendet eine MVVM-View eine Bindungsfunktion (data binging) zur bidirektionalen Zuordnung von Daten aus dem ViewModel zu den jeweiligen Objekten auf der View. Z. B. bildet eine Liste von Zahlen im ViewModel die Einträge in einem Dropdown-Menü auf der View ab. Aber auch das Binden von Daten aus dem Model an Benutzereingaben durch Maus, Tastatur oder Touch-Screens ist möglich. Beispielsweise kann ein Mausklick eine Anweisung in dem ViewModel auslösen. Die Anweisung besorgt Daten aus dem Model, wodurch die View durch data binding aktualisiert wird. \cite{papa_fundamental_2011} \cite{freeman_pro_2017} \cite{bragge_model-view-controller_2013}	
 			
-			\begin{figure}[th]
+			\begin{figure}[h!]
     			\centering
     			\includegraphics[width=0.7\textwidth]{img/mvvm}
     			\caption{Schematische Darstellung des Model-View-ViewModel Konzepts}
     			\label{fig:mvvm}
     		\end{figure}
-
+    		
+		\vspace{-5mm}
 		\paragraph*{Redux.js}
 			Redux.js ist eine Bibliothek\footurl{Redux.js Github Repository -}{https://github.com/reduxjs/redux} für die Programmiersprache JavaScript und stellt einen sogenannten vorhersehbaren Zustandscontainer\footurl{Redux Core Concepts -}{https://redux.js.org/introduction/core-concepts} für JavaScript-Anwendungen bereit. In diesem Container wird der Zustand der gesamten Anwendung in einem sogenannten Objektbaum gespeichert. Dieser Baum ist mit der Ordner-Struktur von Windows vergleichbar. Es gibt einen Wurzel-Ordner, in dem wiederum Ordner oder aber auch Dateien enthalten sind. Im Zustandscontainer bezeichnet man die Ordner als States bzw. auf deutsch Zustände. Die Dateien sind einfache Daten, die unteranderem auf der Benutzeroberfläche angezeigt werden sollen. Diese Aufteilung in die States ist dazu gedacht, jeder View nur die wirklich benötigten Daten bereitzustellen. Diese Struktur erleichtert das Testen oder Untersuchen der Anwendung und ermöglicht es, durch Hinzufügen eines neuen States den aktuellen Entwicklungsstand der Anwendung beizubehalten und dadurch den Entwicklungsprozess zu beschleunigen. \\
 			Ein weiteres wichtiges Prinzip\footurl{Redux Three Principles -}{https://redux.js.org/introduction/three-principles} von Redux ist, dass die Daten in den States schreibgeschützt sind. Die einzige Möglichkeit den Zustand bzw. die Daten zu ändern, besteht darin, eine Aktion auszulösen. Die Aktion beschreibt, wie der State und dessen Daten sich ändert. Dadurch wird sichergestellt, dass weder die Views noch Netzwerk-Rückrufe jemals direkt den Zustand ändern können. Stattdessen bringen sie nur die Absicht zum Ausdruck, den State zu verändern und lösen eine Aktion aus, die die Änderung für sie vornimmt. Da alle Aktionen zentralisiert sind und eine nach der anderen in einer strikten Reihenfolge erfolgen, gibt es weniger Programmfehlerquellen.
-
 
 	\section{Entwurf und Design}\label{sc:entwurfunddesign}
 		In der Entwurfsphase wird normalerweise über die Datenhaltung, die Verteilung des Software-Systems im Netz und die Benutzeroberfläche entschieden\footurl{Vorlesung 9, Folie 27 aus Softwaretechnik Grundlagen von Prof. Dr.-Ing. Wilfried Schubert (2019) -}{https://www.staff.hs-mittweida.de/~wschub/intranet/ss19/Fach_SWT/Fach_SWT_Zeitplan.htm}. Jedoch standen diese Grundsatzentscheidungen schon zu Beginn des Praktikums durch die Kenntnisse von Tobias Kallauke und dem Verfasser fest. Zur Datenspeicherung verwendet der Server PostgreSQL\footurl{PostgreSQL Internetseite -}{https://www.postgresql.org/}, eine relationale Datenbank. Zum Speichern der Bilder wird die Server-Verzeichnisstruktur genutzt. In der App hingegen werden keine Daten persistent gespeichert. Durch die Aufteilung von App und Server handelt es sich um eine sogenannte Client-Server-Architektur und für die Benutzeroberfläche der iOS-App wird, wie schon erwähnt, das deklarative SwiftUI verwendet. Weitere Informationen zum Entwurf der Server-Architektur und der Android-App befinden sich im Praktikumsbericht von Tobias Kallauke.
@@ -286,15 +288,16 @@ Im Rahmen eines zwölfwöchigen Forschungspraktikums an der Hochschule Mittweida
 
 %%%%%%%%%%%%%%%%%%%%%
 		Daher lag es nah die wesentlichen Konzepte von Redux umzusetzen und einen Redux ähnlichen State Container, als ViewModel zu implementieren. Aus der Definition von Teil-Workflows sollte der Container oder auch Store genannt mindestens 5 States haben: 
+		\vspace{-5mm}
 		\begin{itemize}
 			\item für Authentifizierung sowie Registrierung,
-			\item für das Anlegen von Vorlagen, um Zwischenergebnisse zu speichern,
+			\item für das Anlegen von Scan-Vorlagen und Speichern der Zwischenergebnisse,
 			\item für das Ausführen von Server-Aufrufen zum Speichern und Abrufen von Vorlagen, 
 			\item für die Steuerung des Workflows bzw. den stellvertretenden Views sowie
 			\item für sonstige Daten, die sehr häufig verwendet werden.
 		\end{itemize}
 		
-		\begin{figure}[th]
+		\begin{figure}[h!]
 			\centering
 			\begin{subfigure}[t]{0.48\textwidth}
 				\centering
@@ -311,28 +314,29 @@ Im Rahmen eines zwölfwöchigen Forschungspraktikums an der Hochschule Mittweida
 			\caption{Architektur Schemata}
 		\end{figure}
 		
-		Das Schema \ref{fig:redux} zeigt, die in der App umgesetzte Redux ähnliche Struktur. Über eine View (rot) können Aktionen (blau) aufgerufen werden. Diese gelangt zuerst in einen sogenannten Dispatcher (lila), welcher als Verteiler dient. Anhand der Art einer Aktion, wird der entsprechende Reducer (grün) vom Dispatcher beauftragt, die Aktion auszuführen. Ein Reducer ist für genau eine Art von Aktionen zuständig. Allerdings ist, wie in der \autoref{fig:tree} zu sehen ist, eine Schachtellung von Reducern (grün) möglich. Dies bedeutet auch, dass Aktions-Arten ineinander geschachtelt werden können. Das hat den Hintergrund, dass die States wie ein Objektbaum aufgebaut sind. So hat jeder State seinen eigenen Reducer, was für die oben erwähnte Modularität sorgt. Möchte man beispielsweise eine Änderung im Kontroll-Mechanismen State (siehe Kontroll-State in \ref{fig:tree}) vornehmen, muss die Haupt-Aktion in einer Kontroll-Mechanismen Reducer Aktion gekapselt werden und diese wiederum in einer Vorlagen Reducer Aktion. Zum Ausführen der Aktion, werden dann die entsprechenden Reducer die Aktions-Kapselung von außen nach innen auflösen. Nachdem die Aktion ausgeführt und eine State-Änderung herbeigeführt wurde, aktualisiert sich durch das data binding von MVVM die View. Genauer werden alle Views, die eine Bindung zu dem jeweiligen Datum haben, über die Änderung benachrichtigt und daraufhin aktualisieren diese sich.
+		Das Schema \ref{fig:redux} zeigt, die in der App umgesetzte Redux ähnliche Struktur. Über eine View (rot) können Aktionen (blau) aufgerufen werden. Diese gelangt zuerst in einen sogenannten Dispatcher (lila), welcher als Verteiler dient. Anhand der Art einer Aktion, wird der entsprechende Reducer (grün) vom Dispatcher beauftragt, die Aktion auszuführen. Ein Reducer ist für genau eine Art von Aktionen zuständig. Allerdings ist, wie in der \autoref{fig:tree} zu sehen ist, eine Kapselung von Reducern (grün) möglich. Ferner können Aktions-Arten ineinander gekapselt werden. Das hat den Hintergrund, dass die States wie ein Objektbaum aufgebaut sind. So hat jeder State seinen eigenen Reducer, was für die oben erwähnte Modularität sorgt. Muss beispielsweise eine Änderung im Kontroll-Mechanismen State (siehe Kontroll-State in \ref{fig:tree}) vorgenommen werden, wird die Haupt-Aktion in einer Kontroll-Mechanismen-Reducer-Aktion gekapselt und diese wiederum in einer Vorlagen-Reducer-Aktion. Zum Ausführen dieser Aktion, werden zuvor die entsprechenden Reducer die Kapselungen von außen nach innen auflösen. Nachdem die Aktion ausgeführt und eine State-Änderung herbeigeführt wurde, aktualisiert sich durch data binding von MVVM die View. Genauer werden alle Views, die eine Bindung zu dem jeweiligen Datum im State haben, über die Änderung benachrichtigt und daraufhin aktualisieren diese ihre Benutzeroberfläche.
 
-		Ein weiterer wichtiger Punkt sind die Server-Aufrufe. Für diese gibt es einen eigenen Reducer und eine besondere Schnittstelle. Diese Schnittstelle ist in der \autoref{fig:redux} grau markiert und mit API \nomenclature{API}{application programming interface, deutsch: Programmierschnittstelle} beschriftet. Diese hat die Besonderheit selbst Aktionen an den Container zu senden. Beispielsweise löst ein Knopfdruck in einer View die Aktion aus, um alle Vorlagen vom Server zu laden. Diese Aktion gelangt über den vorgesehenen Reducer zu der API-Schnittstelle. Dort wird ein entsprechender Server-Aufruf gestartet und auf den Server-Rückruf gewartet. Sobald die Antwort des Servers angekommen ist, wird diese mit Hilfe einer Aktion zurück zum Container gesendet. Dort wird sich wieder ein entsprechender Reducer um eventuelle Fehlerbehandlung oder das Ablegen der heruntergeladenen Vorlagen kümmern.
+		Ein weiterer wichtiger Bestandteil der Architektur sind die Server-Aufrufe. Für diese gibt es einen eigenen Reducer und Schnittstelle. Diese Schnittstelle ist in der \autoref{fig:redux} grau markiert und mit API \nomenclature{API}{application programming interface, deutsch: Programmierschnittstelle} beschriftet. Diese hat die Besonderheit selbst Aktionen an den Container zu senden. Beispielsweise löst ein Knopfdruck in einer View die Aktion aus, alle Vorlagen vom Server zu laden. Diese Aktion gelangt über den vorgesehenen Reducer zu der API-Schnittstelle. Dort wird ein entsprechender Server-Aufruf gestartet und auf den Server-Rückruf gewartet. Sobald die Antwort des Servers angekommen ist, wird diese mit Hilfe einer Aktion zurück zum Container gesendet. Dort verarbeitet ein entsprechender Reducer eventuelle Fehlerbehandlung oder die heruntergeladenen Vorlagen.
 		
 	\section{Implementierung}\label{sc:implementierung}
+		Zur Realisierung der entworfenen Systemkomponenten wurde ausschließlich, die von Apple entwickelte IDE\nomenclature{IDE}{integrated development environment, deutsch: Integrierte Entwicklungsumgebung} Xcode\footurl{Xcode Internetseite -}{https://developer.apple.com/xcode/}, verwendet. Diese stellt virtuelle iOS oder iPadOS Geräte zur Verfügung, auf denen die App getestet werden kann. Diese Simulatoren bieten unteranderem auch die Möglichkeit an, die Anwendung schnell auf verschiedenen Betriebssystem-Versionen zu testen. Auch ist das Testen der App auf echten Geräten durch Xcode möglich, was bei der Entwicklung unumgänglich war. Grund dafür ist die Benutzung der Kamera, die bei den Simulatoren zu gewollten Abstürzen führt, da diese keinen Zugriff auf eine Kamerasystem besitzen.
 		
-		Zur Realisierung der entworfenen Systemkomponenten wurde ausschließlich, die von Apple entwickelte IDE\nomenclature{IDE}{integrated development environment, deutsch: Integrierte Entwicklungsumgebung} Xcode\footurl{Xcode Internetseite -}{https://developer.apple.com/xcode/}, verwendet. Diese stellt Geräte-Simulatoren zur Verfügung, auf denen die App getestet werden kann. Die Simulatoren bieten unteranderem auch die Möglichkeit an, die Anwendung schnell auf verschiedenen iOS bzw. iPadOS Versionen zu testen. Auch ist das Testen der App auf echten Geräten durch Xcode möglich, was bei der Entwicklung unumgänglich war. Grund dafür ist die Benutzung der Kamera, die bei den Simulatoren zu gewollten Abstürzen führt, da diese keinen Zugriff auf eine Kamerasystem besitzen.
-		
-		Die App wurde ausschließlich in der Programmiersprache Swift geschrieben. Zusätzlich wurden die Frameworks SwiftUI, Vision und VisionKit von Apple sowie das Framework Kingfisher\footurl{Kingfisher GitHub Repository -}{https://github.com/onevcat/Kingfisher}, zum Downloaden und Cachen von Bildern verwendet. Das Vision-Framework führt Erkennung von Gesichts- und Gesichtsmarkierungen, Texterkennung, Barcode-Erkennung, Bildregistrierung und allgemeine Merkmalsverfolgung durch. Jedoch wurde in der App nur die integrierte Texterkennung benutzt. Es ist aber anzunehmen, das Algorithmen aus VisionKit von Vision zur Dokumenten-Erkennung verwendet. Für mehr Informationen über die Frameworks SwiftUI und VisionKit siehe in \autoref{sc:analyse}.
+		Die App ist ausschließlich in der Programmiersprache Swift geschrieben. Neben den Frameworks SwiftUI, Vision und VisionKit von Apple wurde das das Framework Kingfisher\footurl{Kingfisher GitHub Repository -}{https://github.com/onevcat/Kingfisher}, zum Downloaden und Cachen von Bildern verwendet. Das Vision-Framework führt Erkennung von Gesichts- und Gesichtsmarkierungen, Texterkennung, Barcode-Erkennung, Bildregistrierung und allgemeine Merkmalsverfolgung durch. Jedoch wurde in der App nur die integrierte Texterkennung benutzt. Es ist aber anzunehmen, das Algorithmen aus VisionKit von Vision zur Dokumenten-Erkennung verwendet. Für mehr Informationen über die Frameworks SwiftUI und VisionKit siehe in \autoref{sc:analyse}.
 		
 		Zum Einrichten und Testen des Backends wurde außerdem Visual Studio Community bzw. Visual Studio Code\footurl{Visual Studio Internetseite -}{https://visualstudio.microsoft.com/de/} mit dem REST Client Plugin\footurl{REST Client Repository -}{https://github.com/Huachao/vscode-restclient} verwendet. Das Backend konnte als lokaler Server auf dem Entwicklungscomputer gestartet und über die IP-Adresse 0.0.0.0 im lokalen Netzwerk aufgerufen werden. Für die Verwaltung der PostgreSQL-Datenbank genügte die Anwendung PgAdmin4\footurl{PgAdmin Internetseite -}{https://www.pgadmin.org/}. Damit ist es möglich einzelne Einträge oder auch ganze Tabellen der Datenbank zu bearbeiten.
 		
 		\subsection{Registrieren und Anmelden}
-			Die technische Implementierung der Registrierung und Anmeldung beinhaltet typische Charakteristiken von Anmelde- und Registrier-Formularen. Die E-Mail-Textfelder besitzen, wie auch das Passwort-Feld der Anmeldung eine AutoFill-Funktion. Dadurch kann das iOS-Gerät Registrier- und Anmelde-Daten vorschlagen und automatisch in die entsprechenden Felder einsetzten. Dies sieht man im dritten Bild \ref{fig:anmelden} anhand des \glqq Passwörter\grqq -Knopfes über der Tastatur.  Weiter sind alle Passwort-Felder gesichert. Das bedeutet, dass der Inhalt zum Schutz der Privatsphäre standardmäßig ausgeblendet und mit Punkten ersetzt wird. Durch das drücken des Auges rechts des Textfeldes kann der Inhalt jedoch eingesehen werden. Im mittlerem Bild \ref{fig:register} sind wegen der Sicherheitsstandards von iOS, bei einer Aufnahme des Bildschirms nicht einmal die Ersatz-Punkte des ersten Passwort-Textfelds zu sehen. Zusätzlich validieren alle Text-Felder ihren Inhalt mithilfe von regulären Ausdrücken. Beispielsweise muss ein Passwort aus 8 Zeichen bestehen und zwei von den drei Folgenden Eigenschaften erfüllen:
+			Die E-Mail-Textfelder besitzen, wie auch das Passwort-Feld der Anmeldung eine AutoFill-Funktion. Dadurch kann die App Registrier- und Anmelde-Daten vorschlagen und automatisch in die entsprechenden Felder einsetzten. Im dritten Bild \ref{fig:anmelden} ist das anhand des \glqq Passwörter\grqq -Knopfes über der Tastatur zu sehen. Weiter sind alle Passwort-Felder gesichert, wodurch der Inhalt zum Schutz der Privatsphäre standardmäßig ausgeblendet und mit Punkten ersetzt wird. Auf der Bildschirmaufnahme \ref{fig:register} sind die Punkte wegen der Sicherheitsstandards von iOS nicht zu sehen. Durch das drücken des Auges rechts des Textfeldes kann der Inhalt auch eingesehen werden. Zusätzlich validieren alle Text-Felder ihren Inhalt mithilfe von regulären Ausdrücken. Beispielsweise muss ein Passwort aus 8 Zeichen bestehen und zwei von den drei Folgenden Eigenschaften erfüllen:
+			\vspace{-5mm}
 			\begin{enumerate}
 				\item Es ist mindestens ein Sonderzeichen enthalten.
 				\item Es ist mindestens ein Großbuchstabe enthalten.
 				\item Es ist mindestens eine Zahl enthalten.
 			\end{enumerate}
+			\vspace{-5mm}
 			Die Validierung ist jedoch nicht standardmäßig, sondern wurde selbst entwickelt.
 			
-		\begin{figure}[th]
+		\begin{figure}[th!]
     		\centering
    			\begin{subfigure}[t]{0.3\textwidth}
        			\frame{\includegraphics[width=0.96\textwidth]{img/1willkommen.png}}
@@ -350,13 +354,15 @@ Im Rahmen eines zwölfwöchigen Forschungspraktikums an der Hochschule Mittweida
 	       		\label{fig:anmelden}
     		\end{subfigure}
    			\caption{Willkommen- Registrier- und Anmelde-View}\label{fig:start}
-		\end{figure}
-			
+		\end{figure}	
+		
 		\subsection{Scan-Vorlagen erstellen und speichern}
 			Bei der Implementierung des ersten Arbeitsschritts der Scan-Vorlagen wurde das Flussdiagramm \ref{fig:erstellen_flow}, welches im \autoref{ch:workflow} zu finden sind, benutzt.
 			
 			\subsubsection*{Scan-Vorlage erstellen}
-			\begin{figure}[th]
+				Im ersten Schritt sind ein Name und weitere Informationen, zu der Vorlage an zugegeben (siehe \ref{fig:v2}), um im Anschluss die Fotos aufzunehmen. Bei der Kamera-View (siehe \ref{fig:v3}) handelt es sich um die Scan-View des Frameworks VisionKit. Mithilfe von Kantenerkennung und anderen Algorithmen, die Tobias Kallauke in seinem Bericht beschreibt, wird dass Dokument sobald es erkannt ist, automatisch fotografiert. Das Dokument wird in Echtzeit aus dem Bild ausgeschnitten und gerade gezogen. Ein manuelles Auslösen des Fotos und Anpassen der Dokumenten-Kanten im Bild, ist ebenfalls möglich. Zugleich werden alle erstellten Bilder in einer Gruppe gesammelt. Diese können vor dem Abspeichern angeschaut und nochmals bearbeitet werden. Die \autoref{fig:klausur} entstand durch diesen Prozess.
+				
+			\begin{figure}[h!]
     			\centering
     			\begin{subfigure}[t]{0.3\textwidth}
         			\frame{\includegraphics[width=0.96\textwidth]{img/V2}}
@@ -376,98 +382,82 @@ Im Rahmen eines zwölfwöchigen Forschungspraktikums an der Hochschule Mittweida
     			\caption{Die ersten Views zur Erstellung einer Scan-Vorlage}\label{fig:erstellung1}
 			\end{figure}
 			
-			Im ersten Schritt sind ein Name und weitere Informationen, zu der Vorlage an zugegeben (siehe \ref{fig:v2}), um im Anschluss die Fotos aufzunehmen. Bei der Kamera-View (siehe \ref{fig:v3}) handelt es sich um die Scan-View des Frameworks VisionKit. Mithilfe von Kantenerkennung und anderen Algorithmen, die Tobias Kallauke in seinem Bericht beschreibt, kann dass Dokument sobald es erkannt ist, automatisch fotografiert werden. In Echtzeit wird das erkannte Dokument aus dem Bild ausgeschnitten und gerade gezogen. Ein manuelles Auslösen des Fotos und Anpassen der Dokumenten-Kanten im Bild, ist ebenfalls möglich. Des Weiterem werden alle erstellten Bilder zu einer Gruppe gesammelt. Diese können vor dem Abspeichern angeschaut und nochmal bearbeitet werden. Die \autoref{fig:klausur} entstand durch diesen Prozess.
-			
 			\subsubsection*{Regionen erstellen}
-			\begin{figure}[th]
-    			\centering
-    			\begin{subfigure}[t]{0.3\textwidth}
-        			\frame{\includegraphics[width=0.96\textwidth]{img/V5}}
-        			\caption{View zum Festlegen von den Regionen Eigenschaften}
-        			\label{fig:v5}
-    			\end{subfigure}
-    			\begin{subfigure}[t]{0.3\textwidth}
-        			\frame{\includegraphics[width=0.96\textwidth]{img/V6}}
-        			\caption{Auswahl des Datentyps}
-        			\label{fig:v6}
-    			\end{subfigure}
-    			\begin{subfigure}[t]{0.3\textwidth}
-       				\frame{\includegraphics[width=0.96\textwidth]{img/V7}}
-        			\caption{Markierung der Region auf dem Dokument}
-        			\label{fig:v7}
-    			\end{subfigure}
-    			\caption{Views zur Erstellung von Regionen}
-    			\label{fig:erstellung2}
-			\end{figure}
+				Im Anschluss sind die Regionen auf den Dokumenten-Seiten zu markieren, deren Inhalt beim Einscannen digitalisiert werden soll. Zu erst wird die gewünschte Seite aus einer Übersicht (siehe \ref{fig:v4}) ausgewählt. Anschließend ist eine Vorschau der Seite mit alle eingetragenen Regionen zu sehen (siehe \ref{fig:v8} bzw. \ref{fig:v9}). Über einen Button können weitere Regionen hinzugefügt werden. Dazu muss ein Namen (siehe \ref{fig:v5}) und ein Datentyp (siehe \ref{fig:v6}) festgelegt werden. Sobald die Eigenschaften der Region festgelegt sind, muss diese noch auf dem Bild markiert werden. Dazu muss mit einem Finger ein Rechteck in einer beliebigen Größe erstellt werden (siehe \ref{fig:v7}). Die markierte Region kann anschließend bewegt oder neu gemacht werden. Mit einer Zwei-Finger-Geste kann an die Seite heran bzw. auch heraus gezoomt werden, um beispielsweise kleine Regionen zu markieren. Dieses Vorgehen muss dann für alle nötigen Regionen auf den jeweiligen Seiten wiederholt werden. 
 			
-			\begin{figure}[th]
-    			\centering
-				\begin{subfigure}[t]{0.3\textwidth}
-       				\frame{\includegraphics[width=0.96\textwidth]{img/V8}}
-        			\caption{Seiten-Vorschau mit der ersten Region}
-        			\label{fig:v8}
-    			\end{subfigure}
-    			\begin{subfigure}[t]{0.3\textwidth}
-       				\frame{\includegraphics[width=0.96\textwidth]{img/V9}}
-        			\caption{Seiten-Vorschau mit allen Regionen}
-        			\label{fig:v9}
-    			\end{subfigure}
-    			\begin{subfigure}[t]{0.3\textwidth}
-       				\frame{\includegraphics[width=0.96\textwidth]{img/V10}}
-        			\caption{Löschen einer angelegten Region}
-        			\label{fig:v10}
-    			\end{subfigure}
-    			\caption{Seiten-Vorschau-View}
-				\label{fig:erstellung3}
-			\end{figure}
+				\begin{figure}[h!]
+    				\centering
+    				\begin{subfigure}[t]{0.3\textwidth}
+        				\frame{\includegraphics[width=0.96\textwidth]{img/V5}}
+        				\caption{View zum Festlegen von den Regionen Eigenschaften}
+        				\label{fig:v5}
+    				\end{subfigure}
+    				\begin{subfigure}[t]{0.3\textwidth}
+        				\frame{\includegraphics[width=0.96\textwidth]{img/V6}}
+        				\caption{Auswahl des Datentyps}
+        				\label{fig:v6}
+    				\end{subfigure}
+    				\begin{subfigure}[t]{0.3\textwidth}
+       					\frame{\includegraphics[width=0.96\textwidth]{img/V7}}
+        				\caption{Markierung der Region auf dem Dokument}
+        				\label{fig:v7}
+    				\end{subfigure}
+    				\caption{Views zur Erstellung von Regionen}
+    				\label{fig:erstellung2}
+				\end{figure}
 			
-			Im nächsten Schritt sind die Regionen auf den Dokumenten-Seiten zu markieren, deren Inhalt beim Einscannen digitalisiert werden soll. Zu erst wird die gewünschte Seite aus einer Übersicht (siehe \ref{fig:v4}) ausgewählt. Anschließend ist eine Vorschau der Seite mit alle eingetragenen Regionen zu sehen (siehe \ref{fig:v8} bzw. \ref{fig:v9}). Über einen Button können weitere Regionen hinzugefügt werden. Dazu legt man einen Namen (siehe \ref{fig:v5}) und einen Datentyp (siehe \ref{fig:v6}) fest. Die Datentypen sind für die Texterkennung und Erstellung der Tabelle für die Notenfreigabe wichtig. Dazu später noch mehr. Wenn die Eigenschaften der Region festgelegt sind, muss diese noch auf dem Bild markiert werden. Dazu zieht man mit einem Finger ein Rechteck in einer beliebigen Größe ein (siehe \ref{fig:v7}). Die markierte Region kann anschließend noch bewegt oder neu gemacht werden. Um kleinere Regionen präzise zu markieren kann mit einer Zwei-Finger-Geste auch an die Seite heran bzw. auch heraus gezoomt werden. Dieses Vorgehen muss dann für alle nötigen Regionen auf den jeweiligen Seiten wiederholt werden. 
-			
-			\begin{figure}[th]
-    			\centering
-				\begin{subfigure}[t]{0.3\textwidth}
-       				\frame{\includegraphics[width=0.96\textwidth]{img/L6}}
-        			\caption{Kontroll-Liste mit angelegten Kontrollmechanismen}
-        			\label{fig:l1}
-    			\end{subfigure}
-    			\begin{subfigure}[t]{0.3\textwidth}
-       				\frame{\includegraphics[width=0.96\textwidth]{img/L4}}
-        			\caption{View zur Erstellung einer Kontrolle}
-        			\label{fig:l2}
-    			\end{subfigure}
-    			\begin{subfigure}[t]{0.3\textwidth}
-       				\frame{\includegraphics[width=0.96\textwidth]{img/L3}}
-        			\caption{View zur Auswahl einer Region}
-        			\label{fig:l3}
-    			\end{subfigure}
-    			\caption{Views zur Erstellung von Kontrollmechanismen}
-				\label{fig:link1}
-			\end{figure}
-	
+			\vspace{-5mm}
 			\subsubsection*{Kontrollmechanismus erstellen}
-			Zum Schluss können noch die sogenannte Kontrollmechanismen erstellt werden. Diese Funktion ist allerdings noch nicht sehr weit fortgeschritten und beinhaltet aktuell nur den Kontrollmechanismen-Typ zum Vergleichen von Regionen, wie im \autoref{ch:konzept} beschrieben ist. Beim Erstellen einer Kontrolle dieses Typs wählt man zwei Regionen aus (siehe \autoref{fig:l2}), deren Inhalt nach der Texterkennung auf Gleichheit überprüft wird. Zur Auswahl stehen alle vorher angelegten Regionen, wie in \autoref{fig:l3} zu sehen ist. In \autoref{fig:l1} ist eine Übersicht aller angelegten Kontrollen zu der Scan-Vorlage zu sehen sowie ein Button zum Speichern der Vorlage.
+				Schließlich können die sogenannte Kontrollmechanismen erstellt werden. Diese Funktion ist allerdings noch nicht sehr weit fortgeschritten und beinhaltet aktuell nur den Kontrollmechanismen-Typ zum Vergleichen von Regionen, wie im \autoref{ch:konzept} beschrieben ist. Beim Erstellen einer Kontrolle dieses Typs müssen zwei Regionen aus gewählt werden(siehe \autoref{fig:l2}), deren Inhalt nach der Texterkennung auf Gleichheit überprüft wird. Bei der Wahl der zwei Regionen stehen alle vorher angelegten Regionen, wie in \autoref{fig:l3} zu sehen ist, zur Verfügung. In \autoref{fig:l1} ist eine Übersicht aller angelegten Kontrollen zu der Scan-Vorlage zu sehen sowie ein Button zum Speichern der Vorlage.
+				
+				\begin{figure}[h!]
+    				\centering
+					\begin{subfigure}[t]{0.3\textwidth}
+       					\frame{\includegraphics[width=0.96\textwidth]{img/L6}}
+        				\caption{Kontroll-Liste mit angelegten Kontrollmechanismen}
+        				\label{fig:l1}
+    				\end{subfigure}
+    				\begin{subfigure}[t]{0.3\textwidth}
+       					\frame{\includegraphics[width=0.96\textwidth]{img/L4}}
+        				\caption{View zur Erstellung einer Kontrolle}
+        				\label{fig:l2}
+    				\end{subfigure}
+    				\begin{subfigure}[t]{0.3\textwidth}
+       					\frame{\includegraphics[width=0.96\textwidth]{img/L3}}
+        				\caption{View zur Auswahl einer Region}
+        				\label{fig:l3}
+    				\end{subfigure}
+    				\caption{Views zur Erstellung von Kontrollmechanismen}
+					\label{fig:link1}
+				\end{figure}
 
 			\subsubsection*{Scan-Vorlage speichern}
-			Wenn eine Vorlage gespeichert werden soll, passiert das in mehreren Schritten. Dazu wird die entsprechenden Server-Schnittstellen aufgerufen und auf die Server-Rückrufe gewartet. Für genauere Details zur API des Servers siehe im Praktikumsbericht von Tobias Kallauke.
+				Die Speicherung benötigt mehreren Schritten. Dazu werden die entsprechenden Server-Schnittstellen in einer bestimmten Reihenfolge aufgerufen. Für genauere Details zur API des Servers siehe im Praktikumsbericht von Tobias Kallauke.
+				
+				%%%%%%%%%%%%%%%%%%%%%%
+	%			... und wie die Vorlage versendet wird ...
+				%%%%%%%%%%%%%%%%%%%%%%
 			
-			Im folgenden Abschnitt, ist beschrieben, in welcher Reihenfolge das Hochladen einer Vorlage zum Server geschieht. Dabei werden mögliche Fehler von Seiten des Server, der Internetverbindung und des Clients ignoriert. Jedoch ist im aktuellen Stand der App das Abfangen des Fehler schon integriert, die Fehlerbehandlung aber noch nicht.
-			\begin{enumerate}
-				\item Der Name und die Beschreibung der Vorlage sowie die Liste an Kontrollmechanismen wird gesendet. In der Antwort des Servers befindet sich  die Vorlagen-ID\nomenclature{ID}{Steht für einen einzigartigen Identifikator} , die in den nächsten Schritten benötigt wird. 
-				\item Die Bilder der Seiten werden gesendet. Als Antwort zu jedem Bild wird der Pfad zurück geschickt, wo das Bild vom Server gespeichert wurde. Dieser Pfad wird im nächsten Schritt benötigt.
-				\item Die Seiten mit einer Seiten-Nummer und dem Pfad zu dem Bild, wird mit der Vorlagen-ID gesendet. Als Antwort wird eine Seiten-ID zurückgegeben, die im nächsten Schritt verwendet wird.
-				\item Die Regionen der Seiten werden gesendet. Eine Region hat X- und Y-Koordinaten. Diese repräsentieren den Abstand vom Bildursprung, der sich in jedem Bild oben links befindet. Außerdem besitzt eine Region noch eine Höhe und Breite sowie einen Namen und einen Datentyp (\ref{fig:v5} und \ref{fig:v7}). Die Koordinaten sowie die Höhe und Breite sind alle in Pixel angegeben. Zusammen mit der Seiten-ID wird das Attribute an den Server gesendet.
-			\end{enumerate}
+%				Im folgenden Abschnitt, ist beschrieben, in welcher Reihenfolge das Hochladen einer Vorlage zum Server geschieht. Dabei werden mögliche Fehler von Seiten des Server, der Internetverbindung und des Clients ignoriert. Jedoch ist im aktuellen Stand der App das Abfangen des Fehler schon integriert, eventuelle Fehlerbehandlung aber nicht.
+%				\begin{enumerate}
+%					\item Der Name und die Beschreibung der Vorlage sowie die Liste an Kontrollmechanismen wird gesendet. In der Antwort des Servers befindet sich  die Vorlagen-ID\nomenclature{ID}{Steht für einen einzigartigen Identifikator} , die in den nächsten Schritten benötigt wird. 
+%					\item Die Bilder der Seiten werden gesendet. Als Antwort zu jedem Bild wird der Pfad zurück geschickt, wo das Bild vom Server gespeichert wurde. Dieser Pfad wird im nächsten Schritt benötigt.
+%					\item Die Seiten mit einer Seiten-Nummer und dem Pfad zu dem Bild, wird mit der Vorlagen-ID gesendet. Als Antwort wird eine Seiten-ID zurückgegeben, die im nächsten Schritt verwendet wird.
+%					\item Die Regionen der Seiten werden gesendet. Eine Region hat X- und Y-Koordinaten. Diese repräsentieren den Abstand vom Bildursprung, der sich in jedem Bild oben links befindet. Außerdem besitzt eine Region noch eine Höhe und Breite sowie einen Namen und einen Datentyp (\ref{fig:v5} und \ref{fig:v7}). Die Koordinaten sowie die Höhe und Breite sind alle in Pixel angegeben. Zusammen mit der Seiten-ID wird das Attribute an den Server gesendet.
+%				\end{enumerate}
 			
+		\newpage
 		\subsection{Scan-Vorlage verwenden}
 			Bei der Implementierung dieses Arbeitsschritts wurde das Flussdiagramm \ref{fig:verwenden_flow}, welches im \autoref{ch:workflow} zu finden sind, benutzt.
 			
-			Um eine Klausur zu digitalisieren, muss die vorher erstellte Scan-Vorlage ausgewählt werden (\ref{fig:liste1}). Danach bietet die Benutzeroberfläche über einen Button die Möglichkeit an, eine Klausur ein zu scannen (\ref{fig:liste2}). Bevor die Bilder aufgenommen werden können, erscheint ein Dialogfenster (\ref{fig:ocr1}), in dem der Benutzer sich entscheiden muss, welche OCR-Engine benutzt werden soll. Aktuell gibt es zwei Möglichkeiten.
+			Um eine Klausur zu digitalisieren, muss die vorher erstellte Scan-Vorlage ausgewählt werden (\ref{fig:liste1}). Danach ist das Einscannen eine Klausur über einen Button möglich (\ref{fig:liste2}). Bevor die Bilder aufgenommen werden können, erscheint ein Dialogfenster (\ref{fig:liste3}), in dem der Benutzer sich entscheiden muss, welche OCR-Engine benutzt werden soll. Aktuell gibt es zwei Möglichkeiten:
+			\vspace{-5mm}
 			\begin{itemize}
 				\item Die OCR-Engine des Vision Frameworks von Apple, welche direkt auf dem Gerät und ohne eine Internetverbindung die Texterkennung durchführt,  
 				\item oder die OCR-Engine Tesseract, die über eine Schnittstelle des Servers aufzurufen ist.
 			\end{itemize}
 				
-			\begin{figure}[th]
+			\begin{figure}[h!]
     			\centering
 				\begin{subfigure}[t]{0.3\textwidth}
        				\frame{\includegraphics[width=0.96\textwidth]{img/liste1}}
@@ -480,25 +470,53 @@ Im Rahmen eines zwölfwöchigen Forschungspraktikums an der Hochschule Mittweida
         			\label{fig:liste2}
     			\end{subfigure}
     			\begin{subfigure}[t]{0.3\textwidth}
-       				\frame{\includegraphics[width=0.96\textwidth]{img/ocr4}}
+       				\frame{\includegraphics[width=0.96\textwidth]{img/ocr1}}
         			\caption{Liste der Kontroll-Mechanismen}
         			\label{fig:liste3}
     			\end{subfigure}
-    			\caption{Listen- und Detail-Ansicht von Scan-Vorlagen}
+    			\caption{Dialogfenster zur Auswahl der OCR-Engine}
 				\label{fig:vorlagen}
 			\end{figure}
 			
-			Nach der Auswahl öffnet sich die Kamera und die Bilder können aufgenommen werden. Wichtig dabei ist, dass die Seiten beim Fotografiert die selbe Reihenfolge, wie in der Scan-Vorlage haben. Auch muss die Anzahl der eingescannten Seiten mit denen in der Vorlage übereinstimmen. Bei der Implementierung der Scan-View wurde auf die Selbe zurückgegriffen, wie sie auch beim Vorlagen Erstellen zu finden ist (siehe \ref{fig:v3}). Grundsätzlich konnten viele Komponenten der gesamten Benutzeroberfläche dank SwiftUI immer wieder verwendet werden. Durch die Scan-View wird die Seiten aus dem Bild ausgeschnitten, geglättet und der Kontrast des Bildes wird ebenfalls leicht angepasst, damit Buchstaben leichter zu erkennen sind und Schatten bzw. Falten verschwinden.
+			Letztendlich erscheint die Scan-View und die Bilder können aufgenommen werden. Wichtig dabei ist, dass die Seiten beim Fotografiert die selbe Reihenfolge, wie in der Scan-Vorlage haben. Auch muss die Anzahl der eingescannten Seiten mit denen in der Vorlage übereinstimmen. Bei der Implementierung der Scan-View wurde auf die Selbe zurückgegriffen, wie sie auch beim Vorlagen Erstellen zu finden ist (siehe \ref{fig:v3}). Grundsätzlich konnten viele Komponenten der gesamten Benutzeroberfläche dank SwiftUI immer wieder verwendet werden. Durch die Scan-View wird die Seiten aus dem Bild ausgeschnitten, geglättet und der Kontrast des Bildes wird ebenfalls leicht angepasst, damit Buchstaben leichter zu erkennen sind und Schatten bzw. Falten verschwinden.
 			
-			Nach dem Einscannen der Klausur-Seiten beginnt der Prozess der Texterkennung. Durch Aktivitätsanzeigen wird dem Benutzer mitgeteilt, dass die Anwendung gerade beschäftigt ist. Die Abläufe bei der online OCR-Engine sind jedoch leicht anders, als die, des Vision Frameworks.
+			Nach dem Einscannen der Klausur-Seiten beginnt der Prozess der Texterkennung. Durch Aktivitätsanzeigen wird dem Benutzer mitgeteilt, dass die Anwendung gerade arbeitet. Die Abläufe bei der online OCR-Engine sind jedoch leicht anders, als die, des Vision Frameworks.
+			
+			\subsubsection*{Ablauf mit Vision}
+				Bei der Verwendung von Vision gibt es folgende grobe Schritte:
+				\vspace{-5mm}
+				\begin{enumerate}
+					\item Die markierten Regionen werden in der Vorlage auf die neuen Fotos angewendet.
+					\item Mithilfe der Regionen werden Bildausschnitten aus den Fotos erstellen.
+					\item Die Ausschnitte werden in die ausgewählte OCR-Engine überführt.
+					\item Darstellung der Texterkennungs-Ergebnisse auf der View.
+				\end{enumerate}
+			
+				\paragraph*{Zu 1.: Die markierten Regionen werden in der Vorlage auf die neuen Fotos angewendet.}
+					Nun wird jedes Foto des neuen Scans mit den Regionen der jeweiligen Seite der Scan-Vorlage verarbeitet. 
+					%Zur Erinnerung aus \autoref{ch:konzept}: Das Ziel ist es, die markierten Regionen in der Vorlage auf die zu digitalisierende Seite anzuwenden und minimale Bildausschnitte zu erstellen, in denen der zu digitalisierende Text steht (siehe \autoref{fig:schema2}). Diese Ausschnitte werden dann von der Texterkennung verarbeitet. 
+				 	%Diesen Vorgang wird für jede Seite wiederholt. Jedoch ergibt sich hierbei ein Problem.
+					Wie in den Abbildungen \ref{fig:seite1} und \ref{fig:seite2} zu sehen ist, haben beide, durch die App entstandenen Bilder, unterschiedliche Maße. Die \autoref{fig:seite1} ist größer und etwas breiter als die \autoref{fig:seite2}. Das liegt daran, dass sich der Winkel und der Abstand der Kamera zum Dokument bei den Aufnahme geändert hat. Wenn die Bilder in der Vorlage nicht genau so groß sind, wie die Bilder des neuen Scans, können wichtige Informationen durch die absoluten Positionen der Regionen abgeschnitten werden. Aus diesem Grund müssen nun die absoluten in relative Positionen umgerechnet werden. Gleiches gilt für die Höhe und Breite der Regionen.
 
-			\begin{figure}[th]
+				\paragraph*{Zu 2.: Mithilfe der Regionen werden Bildausschnitten aus den Fotos erstellen.}
+					Nachdem die neue Position und Maße berechnet wurden, entstehen daraus Bildausschnitte für die Texterkennung. 
+					%Zur Erinnerung, die Regionen dienen als eine Art Schablone, so dass alles, was sich außerhalb dieser befindet, nicht verwendet wird (siehe \autoref{fig:schablone1}). 
+					Bei falscher Erstellung der Vorlagen oder bei falschem Einscannen der Klausur kann es trotzdem passieren, dass Teile der Regionen wegfallen. Dazu im \autoref{ssc:erkennen} mehr.
+				
+				\paragraph*{Zu 3.: Die Ausschnitte werden in die ausgewählte OCR-Engine überführt.}
+					Zu jedem Bildausschnitt wird eine sogenannte Texterkennungs-Anfrage konfiguriert. Hierfür wird weiterhin die zugehörige Region benötigt. In der Konfiguration werden an Hand des Region-Datentyps (\ref{fig:v6}) unterschiedliche Einstellungen getroffen. Beispielsweise wird beim Datentyp Note eine sogenannte costum words-Liste verwendet. Sie beinhaltet alle zu erwartende Ergebnisse bzw. Noten. Die Liste hat, wie schon im \autoref{ch:konzept} erwähnt, Vorrang vor dem Standard-Wörterbuch, in der Worterkennungsphase und sorgt für bessere Ergebnisse\footurl{Vision \textit{costumWords} Dokumentation}{https://developer.apple.com/documentation/vision/vnrecognizetextrequest/3152640-customwords}. % Auch könnte hier die Sprache des zu erkennenden Texts angegeben oder die  Texterkennungs-Stufe eingestellt werden. Diese bestimmt, welche Techniken bei der Texterkennung verwendet werden. Entweder man gibt der Geschwindigkeit Vorrang vor der Genauigkeit oder aber man setzt auf eine längere, rechenintensivere Erkennung. In der Anwendung ist die OCR-Genauigkeit entscheidend und auf die Einstellung der Sprache wurde verzichtet, da es sich in keinem Fall um normalen Text handelt, sondern um Eigennamen, Abkürzungen und Ziffern.
+						
+					Standardmäßig werden bei der Bearbeitung einer Texterkennungs-Anfrage zunächst alle Glyphen oder Zeichen im Eingabebild lokalisiert und dann jede Zeichenfolge analysiert\footurl{Quelle: \textit{VNRecognizeTextRequest} Dokumentation}{https://developer.apple.com/documentation/vision/vnrecognizetextrequest}. Anschließend wird eine Korrektur an den erkannter Wörter auf der Grundlage eines Wörterbuchs und anderer Wahrscheinlichkeits-Heuristiken für Zeichenpaare durchgeführt \cite{apple_text_2019}. Der genaue Ablauf der Texterkennung oder die verwendeten Algorithmen von Vision sind allerdings nicht bekannt. 
+				
+					Anschließend an die Texterkennung durch Vision erfolgt in einigen Fällen noch eine selbst entwickelte Korrektur, wie sie in \autoref{ch:konzept} \autoref{sc:erweiterungkonzept} beschreiben ist. Wieder ist der Regionen-Datentyp (\ref{fig:v6}) ausschlaggebend. Beispielsweise wird der Text einer vermeidlichen Seminargruppe mit allen in der App hinterlegten Seminargruppen verglichen. Der Seminargruppen-Name mit der größten Übereinstimmung wird mit dem erkannten Wort ersetzt und die confidence gegebenenfalls angepasst.
+				
+					Zuletzt werden die erkennten Texte bzw. Worte und deren confidence an den State-Container der App gesendet. Für die Ergebnisse der Texterkennung ist ein eigener State vorgesehen, in dem auch die Server-Ergebnisse von Tesseract gesichert werden. Somit ist das Anzeigen der Ergebnisse bei beiden OCR-Engines gleich.  
+				
+				\paragraph*{Zu 4.: Darstellung der Texterkennungs-Ergebnisse auf der View.}
+					Die Ergebnissen der Texterkennung und die jeweilige confidence werden auf der Benutzeroberfläche, nach Seiten sortiert, angezeigt (\ref{fig:ocr2}). Alle OCR-Ergebnisse können zudem noch angepasst werden. Abhängig vom Datentyp der Region passt sich die Tastatur beim Ändern der Texte an (\ref{fig:ocr3}). Beispielsweise sind die Tastaturen beim Anpassen von Noten und Punkte auf Zahlen und Dezimalpunkte spezialisiert. Zudem kann die confidence farblich (siehe \autoref{fig:ocr2}) aber auch als Zahlenwert (siehe \autoref{fig:ocr3}) angezeigt werden. Wurde kein Text erkannt, ist dementsprechend ein Warnsymbol an der Stelle der confidence zu sehen.    
+ 
+ 			\begin{figure}[h!]
     			\centering
-				\begin{subfigure}[t]{0.3\textwidth}
-       				\frame{\includegraphics[width=0.96\textwidth]{img/ocr1}}
-        			\caption{Dialogfenster zur Auswahl der OCR-Engine}
-        			\label{fig:ocr1}
-    			\end{subfigure}
     			\begin{subfigure}[t]{0.3\textwidth}
        				\frame{\includegraphics[width=0.96\textwidth]{img/ocr2}}
         			\caption{Übersicht nach der Texterkennung mit farblicher confidence}
@@ -509,41 +527,18 @@ Im Rahmen eines zwölfwöchigen Forschungspraktikums an der Hochschule Mittweida
         			\caption{Änderung der Note mit spezieller Tastatur für Dezimalzahlen und confidence als Zahlenwert}
         			\label{fig:ocr3}
     			\end{subfigure}
-    			\caption{Vorlagen-Ansicht vor und nach der Texterkennung}
+    			\begin{subfigure}[t]{0.3\textwidth}
+       				\frame{\includegraphics[width=0.96\textwidth]{img/ocr4}}
+        			\caption{Dialogfenster zur Auswahl der OCR-Engine}
+        			\label{fig:ocr4}
+    			\end{subfigure}
+    			\caption{Listen- und Detail-Ansicht von Scan-Vorlagen}
 				\label{fig:ocr}
 			\end{figure}
-			
-			\subsubsection*{Ablauf mit Vision}
-				Bei der Verwendung von Vision gibt es folgende grobe Schritte:
-				\begin{enumerate}
-					\item Die markierten Regionen in der Vorlage auf die neuen Bilder anwenden
-					\item Mit den Regionen jedes Bilds Bildausschnitten erstellen
-					\item Die Ausschnitte in die OCR-Engine geben
-					\item Texterkennungs-Ergebnisse darstellen
-				\end{enumerate}
-			
-				\paragraph*{Zu 1.: Die markierten Regionen in der Vorlage auf die neuen Bilder anwenden}
-				Damit ist gemeint, dass nun das erste Bild des neuen Scans mit den Regionen der ersten Seite der Vorlage verarbeitet wird. Zur Erinnerung aus \autoref{ch:konzept}: Das Ziel ist es, die markierten Regionen in der Vorlage auf die zu digitalisierende Seite anzuwenden und minimale Bildausschnitte zu erstellen, in denen der zu digitalisierende Text steht (siehe \autoref{fig:schema2}). Diese Ausschnitte werden dann von der Texterkennung verarbeitet. Diesen Vorgang wird für jede Seite wiederholt. Jedoch ergibt sich hierbei ein Problem.
-				
-				Wie man in den Abbildungen \ref{fig:seite1} und \ref{fig:seite2} sieht, haben beide, durch die App entstandenen Bilder, unterschiedliche Maße. Die \autoref{fig:seite1} ist größer und etwas breiter als die \autoref{fig:seite2}. Das liegt daran, dass sich der Winkel und der Abstand der Kamera zum Dokument bei den Aufnahme geändert hat, da das Gerät, während des Fotografierens in den Händen gehalten wurde. Das bedeutet also, wenn die Bilder in der Vorlage nicht genau so groß sind, wie die Bilder des neuen Scans, können im schlechtesten Fall wichtige Informationen durch die absoluten Positionen des Regionen abgeschnitten werden. Würde man immer den selben Abstand und Winkel garantieren, wie das beispielsweise in einem richtigen Kopiergerät oder Scanner der Fall ist, könnte man nun die Berechnung der absoluten Positionen in relative Positionen der Regionen weglassen. Zusätzlich sind die relative Höhe und Breite der Regionen ebenfalls zu berechnen. 
-
-				\paragraph*{Zu 2.: Mit den Regionen jedes Bilds Bildausschnitten erstellen}
-				Nachdem die neue Position und Maße aller Regionen einer Seite bestimmt sind, entstehen daraus Bildausschnitte für die Texterkennung. Zur Erinnerung, die Regionen dienen als eine Art Schablone, so dass alles, was sich außerhalb dieser befindet, nicht verwendet wird (siehe \autoref{fig:schablone1}). Auch trotz der Umrechnung in relative Positionen kann es bei falscher Erstellung der Vorlagen oder bei falschem Einscannen der Klausur passieren, dass trotzdem Teile der Regionen wegfallen. Für mehr Details über falsches Erstellen oder Einscannen siehe im \autoref{ssc:erkennen}.
-				
-				\paragraph*{Zu 3.: Die Ausschnitte in die OCR-Engine geben}
-				Zu jedem Bildausschnitt wird eine sogenannte Texterkennungs-Anfrage konfiguriert. Auch hierfür wird immer noch die zugehörige Region des Ausschnitts benötigt. In der Konfiguration werden an Hand des Region-Datentyps (\ref{fig:v6}) unterschiedliche Einstellungen getroffen. Beispielsweise bekommt die Anfrage einer Region, vom Typ Note, eine Liste an möglichen Noten. Die Liste hat, wie schon im \autoref{ch:konzept} erwähnt, Vorrang vor dem Standard-Wörterbuch, in der Worterkennungsphase und sorgt für bessere Ergebnisse\footurl{Vision \textit{costumWords} Dokumentation}{https://developer.apple.com/documentation/vision/vnrecognizetextrequest/3152640-customwords}. Auch könnte hier die Sprache des zu erkennenden Texts angegeben oder die  Texterkennungs-Stufe eingestellt werden. Diese bestimmt, welche Techniken bei der Texterkennung verwendet werden. Entweder man gibt der Geschwindigkeit Vorrang vor der Genauigkeit oder aber man setzt auf eine längere, rechenintensivere Erkennung. In der Anwendung ist die OCR-Genauigkeit entscheidend und auf die Einstellung der Sprache wurde verzichtet, da es sich in keinem Fall um normalen Text handelt, sondern um Eigennamen, Abkürzungen und Ziffern.
-						
-				Standardmäßig werden bei einer Texterkennungs-Anfrage zunächst alle Glyphen oder Zeichen im Eingabebild lokalisiert und dann jede Zeichenfolge analysiert\footurl{Quelle: \textit{VNRecognizeTextRequest} Dokumentation}{https://developer.apple.com/documentation/vision/vnrecognizetextrequest}. Anschließend wird eine Korrektur an den erkannter Wörter auf der Grundlage eines Wörterbuchs und anderer Wahrscheinlichkeits-Heuristiken für Zeichenpaare durchgeführt \cite{apple_text_2019}. Der genaue Ablauf der Texterkennung oder die verwendeten Algorithmen von Vision sind allerdings nicht bekannt. 
-				
-				Anschließend an die Texterkennung durch Vision erfolgt in einigen Fällen noch eine selbst entwickelte Korrektur, wie sie in \autoref{ch:konzept} \autoref{sc:erweiterungkonzept} beschreiben ist. Auch hier spielt der Regionen-Datentyp (\ref{fig:v6}) wieder eine Rolle. Beispielsweise wird der Text einer vermeidlichen Seminargruppe mit allen in der App hinterlegten Seminargruppen verglichen. Der Seminargruppen-Name mit der größten Übereinstimmung wird dann angezeigt. Die confidence wird ebenfalls angepasst. Zur Erinnerung, diese sagt aus, wie sicher sich die Texterkennung ist, dass das Ergebnis stimmt. Ähnliche Korrekturen gibt es für die Note und Punkte.
-				
-				Danach werden die erkennten Texte bzw. Worte und deren confidencen an den State-Container der App gesendet. Für die Ergebnisse der Texterkennung ist ein eigener State vorgesehen, in dem auch die Server-Ergebnisse von Tesseract gesichert werden. Somit ist das Anzeigen der Ergebnisse bei beiden OCR-Engines gleich.  
-				
-				\paragraph*{Zu 4.: Texterkennungs-Ergebnisse darstellen}
-				Die Ergebnissen der Texterkennung und die jeweilige confidence werden auf der Benutzeroberfläche, nach Seiten sortiert, angezeigt (\ref{fig:ocr2}). Alle OCR-Ergebnisse können zudem noch angepasst werden. Abhängig vom Datentyp der Region passt sich die Tastatur beim Ändern der Texte an (\ref{fig:ocr3}). Beispielsweise sind die Tastaturen beim Anpassen von Noten und Punkte auf Zahlen und Dezimalpunkte spezialisiert. Zudem kann die confidence farblich (siehe \autoref{fig:ocr2}) aber auch als Zahlenwert (siehe \autoref{fig:ocr3}) angezeigt werden. Wurde kein Text erkannt, ist dementsprechend ein Warnsymbol an der Stelle der confidence zu sehen.    
  
 			\subsubsection*{Ablauf mit Tesseract}
-				Etwas anders ist der Ablauf, wenn die Texterkennung Tesseract auf dem Server verwendet wird:
+				Die Texterkennung mit Tesseract auf dem Server hat einen anderen Ablauf:
+				\vspace{-5mm}
 				\begin{enumerate}
 					\item Bilder an den Server senden
 					\item Auftrag zur Texterkennung an den Server senden
@@ -552,7 +547,7 @@ Im Rahmen eines zwölfwöchigen Forschungspraktikums an der Hochschule Mittweida
 				\end{enumerate}
 				
 				\paragraph*{Zu 1.: Bilder an den Server senden}
-				Nachdem das Dokument fotografiert wurden, werden die Aufnahmen an den Server gesendet. Dieser gibt, wie beim Speichern der Scan-Vorlage, die Pfade der Bilder als Antwort zurück. 
+				Nachdem das Dokument fotografiert wurden, werden die Aufnahmen an den Server gesendet. Dieser gibt die Speicher-Pfade der Bilder als Antwort zurück. 
 				
 				\paragraph*{Zu 2.: Auftrag zur Texterkennung an den Server senden}
 				Anschließend wird für jeden Pfad eine Auftrag zur Texterkennung an  die OCR-Schnittstelle des Servers gestellt. In der Anfrage wird der Pfad des Bildes und die passende Seiten-ID der ausgewählten Vorlage gesendet. Ab hier übernimmt der Server die Arbeit der Texterkennung.
@@ -673,7 +668,8 @@ Im Rahmen eines zwölfwöchigen Forschungspraktikums an der Hochschule Mittweida
 	\begin{enumerate}
 		\item ''Neue Vorlage erstellen''
 		\item Foto machen
-		\item Frage: Ist Foto gut? 
+		\item Frage: Ist Foto gut?
+		\vspace{-5mm}
 		\begin{enumerate}
 			\item Ja: gehe zu 4.
 			\item Nein: gehe zu 2.
@@ -681,6 +677,7 @@ Im Rahmen eines zwölfwöchigen Forschungspraktikums an der Hochschule Mittweida
 		\item Neues Attribut hinzufügen
 		\item Bereich auf Bild auswählen
 		\item Frage: Ist Bereich gut?
+		\vspace{-5mm}
 		\begin{enumerate}
 			\item Ja: gehe zu 7.
 			\item Nein: gehe zu 5.
@@ -688,6 +685,7 @@ Im Rahmen eines zwölfwöchigen Forschungspraktikums an der Hochschule Mittweida
 		\item Name für Attribut festlegen
 		\item Datentyp für Attribut festlegen (Name, Matrikelnummer, Note, ...)
 		\item Frage: Sind alle Attribute vorhanden?
+		\vspace{-5mm}
 		\begin{enumerate}
 			\item Ja: gehe zu 10.
 			\item Nein: gehe zu 4.
@@ -698,7 +696,7 @@ Im Rahmen eines zwölfwöchigen Forschungspraktikums an der Hochschule Mittweida
 	
 	\begin{figure}[th]
    		\centering
-   		\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{img/erstellen_flow}
+ 		\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{img/erstellen_flow}
    		\caption{Gekürztes Flussdiagramm zum Erstellen einer Scan-Vorlage}
    		\label{fig:erstellen_flow}
    	\end{figure}
@@ -712,6 +710,27 @@ Im Rahmen eines zwölfwöchigen Forschungspraktikums an der Hochschule Mittweida
 
 	
 \chapter{Zusätzliche Funktionalität} \label{ch:accses}
+
+	\begin{figure}[h]
+		\centering
+		\begin{subfigure}[t]{0.3\textwidth}
+       		\frame{\includegraphics[width=0.96\textwidth]{img/V8}}
+        	\caption{Seiten-Vorschau mit der ersten Region}
+        	\label{fig:v8}
+    	\end{subfigure}
+    	\begin{subfigure}[t]{0.3\textwidth}
+       		\frame{\includegraphics[width=0.96\textwidth]{img/V9}}
+        	\caption{Seiten-Vorschau mit allen Regionen}
+        	\label{fig:v9}
+    	\end{subfigure}
+    	\begin{subfigure}[t]{0.3\textwidth}
+       		\frame{\includegraphics[width=0.96\textwidth]{img/V10}}
+        	\caption{Löschen einer angelegten Region}
+        	\label{fig:v10}
+    	\end{subfigure}
+    	\caption{Seiten-Vorschau-View}
+		\label{fig:erstellung3}
+	\end{figure}
 	
 	- Textgröße
 	
