@@ -36,12 +36,12 @@
 \Seminargruppe{IF17wS-B \\[\bigskipamount] Matrikelnummer:\\ 46540}
 \Fakultaet{\MNI}
 \Erstpruefer{Prof\@. Dr\@. Marc Ritter}
-\Zweitpruefer{}
+\Zweitpruefer{Dipl.-Inf. Holger Langner}
 
-\Datum{13.03.2020}
+\Datum{15.05.2020}
 
-\Tag{13}
-\Monat{März}
+\Tag{15}
+\Monat{Mai}
 \Jahr{2020}
 
 \Anlagen{}
@@ -227,7 +227,7 @@ Im Rahmen eines zwölfwöchigen Forschungspraktikums an der Hochschule Mittweida
     	\end{figure}
 		
 	\section{Erweiterung des Konzepts}\label{sc:erweiterungkonzept}
-		Weiter ist eine weitere Korrektur sinnvoll. Angenommen ein Student verschreibt sich bei seiner Seminargruppe und vergisst ein Zeichen. Die Texterkennung erkennt zwar jedes Zeichen, jedoch nicht die korrekte Bezeichnung der Seminargruppe. Deshalb sollte nach der Texterkennung die falsche Bezeichnung durch diejenige Seminargruppe ersetzt werden, die die größte Übereinstimmung mit der erkannten Bezeichnung hat. Bei diesem Vorgehen ist zu beachten, dass nur die Seminargruppen verwendet werden sollten, die tatsächlich die Klausur geschrieben haben. Ähnliches ist auch für die Namen oder Matrikelnummern der Studenten möglich.
+		Weiter ist eine zusätzliche Korrektur angedacht. Angenommen ein Student verschreibt sich bei seiner Seminargruppe und vergisst ein Zeichen. Die Texterkennung erkennt zwar jedes Zeichen, jedoch nicht die korrekte Bezeichnung der Seminargruppe. Deshalb sollte nach der Texterkennung die falsche Bezeichnung durch diejenige Seminargruppe ersetzt werden, die die größte Übereinstimmung mit der erkannten Bezeichnung hat. Bei diesem Vorgehen ist zu beachten, dass nur die Seminargruppen verwendet werden sollten, die tatsächlich die Klausur geschrieben haben. Ähnliches ist auch für die Namen oder Matrikelnummern der Studenten möglich.
 		
 		Allerdings entstehen auch durch das OCR Fehler. Aus diesem Grund wird neben jedem Ergebnis die sogenannte confidence angezeigt. Diese sagt aus, wie sicher die Texterkennung des Ergebnisses ist. Jedoch kann es auch hier falsche Positiv-Ergebnisse geben. Deshalb ist auch die confidence kein perfekter Indikator für die Richtigkeit des Ergebnisses. Deswegen gibt es, wie in \autoref{it:senden} beschrieben, die Möglichkeit, die Ergebnisse noch einmal zu überprüfen und zu korrigieren, bevor sie an den Server zum Abspeichern gesendet werden. Auch die Kontrollmechanismen reagieren auf die Änderungen der Ergebnisse, sodass Fehlermeldungen behoben werden können.
 
@@ -237,7 +237,7 @@ Im Rahmen eines zwölfwöchigen Forschungspraktikums an der Hochschule Mittweida
 	Dieses Kapitel beschreibt einzelne Phasen der Entwicklung der iOS-App in einer ähnlichen Reihenfolge, wie im Wasserfall-Model zur Verwaltung der Entwicklung großer Softwaresysteme nach Winston W. Royce \cite{royce_managing_1970} (siehe \autoref{fig:waterfall}).
     	
 	\section{Anforderungsplanung}\label{sc:anforderungsplanung}
-	Vor Beginn des Praktikums wurde diskutiert und kalkuliert, welches Thema aus dem Projekt Memo Space für ein zwölfwöchiges Praktikum geeignet ist. Dabei entstand eine Art Durchführbarkeits- / Machbarkeitsstudie, welche zur Entscheidung führte, das Dokumenten-Scanner-Softwaresystem zu entwickeln. Tobias Kallauke soll aufgrund seiner Kenntnisse und Erfahrungen ein Backend mit entsprechenden Schnittstellen und eine Android-App erstellen, während der Verfasser eine iOS-App programmiert. Die iOS-Anwendung soll den Anforderungen, die im gleichnamigen \autoref{ch:anforderungen} zu finden sind, erfüllen. Für weitere Details über den Server, dessen Architektur und die Android-App siehe im Praktikumsbericht von Tobias Kallauke.
+	Vor Beginn des Praktikums wurde diskutiert und kalkuliert, welches Thema aus dem Projekt Memo Space für ein zwölfwöchiges Praktikum geeignet ist. Dabei entstand eine Art Durchführbarkeits- / Machbarkeitsstudie, welche zur Entscheidung führte, das Dokumenten-Scanner-Softwaresystem zu entwickeln. Tobias Kallauke soll aufgrund seiner Kenntnisse und Erfahrungen ein Backend mit entsprechenden Schnittstellen und eine Android-App erstellen, während der Verfasser eine iOS-App programmiert. Die iOS-Anwendung soll den Anforderungen, die im gleichnamigen \autoref{ch:anforderungen} zu finden sind, erfüllen. Weitere Details über den Server, dessen Architektur und die Android-App sind im Praktikumsbericht von Tobias Kallauke beschrieben.
 
 
 \section{Analyse und Definition}\label{sc:analyse}
@@ -290,7 +290,7 @@ Im Rahmen eines zwölfwöchigen Forschungspraktikums an der Hochschule Mittweida
 		Daher lag es nah die wesentlichen Konzepte von Redux umzusetzen und einen Redux ähnlichen State Container, als ViewModel zu implementieren. Aus der Definition von Teil-Workflows sollte der Container oder auch Store genannt mindestens 5 States haben: 
 		\vspace{-5mm}
 		\begin{itemize}
-			\item für Authentifizierung sowie Registrierung,
+			\item Für Authentifizierung sowie Registrierung,
 			\item für das Anlegen von Scan-Vorlagen und Speichern der Zwischenergebnisse,
 			\item für das Ausführen von Server-Aufrufen zum Speichern und Abrufen von Vorlagen, 
 			\item für die Steuerung des Workflows bzw. den stellvertretenden Views sowie
@@ -314,19 +314,19 @@ Im Rahmen eines zwölfwöchigen Forschungspraktikums an der Hochschule Mittweida
 			\caption{Architektur Schemata}
 		\end{figure}
 		
-		Das Schema \ref{fig:redux} zeigt, die in der App umgesetzte Redux ähnliche Struktur. Über eine View (rot) können Aktionen (blau) aufgerufen werden. Diese gelangt zuerst in einen sogenannten Dispatcher (lila), welcher als Verteiler dient. Anhand der Art einer Aktion, wird der entsprechende Reducer (grün) vom Dispatcher beauftragt, die Aktion auszuführen. Ein Reducer ist für genau eine Art von Aktionen zuständig. Allerdings ist, wie in der \autoref{fig:tree} zu sehen ist, eine Kapselung von Reducern (grün) möglich. Ferner können Aktions-Arten ineinander gekapselt werden. Das hat den Hintergrund, dass die States wie ein Objektbaum aufgebaut sind. So hat jeder State seinen eigenen Reducer, was für die oben erwähnte Modularität sorgt. Muss beispielsweise eine Änderung im Kontroll-Mechanismen State (siehe Kontroll-State in \ref{fig:tree}) vorgenommen werden, wird die Haupt-Aktion in einer Kontroll-Mechanismen-Reducer-Aktion gekapselt und diese wiederum in einer Vorlagen-Reducer-Aktion. Zum Ausführen dieser Aktion, werden zuvor die entsprechenden Reducer die Kapselungen von außen nach innen auflösen. Nachdem die Aktion ausgeführt und eine State-Änderung herbeigeführt wurde, aktualisiert sich durch data binding von MVVM die View. Genauer werden alle Views, die eine Bindung zu dem jeweiligen Datum im State haben, über die Änderung benachrichtigt und daraufhin aktualisieren diese ihre Benutzeroberfläche.
+		Das Schema \ref{fig:redux} zeigt, die in der App umgesetzte Struktur. Über eine View (rot) können Aktionen (blau) aufgerufen werden. Diese gelangen zuerst in einen sogenannten Dispatcher (lila), welcher als Verteiler dient. Anhand der Art einer Aktion, wird der entsprechende Reducer (grün) vom Dispatcher beauftragt, die Aktion auszuführen. Jeweils ein Reducer ist nur für eine Aktions-Art zuständig. In \autoref{fig:tree} ist eine Schachtelung von Reducern (grün) zu sehen. Ebenfalls können Aktions-Arten ineinander geschachtelt werden. Das hat den Hintergrund, dass die States wie ein Objektbaum aufgebaut sind. So hat jeder State seinen eigenen Reducer und eigene Aktionen, was für die oben erwähnte Modularität sorgt. Muss beispielsweise eine Änderung im Kontroll-Mechanismen-State (siehe Kontroll-State in \ref{fig:tree}) vorgenommen werden, wird die Haupt-Aktion in einer Kontroll-Mechanismen-Reducer-Aktion geschachtelt und diese wiederum in einer Vorlagen-Reducer-Aktion. Zum Ausführen der Haupt-Aktion, werden zuvor die entsprechenden Reducer die Schachtelung von außen nach innen auflösen. Nachdem die Aktion ausgeführt und eine State-Änderung herbeigeführt wurde, aktualisiert sich durch data binding von MVVM die View. Speziell werden alle Views, die eine Bindung zu dem jeweiligen Datum im State haben, über die Änderung benachrichtigt und daraufhin aktualisieren diese ihre Benutzeroberfläche.
 
-		Ein weiterer wichtiger Bestandteil der Architektur sind die Server-Aufrufe. Für diese gibt es einen eigenen Reducer und Schnittstelle. Diese Schnittstelle ist in der \autoref{fig:redux} grau markiert und mit API \nomenclature{API}{application programming interface, deutsch: Programmierschnittstelle} beschriftet. Diese hat die Besonderheit selbst Aktionen an den Container zu senden. Beispielsweise löst ein Knopfdruck in einer View die Aktion aus, alle Vorlagen vom Server zu laden. Diese Aktion gelangt über den vorgesehenen Reducer zu der API-Schnittstelle. Dort wird ein entsprechender Server-Aufruf gestartet und auf den Server-Rückruf gewartet. Sobald die Antwort des Servers angekommen ist, wird diese mit Hilfe einer Aktion zurück zum Container gesendet. Dort verarbeitet ein entsprechender Reducer eventuelle Fehlerbehandlung oder die heruntergeladenen Vorlagen.
+		Ein weiterer wichtiger Bestandteil der Architektur sind die Server-Aufrufe. Für diese gibt es einen eigenen Reducer und eigene Schnittstellen. Diese Schnittstellen sind in der \autoref{fig:redux} grau markiert und mit API \nomenclature{API}{application programming interface, deutsch: Programmierschnittstelle} beschriftet. Ihre Besonderheit besteht darin, selbst Aktionen an den Container zu senden. Beispielsweise löst der Benutzer die Aktion aus, alle Vorlagen vom Server zu laden. Diese Aktion gelangt über den vorgesehenen Reducer zu der API-Schnittstelle. Dort wird ein entsprechender Server-Aufruf gestartet und auf den Server-Rückruf gewartet. Sobald die Antwort des Servers angekommen ist, wird diese mit Hilfe einer Aktion zurück zum Container gesendet. Dort verarbeitet ein entsprechender Reducer eventuelle Fehler oder die heruntergeladenen Vorlagen.
 		
 	\section{Implementierung}\label{sc:implementierung}
-		Zur Realisierung der entworfenen Systemkomponenten wurde ausschließlich, die von Apple entwickelte IDE\nomenclature{IDE}{integrated development environment, deutsch: Integrierte Entwicklungsumgebung} Xcode\footurl{Xcode Internetseite -}{https://developer.apple.com/xcode/}, verwendet. Diese stellt virtuelle iOS oder iPadOS Geräte zur Verfügung, auf denen die App getestet werden kann. Diese Simulatoren bieten unteranderem auch die Möglichkeit an, die Anwendung schnell auf verschiedenen Betriebssystem-Versionen zu testen. Auch ist das Testen der App auf echten Geräten durch Xcode möglich, was bei der Entwicklung unumgänglich war. Grund dafür ist die Benutzung der Kamera, die bei den Simulatoren zu gewollten Abstürzen führt, da diese keinen Zugriff auf eine Kamerasystem besitzen.
+		Zur Realisierung der entworfenen Systemkomponenten wurde ausschließlich, die von Apple entwickelte IDE\nomenclature{IDE}{integrated development environment, deutsch: Integrierte Entwicklungsumgebung} Xcode\footurl{Xcode Internetseite -}{https://developer.apple.com/xcode/}, verwendet. Diese stellt virtuelle iOS oder iPadOS Geräte zur Verfügung, auf denen die App getestet werden kann. Diese Simulatoren bieten unteranderem auch die Möglichkeit, die Anwendung schnell auf verschiedenen Betriebssystem-Versionen zu testen. Auch ist das Testen der App auf echten Geräten durch Xcode möglich, was bei der Entwicklung unumgänglich war. Grund dafür ist die Benutzung der Kamera, die bei den Simulatoren zu gewollten Abstürzen führt, da diese keinen Zugriff auf ein Kamerasystem besitzen.
 		
-		Die App ist ausschließlich in der Programmiersprache Swift geschrieben. Neben den Frameworks SwiftUI, Vision und VisionKit von Apple wurde das das Framework Kingfisher\footurl{Kingfisher GitHub Repository -}{https://github.com/onevcat/Kingfisher}, zum Downloaden und Cachen von Bildern verwendet. Das Vision-Framework führt Erkennung von Gesichts- und Gesichtsmarkierungen, Texterkennung, Barcode-Erkennung, Bildregistrierung und allgemeine Merkmalsverfolgung durch. Jedoch wurde in der App nur die integrierte Texterkennung benutzt. Es ist aber anzunehmen, das Algorithmen aus VisionKit von Vision zur Dokumenten-Erkennung verwendet. Für mehr Informationen über die Frameworks SwiftUI und VisionKit siehe in \autoref{sc:analyse}.
+		Die App ist ausschließlich in der Programmiersprache Swift geschrieben. Neben den Frameworks SwiftUI, Vision und VisionKit von Apple wurde das Framework Kingfisher\footurl{Kingfisher GitHub Repository -}{https://github.com/onevcat/Kingfisher}, zum Downloaden und Cachen von Bildern verwendet. Das Vision-Framework führt Gesichts-, Text- und Barcode-Erkennung, Bildregistrierung und allgemeine Merkmalsverfolgung durch. Jedoch wurde in der App nur die integrierte Texterkennung benutzt. Es ist aber anzunehmen, dass zur Dokumenten-Erkennung  Algorithmen aus Vision von VisionKit verwendet werden. Für mehr Informationen über die Frameworks SwiftUI und VisionKit siehe in \autoref{sc:analyse}.
 		
-		Zum Einrichten und Testen des Backends wurde außerdem Visual Studio Community bzw. Visual Studio Code\footurl{Visual Studio Internetseite -}{https://visualstudio.microsoft.com/de/} mit dem REST Client Plugin\footurl{REST Client Repository -}{https://github.com/Huachao/vscode-restclient} verwendet. Das Backend konnte als lokaler Server auf dem Entwicklungscomputer gestartet und über die IP-Adresse 0.0.0.0 im lokalen Netzwerk aufgerufen werden. Für die Verwaltung der PostgreSQL-Datenbank genügte die Anwendung PgAdmin4\footurl{PgAdmin Internetseite -}{https://www.pgadmin.org/}. Damit ist es möglich einzelne Einträge oder auch ganze Tabellen der Datenbank zu bearbeiten.
-		
+		Zum Einrichten und Testen des Backends wurde außerdem Visual Studio Community bzw. Visual Studio Code\footurl{Visual Studio Internetseite -}{https://visualstudio.microsoft.com/de/} mit dem REST Client Plugin\footurl{REST Client Repository -}{https://github.com/Huachao/vscode-restclient} verwendet. Das Backend konnte als lokaler Server auf dem Entwicklungscomputer gestartet und im lokalen Netzwerk aufgerufen werden. Für die Verwaltung der PostgreSQL-Datenbank bot sich PgAdmin4\footurl{PgAdmin Internetseite -}{https://www.pgadmin.org/} an. Damit ist es möglich, einzelne Einträge oder auch ganze Tabellen der Datenbank zu bearbeiten.
+
 		\subsection{Registrieren und Anmelden}
-			Die E-Mail-Textfelder besitzen, wie auch das Passwort-Feld der Anmeldung eine AutoFill-Funktion. Dadurch kann die App Registrier- und Anmelde-Daten vorschlagen und automatisch in die entsprechenden Felder einsetzten. Im dritten Bild \ref{fig:anmelden} ist das anhand des \glqq Passwörter\grqq -Knopfes über der Tastatur zu sehen. Weiter sind alle Passwort-Felder gesichert, wodurch der Inhalt zum Schutz der Privatsphäre standardmäßig ausgeblendet und mit Punkten ersetzt wird. Auf der Bildschirmaufnahme \ref{fig:register} sind die Punkte wegen der Sicherheitsstandards von iOS nicht zu sehen. Durch das drücken des Auges rechts des Textfeldes kann der Inhalt auch eingesehen werden. Zusätzlich validieren alle Text-Felder ihren Inhalt mithilfe von regulären Ausdrücken. Beispielsweise muss ein Passwort aus 8 Zeichen bestehen und zwei von den drei Folgenden Eigenschaften erfüllen:
+			Die E-Mail-Textfelder besitzen, wie auch das Passwortfeld der Anmeldung eine AutoFill-Funktion. Dadurch kann die App Registrier- und Anmeldedaten vorschlagen und automatisch in die entsprechenden Felder einsetzten. Im dritten Bild \ref{fig:anmelden} ist das anhand des \glqq Passwörter\grqq -Knopfes über der Tastatur zu sehen. Außerdem sind alle Passwortfelder gesichert, wodurch der Inhalt zum Schutz der Privatsphäre standardmäßig ausgeblendet und mit Punkten ersetzt wird. Aufgrund der Sicherheitsstandards von iOS sind die Punkte auf der Bildschirmaufnahme \ref{fig:register} nicht zu sehen. Durch Berühren des Auges neben dem Textfeld kann der Inhalt ein- und ausgeblendet werden. Zusätzlich validieren alle Textfelder ihren Inhalt mithilfe von regulären Ausdrücken. Beispielsweise muss ein Passwort aus 8 Zeichen bestehen und zwei von den drei folgenden Eigenschaften erfüllen:
 			\vspace{-5mm}
 			\begin{enumerate}
 				\item Es ist mindestens ein Sonderzeichen enthalten.
@@ -335,6 +335,7 @@ Im Rahmen eines zwölfwöchigen Forschungspraktikums an der Hochschule Mittweida
 			\end{enumerate}
 			\vspace{-5mm}
 			Die Validierung ist jedoch nicht standardmäßig, sondern wurde selbst entwickelt.
+
 			
 		\begin{figure}[th!]
     		\centering
@@ -357,10 +358,11 @@ Im Rahmen eines zwölfwöchigen Forschungspraktikums an der Hochschule Mittweida
 		\end{figure}	
 		
 		\subsection{Scan-Vorlagen erstellen und speichern}
-			Bei der Implementierung des ersten Arbeitsschritts der Scan-Vorlagen wurde das Flussdiagramm \ref{fig:erstellen_flow}, welches im \autoref{ch:workflow} zu finden sind, benutzt.
+			Bei der Implementierung des ersten Arbeitsschrittes der Scan-Vorlagen wurde das Flussdiagramm \ref{fig:erstellen_flow}, welches im \autoref{ch:workflow} zu finden sind, benutzt.
 			
 			\subsubsection*{Scan-Vorlage erstellen}
-				Im ersten Schritt sind ein Name und weitere Informationen, zu der Vorlage an zugegeben (siehe \ref{fig:v2}), um im Anschluss die Fotos aufzunehmen. Bei der Kamera-View (siehe \ref{fig:v3}) handelt es sich um die Scan-View des Frameworks VisionKit. Mithilfe von Kantenerkennung und anderen Algorithmen, die Tobias Kallauke in seinem Bericht beschreibt, wird dass Dokument sobald es erkannt ist, automatisch fotografiert. Das Dokument wird in Echtzeit aus dem Bild ausgeschnitten und gerade gezogen. Ein manuelles Auslösen des Fotos und Anpassen der Dokumenten-Kanten im Bild, ist ebenfalls möglich. Zugleich werden alle erstellten Bilder in einer Gruppe gesammelt. Diese können vor dem Abspeichern angeschaut und nochmals bearbeitet werden. Die \autoref{fig:klausur} entstand durch diesen Prozess.
+				Zu Beginn sind ein Name und eine Beschreibung der Vorlage anzugeben (siehe \ref{fig:v2}), um im Anschluss die Fotos aufzunehmen. Bei der Kamera-View (siehe \ref{fig:v3}) handelt es sich um die Scan-View des Frameworks VisionKit. Mithilfe von Kantenerkennung und anderen Algorithmen, die Tobias Kallauke in seinem Bericht beschreibt, wird das Dokument, sobald es erkannt ist, automatisch fotografiert. Das Dokument wird in Echtzeit aus dem Bild ausgeschnitten und gerade gezogen. Ein manuelles Auslösen des Fotos und Anpassen der Dokumentenkanten im Bild, ist ebenfalls möglich. Zugleich werden alle erstellten Bilder in einer Gruppe gesammelt. Diese können vor dem Abspeichern angeschaut und nochmals bearbeitet werden. Die \autoref{fig:klausur} entstand durch diesen Prozess. 
+
 				
 			\begin{figure}[h!]
     			\centering
@@ -371,7 +373,7 @@ Im Rahmen eines zwölfwöchigen Forschungspraktikums an der Hochschule Mittweida
     			\end{subfigure}
     			\begin{subfigure}[t]{0.3\textwidth}
         			\frame{\includegraphics[width=0.96\textwidth]{img/V3}}
-        			\caption{Kamera- Scan-View mit Dokumenten-Erkennung}
+        			\caption{Kamera- bzw. Scan-View mit Dokumenten-Erkennung}
         			\label{fig:v3}
     			\end{subfigure}
     			\begin{subfigure}[t]{0.3\textwidth}
@@ -383,8 +385,8 @@ Im Rahmen eines zwölfwöchigen Forschungspraktikums an der Hochschule Mittweida
 			\end{figure}
 			
 			\subsubsection*{Regionen erstellen}
-				Im Anschluss sind die Regionen auf den Dokumenten-Seiten zu markieren, deren Inhalt beim Einscannen digitalisiert werden soll. Zu erst wird die gewünschte Seite aus einer Übersicht (siehe \ref{fig:v4}) ausgewählt. Anschließend ist eine Vorschau der Seite mit alle eingetragenen Regionen zu sehen (siehe \ref{fig:v8} bzw. \ref{fig:v9}). Über einen Button können weitere Regionen hinzugefügt werden. Dazu muss ein Namen (siehe \ref{fig:v5}) und ein Datentyp (siehe \ref{fig:v6}) festgelegt werden. Sobald die Eigenschaften der Region festgelegt sind, muss diese noch auf dem Bild markiert werden. Dazu muss mit einem Finger ein Rechteck in einer beliebigen Größe erstellt werden (siehe \ref{fig:v7}). Die markierte Region kann anschließend bewegt oder neu gemacht werden. Mit einer Zwei-Finger-Geste kann an die Seite heran bzw. auch heraus gezoomt werden, um beispielsweise kleine Regionen zu markieren. Dieses Vorgehen muss dann für alle nötigen Regionen auf den jeweiligen Seiten wiederholt werden. 
-			
+				Im Anschluss sind die Regionen auf den Dokumentenseiten zu markieren, deren Inhalt beim Einscannen digitalisiert werden soll. Dafür wird zunächst die gewünschte Seite aus einer Übersicht (siehe \ref{fig:v4}) ausgewählt. Anschließend ist eine Vorschau der Seite mit allen eingetragenen Regionen zu sehen (siehe \ref{fig:v8} bzw. \ref{fig:v9}). Über einen Button können weitere Regionen hinzugefügt werden. Dazu muss ein Name (siehe \ref{fig:v5}) und ein Datentyp (siehe \ref{fig:v6}) festgelegt werden. Sobald die Eigenschaften der Region definiert sind, muss diese Region auf dem Bild markiert werden. Dazu zieht man mit einem Finger ein Rechteck über die gewünschte Region (siehe \ref{fig:v7}). Zudem kann an die Seite heran- oder herausgezoomt werden, um beispielsweise kleine Regionen zu markieren. Dieses Vorgehen muss anschließend für alle benötigen Regionen auf den jeweiligen Seiten wiederholt werden.
+ 
 				\begin{figure}[h!]
     				\centering
     				\begin{subfigure}[t]{0.3\textwidth}
@@ -407,8 +409,8 @@ Im Rahmen eines zwölfwöchigen Forschungspraktikums an der Hochschule Mittweida
 				\end{figure}
 			
 			\vspace{-5mm}
-			\subsubsection*{Kontrollmechanismus erstellen}
-				Schließlich können die sogenannte Kontrollmechanismen erstellt werden. Diese Funktion ist allerdings noch nicht sehr weit fortgeschritten und beinhaltet aktuell nur den Kontrollmechanismen-Typ zum Vergleichen von Regionen, wie im \autoref{ch:konzept} beschrieben ist. Beim Erstellen einer Kontrolle dieses Typs müssen zwei Regionen aus gewählt werden(siehe \autoref{fig:l2}), deren Inhalt nach der Texterkennung auf Gleichheit überprüft wird. Bei der Wahl der zwei Regionen stehen alle vorher angelegten Regionen, wie in \autoref{fig:l3} zu sehen ist, zur Verfügung. In \autoref{fig:l1} ist eine Übersicht aller angelegten Kontrollen zu der Scan-Vorlage zu sehen sowie ein Button zum Speichern der Vorlage.
+			\subsubsection*{Kontrollmechanismen erstellen}
+				Schließlich können die Kontrollmechanismen erstellt werden. Diese Funktion ist allerdings noch nicht sehr weit fortgeschritten und beinhaltet aktuell nur den Kontrollmechanismen-Typ zum Vergleichen von Regionen, wie im \autoref{ch:konzept} beschrieben ist. Beim Erstellen einer Kontrolle dieses Typs müssen zwei Regionen aus gewählt werden (siehe \autoref{fig:l2}), deren Inhalt nach der Texterkennung auf Gleichheit überprüft wird. Bei der Wahl der zwei Regionen stehen alle vorher angelegten Regionen, wie in \autoref{fig:l3} zu sehen ist, zur Verfügung. In \autoref{fig:l1} sind die bereits angelegten Kontrollmechanismen dieser Scan-Vorlage zu sehen sowie ein Button zum Speichern der Vorlage.
 				
 				\begin{figure}[h!]
     				\centering
@@ -432,7 +434,7 @@ Im Rahmen eines zwölfwöchigen Forschungspraktikums an der Hochschule Mittweida
 				\end{figure}
 
 			\subsubsection*{Scan-Vorlage speichern}
-				Die Speicherung benötigt mehreren Schritten. Dazu werden die entsprechenden Server-Schnittstellen in einer bestimmten Reihenfolge aufgerufen. Für genauere Details zur API des Servers siehe im Praktikumsbericht von Tobias Kallauke.
+				Die Speicherung erfolgt in mehreren Schritten. Dazu werden die entsprechenden Server-Schnittstellen in einer bestimmten Reihenfolge aufgerufen. Für genauere Details zur API des Servers siehe im Praktikumsbericht von Tobias Kallauke.
 				
 				%%%%%%%%%%%%%%%%%%%%%%
 	%			... und wie die Vorlage versendet wird ...
@@ -448,14 +450,15 @@ Im Rahmen eines zwölfwöchigen Forschungspraktikums an der Hochschule Mittweida
 			
 		\newpage
 		\subsection{Scan-Vorlage verwenden}
-			Bei der Implementierung dieses Arbeitsschritts wurde das Flussdiagramm \ref{fig:verwenden_flow}, welches im \autoref{ch:workflow} zu finden sind, benutzt.
+			Bei der Implementierung dieses Arbeitsschrittes wurde das Flussdiagramm \ref{fig:verwenden_flow}, welches im \autoref{ch:workflow} zu finden ist, benutzt.
 			
-			Um eine Klausur zu digitalisieren, muss die vorher erstellte Scan-Vorlage ausgewählt werden (\ref{fig:liste1}). Danach ist das Einscannen eine Klausur über einen Button möglich (\ref{fig:liste2}). Bevor die Bilder aufgenommen werden können, erscheint ein Dialogfenster (\ref{fig:liste3}), in dem der Benutzer sich entscheiden muss, welche OCR-Engine benutzt werden soll. Aktuell gibt es zwei Möglichkeiten:
+			Um eine Klausur zu digitalisieren, muss die vorher erstellte Scan-Vorlage ausgewählt werden (\ref{fig:liste1}). Danach ist das Einscannen einer Klausur über einen Button möglich (\ref{fig:liste2}). Bevor die Bilder aufgenommen werden können, erscheint ein Dialogfenster (\ref{fig:liste3}). Der Benutzer muss entscheiden, welche OCR-Engine benutzt werden soll. Aktuell gibt es zwei Möglichkeiten:
 			\vspace{-5mm}
 			\begin{itemize}
-				\item Die OCR-Engine des Vision Frameworks von Apple, welche direkt auf dem Gerät und ohne eine Internetverbindung die Texterkennung durchführt,  
+				\item Die OCR-Engine des Vision-Frameworks, welche direkt auf dem Gerät und ohne eine Internetverbindung die Texterkennung durchführt,  
 				\item oder die OCR-Engine Tesseract, die über eine Schnittstelle des Servers aufzurufen ist.
 			\end{itemize}
+
 				
 			\begin{figure}[h!]
     			\centering
@@ -478,42 +481,37 @@ Im Rahmen eines zwölfwöchigen Forschungspraktikums an der Hochschule Mittweida
 				\label{fig:vorlagen}
 			\end{figure}
 			
-			Letztendlich erscheint die Scan-View und die Bilder können aufgenommen werden. Wichtig dabei ist, dass die Seiten beim Fotografiert die selbe Reihenfolge, wie in der Scan-Vorlage haben. Auch muss die Anzahl der eingescannten Seiten mit denen in der Vorlage übereinstimmen. Bei der Implementierung der Scan-View wurde auf die Selbe zurückgegriffen, wie sie auch beim Vorlagen Erstellen zu finden ist (siehe \ref{fig:v3}). Grundsätzlich konnten viele Komponenten der gesamten Benutzeroberfläche dank SwiftUI immer wieder verwendet werden. Durch die Scan-View wird die Seiten aus dem Bild ausgeschnitten, geglättet und der Kontrast des Bildes wird ebenfalls leicht angepasst, damit Buchstaben leichter zu erkennen sind und Schatten bzw. Falten verschwinden.
+			Nun erscheint die Scan-View und die Bilder können aufgenommen werden. Wichtig dabei ist, dass die Seiten beim Fotografieren dieselbe Reihenfolge, wie in der Scan-Vorlage haben. Auch muss die Anzahl der eingescannten Seiten mit denen in der Vorlage übereinstimmen. Mithilfe der Scan-View wird die Seite aus dem Bild ausgeschnitten, geglättet und der Kontrast des Bildes so verändert, dass Schriftzeichen leichter zu erkennen sind und Schatten bzw. Falten verschwinden.
 			
-			Nach dem Einscannen der Klausur-Seiten beginnt der Prozess der Texterkennung. Durch Aktivitätsanzeigen wird dem Benutzer mitgeteilt, dass die Anwendung gerade arbeitet. Die Abläufe bei der online OCR-Engine sind jedoch leicht anders, als die, des Vision Frameworks.
-			
+			Nach dem Einscannen der Klausurseiten beginnt der Prozess der Texterkennung. Durch Aktivitätsanzeigen wird dem Benutzer mitgeteilt, dass die Anwendung gerade arbeitet. Die Abläufe der online OCR-Engine und des Vision Frameworks unterscheiden sich deutlich.	
+
 			\subsubsection*{Ablauf mit Vision}
 				Bei der Verwendung von Vision gibt es folgende grobe Schritte:
 				\vspace{-5mm}
 				\begin{enumerate}
 					\item Die markierten Regionen werden in der Vorlage auf die neuen Fotos angewendet.
-					\item Mithilfe der Regionen werden Bildausschnitten aus den Fotos erstellen.
+					\item Mithilfe der Regionen werden Bildausschnitte aus den Fotos erstellt.
 					\item Die Ausschnitte werden in die ausgewählte OCR-Engine überführt.
-					\item Darstellung der Texterkennungs-Ergebnisse auf der View.
+					\item Darstellung der Texterkennungsergebnisse auf der View.
 				\end{enumerate}
-			
+					
 				\paragraph*{Zu 1.: Die markierten Regionen werden in der Vorlage auf die neuen Fotos angewendet.}
 					Nun wird jedes Foto des neuen Scans mit den Regionen der jeweiligen Seite der Scan-Vorlage verarbeitet. 
-					%Zur Erinnerung aus \autoref{ch:konzept}: Das Ziel ist es, die markierten Regionen in der Vorlage auf die zu digitalisierende Seite anzuwenden und minimale Bildausschnitte zu erstellen, in denen der zu digitalisierende Text steht (siehe \autoref{fig:schema2}). Diese Ausschnitte werden dann von der Texterkennung verarbeitet. 
-				 	%Diesen Vorgang wird für jede Seite wiederholt. Jedoch ergibt sich hierbei ein Problem.
-					Wie in den Abbildungen \ref{fig:seite1} und \ref{fig:seite2} zu sehen ist, haben beide, durch die App entstandenen Bilder, unterschiedliche Maße. Die \autoref{fig:seite1} ist größer und etwas breiter als die \autoref{fig:seite2}. Das liegt daran, dass sich der Winkel und der Abstand der Kamera zum Dokument bei den Aufnahme geändert hat. Wenn die Bilder in der Vorlage nicht genau so groß sind, wie die Bilder des neuen Scans, können wichtige Informationen durch die absoluten Positionen der Regionen abgeschnitten werden. Aus diesem Grund müssen nun die absoluten in relative Positionen umgerechnet werden. Gleiches gilt für die Höhe und Breite der Regionen.
+					Wie in den Abbildungen \ref{fig:seite1} und \ref{fig:seite2} zu sehen ist, haben beide, durch die App entstandenen Bilder, unterschiedliche Maße. Die \autoref{fig:seite1} ist größer und etwas breiter als die \autoref{fig:seite2}. Das liegt daran, dass sich der Winkel und der Abstand der Kamera zum Dokument zwischen den Aufnahmen geändert hat. Wenn die Bilder in der Vorlage nicht genau so groß sind, wie die Bilder des neuen Scans, können wichtige Informationen durch die absoluten Positionen der Regionen abgeschnitten werden. Aus diesem Grund müssen nun die absoluten in relative Positionen umgerechnet werden. Gleiches gilt für die Höhe und Breite der Regionen.
 
-				\paragraph*{Zu 2.: Mithilfe der Regionen werden Bildausschnitten aus den Fotos erstellen.}
-					Nachdem die neue Position und Maße berechnet wurden, entstehen daraus Bildausschnitte für die Texterkennung. 
-					%Zur Erinnerung, die Regionen dienen als eine Art Schablone, so dass alles, was sich außerhalb dieser befindet, nicht verwendet wird (siehe \autoref{fig:schablone1}). 
-					Bei falscher Erstellung der Vorlagen oder bei falschem Einscannen der Klausur kann es trotzdem passieren, dass Teile der Regionen wegfallen. Dazu im \autoref{ssc:erkennen} mehr.
+				\paragraph*{Zu 2.: Mithilfe der Regionen werden Bildausschnitte aus den Fotos erstellen.}
+					Nachdem die neue Position und die Maße berechnet wurden, entstehen daraus Bildausschnitte für die Texterkennung. Bei falscher Erstellung der Vorlagen oder bei falschem Einscannen der Klausur kann es trotzdem passieren, dass Teile der Regionen wegfallen. Dazu im \autoref{ssc:erkennen} mehr.
 				
 				\paragraph*{Zu 3.: Die Ausschnitte werden in die ausgewählte OCR-Engine überführt.}
-					Zu jedem Bildausschnitt wird eine sogenannte Texterkennungs-Anfrage konfiguriert. Hierfür wird weiterhin die zugehörige Region benötigt. In der Konfiguration werden an Hand des Region-Datentyps (\ref{fig:v6}) unterschiedliche Einstellungen getroffen. Beispielsweise wird beim Datentyp Note eine sogenannte costum words-Liste verwendet. Sie beinhaltet alle zu erwartende Ergebnisse bzw. Noten. Die Liste hat, wie schon im \autoref{ch:konzept} erwähnt, Vorrang vor dem Standard-Wörterbuch, in der Worterkennungsphase und sorgt für bessere Ergebnisse\footurl{Vision \textit{costumWords} Dokumentation}{https://developer.apple.com/documentation/vision/vnrecognizetextrequest/3152640-customwords}. % Auch könnte hier die Sprache des zu erkennenden Texts angegeben oder die  Texterkennungs-Stufe eingestellt werden. Diese bestimmt, welche Techniken bei der Texterkennung verwendet werden. Entweder man gibt der Geschwindigkeit Vorrang vor der Genauigkeit oder aber man setzt auf eine längere, rechenintensivere Erkennung. In der Anwendung ist die OCR-Genauigkeit entscheidend und auf die Einstellung der Sprache wurde verzichtet, da es sich in keinem Fall um normalen Text handelt, sondern um Eigennamen, Abkürzungen und Ziffern.
-						
-					Standardmäßig werden bei der Bearbeitung einer Texterkennungs-Anfrage zunächst alle Glyphen oder Zeichen im Eingabebild lokalisiert und dann jede Zeichenfolge analysiert\footurl{Quelle: \textit{VNRecognizeTextRequest} Dokumentation}{https://developer.apple.com/documentation/vision/vnrecognizetextrequest}. Anschließend wird eine Korrektur an den erkannter Wörter auf der Grundlage eines Wörterbuchs und anderer Wahrscheinlichkeits-Heuristiken für Zeichenpaare durchgeführt \cite{apple_text_2019}. Der genaue Ablauf der Texterkennung oder die verwendeten Algorithmen von Vision sind allerdings nicht bekannt. 
+					Zu jedem Bildausschnitt wird eine sogenannte Texterkennungsanfrage konfiguriert. Hierfür wird weiterhin die zugehörige Region benötigt. In der Konfiguration werden an Hand des Region-Datentyps (\ref{fig:v6}) unterschiedliche Einstellungen getroffen. Beispielsweise wird beim Datentyp Note eine sogenannte costum words-Liste verwendet. Sie beinhaltet alle zu erwartende Ergebnisse bzw. Noten. Die Liste hat in der Worterkennungsphase Vorrang vor dem Standard-Wörterbuch, wie schon im \autoref{ch:konzept} erwähnt und sorgt für bessere Ergebnisse\footurl{Vision \textit{costumWords} Dokumentation}{https://developer.apple.com/documentation/vision/vnrecognizetextrequest/3152640-customwords}.						
+					Standardmäßig werden bei der Bearbeitung einer Texterkennungsanfrage zunächst alle Zeichen im Eingabebild lokalisiert und dann jede Zeichenfolge analysiert\footurl{Quelle: \textit{VNRecognizeTextRequest} Dokumentation}{https://developer.apple.com/documentation/vision/vnrecognizetextrequest}. Anschließend wird eine Korrektur der erkannten Wörter auf der Grundlage eines Wörterbuchs und anderer Wahrscheinlichkeitsheuristiken für Zeichenpaare durchgeführt \cite{apple_text_2019}. Der genaue Ablauf der Texterkennung bzw. die verwendeten Algorithmen von Vision sind allerdings nicht bekannt. 
 				
-					Anschließend an die Texterkennung durch Vision erfolgt in einigen Fällen noch eine selbst entwickelte Korrektur, wie sie in \autoref{ch:konzept} \autoref{sc:erweiterungkonzept} beschreiben ist. Wieder ist der Regionen-Datentyp (\ref{fig:v6}) ausschlaggebend. Beispielsweise wird der Text einer vermeidlichen Seminargruppe mit allen in der App hinterlegten Seminargruppen verglichen. Der Seminargruppen-Name mit der größten Übereinstimmung wird mit dem erkannten Wort ersetzt und die confidence gegebenenfalls angepasst.
+					Nach der Texterkennung durch Vision erfolgt in einigen Fällen noch eine selbst entwickelte Korrektur, wie sie in \autoref{ch:konzept} \autoref{sc:erweiterungkonzept} beschrieben ist. Wieder ist der Regionen-Datentyp (\ref{fig:v6}) ausschlaggebend. Beispielsweise wird der Text einer vermeintlichen Seminargruppe mit allen in der App hinterlegten Seminargruppen verglichen. Das erkannte Wort wird durch den Seminargruppennamen mit der größten Übereinstimmung ersetzt und die confidence gegebenenfalls angepasst.
 				
-					Zuletzt werden die erkennten Texte bzw. Worte und deren confidence an den State-Container der App gesendet. Für die Ergebnisse der Texterkennung ist ein eigener State vorgesehen, in dem auch die Server-Ergebnisse von Tesseract gesichert werden. Somit ist das Anzeigen der Ergebnisse bei beiden OCR-Engines gleich.  
+					Zuletzt werden die erkennten Texte bzw. Worte und deren confidence an den State-Container der App gesendet. Für die Ergebnisse der Texterkennung ist ein eigener State vorgesehen, in dem auch die Serverergebnisse von Tesseract gesichert werden. Somit ist das Anzeigen der Ergebnisse bei beiden OCR-Engines gleich.  
 				
-				\paragraph*{Zu 4.: Darstellung der Texterkennungs-Ergebnisse auf der View.}
-					Die Ergebnissen der Texterkennung und die jeweilige confidence werden auf der Benutzeroberfläche, nach Seiten sortiert, angezeigt (\ref{fig:ocr2}). Alle OCR-Ergebnisse können zudem noch angepasst werden. Abhängig vom Datentyp der Region passt sich die Tastatur beim Ändern der Texte an (\ref{fig:ocr3}). Beispielsweise sind die Tastaturen beim Anpassen von Noten und Punkte auf Zahlen und Dezimalpunkte spezialisiert. Zudem kann die confidence farblich (siehe \autoref{fig:ocr2}) aber auch als Zahlenwert (siehe \autoref{fig:ocr3}) angezeigt werden. Wurde kein Text erkannt, ist dementsprechend ein Warnsymbol an der Stelle der confidence zu sehen.    
+				\paragraph*{Zu 4.: Darstellung der Texterkennungsergebnisse auf der View.}
+					Die Ergebnisse der Texterkennung und die jeweilige confidence werden auf der Benutzeroberfläche, nach Seiten sortiert, angezeigt (\ref{fig:ocr2}). Alle OCR-Ergebnisse können zudem noch angepasst werden. Abhängig vom Datentyp der Region passt sich die Tastatur beim Ändern der Texte an (\ref{fig:ocr3}). Beispielsweise sind die Tastaturen beim Anpassen von Noten und Punkten auf Zahlen und Dezimalpunkte spezialisiert. Zudem kann die confidence farblich (siehe \autoref{fig:ocr2}), aber auch als Zahlenwert (siehe \autoref{fig:ocr3}) angezeigt werden. Wurde kein Text erkannt, ist dementsprechend ein Warnsymbol an der Stelle der confidence zu sehen.  
  
  			\begin{figure}[h!]
     			\centering
@@ -537,36 +535,40 @@ Im Rahmen eines zwölfwöchigen Forschungspraktikums an der Hochschule Mittweida
 			\end{figure}
  
 			\subsubsection*{Ablauf mit Tesseract}
-				Die Texterkennung mit Tesseract auf dem Server hat einen anderen Ablauf:
+				Die Texterkennung mit Tesseract folgenden Ablauf:
 				\vspace{-5mm}
 				\begin{enumerate}
-					\item Bilder an den Server senden
-					\item Auftrag zur Texterkennung an den Server senden
-					\item Serverseitige Texterkennung
-					\item Texterkennungs-Ergebnisse darstellen
+					\item Bilder an den Server senden.
+					\item Auftrag zur Texterkennung an den Server senden.
+					\item Serverseitige Texterkennung durchführen.
+					\item Texterkennungsergebnisse empfangen und darstellen.
 				\end{enumerate}
 				
-				\paragraph*{Zu 1.: Bilder an den Server senden}
-				Nachdem das Dokument fotografiert wurden, werden die Aufnahmen an den Server gesendet. Dieser gibt die Speicher-Pfade der Bilder als Antwort zurück. 
+				\paragraph*{Zu 1.: Bilder an den Server senden.}
+				Nachdem das Dokument fotografiert wurde, werden die Aufnahmen an den Server gesendet. Dieser gibt die Speicherpfade der Bilder als Antwort zurück. 
 				
-				\paragraph*{Zu 2.: Auftrag zur Texterkennung an den Server senden}
-				Anschließend wird für jeden Pfad eine Auftrag zur Texterkennung an  die OCR-Schnittstelle des Servers gestellt. In der Anfrage wird der Pfad des Bildes und die passende Seiten-ID der ausgewählten Vorlage gesendet. Ab hier übernimmt der Server die Arbeit der Texterkennung.
+				\paragraph*{Zu 2.: Auftrag zur Texterkennung an den Server senden.}
+				Anschließend wird für jeden Pfad ein Auftrag zur Texterkennung an  die OCR-Schnittstelle des Servers ausgelöst. In der Anfrage wird der Pfad des Bildes und die passende Seiten-ID der ausgewählten Vorlage gesendet. Nun übernimmt der Server die Arbeit der Texterkennung.
 				
-				\paragraph*{Zu 3.: Serverseitige Texterkennung}
-				Mithilfe der Seiten-ID, die in der Datenbank des Servers hinterlegt ist, werden dann die Regionen der Seite auf das Bild, welches sich an dem gesendet Pfad befindet, angewendet. Für mehr Details siehe im Praktikumsbericht von Tobias Kallauke. 
+				\paragraph*{Zu 3.: Serverseitige Texterkennung durchführen.}
+				Mithilfe der Seiten-ID, die in der Datenbank des Servers hinterlegt ist, werden die Regionen der Seite auf das Bild, welches sich an dem gesendeten Pfad befindet, angewendet. Für mehr Details siehe im Praktikumsbericht von Tobias Kallauke. 
 				
-				\paragraph*{Zu 4.: Texterkennungs-Ergebnisse darstellen}
-				Nach der Texterkennung sendet der Server die Ergebnisse der Seiten als Antwort zurück. Diese werden dann im selben State des State-Containers gesichert, wie es auch bei Vision der Fall ist. Die Ergebnisse bestehen aus der Region-ID, zur Zuordnung, dem erkannten Text sowie der confidence des OCR, zu dem jeweiligem Wort. Auch ähnlich, wie es bei Vision der Fall ist. Die Darstellung der Ergebnisse und das Verhalten der Benutzeroberfläche ist ebenfalls identisch.      
+				\paragraph*{Zu 4.: Texterkennungsergebnisse empfangen und darstellen.}
+				Nach der Texterkennung sendet der Server die Ergebnisse der Seiten als Antwort zurück. Wie bei Vision werden diese im selben State des State-Containers gesichert. Die Ergebnisse bestehen aus der Region-ID zur Zuordnung, dem erkannten Text sowie der confidence des OCR zum jeweiligen Text. Ähnlich, wie bei Vision.      
 
 %%%%%%%%%%%%%%%% - FAZIT - %%%%%%%%%%%%%%%
 
 \chapter{Fazit}\label{ch:fazit}
-	Dieses Kapitel reflektiert den aktuellen Stand der App und zieht einen Vergleich mit den Anforderungen aus \autoref{ch:anforderungen}.
+	Dieses Kapitel reflektiert den aktuellen Stand der App und zieht einen Vergleich mit den Anforderungen aus \autoref{ch:anforderungen}. Im Anhang \autoref{ch:accses} sind dazu einige weitere Screenshots abgebildet.
 	
 	\section{Stand des Prototyps}
-		Während der Entwicklung konnten viele Anforderungen umgesetzte werden. Jedoch fehlt zum Zeitpunkt der Abgabe ein essentieller Bestandteil der App. Auf Grund mangelnder Zeit war es nicht mehr möglich die digitalisierten Daten aus der Texterkennung an den Server zu senden, wo sie gespeichert und in ein tabellarisches Format gebracht werden sollten. 
+		Während der Entwicklung konnten die meisten Funktionen des Prototyps umgesetzt werden. Jedoch fehlt zum Zeitpunkt der Abgabe ein essentieller Bestandteil der App. Auf Grund mangelnder Zeit war es nicht mehr möglich, die Funktion zum Speichern der digitalisierten Daten in Front- und Backend zu implementieren. Auch fehlt die Überführung der Daten in ein geeignetes Format.
 		
-		Außerdem wurde nur einer der Kontrollmechanismen umgesetzt. Grund dafür ist, dass dafür zu wenig Zeit in der Planung investiert wurde. Grundsätzlich könnten die fehlenden Mechanismen recht schnell implementiert werden, allerdings ist der aktuelle Ansatz der dahinter liegenden Datenstruktur nicht zum Speichern in der Datenbank geeignet. Sobald Änderungen an der Datenstruktur vorgenommen werden könnten, kann es zu Fehlern kommen. Es existiert jedoch schon eine Idee zur Umsetzung einer besseren Datenstruktur. Dafür müssten allerdings neben der App auch der Server und die Datenbank angepasst werden. Des Weiteren wurden Fehlermeldungen und/oder -behandlungen bezüglich des Servers nur sporadisch implementiert. Aber auch hierfür sind die Grundlagen schon gelegt, da Fehler stets aufgefangen und zentral abgelegt werden. 
+		Außerdem sind nicht alle verfügbaren Serverschnittstellen implementiert. Die Views zum Ändern einer Scan-Vorlage sind schon integriert, da die Views zum Erstellen einer Scan-Vorlage hier wieder verwendet werden konnten. Es fehlen lediglich die interne Logik sowie Schnittstellen zum Server.	
+		
+		Weiterhin konnte nur einer der Kontrollmechanismen umgesetzt werden, da zu wenig Zeit in die Planung investiert wurde. Grundsätzlich ließen sich die fehlenden Mechanismen recht schnell implementieren, jedoch ist die aktuelle Datenstruktur nicht zum Speichern in der Datenbank geeignet. Sobald Änderungen an der Datenstruktur vorgenommen werden, kann es zu Fehlern kommen. Es existiert aber schon eine Idee zur Verbesserung. Dafür müssten allerdings neben der App auch der Server und die Datenbank angepasst werden. 
+		
+		Des Weiteren wurden Fehlermeldungen und/oder -behandlungen bezüglich des Servers nur sporadisch implementiert. Aber auch hierfür sind die Grundlagen schon gelegt, da Fehler stets aufgefangen und zentral abgelegt werden. 
 	
 %	\section{Hürden während der Entwicklung}
 %	
@@ -580,73 +582,69 @@ Im Rahmen eines zwölfwöchigen Forschungspraktikums an der Hochschule Mittweida
 %	- Debugging bei nicht statischen Daten schwer, Mock erstellen
 %	
 %	- Umfang von SwiftUI viele Umwege 
+
 	\section{Probleme und Grenzen der App}\label{sc:grenzen}
-		In diesem Abschnitt werden Probleme aufgeführt, die beim Verwenden der App beobachtet werden können. Auch wird hier über mögliche Lösungen zu einigen Problemen diskutiert.
+		In diesem Abschnitt werden eventuell auftretende Probleme benannt und Lösungsvorschläge gegeben.
 
 		\subsection{Probleme beim Erkennen von Dokumenten}\label{ssc:erkennen}
-			Bei der Erkennung von Dokumenten in einem Bild wird in der Bildverarbeitung auf Algorithmen der Segmentierung zurück gegriffen. Im Praktikumsbericht von Tobias Kallauke wird ein gängiger Ablauf zum Erkennen von Dokumenten dargestellt. Die genaueren Hintergrund und Schwächen der Algorithmen, welche die grundlegenden Probleme und Grenzen der App begründen, würden den Rahmen des Praktikumsberichts sprengen, weshalb darauf nicht weiter eingegangen wird. Allerdings muss klar sein, dass für die Erkennung des Dokuments es wichtig ist, dass die Ecken sowie die Seiten sich gut vom Hintergrund abheben.
-		
-			Das bedeutet im Umkehrschluss, dass wenn die Seiten und Ecken sich nicht gut abheben, kann das Dokument nicht oder nur schlecht erkannt werden. Allerdings gibt es für diese Probleme zwei effiziente Lösungen. 
+			Beim Fotografieren der Klausuren können infolge mangelnder Belichtung, schlechtem Hintergrund oder durch umgeknickte bzw. verdeckte Ecken, die Seitenränder und/oder die Ecken nicht ausreichend erkannt werden. Die Segementier-Algorithemen stoßen bei der Bildverarbeitung hier an ihre Grenzen. Auf die Erklärung der genauen Hintergründe wird in diesem Bericht verzichtet. Weiterhin kommt es bei schnellen Bewegungen der Kamera oder zu flachem Winkel zum Dokument dazu, dass die App einen falschen Bildausschnitt wählt.
+			\vspace{-5mm}
 			\begin{itemize}
-				\item Die erste Lösung besteht darin, einen Blitz zu verwenden. Meistens schaltet sich bei zu wenig Licht die zusätzliche Belichtung automatisch ein. Grundsätzlich empfiehlt es sich aber, immer eine Blitz zu verwenden, da dadurch das Dokument gleichmäßig belichtet wird. Außerdem werden Schatten vom Benutzer oder durch kleinere Falten beseitigt, welche durch eine Deckenbeleuchtung entstehen könnten. Bei einer zu starken Grundbelichtung verschlechtert ein Blitz jedoch nur das Ergebnis, da dadurch Text und Kanten unkenntlich gemacht werden könnten. Nach eigener Erfahrung ist es am geeignetsten, bei Tageslicht und mit Blitz die Dokumente aufzunehmen. 
-				\item Auch wenn bei guter Belichtung, die Wahrscheinlichkeit für falsche Kantenerkennung reduziert worden ist, kommt es bei schnellen Bewegungen der Kamera oder zu spitzem Winkel zum Dokument sowie ungeeignetem Hintergrund trotzdem dazu, dass ein falscher Bildausschnitt als Dokument gewählt wird. Deshalb ist es möglich das Bild noch einmal aufzunehmen, oder aber das Dokument im Bild selbst zu markieren. Dafür stellt VisionKit eine besondere View zur Verfügung, die es einem ermöglicht, die Ecken des Dokuments per Hand auszuwählen. Das hilft auch gegen die Problematik, wenn die Ecken des Papiers umgekickt oder abgerissen sind, da man selbst die Position der Ecke approximiert angeben kann. 
+				\item Die erste Problemlösung besteht darin, einen Blitz zu verwenden. Meistens schaltet sich bei zu wenig Licht die zusätzliche Belichtung automatisch ein. Grundsätzlich empfiehlt es sich aber, immer eine Blitz zu verwenden, da dadurch das Dokument gleichmäßig belichtet wird. Bei einer zu starken Grundbelichtung verschlechtert ein Blitz jedoch das Ergebnis, da Text und Kanten unkenntlich gemacht werden. Um eine gute Qualität zu erzielen, ist es am günstigsten die Dokumente bei Tageslicht und mit Blitz aufzunehmen. 
+				\item Weiter ist es möglich die Dokumentenseite noch einmal zu fotografieren oder diese im Bild manuell auszurichten. Dafür stellt VisionKit eine besondere View zur Verfügung, die es dem Benutzer ermöglicht, die Ecken des Dokumentes per Hand auszuwählen.
 			\end{itemize}
 		
 		\subsection{Probleme der Klausur-Vorlage beim Scannen}\label{ssc:problemevorlage}
-			Dieser Abschnitt bezieht sich ausschließlich auf entstandene Probleme mit der Klausur, welche in \autoref{fig:klausur} zu sehen ist. Diese stand während des Praktikums als Beispiel-Klausur zur Verfügung und ist stellvertretend für alle Klausuren-Vorlagen der Fakultät CB. Im \autoref{sc:vorlage}, werden mögliche Änderungen und Lösungen zu den hier aufgeführten Problemen diskutiert.
+			Dieser Abschnitt bezieht sich ausschließlich auf bestehende Probleme mit den Klausurseiten, welche in \autoref{fig:klausur} zu sehen sind und während des Praktikums genutzt wurden. Sie stehen stellvertretend für Klausuren-Vorlagen der Fakultät CB. Im \autoref{sc:vorlage}, werden mögliche Änderungen und Lösungen zu den hier aufgeführten Problemen diskutiert.
 		
-			Wie in der \autoref{fig:seite1} zu sehen ist, besitzt die Klausur ein Deckblatt mit Feldern, die der Student auszufüllen hat. Darunter Name, Artikelnummer und Seminargruppe. Diese Informationen sind essentiell bei der Digitalisierung und doch wird nicht klar zwischen einem Feld für den Vornamen und einem Feld für den Nachnamen differenziert. In den Abbildungen \ref{fig:erstellung2} und \ref{fig:erstellung3} wird diese Problematik nochmal dargestellt. Bei den Datentypen der Regionen (\ref{fig:v6}) wird zwischen Vornamen und Nachnamen unterschieden, auf der Klausur (\ref{fig:v7}) jedoch nicht. In der abgebildeten Vorlage (\ref{fig:v9}) wurde der Vorname auf den ersten und der Nachname auf dem zweiten Strich des Feldes Namen gesetzt. Auch verleitet ein einzelner Strich dazu, über die Länge hinaus zu schreiben. Wenn die Regionen der Scan-Vorlage dann zu klein gewählt ist, können Informationen fehlen. Bei dem Feld für die Note wird dies noch extremer. Da nicht mal ein Markierung für die Note vorhanden ist, müsste man einen sehr viel größeren Bereich markieren (\ref{fig:v9}). Allerdings wird hinter der Note auch die Unterschrift des Prüfers gesetzt, welche bei der Digitalisierung nicht mit auftauchen sollte. Im Gegensatz dazu sind die Felder in der Tabelle für die Punkte zu jeder Aufgabe zu klein. Die geringe Größe verleitet dazu, dass Feld komplett aus zu nutzen und die Ziffer möglichst groß rein zu schreiben. Dazu kommt dass solch kleinen Regionen kaum Spielraum für Toleranz lassen und somit entstehen hier immer wieder Fehler. Entweder die Ziffer ist abgeschnitten, wenn man die Region zu klein wählt oder aber die Ränder des Feldes werden als eine Eins oder als der Buchstabe l erkannt, wenn man die Region zu groß wählt.
+			Wie in der \autoref{fig:seite1} zu sehen ist, wird nicht klar zwischen einem Feld für den Vornamen und Nachnamen differenziert. Zudem ist ein einzelner Strich als Feldbegrenzung ungeeignet. Die Punktefelder in der Tabelle dagegen sind besser abgegrenzt, jedoch zu klein. Die geringe Größe verleitet dazu, das Feld komplett auszunutzen und die Ziffer möglichst groß reinzuschreiben. Allerdings sollte eine gewisser Abstand zur Regionbegrenzung für optimale Texterkennung gelassen werden. Bei dem Notenfeld dagegen existiert keine Begrenzung. Für das Markieren der Region ist das ebenfalls ungeeignet (\ref{fig:v9}). Denn hinter der Note wird die Unterschrift des Prüfers gesetzt, welche bei der Digitalisierung nicht mit erscheinen darf.
 
 		\subsection{Weitere Probleme der App}
-			Obwohl SwiftUI die Entwicklung der App erst möglich gemacht hat, bringt das Framework von Juni 2019 einige Schwierigkeiten mit sich. Seit der Veröffentlichung gibt es nur eine sehr kleine Dokumentation und der Schnittstellen-Umfang, kann auch noch lange nicht mit dem des Frameworks von UIKit mithalten, welches seit Jahren in der iOS-Entwicklung als Standard benutzt wird. Grund für den geringen Umfang und schlechter Dokumentation ist vermutlich, die ständige Weiterentwicklung Seitens Apple. Das führt jedoch zu einigen provisorischen Lösungen und macht das Auffinden von Fehlern besonders schwierig. Deshalb kann es bei der Benutzung der App zu unerwarteten Abstürzen oder Aufhängern kommen. Des Weiteren sind die verwendeten Texterkennung-Engines nur für gedruckte Schrift ausgelegt. Handschriftliche Zeichen werden nur dann gut erkannt, wenn sie in Druckschrift geschrieben sind. Bei Ziffern ist es besonders auffällig, da z. B. eine gedruckte 4 oder 7 ganz andere Charakteristiken haben, als wenn sie geschrieben wurde.
+			Obwohl SwiftUI die Entwicklung des Prototyps erst möglich gemacht hat, bringt das Framework von Juni 2019 einige Schwierigkeiten mit sich. Seit der Veröffentlichung existiert eine sehr kleine und unvollständige Dokumentation der SwiftUI-Schnittstellen. Auch ist der geringe Umfang von SwiftUI nicht mit dem von UIKit, welches seit Jahren in der iOS-Entwicklung als Standard benutzt wird, zu vergleichen. Das führt immer wieder zu einigen provisorischen Lösungen und macht das Auffinden von Fehlern besonders schwierig. Es kann daher bei der Benutzung der App zu unerwarteten Abstürzen oder Aufhängern kommen. Des Weiteren sind die verwendeten Texterkennung-Engines nur für gedruckte Schrift ausgelegt. Druckschrift wird daher häufiger erkannt als Schreibschrift. Auch bei bestimmten Ziffern, wie 1, 4 und 7 kommt es zu Fehlern bzw. Verwechslungen.
 	
 	%%%%%%%%%%%%%%%% - TEMPLATES - %%%%%%%%%%%%%%%
 
 	\section{Verbesserung der Klausuren-Vorlage}\label{sc:vorlage}
-		Dieser Abschnitt beschäftigt sich mit Verbesserungen und Änderungen an Hand der Klausur in \autoref{fig:klausur}. Sie steht jedoch stellvertretend für die Klausuren-Vorlage der Fakultät CB. Alle folgenden Vorschläge haben den Hintergrund die App bei der Digitalisierung zu unterstützen und basieren auf der gesammelten Erfahrung mit der Anwendung, während der Entwicklung sowie den angegeben Problemen aus \autoref{sc:grenzen}.
+		Basierend auf der gesammelten Erfahrung mit der Anwendung beschäftigt sich dieser Abschnitt mit Verbesserungs- und Änderungsvorschlägen der Klausur in \autoref{fig:klausur}. Sie steht, wie auch zu vor, stellvertretend für die Klausuren-Vorlagen der Fakultät CB. Alle folgenden Vorschläge haben den Hintergrund, die App bei der Digitalisierung zu unterstützen und beziehen sich auf die in \autoref{sc:grenzen} beschriebenen Probleme.
 	
-		Der erste Vorschlag bezieht sich auf die Problematik, dass die Ecken und Kanten bei der Erkennung des Dokuments entscheidend sind. Sie sind die wichtigsten Referenz-Punkte bei der Objekt-Erkennung, können aber unter bestimmten Bedienungen, wie im \autoref{ssc:erkennen} erklärt, nicht immer erkannt werden. Aus diesem Grund empfiehlt es sich eigene Referenzpunkt auf dem Dokument anzubringen. Beispielsweise durch einen Rahmen, wie es schon auf der Klausur (\ref{fig:seite1}) gemacht wurde, oder durch QR-Code ähnliche Muster. Der Vorteil bei eigenen Referenzpunkt ist, dass sie so gestaltet werden können, dass sie sich immer vom Blatt abheben. So mit ist die Dokumenten-Erkennung nur noch vom Licht abhängig. Ein weiterer Vorteil ist, dass dadurch die Kamera noch näher an den Text heran kann und die Auflösung noch besser wird. Der größte Nachteil daran ist allerdings, dass die Erkennung nicht mehr allein von Frameworks übernommen werden kann. Es müsste ein künstliches neuronales Netz trainiert werden, welche diese Referenzpunkte in Bildern erkennt. 
+		Der erste Vorschlag bezieht sich auf die große Bedeutung der Ecken und Kanten bei der Erkennung des Dokuments. Diese wichtigen Referenzpunkte werden aber unter bestimmten Bedingungen, wie im \autoref{ssc:erkennen} erklärt, nicht immer erkannt. Deshalb empfiehlt es sich, eigene Referenzpunkt auf dem Dokument anzubringen. Beispielsweise durch einen Rahmen, wie es auf der Klausur (\ref{fig:seite1}) zu sehen ist. oder durch ein QR-Code ähnliches Muster. Ein Vorteil bei eigenen Referenzpunkten ist, dass sich ihre Gestallt immer vom Dokument abheben kann. Somit ist die Dokumenten-Erkennung nur noch vom Licht abhängig. Dadurch kann die Kamera näher an den Text heran, wodurch sich die Bildqualität verbessert. Jedoch kann nun die Erkennung nicht mehr von Frameworks übernommen werden. Es müssten künstliche neuronale Netze trainiert werden, welche diese Referenzpunkte in Bildern erkennen. 
 	
-		Der zweite Vorschlag bezieht sich auf den \autoref{ssc:problemevorlage}. Einige dort angesprochenen Probleme bezogen sich auf die Ungewissheit, wie groß eine Region abzustecken ist. Die einfachste Lösung ist es, einen genauen Rahmen für alle Felder fest zu legen. Auch müssen alle Felder ausreichend beschriftet sein, so dass jedem klar ist, wo was hineinzutragen ist. Und um das Problem zu vermeiden, dass der Rahmen als ein Buchstabe oder eine Zahl erkannt wird, kann dieser nur schwach eingezogen werden. Mithilfe von Bildverarbeitung-Algorithmen könnten diese feinen Linien dann auch ohne Verlust der wichtigen Daten heraus gerechnet werden. 
+		Der zweite Vorschlag bezieht sich auf den \autoref{ssc:problemevorlage}. Dementsprechend wäre es sinnvoll alle Felder ausreichend zu beschriften und mit einer dünnen Linie zu begrenzen. Mithilfe von Bildverarbeitungsalgorithmen könnten die feinen Rahmen ohne Verlust der wichtigen Daten heraus gerechnet werden.
 		
-		Abschließend ist zu erwähnen, dass laut der Problemstellung aus \autoref{ch:problemstellung} eine Klausuren-Vorlage entwickelt werden sollte. Auf Grund mangelnder Zeit war das jedoch nicht möglich. 
-
+		Abschließend ist zu erwähnen, dass laut der Problemstellung aus \autoref{ch:problemstellung} eine Klausuren-Vorlage entwickelt werden sollte. Auf Grund mangelnder Zeit war das jedoch nicht möglich.
 
 %%%%%%%%%%%%%%%% - AUSBLICK - %%%%%%%%%%%%%%%
 		
 % Jedoch sollten auch einige angesprochenen Probleme aus Kapitel \ref{ch:grenzen} behoben werden, wenn die App in Zukunft tatsächlich von Hochschulmitarbeitern benutzt werden soll.
 \chapter{Ausblick}\label{ch:ausblick}
-	Der aktuelle Stand der App bietet eine gute Grundlage für mögliche Weiterentwicklungen. Jedoch fehlen einige wichtige Elemente zur Inbetriebnahme des Software-Systems, wie schon im \autoref{ch:fazit} verdeutlicht. In den folgenden Abschnitten werden einige Ideen erläutert, wie die App und das gesamte Software-System weiter entwickelt und verbessert werden kann.
-
+	In den folgenden Abschnitten werden einige Ideen erläutert, wie die App und das gesamte Software-System verbessert werden können.
+	
 	\paragraph*{Verbesserung der Benutzerfreundlichkeit und des Workflows} \label{pa:benutzer} 
-		Gerade weil die App noch ein Prototyp ist, sollten bei einer Weiterentwicklung zu allererst Dinge implementiert werden, die die Benutzung verbessern. Beispielsweise werden Login-Daten und schon heruntergeladene Scan-Vorlagen nicht gespeichert. Auch muss zu jeder Region ein Name vergeben werden. Allerdings gibt auch der Datentyp (\ref{fig:v6}) der Region in den meisten Fällen darüber Auskunft, wie die Region heißen sollte (siehe dazu \autoref{fig:v5}). Handelt es sich um den Vor- bzw. Nachnamen, die Matrikel-Nummer, Seminar-Gruppe oder die Note, taucht diese Region auch nur genau einmal in einer Scan-Vorlage auf. Ausschließlich der Datentyp Punkte sollte mehrmals vergeben werden können. Aus diesen Aspekten sollte der Workflow beim erstellen von Regionen angepasst werden. 
+		Angesichts des Prototyp-Status der App sollten bei einer Weiterentwicklung zu allererst Systemkomponenten implementiert werden, die die Benutzung verbessern. Beispielsweise werden Login-Daten und schon heruntergeladene Scan-Vorlagen nicht dauerhaft gespeichert. Auch muss zu jeder Region ein Name vergeben werden. Bei genauerer Betrachtung gibt aber auch der Datentyp (\ref{fig:v6}) der Region in den meisten Fällen Auskunft darüber, wie die Region benannt werden sollte (siehe dazu \autoref{fig:v5}). Handelt es sich um den Vor- bzw. Nachnamen, die Matrikelnummer, Seminargruppe oder Note, taucht diese Region auch nur genau einmal in einer Scan-Vorlage auf. Ausschließlich der Datentyp Punkte soll mehrmals vergeben werden können. Daher ist es sinnvoll den Workflow beim Erstellen von Regionen entsprechend anzupassen. 
 	
 	\paragraph*{Weitere Dokument- und Datentypen} 
-		Auf dem \hyperref[pa:benutzer]{Abschnitt \textit{Verbesserung der Benutzerfreundlichkeit und des Workflows}} \xspace aufbauend, ist folgende Idee entstanden. Durch die generischen Vorlagen ist es möglich neben Klausuren auch andere Dokumente nach diesem Schema zu digitalisieren. Beispielsweise Krankenscheinen, Urlaubsanträgen oder Arbeitsverträgen. Dafür könnten spezielle Workflows zum Erstellen einer Vorlage implementiert werden und weitere Regionen-Datentypen hinzukommen, wie z. B. Datum, IBAN-Nummern, E-Mail-Adressen und Telefonnummern.
+		Auf dem \hyperref[pa:benutzer]{Abschnitt Verbesserung der Benutzerfreundlichkeit und des Workflows} \xspace aufbauend, ist folgende Idee entstanden. Durch die generischen Vorlagen ist es möglich, neben Klausuren auch andere Dokumente nach diesem Schema zu digitalisieren. Beispielsweise Krankenscheine, Urlaubsanträge oder Arbeitsverträge. Dafür könnten spezielle Workflows zum Erstellen der jeweiligen Vorlage und weitere Regionen-Datentypen implementiert werden, wie z. B. Datum, IBAN-Nummer, E-Mailadresse und Telefonnummer.
 		
 %	\paragraph*{Weitere Kontrollmechanismen} 
 %		Typische Mathematische Operatoren, + - / * < > >= <= ( ), Mengenlehre, Datentypen verwenden (Datum > 01.01.2020), Alter > 18
 	
-	\paragraph*{Server-Schnittstellen} 
-		Zum Zeitpunkt der Abgabe sind in der iOS-App nicht alle verfügbaren Server-Schnittstellen implementiert. Es fehlt noch das Ändern ganzer Vorlagen und deren Einzelteile, wie Seiten und Regionen. Die Views zum Ändern einer Scan-Vorlage sind schon implementiert, da die Views vom Erstellen einer Scan-Vorlage an der Stelle wieder verwendet werden konnte. Es fehlt lediglich die interne Logik sowie Schnittstellen zum Server.	
-	
 	\paragraph*{Erweiterung der Texterkennung} 
-		Wie im \autoref{sc:grenzen} erwähnt unterstützten Vision und Tesseract das Erkennen von Handschrift nicht. Jedoch wäre es möglich eigne Neuronale-Netze zu trainieren und implementieren, die diese Aufgabe übernehmen. Beispielsweise existiert ein Datensatz an handgeschriebene Ziffern \footurl{MNIST-Datensatz -}{http://yann.lecun.com/exdb/mnist/}, mit dem solch ein einfaches Netz für das Erkennen von Ziffern, trainiert werden könnte. Außerdem bietet die Server Architektur die Möglichkeit, weitere oder mehr OCR-Engines zu implementieren. Für mehr Details siehe im Praktikumsbericht von Tobias Kallauke.
+		Wie im \autoref{sc:grenzen} erwähnt unterstützen Vision und Tesseract nicht das Erkennen von Schreibschrift. Jedoch wäre es möglich eigene neuronale Netze zu trainieren und implementieren, die diese Aufgabe übernehmen. Beispielsweise existiert ein Datensatz an handgeschriebenen Ziffern \footurl{MNIST-Datensatz -}{http://yann.lecun.com/exdb/mnist/}, mit dem ein einfaches Netz für das Erkennen von Ziffern, trainiert werden kann. Außerdem bietet die Serverarchitektur die Möglichkeit, andere oder mehr OCR-Engines zu implementieren. Für mehr Details siehe im Praktikumsbericht von Tobias Kallauke.
 	
 	\paragraph*{Klausuren-Einsicht} 
-		Die archivierten Klausuren-Bilder könnten über ein Web-Portal dazu genutzt werden, eine online Einsicht der Prüfungen zu gestalten. Jedoch bringt solch eine Plattform auch ein Problem mit sich. Durch sie ist die Verbreitung von Klausuren noch einfacher als zuvor, wodurch die Professoren dazu angehalten werden, immer wieder neue Aufgaben auszudenken. Aber auch dafür könnte es in Zukunft eine Lösung geben. 
+		Die archivierten Klausurenbilder könnten über ein Web-Portal dazu genutzt werden, eine Online-Einsicht der Prüfungen zu ermöglichen. Jedoch bringt solch eine Plattform auch ein Problem mit sich. Durch sie ist die Verbreitung von Klausuren noch einfacher als zuvor, wodurch die Professoren dazu angehalten werden, sich immer wieder neue Aufgaben auszudenken. Aber auch dafür könnte es in Zukunft eine Lösung geben. 
 	
 	\paragraph*{Weitere Plattformen} 
-		Neben der iOS-App sollte Tobias Kallauke die selbe für Android Geräte entwickeln. Jedoch existierten zum Zeitpunkt der Entwicklung keine Frameworks, die das Erkennen von Dokumenten in der Kamera übernimmt. Deshalb entwickelte Tobias ein Prototyp, der sich mit diesem Problem beschäftigt. Allerdings könnte das Software-System auf noch mehr Plattformen Anwendung finden. Neben einem Programm für Linux, MacOS und Windows ist auch einen Web-Plattform  erdenklich. Alle könnten den selben Umfang besitzen nur das Erstellen der Scans erfolgt beispielsweise über Scan- oder Kopiergeräte.
+		Neben der iOS-App versuchte Tobias Kallauke dieselbe für die Android-Plattform zu entwickeln. Jedoch existierten zum Zeitpunkt des Praktikums keine passenden Frameworks, die das Erkennen von Dokumenten in Echtzeit übernehmen. Deshalb entwickelte Tobias einen Prototyp, der sich ausschließlich mit diesem Problem beschäftigt. Jedoch könnte das Software-System auf noch mehr Plattformen Anwendung finden. Neben einem Programm für Linux, MacOS und Windows ist auch eine Web-Plattform erdenklich. Alle Plattformen könnten den selben Funktionsumfang besitzen. Lediglich das Erstellen bzw. Aufnehmen der Fotos erfolgt beispielsweise über Scan- oder Kopiergeräte.
 	
 	\paragraph*{Intelligente Referenzpunkte}\label{pa:referenzpunkte}
-		In \autoref{sc:vorlage} wurde erwähnt, dass eigene Referenzpunkte auf den Klausuren Vorteile mit sich bringen. Möglich wäre auch, dass die Referenzpunkte ähnlich wie QR-Codes aufgebaut sind. Diese enthalten die nötigen Informationen zu den Regionen auf der Seite und ermöglichen das Digitalisieren, ohne die Auswahl der richtigen Vorlage. Daran angelehnt könnten ein \LaTeX -Paket oder Word-PlugIn entwickelt werden, wodurch die QR-Codes automatisch für jede Seite und deren Regionen generiert werden. 
+		In \autoref{sc:vorlage} wurde erwähnt, dass eigene Referenzpunkte auf den Klausuren Vorteile mit sich bringen. Möglich wäre auch, dass die Referenzpunkte ähnlich wie QR-Codes aufgebaut sind. Diese enthalten die nötigen Informationen zu den Regionen auf der Seite und ermöglichen das Digitalisieren ohne die Auswahl der richtigen Vorlage. Daran angelehnt könnten ein \LaTeX -Paket oder Word-PlugIn entwickelt werden, wodurch die QR-Codes automatisch für jede Seite und deren Regionen generiert werden. 
 	
 	\paragraph*{Klausuren-Vorlage entwickeln}
-		Auf \autoref{sc:vorlage} und den \hyperref[pa:referenzpunkte]{\textit{intelligenten Referenzpunkten}} aufbauen könnten Klausuren-Vorlagen umgesetzte und getestet werden. Auch die App müsste angepasst werden, so dass die Referenzpunkte erkannt werden, wie im \autoref{sc:vorlage} beschrieben.
+		Auf \autoref{sc:vorlage} und den \hyperref[pa:referenzpunkte]{intelligenten Referenzpunkten} aufbauend könnten eigene Klausuren-Vorlagen umgesetzt und getestet werden. Eine Anpassung der App ist erforderlich, sodass die Referenzpunkte erkannt werden, wie im \autoref{sc:vorlage} beschrieben.
 		
-	\paragraph*{Benutzer Akzeptanz Studie}\label{pa:akzeptanz}
-		Aktuell ist unklar, ob die App tatsächlich Zeit einspart. Aus diesem Grund bietet es sich an eine umfangreiche Benutzer Akzeptanz Studie anzusehen legen. Außerdem könnten so weitere Probleme entdeckt und Lösungen entwickelt werden, bevor die App benutzt werden kann.
+	\paragraph*{Benutzerakzeptanzstudie}\label{pa:akzeptanz}
+		Aktuell ist unklar, ob die App tatsächlich Zeit einspart. Aus diesem Grund ist es sinnvoll eine umfangreiche Benutzerakzeptanzstudie durchzuführen. Außerdem könnten so weitere Probleme entdeckt und Lösungen entwickelt werden, bevor die App benutzt werden kann.
 	
 	%\paragraph*{Qualitätsstudie} 
 		%Neben einer \hyperref[pa:akzeptanz]{\textit{Benutzer Akzeptanz Studie}} könnte außerdem eine Qualitätsstudie der aktuellen oder auch anderer OCR-Engines erstellt werden. Es gibt viele online OCR-Engines Beispielsweise von Microsoft und Google
@@ -709,8 +707,46 @@ Im Rahmen eines zwölfwöchigen Forschungspraktikums an der Hochschule Mittweida
    	\end{figure}
 
 	
-\chapter{Zusätzliche Funktionalität} \label{ch:accses}
+\chapter{Weitere Funktionalität} \label{ch:accses}
 
+	\begin{figure}[ht]
+	    \centering
+		\begin{subfigure}[h]{\textwidth}
+		    \frame{\includegraphics[height=0.4\textheight,keepaspectratio]{img/pad1}}
+		    \caption{Ergebnisse ansehen auf dem iPad}
+		    \label{fig:pad1}
+		\end{subfigure}
+		
+       	\begin{subfigure}[h]{\textwidth}
+		    \frame{\includegraphics[height=0.4\textheight,keepaspectratio]{img/pad2}}
+		    \caption{Vorlagen-Detailansicht mit Dark-Mode und der größten einstellbaren Textgröße}
+		    \label{fig:pad2}
+		\end{subfigure}
+    	\caption{Vorlagen-Detailansicht auf einem iPad mit Barrierefreiheit Beispiel}
+		\label{fig:zusatz5}
+	\end{figure}
+	
+	\begin{figure}[h]
+		\centering
+		\begin{subfigure}[t]{0.3\textwidth}
+       		\frame{\includegraphics[width=0.96\textwidth]{img/9}}
+        	\caption{Eine der integrierten Fehlermeldungen beim Registrieren}
+        	\label{fig:9}
+    	\end{subfigure}
+    	\begin{subfigure}[t]{0.3\textwidth}
+       		\frame{\includegraphics[width=0.96\textwidth]{img/13}}
+        	\caption{Eine der integrierten Fehlermeldungen beim Anmelden}
+        	\label{fig:13}
+    	\end{subfigure}
+    	\begin{subfigure}[t]{0.3\textwidth}
+       		\frame{\includegraphics[width=0.96\textwidth]{img/L5}}
+        	\caption{Löschen eines angelegten Kontrollmechanismuses}
+        	\label{fig:l5}
+    	\end{subfigure}
+    	\caption{Beispiel-Fehlermeldungen und View beim Löschen eines angelegten Kontrollmechanismuses}
+		\label{fig:zusatz2}
+	\end{figure}
+	
 	\begin{figure}[h]
 		\centering
 		\begin{subfigure}[t]{0.3\textwidth}
@@ -729,16 +765,51 @@ Im Rahmen eines zwölfwöchigen Forschungspraktikums an der Hochschule Mittweida
         	\label{fig:v10}
     	\end{subfigure}
     	\caption{Seiten-Vorschau-View}
-		\label{fig:erstellung3}
+		\label{fig:zusatz1}
 	\end{figure}
 	
-	- Textgröße
+	\begin{figure}[h]
+		\centering
+		\begin{subfigure}[t]{0.3\textwidth}
+       		\frame{\includegraphics[width=0.96\textwidth]{img/z1}}
+        	\caption{Seiten-Vorschau der 1. Seite mit allen Regionen im Dark-Mode}
+        	\label{fig:l5}
+    	\end{subfigure}
+		\begin{subfigure}[t]{0.3\textwidth}
+       		\frame{\includegraphics[width=0.96\textwidth]{img/V11}}
+        	\caption{Seiten-Vorschau der 2. Seite mit allen Regionen}
+        	\label{fig:v11}
+    	\end{subfigure}
+    	\begin{subfigure}[t]{0.3\textwidth}
+       		\frame{\includegraphics[width=0.96\textwidth]{img/V12}}
+        	\caption{Seiten-Vorschau der 3. Seite mit allen Regionen}
+        	\label{fig:v12}
+    	\end{subfigure}
+    	
+    	\caption{Seiten-Vorschau im Light- und Dark-Mode}
+		\label{fig:zusatz3}
+	\end{figure}
 	
-	- Dunkelmodus
-	
-	- Überschrift nochmal ändern
-	
-	- Kontrollmechanismus löschen siehe Bilder L5
+	\begin{figure}[h]
+		\centering
+		\begin{subfigure}[t]{0.3\textwidth}
+       		\frame{\includegraphics[width=0.96\textwidth]{img/z4}}
+        	\caption{Ergebnis bearbeiten mit der größten einstellbaren Textgröße}
+        	\label{fig:z4}
+    	\end{subfigure}
+		\begin{subfigure}[t]{0.3\textwidth}
+       		\frame{\includegraphics[width=0.96\textwidth]{img/z2}}
+        	\caption{Löschen einer Vorlage im Dark-Mode}
+        	\label{fig:z2}
+    	\end{subfigure}
+    	\begin{subfigure}[t]{0.3\textwidth}
+       		\frame{\includegraphics[width=0.96\textwidth]{img/z3}}
+        	\caption{Willkommens-View mit der größten einstellbaren Textgröße}
+        	\label{fig:z3}
+    	\end{subfigure}
+    	\caption{Barrierefreiheit und Dark-Mode Beispiele}
+		\label{fig:zusatz4}
+	\end{figure}
 	
 	
 \chapter{Installation der iOS App}\label{ch:installation}
@@ -746,25 +817,25 @@ Im Rahmen eines zwölfwöchigen Forschungspraktikums an der Hochschule Mittweida
 	
 	\textbf{Vorraussetzungen:}
 	\begin{itemize}
-		\item macOS 10.15.4 oder neuer
-		\item Xcode 11.4.1 oder neuer installiert
-		\item iPhone mit iOS 13.0 / iPad mit iPadOS 13.4 oder neuer
-		\item Internetverbindung
+		\item macOS ab Version 10.15.4 
+		\item Xcode ab Version 11.4.1 
+		\item iPhone ab Version iOS 13.0 und/oder iPad ab Version iPadOS 13.4 
+		\item Internetzugang
 	\end{itemize}
 	
 	\textbf{Installation:}
-	Stellen sie sicher, dass Xcode installiert und das iPhone/iPad mit dem Mac über ein USB-Kabel verbunden sind.
+	Stelle sicher, dass Xcode installiert und das iPhone/iPad mit dem Mac über ein USB-Kabel verbunden ist.
 	\begin{enumerate}
 		\item Lade das Projekt herunter. (.zip anschließend entpacken)
-		\item Öffne die Datei \textit{DocumentenScanner.xcodeproj}. Xcode öffnet sich.
-		\item Klicke in der Ordnerübersicht bzw. Navigator ganz oben auf das Xcode Projekt \textit{DocumentenScanner}.
-		\item Wähle im Editor-Fenster nun unter \textit{Targets} das Projekt \textit{DocumentenScanner} aus. (Entweder links oben als Dropdown-Menu oder in dem geöffneten Menü links innerhalb des mittleren Fenster.)
-		\item Wähle den Reiter \textit{Signing \& Capabilities} aus. Es erscheint im mittleren Fenster ein Unterpunkt \textit{Signing}.
+		\item Öffne die Datei \textit{DocumentenScanner.xcodeproj} mit Xcode.
+		\item Klicke in der Ordnerübersicht bzw. im Navigator ganz oben auf das Xcode-Projekt \textit{DocumentenScanner}.
+		\item Wähle im Editor-Fenster unter \textit{Targets} das Projekt \textit{DocumentenScanner} aus. (Entweder links oben als Dropdown-Menü oder im geöffneten Menü links innerhalb des Editor-Fensters.)
+		\item Wähle den Reiter \textit{Signing \& Capabilities} aus. Es erscheint im Editor-Fenster ein Unterpunkt \textit{Signing}.
 		\item Wähle ein passendes Team aus oder lege eins an.
-		\item Ändere den Bundle Identifier passend zu dem ausgewählten Team. Z. B. \url{com.<TeamName>.DocumentenScanner}. Es taucht ein Button auf, mit dem die App signiert werden kann. Falls kein Button erscheint mache mit den nächsten Schritten weiter und kommen bei einer auftretenden Fehlermeldung bezüglich der Signierung hier her zurück. Der Button ist dann zu sehen.
-		\item Wähle nun ein Simulator oder das angeschlossene Gerät in der Toolbar aus den \textit{Active Devices} aus.
-		\item Drücke anschließend den Start bzw. Run Button der \textit{Build Controls} oder die Tasten-Kombination \textit{cmd + R}.
-		\item Folge den Anweisungen von Xcode und auf dem iPhone/iPad. Beim Verwenden eines Simulators tauchen keine weiteren Anweisungen auf. Die App startet automatisch. 
+		\item Ändere den Bundle Identifier passend zum ausgewählten Team. Z. B. \url{com.<Teamname>.DocumentenScanner}. Es taucht ein Button auf, mit dem die App signiert werden muss. Falls kein Button erscheint, gehe zum nächsten Schritt und komme bei einer auftretenden Fehlermeldung bezüglich der Signierung hierher zurück. (Die Internetverbindung wird benötigt.)
+		\item Wähle nun einen Simulator oder das angeschlossene Gerät in der Toolbar aus den \textit{Active Devices} aus.
+		\item Drücke anschließend den Start bzw. Run Button der \textit{Build Controls} oder die Tastenkombination \textbf{cmd + R}.
+		\item Folge den Anweisungen von Xcode und auf dem iPhone oder iPad. Beim Verwenden eines Simulators tauchen keine weiteren Anweisungen auf. Die App startet automatisch. 
 	\end{enumerate}
 	
 
@@ -801,7 +872,7 @@ Im Rahmen eines zwölfwöchigen Forschungspraktikums an der Hochschule Mittweida
 	Im Mittelpunkt der Woche stand der Bericht, an dem ich täglich arbeitete. Ich erstellte einige Bilder für ihn und den Vortrag. Auch gab es diese Woche wieder ein Meeting.
 	
 	\textbf{04.05. - 10.05.}
-	Auch diese Woche arbeitete ich hauptsächlich am Beleg und könnte ihn so weit fertig stellen, dass nur noch wenige Dinge zu erledigen sind. Zudem gelang es Tobias die Fehler der online OCR-Engine Tesseract zu beseitigen. Dadurch konnte ich die letzten fehlenden Schritte für den Umgang mit den OCR-Schnittstellen implementieren und testen.
+	Auch diese Woche arbeitete ich hauptsächlich am Beleg und stellte ihn so weit fertig, dass nur noch wenige Dinge zu erledigen sind. Zudem gelang es Tobias die Fehler der online OCR-Engine Tesseract zu beseitigen. Dadurch konnte ich die letzten fehlenden Schritte für den Umgang mit den OCR-Schnittstellen implementieren und testen.
 	
 	\textbf{11.05. - 15.05.}
 
