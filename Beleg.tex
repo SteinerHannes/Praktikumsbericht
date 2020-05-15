@@ -55,7 +55,7 @@
 \begin{document}
 
 \begin{Referat}
-Im Rahmen eines zwölfwöchigen Forschungspraktikums an der Hochschule Mittweida arbeiteten der Student Tobias Kallauke und der Verfasser des Berichts gemeinsam an einem Projekt mit dem Hintergrund der Digitalisierung der Verwaltung von Lehr- und Forschungseinrichtung. Dabei entwickelten sie ein prototypisches Software-System, mit dessen Hilfe kontrollierte Klausuren eingescannt und digitalisiert werden können.
+Im Rahmen eines zwölfwöchigen Forschungspraktikums an der Hochschule Mittweida arbeiteten der Student Tobias Kallauke und der Verfasser des Berichts gemeinsam an einem Projekt mit dem Hintergrund der Digitalisierung der Verwaltung von Lehr- und Forschungseinrichtung. Dabei entwickelten sie einen Anschauungsprototyp, mit dessen Hilfe kontrollierte Klausuren eingescannt und digitalisiert werden können.
 \end{Referat}
 
 \Hauptteil
@@ -65,12 +65,12 @@ Im Rahmen eines zwölfwöchigen Forschungspraktikums an der Hochschule Mittweida
 \chapter{Einleitung}
 	Digitalisierung wird gängig als Integration von digitaler Technologie in den Alltag verstanden und soll helfen Zeit einzusparen. Mit diesem Gedanken initiierten die Mitarbeiter Holger Langner und Falk Schmidsberger der Hochschule Mittweida das Projekt Memo Space. Im Zuge dessen sollen kleinere Forschungsergebnisse entstehen, die richtungsweisend für die Digitalisierung der Verwaltung von Lehr- und Forschungseinrichtung sind.
 
-	Im Rahmen eines zwölfwöchigen Forschungspraktikums an der Hochschule Mittweida arbeiteten der Student Tobias Kallauke und der Verfasser des Berichts gemeinsam an einem Forschungsprojekt von Memo Space. Dabei entwickelten sie ein prototypisches Software-System zum Einscannen und Digitalisieren von kontrollierten Klausuren.
+	Im Rahmen eines zwölfwöchigen Forschungspraktikums an der Hochschule Mittweida arbeiteten der Student Tobias Kallauke und der Verfasser des Berichts gemeinsam an einem Forschungsprojekt von Memo Space. Dabei entwickelten sie einen Anschauungsprototyp zum Einscannen und Digitalisieren von kontrollierten Klausuren.
 
 %%%%%%%%%%%%%%% - HSMW - %%%%%%%%%%%%%%%
 
 \chapter{Hochschule Mittweida}
-	Die Hochschule Mittweida - university of applied science (HSMW) \nomenclature{HSMW}{Hochschule Mittweida - university of applied science} wurde vor über 150 Jahren gegründet. Heute lehrt und forscht sie mit ca. 6000 Studenten in fünf Fakultäten und vier Forschungsschwerpunkten\cite{hochschule_mittweida_hochschule_nodate}. Eines der Schwerpunkte ist die Angewandte Informatik, in dem Memo Space angesiedelt ist.
+	Die Hochschule Mittweida - university of applied science (HSMW) \nomenclature{HSMW}{Hochschule Mittweida - university of applied science} wurde vor über 150 Jahren gegründet. Heute lehrt und forscht sie mit ca. 6000 Studenten in fünf Fakultäten und vier Forschungsschwerpunkten\cite{hochschule_mittweida_hochschule_nodate}. Einer der Schwerpunkte ist die Angewandte Informatik, in dem Memo Space angesiedelt ist.
 	
 	Nach eigener Einschätzung schreibt jeder Student der HSMW ca. 5 Prüfungen pro Semester. Das bedeutet, dass im Jahr um die 60.000 Klausuren kontrolliert werden. Dazu kommt, dass die Zensuren in das Verwaltungs-Intranet der HSMW eingetragen werden müssen. Dieser Vorgang ist ebenfalls aufwendig, repetitiv und deshalb kognitiv belastend.
 	
@@ -82,7 +82,7 @@ Im Rahmen eines zwölfwöchigen Forschungspraktikums an der Hochschule Mittweida
 	An der Kontrolle von Klausuren arbeiten zum Ende eines Semesters Hochschulmitarbeiter über Tage. Diese Aufgabe muss stets mit hoher Konzentration erledigt werden. Auch bei der anschließenden Eingabe der Noten in ein Webformular des Verwaltungs-Intranets der HSMW ist ein kognitiv belastender Navigationsaufwand notwendig. Denn um die Zensuren einzutragen, muss für jeden Studenten zunächst die jeweilige Seminargruppe und anschließend der Studenten-Name herausgesucht werden. Die unübersichtlichen Listen und die hohe Anzahl an Klicks sind für die Hochschulmitarbeiter belastend. Zusätzlich wird die Suche nach der Seminargruppe durch die ähnlich lautenden Bezeichnungen erschwert. Das führt beim Danebenklicken in der Seminargruppen-Liste dazu, dass man sich eventuell in der Navigation verirrt und von vorne beginnen muss.
 	
 	\section{Digitalisieren der Klausur-Daten}
-	Für genau diesen Vorgang wird nach einer effizienteren Lösung gesucht. Die Prüfer sollen effektiv und möglichst zeitsparend diese Aufgabe verrichten, ohne die Überlastung ihrer Aufmerksamkeitsspanne. Zudem ist angedacht, alle relevanten Klausuren-Daten zu digitalisieren und in ein geeignetes Format zu bringen, um sie automatisiert in das Verwaltungs-Intranet überführen zu können. Darüber hinaus empfiehlt es sich, digitale Kopien der Klausuren abzuspeichern, um sie nicht nur analog zu archivieren.
+	Für genau diesen Vorgang wird nach einer effizienteren Lösung gesucht. Die Prüfer sollen effektiv und möglichst zeitsparend diese Aufgabe verrichten, ohne die Überlastung ihrer Aufmerksamkeitsspanne. Zudem ist angedacht, alle relevanten Klausuren-Daten zu digitalisieren und in ein geeignetes Format zu bringen. Darüber hinaus empfiehlt es sich, digitale Kopien der Klausuren abzuspeichern, um sie nicht nur analog zu archivieren.
 	
 	\section{Klausuren-Vorlage}\label{sc:klausuren-vorlage}
 	Eine Klausuren-Vorlage bzw. ein Gestaltungsleitfaden für Klausuren der Fakultät Angewandte Computer- und Biowissenschaften bietet außerdem die Möglichkeit der Kontrolle des Prüfers. Durch das vorgegebene Layout der Klausur ist es möglich, Fehler des Prüfers zu erkennen. Die Klausur in \autoref{fig:klausur} ist nach dieser Klausuren-Vorlage angefertigt worden. Auf dem Deckblatt (\ref{fig:seite1}) der Prüfung ist eine Tabelle mit drei Zeilen und jeweils einer Spalte pro Klausur-Aufgabe. In der ersten Zeile befinden sich die Nummern der Aufgaben, in der zweiten die zu erreichenden Punkte der Aufgabe. In der dritten Zeile trägt der Prüfer die erbrachten Punkte des Studenten ein. Unter der Tabelle befindet sich ein Feld für die erreichte Gesamtpunktzahl sowie ein weiteres für die aus den Punkten resultierende Note. Es soll nun überprüft werden, ob die Summe der erreichten Punkte mit der Gesamtpunktzahl übereinstimmt. Zudem wird auch die Note errechnet und mit dem Ergebnis des Prüfers verglichen werden. Ein weiteres Merkmal der Klausuren-Vorlage ist ein Feld, für die vom Studenten erreichten Punkte über jeder Aufgabenstellung auf den nachfolgenden Seiten. Zu sehen sind solche Felder in \autoref{fig:seite2} am rechten Seitenrand. Die dortige Angabe sollte mit der Angabe in der Tabelle auf dem Deckblatt (\ref{fig:seite1}) übereinstimmen und bietet somit noch eine weitere Möglichkeit der Kontrolle.
@@ -123,7 +123,7 @@ Im Rahmen eines zwölfwöchigen Forschungspraktikums an der Hochschule Mittweida
  
 	Um alle relevanten Daten zu erfassen werden die kontrollierten Klausuren zunächst fotografiert. Bei der anschließenden Digitalisierung aller Schriftzeichen durch die App findet optische Zeichen- bzw. Texterkennung Anwendung. Für die Texterkennung auf externen Servern müssen die entsprechenden Server-Schnittstellen zur Kommunikation implementiert werden. 
 	 
-	Die durch die Texterkennung digitalisierten Daten, die Klausuren-Fotos und die digitalen Scan-Vorlagen sollen außerhalb der App auf einem Server gespeichert werden. Somit können alle Benutzer der App die bereits erstellten Scan-Vorlagen verwenden. Wie bereits erwähnt, werden die digitalisierten Daten zudem in ein geeignetes Format gebracht, um sie, wie angedacht, automatisiert in das Verwaltungs-Intranet zu überführen.
+	Die durch die Texterkennung digitalisierten Daten, die Klausuren-Fotos und die digitalen Scan-Vorlagen sollen außerhalb der App auf einem Server gespeichert werden. Somit können alle Benutzer der App die bereits erstellten Scan-Vorlagen verwenden. Wie bereits erwähnt, werden die digitalisierten Daten zudem in ein geeignetes Format gebracht.
 	
 	Damit Synchronität der Daten zwischen allen Apps und dem Server gewährleistet werden kann, sind auf beiden Seiten Schnittstellen notwendig. Diese sollten den standardmäßigen CRUD\nomenclature{CRUD}{Das Akronym CRUD steht für Create/Erstellen, Read/Lesen, Update/Aktualisieren und Delete/Löschen und umfasst die vier grundlegenden Operationen persistenter Speicher}-Operationen entsprechen. Für genauere Details zu den Sicherheitsmechanismen und den CRUD-Operationen zum Server siehe im Praktikumsbericht von Tobias Kallauke. 
 
@@ -136,7 +136,7 @@ Im Rahmen eines zwölfwöchigen Forschungspraktikums an der Hochschule Mittweida
 	
 		Im folgenden Abschnitt wird zuerst verkürzt und anschließend detailliert geschildert, wie eine Scan-Vorlage zu erstellen ist.
     
-		Um wirklich nur relevante Daten zu digitalisieren, benötigt es die sogenannten Scan-Vorlagen, die in der App durch den Benutzer angelegt werden können. Eine Scan-Vorlage beinhaltet mehrere Schablonen. Solch eine Schablone wird beispielsweise auf das Deckblatt gelegt, sodass nur noch die relevanten Informationen, die digitalisiert werden sollen, zu sehen sind. Alles andere, was nicht von Interesse ist, wird von der Schablone überdeckt. In der \autoref{fig:schablone1} ist dieses Konzept schemenhaft zu sehen. Der Benutzer kann in zwei grobe Schritte, um eine digitale Schablone anzufertigen. Zuerst muss ein Foto von der Seite aufgenommen werden. Anschließend werden die Regionen auf diesem Foto manuell markiert, die digitalisiert werden sollen. Eine Scan-Vorlage ist somit eine Sammlung aller digitalen Schablonen zu einer Klausur, denn jede Seite benötigt eine eigene individuelle Schablone.
+		Um wirklich nur relevante Daten zu digitalisieren, benötigt es die sogenannten Scan-Vorlagen, die in der App durch den Benutzer angelegt werden können. Eine Scan-Vorlage beinhaltet mehrere Schablonen. Solch eine Schablone wird beispielsweise auf das Deckblatt gelegt, sodass nur noch die relevanten Informationen, die digitalisiert werden sollen, zu sehen sind. Alles andere, was nicht von Interesse ist, wird von der Schablone überdeckt. In der \autoref{fig:schablone1} ist dieses Konzept schemenhaft zu sehen. Der Benutzer kann in zwei groben Schritten eine digitale Schablone anfertigen. Zuerst muss ein Foto von der Seite aufgenommen werden. Anschließend werden die Regionen auf diesem Foto manuell markiert, die digitalisiert werden sollen. Eine Scan-Vorlage ist somit eine Sammlung aller digitalen Schablonen zu einer Klausur, denn jede Seite benötigt eine eigene individuelle Schablone.
 				
 		\begin{figure}[h!]
     		\centering
@@ -254,7 +254,7 @@ Im Rahmen eines zwölfwöchigen Forschungspraktikums an der Hochschule Mittweida
 		
 		Durch die Auseinandersetzung mit den Bibliotheken konnte festgestellt werden, dass die zu entwickelnde App nur Geräte ab der Betriebssystem-Version iOS 13.0 unterstützen wird. Grund dafür sind die Apple Frameworks SwiftUI und VisionKit. \\
 		SwiftUI bietet die Möglichkeit, Benutzeroberflächen für alle Apple-Plattformen in der Programmiersprache Swift zu erstellen. Die deklarative Swift-Syntax ist einfach zu lesen und schnell zu schreiben, sodass es möglich ist, die App in wenigen Wochen für iPhone und iPad zu entwickeln. Als Alternative gibt es UIKit\footurl{Dokumentation von UIKit -}{https://developer.apple.com/documentation/uikit}, welches unter allen iOS Versionen funktioniert. Dieses Framework ist allerdings nicht deklarativ, sodass Views sowohl im Code, als auch in Interface-Dateien getrennt voneinander erstellt und konfiguriert werden müssen \cite{sillmann_einstieg_2019}. Dadurch dauert die Entwicklung einer App im Gegensatz zu SwiftUI deutlich länger, wie man auch in dem Video\footurl{SwiftUI vs UIKit – Comparison of building the same app in each framework -}{https://www.youtube.com/watch?v=qk2y-TiLDZo} von Paul Hudson, einem in der Swift-Community sehr bekannten Programmierer und Autor, sieht. Sehr ähnliche Erfahrung hat der Verfasser vor dem Praktikum in seiner Freizeit mit den beiden Frameworks gesammelt. \\
-		VisionKit dagegen ist das Framework zum Scannen der Dokumente. Auch hierfür existiert eine Alternative, welche auch auf älteren iOS Versionen funktioniert. Allerdings unterstützt das Framework WeScan\footurl{WeScan GitHub Repository -}{https://github.com/WeTransfer/WeScan} noch kein stapelweises Scannen. Das bedeutet, dass man immer nur ein Foto machen kann, welches erst abgespeichert werden muss, bevor man das nächste aufnehmen kann. Das ist für den Benutzer umständlich und zeitintensiv. Zu Informationen anderer verwendeter Frameworks siehe im \autoref{ch:prototyp} \autoref{sc:implementierung} und \autoref{sc:implementierung}.
+		VisionKit dagegen ist das Framework zum Scannen der Dokumente. Auch hierfür existiert eine Alternative, welche auch auf älteren iOS Versionen funktioniert. Allerdings unterstützt das Framework WeScan\footurl{WeScan GitHub Repository -}{https://github.com/WeTransfer/WeScan} noch kein stapelweises Scannen. Das bedeutet, dass man immer nur ein Foto machen kann, welches erst abgespeichert werden muss, bevor man das nächste aufnehmen kann. Das ist für den Benutzer umständlich und zeitintensiv. Zu Informationen anderer verwendeter Frameworks siehe im \autoref{ch:prototyp} \autoref{sc:implementierung}.
 
 		Zur Projektplanung und zum Projektmanagement wurde das Scrum-Konzept\footurl{Der Scrum Guide™ -}{https://www.scrumguides.org/scrum-guide.html}, welches sich für agile Softwareentwicklung anbietet, verwendet. Als Versionsverwaltung der App-Software wurde Git\footurl{Git Internetseite -}{https://git-scm.com/} in Kombination mit GitHub Issues\footurl{Mastering Issues -}{https://guides.github.com/features/issues/} und GitHub Project Boards als Planungstools benutzt. Dadurch konnte der Verfasser jedem sogenannten Sprint selbständig Aufgaben zuordnen und den Fortschritt nachvollziehen. Informationen über den Server und der Android-App zu diesem Thema sind im Praktikumsbericht von Tobias Kallauke zu finden.	
 
@@ -274,20 +274,20 @@ Im Rahmen eines zwölfwöchigen Forschungspraktikums an der Hochschule Mittweida
     		
 		\vspace{-5mm}
 		\paragraph*{Redux.js}
-			Redux.js ist eine Bibliothek\footurl{Redux.js Github Repository -}{https://github.com/reduxjs/redux} für die Programmiersprache JavaScript und stellt einen sogenannten vorhersehbaren Zustandscontainer\footurl{Redux Core Concepts -}{https://redux.js.org/introduction/core-concepts} für JavaScript-Anwendungen bereit. In diesem Container wird der Zustand der gesamten Anwendung in einem sogenannten Objektbaum gespeichert. Dieser Baum ist mit der Ordner-Struktur von Windows vergleichbar. Es gibt einen Wurzel-Ordner, in dem wiederum Ordner oder aber auch Dateien enthalten sind. Im Zustandscontainer bezeichnet man die Ordner als States bzw. auf deutsch Zustände. Die Dateien sind einfache Daten, die unteranderem auf der Benutzeroberfläche angezeigt werden sollen. Diese Aufteilung in die States ist dazu gedacht, jeder View nur die wirklich benötigten Daten bereitzustellen. Diese Struktur erleichtert das Testen oder Untersuchen der Anwendung und ermöglicht es, durch Hinzufügen eines neuen States den aktuellen Entwicklungsstand der Anwendung beizubehalten und dadurch den Entwicklungsprozess zu beschleunigen. \\
-			Ein weiteres wichtiges Prinzip\footurl{Redux Three Principles -}{https://redux.js.org/introduction/three-principles} von Redux ist, dass die Daten in den States schreibgeschützt sind. Die einzige Möglichkeit den Zustand bzw. die Daten zu ändern, besteht darin, eine Aktion auszulösen. Die Aktion beschreibt, wie der State und dessen Daten sich ändert. Dadurch wird sichergestellt, dass weder die Views noch Netzwerk-Rückrufe jemals direkt den Zustand ändern können. Stattdessen bringen sie nur die Absicht zum Ausdruck, den State zu verändern und lösen eine Aktion aus, die die Änderung für sie vornimmt. Da alle Aktionen zentralisiert sind und eine nach der anderen in einer strikten Reihenfolge erfolgen, gibt es weniger Programmfehlerquellen.
+			Redux.js ist eine Bibliothek\footurl{Redux.js Github Repository -}{https://github.com/reduxjs/redux} für die Programmiersprache JavaScript und stellt einen sogenannten vorhersehbaren Zustandscontainer\footurl{Redux Core Concepts -}{https://redux.js.org/introduction/core-concepts} für JavaScript-Anwendungen bereit. In diesem Container wird der Zustand der gesamten Anwendung in einem sogenannten Objektbaum gespeichert. Dieser Baum ist mit der Ordner-Struktur von Windows vergleichbar. Es gibt einen Wurzel-Ordner, in dem wiederum Ordner oder aber auch Dateien enthalten sind. Im Zustandscontainer bezeichnet man die Ordner als States bzw. auf deutsch Zustände. Die Dateien sind einfache Daten, die unter anderem auf der Benutzeroberfläche angezeigt werden sollen. Diese Aufteilung in die States ist dazu gedacht, jeder View nur die wirklich benötigten Daten bereitzustellen. Diese Struktur erleichtert das Testen oder Untersuchen der Anwendung und ermöglicht es, durch Hinzufügen eines neuen States den aktuellen Entwicklungsstand der Anwendung beizubehalten und dadurch den Entwicklungsprozess zu beschleunigen. \\
+			Ein weiteres wichtiges Prinzip\footurl{Redux Three Principles -}{https://redux.js.org/introduction/three-principles} von Redux ist, dass die Daten in den States schreibgeschützt sind. Die einzige Möglichkeit den Zustand bzw. die Daten zu ändern, besteht darin, eine Aktion auszulösen. Die Aktion beschreibt, wie der State und dessen Daten sich ändern. Dadurch wird sichergestellt, dass weder die Views noch Netzwerk-Rückrufe jemals direkt den Zustand ändern können. Stattdessen bringen sie nur die Absicht zum Ausdruck, den State zu verändern und lösen eine Aktion aus, die die Änderung für sie vornimmt. Da alle Aktionen zentralisiert sind und eine nach der anderen in einer strikten Reihenfolge erfolgen, gibt es weniger Programmfehlerquellen.
 
 	\section{Entwurf und Design}\label{sc:entwurfunddesign}
-		In der Entwurfsphase wird normalerweise über die Datenhaltung, die Verteilung des Software-Systems im Netz und die Benutzeroberfläche entschieden\footurl{Vorlesung 9, Folie 27 aus Softwaretechnik Grundlagen von Prof. Dr.-Ing. Wilfried Schubert (2019) -}{https://www.staff.hs-mittweida.de/~wschub/intranet/ss19/Fach_SWT/Fach_SWT_Zeitplan.htm}. Jedoch standen diese Grundsatzentscheidungen schon zu Beginn des Praktikums durch die Kenntnisse von Tobias Kallauke und dem Verfasser fest. Zur Datenspeicherung verwendet der Server PostgreSQL\footurl{PostgreSQL Internetseite -}{https://www.postgresql.org/}, eine relationale Datenbank. Zum Speichern der Bilder wird die Server-Verzeichnisstruktur genutzt. In der App hingegen werden keine Daten persistent gespeichert. Durch die Aufteilung von App und Server handelt es sich um eine sogenannte Client-Server-Architektur und für die Benutzeroberfläche der iOS-App wird, wie schon erwähnt, das deklarative SwiftUI verwendet. Weitere Informationen zum Entwurf der Server-Architektur und der Android-App befinden sich im Praktikumsbericht von Tobias Kallauke.
+		In der Entwurfsphase wird normalerweise über die Datenhaltung, die Verteilung des Software-Systems im Netz und die Benutzeroberfläche entschieden\footurl{Vorlesung 9, Folie 27 aus Softwaretechnik Grundlagen von Prof. Dr.-Ing. Wilfried Schubert (2019) -}{https://www.staff.hs-mittweida.de/~wschub/intranet/ss19/Fach_SWT/Fach_SWT_Zeitplan.htm}. Jedoch standen diese Grundsatzentscheidungen schon zu Beginn des Praktikums durch die Kenntnisse von Tobias Kallauke und des Verfassers fest. Zur Datenspeicherung verwendet der Server PostgreSQL\footurl{PostgreSQL Internetseite -}{https://www.postgresql.org/}, eine relationale Datenbank. Zum Speichern der Bilder wird die Server-Verzeichnisstruktur genutzt. In der App hingegen werden keine Daten persistent gespeichert. Durch die Aufteilung von App und Server handelt es sich um eine sogenannte Client-Server-Architektur und für die Benutzeroberfläche der iOS-App wird, wie schon erwähnt, das deklarative SwiftUI verwendet. Weitere Informationen zum Entwurf der Server-Architektur und der Android-App befinden sich im Praktikumsbericht von Tobias Kallauke.
 		
-		Zur Definition einzelner Teil-Workflows, die zusammenhängende Aufgaben umfassen, wurden Flussdiagramme und schriftliche Zustandsautomaten angefertigt (siehe \autoref{ch:workflow}). Diese Modelle halfen dabei Views zu entwickeln und deren Design festzulegen. Das Aussehen der App sollten sich jedoch im Laufe der Zeit noch ändern, da erst einmal die Umsetzung des Konzepts im Vordergrund stand.
+		Zur Definition einzelner Teil-Workflows, die zusammenhängende Aufgaben umfassen, wurden Flussdiagramme und schriftliche Zustandsautomaten angefertigt (siehe \autoref{ch:workflow}). Diese Modelle halfen dabei Views zu entwickeln und deren Design festzulegen. Das Aussehen der App sollte sich jedoch im Laufe der Zeit noch ändern, da erst einmal die Umsetzung des Konzepts im Vordergrund stand.
 
 		Ausgehend vom Design und den Teil-Workflows entstand ein grobes Konzept zur Handhabung der Daten innerhalb der App. Da SwiftUI das Entwurfsmuster MVVM umsetzt, wird eine Struktur für das ViewModel und für den Datenfluss der asynchronen Server-Rückrufe benötigt. Die Struktur-Entwicklung erwies sich bereits während des ersten Prototyps als problematisch. Denn auch bei steigender Komplexität sollte das ViewModel noch übersichtlich bleiben, um eine schnelle Weiterentwicklung zu gewährleisten. Bei der Suche nach einer besseren Lösung wurde die JavaScript-Bibliothek Redux.js zur Verwaltung von Zustandsinformationen in Webanwendungen gefunden.  
 
 		Das Konzept von Redux hilft komplexe Views mit vielen Daten schnell und einfach zu implementieren. Somit werden Server-Antworten und zwischengespeicherte Daten sowie lokal erstellte Daten, die noch nicht auf dem Server gespeichert wurden, strukturiert und zentral abgelegt. Das erleichtert nicht nur das Wiederverwenden von Daten, sondern reduziert die Wiederholung von Server-Aufrufen. Zudem ermöglicht Redux durch die modulare Aufteilung des State-Containers eine schnelle Weiterentwicklung der App, trotz steigender Komplexität. Zudem stellten die Vorteile hinsichtlich des Testens und Untersuchens der App, das schnelle Auffinden von Fehlern in Aussicht. Es erschien nun möglich, trotz begrenzter Praktikumszeit, den Prototyp möglichst fehlerfrei und weit zu entwickeln.
 
 %%%%%%%%%%%%%%%%%%%%%
-		Daher lag es nah die wesentlichen Konzepte von Redux umzusetzen und einen Redux ähnlichen State Container, als ViewModel zu implementieren. Aus der Definition von Teil-Workflows sollte der Container oder auch Store genannt mindestens 5 States haben: 
+		Daher erschien es sinnvoll die wesentlichen Konzepte von Redux umzusetzen und einen Redux ähnlichen State-Container, als ViewModel zu implementieren. Aus der Definition von Teil-Workflows sollte der Container oder auch Store genannt mindestens 5 States haben: 
 		\vspace{-5mm}
 		\begin{itemize}
 			\item Für Authentifizierung sowie Registrierung,
@@ -314,7 +314,7 @@ Im Rahmen eines zwölfwöchigen Forschungspraktikums an der Hochschule Mittweida
 			\caption{Architektur Schemata}
 		\end{figure}
 		
-		Das Schema \ref{fig:redux} zeigt, die in der App umgesetzte Struktur. Über eine View (rot) können Aktionen (blau) aufgerufen werden. Diese gelangen zuerst in einen sogenannten Dispatcher (lila), welcher als Verteiler dient. Anhand der Art einer Aktion, wird der entsprechende Reducer (grün) vom Dispatcher beauftragt, die Aktion auszuführen. Jeweils ein Reducer ist nur für eine Aktions-Art zuständig. In \autoref{fig:tree} ist eine Schachtelung von Reducern (grün) zu sehen. Ebenfalls können Aktions-Arten ineinander geschachtelt werden. Das hat den Hintergrund, dass die States wie ein Objektbaum aufgebaut sind. So hat jeder State seinen eigenen Reducer und eigene Aktionen, was für die oben erwähnte Modularität sorgt. Muss beispielsweise eine Änderung im Kontroll-Mechanismen-State (siehe Kontroll-State in \ref{fig:tree}) vorgenommen werden, wird die Haupt-Aktion in einer Kontroll-Mechanismen-Reducer-Aktion geschachtelt und diese wiederum in einer Vorlagen-Reducer-Aktion. Zum Ausführen der Haupt-Aktion, werden zuvor die entsprechenden Reducer die Schachtelung von außen nach innen auflösen. Nachdem die Aktion ausgeführt und eine State-Änderung herbeigeführt wurde, aktualisiert sich durch data binding von MVVM die View. Speziell werden alle Views, die eine Bindung zu dem jeweiligen Datum im State haben, über die Änderung benachrichtigt und daraufhin aktualisieren diese ihre Benutzeroberfläche.
+		Das Schema \ref{fig:redux} stellt die in der App umgesetzte Struktur dar. Über eine View (rot) können Aktionen (blau) aufgerufen werden. Diese gelangen zuerst in einen sogenannten Dispatcher (lila), welcher als Verteiler dient. Anhand der Art einer Aktion, wird der entsprechende Reducer (grün) vom Dispatcher beauftragt, die Aktion auszuführen. Jeweils ein Reducer ist nur für eine Aktions-Art zuständig. In \autoref{fig:tree} ist eine Schachtelung von Reducern (grün) zu sehen. Ebenfalls können Aktions-Arten ineinander geschachtelt werden. Das hat den Hintergrund, dass die States wie ein Objektbaum aufgebaut sind. So hat jeder State seinen eigenen Reducer und eigene Aktionen, was für die oben erwähnte Modularität sorgt. Muss beispielsweise eine Änderung im Kontroll-Mechanismen-State (siehe Kontroll-State in \ref{fig:tree}) vorgenommen werden, wird die Haupt-Aktion in einer Kontroll-Mechanismen-Reducer-Aktion geschachtelt und diese wiederum in einer Vorlagen-Reducer-Aktion. Zum Ausführen der Haupt-Aktion, werden zuvor die entsprechenden Reducer die Schachtelung von außen nach innen auflösen. Nachdem die Aktion ausgeführt und eine State-Änderung herbeigeführt wurde, aktualisiert sich durch data binding von MVVM die View. Speziell werden alle Views, die eine Bindung zu dem jeweiligen Datum im State haben, über die Änderung benachrichtigt und daraufhin aktualisieren diese ihre Benutzeroberfläche.
 
 		Ein weiterer wichtiger Bestandteil der Architektur sind die Server-Aufrufe. Für diese gibt es einen eigenen Reducer und eigene Schnittstellen. Diese Schnittstellen sind in der \autoref{fig:redux} grau markiert und mit API \nomenclature{API}{application programming interface, deutsch: Programmierschnittstelle} beschriftet. Ihre Besonderheit besteht darin, selbst Aktionen an den Container zu senden. Beispielsweise löst der Benutzer die Aktion aus, alle Vorlagen vom Server zu laden. Diese Aktion gelangt über den vorgesehenen Reducer zu der API-Schnittstelle. Dort wird ein entsprechender Server-Aufruf gestartet und auf den Server-Rückruf gewartet. Sobald die Antwort des Servers angekommen ist, wird diese mit Hilfe einer Aktion zurück zum Container gesendet. Dort verarbeitet ein entsprechender Reducer eventuelle Fehler oder die heruntergeladenen Vorlagen.
 		
@@ -434,7 +434,7 @@ Im Rahmen eines zwölfwöchigen Forschungspraktikums an der Hochschule Mittweida
 				\end{figure}
 
 			\subsubsection*{Scan-Vorlage speichern}
-				Die Speicherung erfolgt in mehreren Schritten. Dazu werden die entsprechenden Server-Schnittstellen in einer bestimmten Reihenfolge aufgerufen. Für genauere Details zur API des Servers siehe im Praktikumsbericht von Tobias Kallauke.
+				Die Speicherung erfolgt in mehreren Schritten. Dazu werden die entsprechenden Server-Schnittstellen in einer bestimmten Reihenfolge aufgerufen. Genauere Details zur API des Servers sind im Praktikumsbericht von Tobias Kallauke zu finden.
 				
 				%%%%%%%%%%%%%%%%%%%%%%
 	%			... und wie die Vorlage versendet wird ...
@@ -499,7 +499,7 @@ Im Rahmen eines zwölfwöchigen Forschungspraktikums an der Hochschule Mittweida
 					Nun wird jedes Foto des neuen Scans mit den Regionen der jeweiligen Seite der Scan-Vorlage verarbeitet. 
 					Wie in den Abbildungen \ref{fig:seite1} und \ref{fig:seite2} zu sehen ist, haben beide, durch die App entstandenen Bilder, unterschiedliche Maße. Die \autoref{fig:seite1} ist größer und etwas breiter als die \autoref{fig:seite2}. Das liegt daran, dass sich der Winkel und der Abstand der Kamera zum Dokument zwischen den Aufnahmen geändert hat. Wenn die Bilder in der Vorlage nicht genau so groß sind, wie die Bilder des neuen Scans, können wichtige Informationen durch die absoluten Positionen der Regionen abgeschnitten werden. Aus diesem Grund müssen nun die absoluten in relative Positionen umgerechnet werden. Gleiches gilt für die Höhe und Breite der Regionen.
 
-				\paragraph*{Zu 2.: Mithilfe der Regionen werden Bildausschnitte aus den Fotos erstellen.}
+				\paragraph*{Zu 2.: Mithilfe der Regionen werden Bildausschnitte aus den Fotos erstellt.}
 					Nachdem die neue Position und die Maße berechnet wurden, entstehen daraus Bildausschnitte für die Texterkennung. Bei falscher Erstellung der Vorlagen oder bei falschem Einscannen der Klausur kann es trotzdem passieren, dass Teile der Regionen wegfallen. Dazu im \autoref{ssc:erkennen} mehr.
 				
 				\paragraph*{Zu 3.: Die Ausschnitte werden in die ausgewählte OCR-Engine überführt.}
@@ -508,7 +508,7 @@ Im Rahmen eines zwölfwöchigen Forschungspraktikums an der Hochschule Mittweida
 				
 					Nach der Texterkennung durch Vision erfolgt in einigen Fällen noch eine selbst entwickelte Korrektur, wie sie in \autoref{ch:konzept} \autoref{sc:erweiterungkonzept} beschrieben ist. Wieder ist der Regionen-Datentyp (\ref{fig:v6}) ausschlaggebend. Beispielsweise wird der Text einer vermeintlichen Seminargruppe mit allen in der App hinterlegten Seminargruppen verglichen. Das erkannte Wort wird durch den Seminargruppennamen mit der größten Übereinstimmung ersetzt und die confidence gegebenenfalls angepasst.
 				
-					Zuletzt werden die erkennten Texte bzw. Worte und deren confidence an den State-Container der App gesendet. Für die Ergebnisse der Texterkennung ist ein eigener State vorgesehen, in dem auch die Serverergebnisse von Tesseract gesichert werden. Somit ist das Anzeigen der Ergebnisse bei beiden OCR-Engines gleich.  
+					Zuletzt werden die erkannten Texte bzw. Worte und deren confidence an den State-Container der App gesendet. Für die Ergebnisse der Texterkennung ist ein eigener State vorgesehen, in dem auch die Serverergebnisse von Tesseract gesichert werden. Somit ist das Anzeigen der Ergebnisse bei beiden OCR-Engines gleich.  
 				
 				\paragraph*{Zu 4.: Darstellung der Texterkennungsergebnisse auf der View.}
 					Die Ergebnisse der Texterkennung und die jeweilige confidence werden auf der Benutzeroberfläche, nach Seiten sortiert, angezeigt (\ref{fig:ocr2}). Alle OCR-Ergebnisse können zudem noch angepasst werden. Abhängig vom Datentyp der Region passt sich die Tastatur beim Ändern der Texte an (\ref{fig:ocr3}). Beispielsweise sind die Tastaturen beim Anpassen von Noten und Punkten auf Zahlen und Dezimalpunkte spezialisiert. Zudem kann die confidence farblich (siehe \autoref{fig:ocr2}), aber auch als Zahlenwert (siehe \autoref{fig:ocr3}) angezeigt werden. Wurde kein Text erkannt, ist dementsprechend ein Warnsymbol an der Stelle der confidence zu sehen.  
@@ -562,11 +562,11 @@ Im Rahmen eines zwölfwöchigen Forschungspraktikums an der Hochschule Mittweida
 	Dieses Kapitel reflektiert den aktuellen Stand der App und zieht einen Vergleich mit den Anforderungen aus \autoref{ch:anforderungen}. Im Anhang \autoref{ch:accses} sind dazu einige weitere Screenshots abgebildet.
 	
 	\section{Stand des Prototyps}
-		Während der Entwicklung konnten die meisten Funktionen des Prototyps umgesetzt werden. Jedoch fehlt zum Zeitpunkt der Abgabe ein essentieller Bestandteil der App. Auf Grund mangelnder Zeit war es nicht mehr möglich, die Funktion zum Speichern der digitalisierten Daten in Front- und Backend zu implementieren. Auch fehlt die Überführung der Daten in ein geeignetes Format.
+		Während der Entwicklung konnten die meisten angedachten Funktionen des Anschauungsprototyps aus \autoref{ch:anforderungen} umgesetzt werden. Jedoch fehlt zum Zeitpunkt der Abgabe ein essentieller Bestandteil der App. Auf Grund mangelnder Zeit war es nicht mehr möglich, die Funktion zum Speichern der digitalisierten Daten in Front- und Backend zu implementieren. Auch fehlt die Überführung der Daten in ein geeignetes Format.
 		
 		Außerdem sind nicht alle verfügbaren Serverschnittstellen implementiert. Die Views zum Ändern einer Scan-Vorlage sind schon integriert, da die Views zum Erstellen einer Scan-Vorlage hier wieder verwendet werden konnten. Es fehlen lediglich die interne Logik sowie Schnittstellen zum Server.	
 		
-		Weiterhin konnte nur einer der Kontrollmechanismen umgesetzt werden, da zu wenig Zeit in die Planung investiert wurde. Grundsätzlich ließen sich die fehlenden Mechanismen recht schnell implementieren, jedoch ist die aktuelle Datenstruktur nicht zum Speichern in der Datenbank geeignet. Sobald Änderungen an der Datenstruktur vorgenommen werden, kann es zu Fehlern kommen. Es existiert aber schon eine Idee zur Verbesserung. Dafür müssten allerdings neben der App auch der Server und die Datenbank angepasst werden. 
+		Weiterhin konnte nur einer der Kontrollmechanismen umgesetzt werden, da zu wenig Zeit in die Planung investiert wurde. Grundsätzlich ließen sich die fehlenden Mechanismen recht schnell implementieren, jedoch ist die aktuelle Datenstruktur nicht zum Speichern in der Datenbank geeignet. Sobald Änderungen an der Datenstruktur vorgenommen werden, kann es zu Fehlern kommen. Es existiert aber schon eine Idee zur Verbesserung. Dafür müssten allerdings neben der App auch der Server und die Datenbank angepasst werden. Auch müsste in jeder Scan-Vorlage zur Berechnung der Note ein Notenspiegel bzw. eine Berechnungsformel hinterlegt werden.
 		
 		Des Weiteren wurden Fehlermeldungen und/oder -behandlungen bezüglich des Servers nur sporadisch implementiert. Aber auch hierfür sind die Grundlagen schon gelegt, da Fehler stets aufgefangen und zentral abgelegt werden. 
 	
@@ -590,12 +590,12 @@ Im Rahmen eines zwölfwöchigen Forschungspraktikums an der Hochschule Mittweida
 			Beim Fotografieren der Klausuren können infolge mangelnder Belichtung, schlechtem Hintergrund oder durch umgeknickte bzw. verdeckte Ecken, die Seitenränder und/oder die Ecken nicht ausreichend erkannt werden. Die Segementier-Algorithemen stoßen bei der Bildverarbeitung hier an ihre Grenzen. Auf die Erklärung der genauen Hintergründe wird in diesem Bericht verzichtet. Weiterhin kommt es bei schnellen Bewegungen der Kamera oder zu flachem Winkel zum Dokument dazu, dass die App einen falschen Bildausschnitt wählt.
 			\vspace{-5mm}
 			\begin{itemize}
-				\item Die erste Problemlösung besteht darin, einen Blitz zu verwenden. Meistens schaltet sich bei zu wenig Licht die zusätzliche Belichtung automatisch ein. Grundsätzlich empfiehlt es sich aber, immer eine Blitz zu verwenden, da dadurch das Dokument gleichmäßig belichtet wird. Bei einer zu starken Grundbelichtung verschlechtert ein Blitz jedoch das Ergebnis, da Text und Kanten unkenntlich gemacht werden. Um eine gute Qualität zu erzielen, ist es am günstigsten die Dokumente bei Tageslicht und mit Blitz aufzunehmen. 
+				\item Die erste Problemlösung besteht darin, einen Blitz zu verwenden. Meistens schaltet sich bei zu wenig Licht die zusätzliche Belichtung automatisch ein. Grundsätzlich empfiehlt es sich aber, immer einen Blitz zu verwenden, da dadurch das Dokument gleichmäßig belichtet wird. Bei einer zu starken Grundbelichtung verschlechtert ein Blitz jedoch das Ergebnis, da Text und Kanten unkenntlich gemacht werden. Um eine gute Qualität zu erzielen, ist es am günstigsten die Dokumente bei Tageslicht und mit Blitz aufzunehmen. 
 				\item Weiter ist es möglich die Dokumentenseite noch einmal zu fotografieren oder diese im Bild manuell auszurichten. Dafür stellt VisionKit eine besondere View zur Verfügung, die es dem Benutzer ermöglicht, die Ecken des Dokumentes per Hand auszuwählen.
 			\end{itemize}
 		
 		\subsection{Probleme der Klausur-Vorlage beim Scannen}\label{ssc:problemevorlage}
-			Dieser Abschnitt bezieht sich ausschließlich auf bestehende Probleme mit den Klausurseiten, welche in \autoref{fig:klausur} zu sehen sind und während des Praktikums genutzt wurden. Sie stehen stellvertretend für Klausuren-Vorlagen der Fakultät CB. Im \autoref{sc:vorlage}, werden mögliche Änderungen und Lösungen zu den hier aufgeführten Problemen diskutiert.
+			Dieser Abschnitt bezieht sich ausschließlich auf bestehende Probleme mit den Klausurseiten, welche in \autoref{fig:klausur} zu sehen sind und während des Praktikums genutzt wurden. Sie stehen stellvertretend für Klausuren-Vorlagen der Fakultät CB. Im \autoref{sc:vorlage} werden mögliche Änderungen und Lösungen zu den hier aufgeführten Problemen diskutiert.
 		
 			Wie in der \autoref{fig:seite1} zu sehen ist, wird nicht klar zwischen einem Feld für den Vornamen und Nachnamen differenziert. Zudem ist ein einzelner Strich als Feldbegrenzung ungeeignet. Die Punktefelder in der Tabelle dagegen sind besser abgegrenzt, jedoch zu klein. Die geringe Größe verleitet dazu, das Feld komplett auszunutzen und die Ziffer möglichst groß reinzuschreiben. Allerdings sollte eine gewisser Abstand zur Regionbegrenzung für optimale Texterkennung gelassen werden. Bei dem Notenfeld dagegen existiert keine Begrenzung. Für das Markieren der Region ist das ebenfalls ungeeignet (\ref{fig:v9}). Denn hinter der Note wird die Unterschrift des Prüfers gesetzt, welche bei der Digitalisierung nicht mit erscheinen darf.
 
@@ -607,7 +607,7 @@ Im Rahmen eines zwölfwöchigen Forschungspraktikums an der Hochschule Mittweida
 	\section{Verbesserung der Klausuren-Vorlage}\label{sc:vorlage}
 		Basierend auf der gesammelten Erfahrung mit der Anwendung beschäftigt sich dieser Abschnitt mit Verbesserungs- und Änderungsvorschlägen der Klausur in \autoref{fig:klausur}. Sie steht, wie auch zu vor, stellvertretend für die Klausuren-Vorlagen der Fakultät CB. Alle folgenden Vorschläge haben den Hintergrund, die App bei der Digitalisierung zu unterstützen und beziehen sich auf die in \autoref{sc:grenzen} beschriebenen Probleme.
 	
-		Der erste Vorschlag bezieht sich auf die große Bedeutung der Ecken und Kanten bei der Erkennung des Dokuments. Diese wichtigen Referenzpunkte werden aber unter bestimmten Bedingungen, wie im \autoref{ssc:erkennen} erklärt, nicht immer erkannt. Deshalb empfiehlt es sich, eigene Referenzpunkt auf dem Dokument anzubringen. Beispielsweise durch einen Rahmen, wie es auf der Klausur (\ref{fig:seite1}) zu sehen ist. oder durch ein QR-Code ähnliches Muster. Ein Vorteil bei eigenen Referenzpunkten ist, dass sich ihre Gestallt immer vom Dokument abheben kann. Somit ist die Dokumenten-Erkennung nur noch vom Licht abhängig. Dadurch kann die Kamera näher an den Text heran, wodurch sich die Bildqualität verbessert. Jedoch kann nun die Erkennung nicht mehr von Frameworks übernommen werden. Es müssten künstliche neuronale Netze trainiert werden, welche diese Referenzpunkte in Bildern erkennen. 
+		Der erste Vorschlag bezieht sich auf die große Bedeutung der Ecken und Kanten bei der Erkennung des Dokuments. Diese wichtigen Referenzpunkte werden aber unter bestimmten Bedingungen, wie im \autoref{ssc:erkennen} erklärt, nicht immer erkannt. Deshalb empfiehlt es sich, eigene Referenzpunkte auf dem Dokument anzubringen. Beispielsweise durch einen Rahmen, wie es auf der Klausur (\ref{fig:seite1}) zu sehen ist. oder durch ein QR-Code ähnliches Muster. Ein Vorteil bei eigenen Referenzpunkten ist, dass sich ihre Gestallt immer vom Dokument abheben kann. Somit ist die Dokumenten-Erkennung nur noch vom Licht abhängig. Dadurch kann die Kamera näher an den Text heran, wodurch sich die Bildqualität verbessert. Jedoch kann nun die Erkennung nicht mehr von Frameworks übernommen werden. Es müssten künstliche neuronale Netze trainiert werden, welche diese Referenzpunkte in Bildern erkennen. 
 	
 		Der zweite Vorschlag bezieht sich auf den \autoref{ssc:problemevorlage}. Dementsprechend wäre es sinnvoll alle Felder ausreichend zu beschriften und mit einer dünnen Linie zu begrenzen. Mithilfe von Bildverarbeitungsalgorithmen könnten die feinen Rahmen ohne Verlust der wichtigen Daten heraus gerechnet werden.
 		
@@ -644,7 +644,7 @@ Im Rahmen eines zwölfwöchigen Forschungspraktikums an der Hochschule Mittweida
 		Auf \autoref{sc:vorlage} und den \hyperref[pa:referenzpunkte]{intelligenten Referenzpunkten} aufbauend könnten eigene Klausuren-Vorlagen umgesetzt und getestet werden. Eine Anpassung der App ist erforderlich, sodass die Referenzpunkte erkannt werden, wie im \autoref{sc:vorlage} beschrieben.
 		
 	\paragraph*{Benutzerakzeptanzstudie}\label{pa:akzeptanz}
-		Aktuell ist unklar, ob die App tatsächlich Zeit einspart. Aus diesem Grund ist es sinnvoll eine umfangreiche Benutzerakzeptanzstudie durchzuführen. Außerdem könnten so weitere Probleme entdeckt und Lösungen entwickelt werden, bevor die App benutzt werden kann.
+		Aktuell ist unklar, ob die App tatsächlich Zeit einspart. Aus diesem Grund ist es sinnvoll, eine umfangreiche Benutzerakzeptanzstudie durchzuführen. Außerdem könnten so weitere Probleme entdeckt und Lösungen entwickelt werden, bevor die App benutzt werden kann.
 	
 	%\paragraph*{Qualitätsstudie} 
 		%Neben einer \hyperref[pa:akzeptanz]{\textit{Benutzer Akzeptanz Studie}} könnte außerdem eine Qualitätsstudie der aktuellen oder auch anderer OCR-Engines erstellt werden. Es gibt viele online OCR-Engines Beispielsweise von Microsoft und Google
@@ -711,19 +711,20 @@ Im Rahmen eines zwölfwöchigen Forschungspraktikums an der Hochschule Mittweida
 
 	\begin{figure}[ht]
 	    \centering
-		\begin{subfigure}[h]{\textwidth}
-		    \frame{\includegraphics[height=0.3\textheight,keepaspectratio]{img/pad1}}
+		\begin{subfigure}[t]{\textwidth}
+			\centering
+		    \frame{\includegraphics[height=0.34\textheight,keepaspectratio]{img/pad1}}
 		    \caption{Ergebnisse ansehen auf dem iPad}
 		    \label{fig:pad1}
 		\end{subfigure}
-		
-       	\begin{subfigure}[h]{\textwidth}
-		    \frame{\includegraphics[height=0.3\textheight,keepaspectratio]{img/pad2}}
+       	\begin{subfigure}[t]{\textwidth}
+       		\centering
+		    \frame{\includegraphics[height=0.34\textheight,keepaspectratio]{img/pad2}}
 		    \caption{Vorlagen-Detailansicht mit Dark-Mode und der größten einstellbaren Textgröße}
 		    \label{fig:pad2}
 		\end{subfigure}
     	\caption{Vorlagen-Detailansicht auf einem iPad mit Barrierefreiheit Beispiel}
-		\label{fig:zusatz5}
+		\label{fig:zusatz1}
 	\end{figure}
 	
 	\begin{figure}[h]
@@ -821,18 +822,19 @@ Im Rahmen eines zwölfwöchigen Forschungspraktikums an der Hochschule Mittweida
 		\item Xcode ab Version 11.4.1 
 		\item iPhone ab Version iOS 13.0 und/oder iPad ab Version iPadOS 13.4 
 		\item Internetzugang
+		\item Zusatz: SwiftLint (\url{https://github.com/realm/SwiftLint})
 	\end{itemize}
 	
 	\textbf{Installation:}
 	Stelle sicher, dass Xcode installiert und das iPhone/iPad mit dem Mac über ein USB-Kabel verbunden ist.
 	\begin{enumerate}
-		\item Lade das Projekt herunter. (.zip anschließend entpacken)
-		\item Öffne die Datei \textit{DocumentenScanner.xcodeproj} mit Xcode.
+		\item Lade das Projekt herunter und entpacke gegebenenfalls die .zip-Datei.
+		\item Öffne die Datei \textit{DokumentenScanner.xcodeproj} mit Xcode.
 		\item Klicke in der Ordnerübersicht bzw. im Navigator ganz oben auf das Xcode-Projekt \textit{DocumentenScanner}.
 		\item Wähle im Editor-Fenster unter \textit{Targets} das Projekt \textit{DocumentenScanner} aus. (Entweder links oben als Dropdown-Menü oder im geöffneten Menü links innerhalb des Editor-Fensters.)
 		\item Wähle den Reiter \textit{Signing \& Capabilities} aus. Es erscheint im Editor-Fenster ein Unterpunkt \textit{Signing}.
 		\item Wähle ein passendes Team aus oder lege eins an.
-		\item Ändere den Bundle Identifier passend zum ausgewählten Team. Z. B. \url{com.<Teamname>.DocumentenScanner}. Es taucht ein Button auf, mit dem die App signiert werden muss. Falls kein Button erscheint, gehe zum nächsten Schritt und komme bei einer auftretenden Fehlermeldung bezüglich der Signierung hierher zurück. (Die Internetverbindung wird benötigt.)
+		\item Ändere den Bundle Identifier passend zum ausgewählten Team. Z. B. \url{com.<Teamname>.DokumentenScanner}. Es taucht ein Button auf, mit dem die App signiert werden muss. Falls kein Button erscheint, gehe zum nächsten Schritt und komme bei einer auftretenden Fehlermeldung bezüglich der Signierung hierher zurück. (Die Internetverbindung wird benötigt.)
 		\item Wähle nun einen Simulator oder das angeschlossene Gerät in der Toolbar aus den \textit{Active Devices} aus.
 		\item Drücke anschließend den Start bzw. Run Button der \textit{Build Controls} oder die Tastenkombination \textbf{cmd + R}.
 		\item Folge den Anweisungen von Xcode und auf dem iPhone oder iPad. Beim Verwenden eines Simulators tauchen keine weiteren Anweisungen auf. Die App startet automatisch. 
@@ -841,20 +843,20 @@ Im Rahmen eines zwölfwöchigen Forschungspraktikums an der Hochschule Mittweida
 
 \chapter{Tätigkeitsbericht}
 	\textbf{24.02. - 01.03.}
-	Zunächst habe ich mich mit der Problemstellung auseinander gesetzt, Ideen gesammelt, Problemanalyse betrieben und einen kleinen Prototypen entwickelt. Dazu erstellte ich eine minimale Projektplanung, arbeitete mich in die Frameworks \textit{Vision} und \textit{VisionKit} ein und setzte eine Versionsverwaltung auf. Zusätzlich suchte ich nach einer passenden App-Architektur, die für das deklarative GUI-Framework SwiftUI sowie für asynchrone Aufgaben, wie z. B. API-Aufrufe geeignet ist. Dabei stieß ich auf \textit{Cleancode Architecture} und \textit{Redux}.
+	Zunächst habe ich mich mit der Problemstellung auseinander gesetzt, Ideen gesammelt, Problemanalyse betrieben und einen kleinen Prototypen entwickelt. Dazu erstellte ich eine minimale Projektplanung, arbeitete mich in die Frameworks Vision und VisionKit ein und setzte eine Versionsverwaltung auf. Zusätzlich suchte ich nach einer passenden App-Architektur, die für das deklarative GUI-Framework SwiftUI sowie für asynchrone Aufgaben, wie z. B. API-Aufrufe geeignet ist. Dabei stieß ich auf Cleancode Architecture und Redux.
 	
 	\textbf{02.03. - 08.03.} 
-	In dieser Woche habe ich die Texterkennung auf den berechneten Regionen eines neuen Fotos implementiert, den Workflow sowie viele andere Kleinigkeiten in der App verbessert und alle Fehler der letzten Woche behoben, sodass ich neue Dinge implementieren konnte. Zudem probierte ich CI sowie Lint für das Projekt aus. Da CI für eine iOS-App mit \textit{GitHub Actions} schwer aufzusetzen war und ab April kostenpflichtig wurde, verwarf ich meine Pläne. Des Weiteren pflegte ich das Projekt Management durch \textit{Issues} und \textit{Project Boards} in GitHub. Anschließend programmierte ich den App-Workflow so um, dass nun mehr als eine Seite aufgenommen und analysiert werden konnte. \\ 			
+	In dieser Woche habe ich die Texterkennung auf den berechneten Regionen eines neuen Fotos implementiert, den Workflow sowie viele andere Kleinigkeiten in der App verbessert und alle Fehler der letzten Woche behoben, sodass ich neue Dinge implementieren konnte. Zudem probierte ich CI sowie Lint für das Projekt aus. Da CI für eine iOS-App mit GitHub Actions schwer aufzusetzen war und ab April kostenpflichtig wurde, verwarf ich meine Pläne. Des Weiteren pflegte ich das Projekt Management durch Issues und Project Boards in GitHub. Anschließend programmierte ich den App-Workflow so um, dass nun mehr als eine Seite aufgenommen und analysiert werden konnte. \\ 			
 	Abgesehen von neuen Quellcode begann ich mit dem Schreiben des Praktikumsberichts und arbeitete mich dazu in \LaTeX \xspace und die Bachelorarbeit-Vorlage für \LaTeX \xspace der Hochschule Mittweida ein.
 	
 	\textbf{09.03. - 15.03.} 
-	Zu Beginn der dritten Woche schaute ich mir Möglichkeiten für serverseitiges OCR an. Dabei sammelte ich Informationen zu dem Framework Vapor und Swift unter Linux. Da die Frameworks \textit{Vision} und \textit{CoreML} von \textit{Apple} unter Linux nicht funktionierten, stellte sich IronOCR als beste Option herausstellte. Mithilfe der in der App verwendeten Datentypen entwickelte ich ein Datenbankmodell und erstellte dazu noch eine JSON-Struktur, die später für die APIs verwendet werden könnte. Außerdem gab es ein Meeting, in dem Tobias Kallauke und ich unseren aktuellen Stand präsentierten, um weitere Schritte und Aufgaben zu planen. Bis zum Ende der Woche arbeitete ich fortlaufend an meinem Beleg und schrieb den Datenfluss in der App um. Nun ähnelte er sehr dem Redux-Model.
+	Zu Beginn der dritten Woche schaute ich mir Möglichkeiten für serverseitiges OCR an. Dabei sammelte ich Informationen zu dem Framework Vapor und Swift unter Linux. Da die Frameworks Vision und CoreML von Apple unter Linux nicht funktionierten, stellte sich IronOCR als beste Option herausstellte. Mithilfe der in der App verwendeten Datentypen entwickelte ich ein Datenbankmodell und erstellte dazu noch eine JSON-Struktur, die später für die APIs verwendet werden könnte. Außerdem gab es ein Meeting, in dem Tobias Kallauke und ich unseren aktuellen Stand präsentierten, um weitere Schritte und Aufgaben zu planen. Bis zum Ende der Woche arbeitete ich fortlaufend an meinem Beleg und schrieb den Datenfluss in der App um. Nun ähnelte er sehr dem Redux-Model.
 	
 	\textbf{16.03. - 22.03.} 
-	Anfangs schrieb ich meinen Praktikumsbericht weiter, bearbeitete alte Issues und fügte neue dem Project Board hinzu. Außerdem gepflegte ich die Dokumentation, um anschließend Kontrollmechanismen hinzuzufügen. Dabei entstanden neue Views. Der Redux-Store musste dadurch angepasst werden. Es kam eine Erweiterung für die Texterkennung hinzu, so dass man durch die Auswahl eines Datentyps, das Resultat der Erkennung verbessern konnte. Des Weiteren habe ich bis zum Ende der Woche den Kontroll-Typ \textit{Vergleich} vollständig implementiert und die App auf Fehler und Abstürze kontrolliert sowie den Beleg um einige Kapitel erweitert.
+	Anfangs schrieb ich meinen Praktikumsbericht weiter, bearbeitete alte Issues und fügte neue dem Project Board hinzu. Außerdem gepflegte ich die Dokumentation, um anschließend Kontrollmechanismen hinzuzufügen. Dabei entstanden neue Views. Der Redux-Store musste dadurch angepasst werden. Es kam eine Erweiterung für die Texterkennung hinzu, so dass man durch die Auswahl eines Datentyps, das Resultat der Erkennung verbessern konnte. Des Weiteren habe ich bis zum Ende der Woche den Kontroll-Typ Vergleich vollständig implementiert und die App auf Fehler und Abstürze kontrolliert sowie den Beleg um einige Kapitel erweitert.
 	
 	\textbf{23.03. - 29.03.} 
-	Ich begann den Workflow und die Navigation in der App zu verbessern und vereinfachen. Dabei beseitigte ich einigen Quellcode des Prototyps, erweiterte die Dokumentation und behob einige Fehler. Anschließend überarbeitete ich einige Views, sodass sie übersichtlicher und einfacher zu benutzen sind. Nach dem iOS 13.4 Update Mitte der Woche funktionierte ein Teil der App nicht, da sich das Verhalten von Views geändert hatte. Ich behob die Fehler, testete ausgiebig die App und fügte iPad Unterstützung hinzu. Des Weiteren entstand eine neue verbesserte permanente Scan-Vorlgae und ich schrieb einen großen Teil des Berichts.
+	Ich begann den Workflow und die Navigation in der App zu verbessern und vereinfachen. Dabei beseitigte ich einigen Quellcode des Prototyps, erweiterte die Dokumentation und behob einige Fehler. Anschließend überarbeitete ich einige Views, sodass sie übersichtlicher und einfacher zu benutzen sind. Nach dem iOS 13.4 Update Mitte der Woche funktionierte ein Teil der App nicht, da sich das Verhalten von Views geändert hatte. Ich behob die Fehler, testete ausgiebig die App und fügte iPad Unterstützung hinzu. Des Weiteren entstand eine neue verbesserte permanente Scan-Vorlage und ich schrieb einen großen Teil des Berichts.
 	
 	\textbf{30.03. - 05.04.} 
 	Das Backend für die App war soweit, dass ich es aufsetzten und die API-Schnittstellen implementieren konnte. Dazu erstellte ich Views für Registrieren und Anmelden, die mithilfe von regulären Ausdrücken, die Eingaben überprüfen. Außerdem entwickelte ich für die anfallenden asynchronen Aufgaben einen Schicht im App-Store. Dabei las ich mich in das Framework Combine ein und überlegte mir einen geeigneten Aufbau. Da der Ansatz von Combine sehr neu für mich war, dauerte es zwei Tage, bis ein erster API-Service mit Fehler-Handling funktionierte. Zum Ende der Woche waren alle der Create-Schnittstellen implementiert, getestet und dokumentiert. Nebenbei erstellte ein paar Issues für das Backend und sprach mich mit Tobias über OCR auf dem Server ab.
@@ -875,7 +877,122 @@ Im Rahmen eines zwölfwöchigen Forschungspraktikums an der Hochschule Mittweida
 	Auch diese Woche arbeitete ich hauptsächlich am Beleg und stellte ihn so weit fertig, dass nur noch wenige Dinge zu erledigen sind. Zudem gelang es Tobias die Fehler der online OCR-Engine Tesseract zu beseitigen. Dadurch konnte ich die letzten fehlenden Schritte für den Umgang mit den OCR-Schnittstellen implementieren und testen.
 	
 	\textbf{11.05. - 15.05.}
+	In der letzten Woche bereitete ich alle Dokumente und Ordner für die Abgabe vor. Dabei erhielt ich nützliches Feedback der Betreuer. 
 
+
+\chapter{Tätigkeitstabelle}
+    \setlength\LTleft{0pt}
+	\setlength\LTright{0pt}
+	\begin{longtable}{
+		|p{0.1\textwidth}
+		|p{0.1\textwidth}
+		|p{0.72\textwidth}|
+	}
+
+	\multicolumn{1}{c}{Datum}&
+	\multicolumn{1}{c}{Stunden}&
+	\multicolumn{1}{c}{Tätigkeit}\\
+	\endfirsthead
+	\multicolumn{1}{c}{Datum}&
+	\multicolumn{1}{c}{Stunden}&
+	\multicolumn{1}{c}{Tätigkeit}\\
+	\endhead
+	
+    \hline
+        24.02.20 & 6,5 & Ideen gesammelt, Dokumentationen angeschaut, Workflows erstellt, Projektplanung betrieben \\ \hline
+        25.02.20 & 6 & Ideen gesammelt,  minimalen  Prototyp mit Texterkennung erstellt \\ \hline
+        26.02.20 & 8,5 & Ideen gesammelt,  weiteren Prototyp in SwiftUI  zum Einzeichnen und Verschieben von Regionen entwickelt \\ \hline
+        27.02.20 & 9 & Projekt mit Git aufgesetzt,  Workflow zum Erstellen einer Region implementiert \\ \hline
+        28.02.20 & 6,5 & Mock-Scan-Vorlage zum Testen erstellt, Fehlersuche bei Regionen-Problemen \\ \hline
+        29.02.20 & 1,5 & Ideen gesammelt \\ \hline
+        01.03.20 &  &  \\ \hline
+		\hline        
+        02.03.20 & 5 & Ideen gesammelt, Texterkennung welche Regionen verwendet implementiert, Workflow verbessert \\ \hline
+        03.03.20 & 6 & Ideen gesammelt, Continues Integration ausprobiert, viele Fehler behoben \\ \hline
+        04.03.20 & 6,5 & Regionen Einzeichnen fertiggestellt (Einzeichnen, Bewegen, Zoom), Seiten- und Regionenvorschau implementiert, JSON Datenstruktur für Server-Kommunikation entwickelt \\ \hline
+        05.03.20 & 8 & Überarbeitung des Workflows für beliebig viele Seiten \\ \hline
+        06.03.20 & 4 & Swiftlint aufgesetzt, Fehler behoben, GitHub Issues erstellt \\ \hline
+        07.03.20 & 5 & Einarbeitung in LaTeX, Ideen für den Bericht gesammelt, Beleg auf Github und Overleaf überführt  \\ \hline
+        08.03.20 & 1 & Ideen gesammelt, Beleg bearbeitet (Stichpunkte) \\ \hline
+        \hline
+        09.03.20 & 2 & Beleg bearbeitet (Stichpunkte) \\ \hline
+        10.03.20 & 1 & Ideen gesammelt, JSON Datenstruktur für Server-Kommunikation entwickelt \\ \hline
+        11.03.20 & 2 & Iron OCR und CoreML  für serverseitige OCR-Engines angeschaut, Datenbankstruktur entwickelt \\ \hline
+        12.03.20 & 6 & Datenbankstruktur bearbeitet, Beleg bearbeitet (Stichpunkte) \\ \hline
+        13.03.20 & 6,5 & Beleg bearbeitet (Kap. 1, 2) \\ \hline
+        14.03.20 & 2,5 & Beleg bearbeitet (Kap. 1, 2) \\ \hline
+        15.03.20 & 7 & Server Side Swift für OCR angeschaut, Redux Container umgeschrieben \\ \hline
+        \hline
+        16.03.20 & 7,5 & Ausführliche Dokumentation, Projektmanagement mit GitHub Issues, Beleg bearbeitet \\ \hline
+        17.03.20 & 8 & Vorbereitung für Kontrollmechanismen, Kontrollmechanismen Anlegen implementiert \\ \hline
+        18.03.20 & 5 & Kontrollmechanismen Anlegen implementiert \\ \hline
+        19.03.20 & 7 & Kontrollmechanismen Anlegen implementiert, App ausführlich getestet \\ \hline
+        20.03.20 & 7 & Fehler mit den Kontrollmechanismen behoben, weitere Issues erstellt, Beleg bearbeitet \\ \hline
+        21.03.20 & 2 & Beleg bearbeitet (Kapitel 3), Ideen für Kontrollmechanismen gesammelt \\ \hline
+        22.03.20 & 5 & Beleg bearbeitet (Kap. 3, 5, 6, Tätigkeitsbericht) \\ \hline
+        \hline
+        23.03.20 & 9 & Dokumentation, Fehlerbehebung, Verbesserung der Navigation und einiger Views \\ \hline
+        24.03.20 & 8,5 & Probleme behoben, Beleg bearbeitet (Kap. 4, 5, 6) \\ \hline
+        25.03.20 & 10 & Probleme mit neuer iOS-Version gesucht und behoben, neue Mock-Scan-Vorlage  \\ \hline
+        26.03.20 & 9 & Mock-Scan-Vorlage fertiggestellt, Design der App verbessert, App für iPad angepasst, Beleg (Kap. 4) \\ \hline
+        27.03.20 & 6 & Beleg bearbeitet (Kap. 4, 5), Fragen zum Meeting aufgeschrieben \\ \hline
+        28.03.20 &  &  \\ \hline
+        29.03.20 &  &  \\ \hline
+        \hline
+        30.03.20 & 9,5 & Backend aufgesetzt, Anmelde- Registrier- und Willkommensansicht entwickelt \\ \hline
+        31.03.20 & 9,5 & Einarbeitung in  Combine-Framework, Vorbereitung Authentifikation, App State angepasst, Network Service geschrieben \\ \hline
+        01.04.20 & 7,5 & Authentifikation-State überarbeitet, Absprache mit Tobias über OCR, Login-API implementiert \\ \hline
+        02.04.20 & 6,5 & Fertigstellung Authentifikation, Vorbereitung für Vorlagen-Network-Service, erste API fertig \\ \hline
+        03.04.20 & 7 & Weitere Vorlagen-API fertiggestellt und getestet,  \\ \hline
+        04.04.20 & 1,5 & Dokumentation geschrieben, Ideen zum Ausführung der Kontrollmechanismen gesammelt  \\ \hline
+        05.04.20 &  &  \\ \hline
+        \hline
+        06.04.20 & 8 & Weitere Ideen zum Ausführen der Kontrollmechanismen gesammelt, weitere APIs implementiert, Beleg bearbeitet (Tätigkeitsbericht) \\ \hline
+        07.04.20 & 7 & Uploud APIs fertig, Ablauf zum gesamten Upload fertig \\ \hline
+        08.04.20 & 7,5 & Eigenen speziellen JSON-Decoder für Download programmiert, Vorlagen-Download-API fertiggestellt, mit Pull-To-Refresh \\ \hline
+        09.04.20 & 6 & iPad-Problem behoben, Meeting, Absprache mit Tobias, Beleg bearbeitet (Kap. 6.3) \\ \hline
+        10.04.20 & 5,5 & Beleg bearbeitet (Kap. 6.3), JWT-Session-Problem probiert zu lösen \\ \hline
+        11.04.20 &  &  \\ \hline
+        12.04.20 &  &  \\ \hline
+        \hline
+        13.04.20 &  &  \\ \hline
+        14.04.20 & 8 & JWT-Session-Problem probiert zu lösen, Performance-Verbesserungen, Absprache mit Tobias, Beleg bearbeitet (Kap. 6) \\ \hline
+        15.04.20 & 8,5 & Beleg bearbeitet (Kap. 6), eigene .bst-Datei erstellt \\ \hline
+        16.04.20 & 8 & Beleg bearbeitet (Kap. 6.5), Commits für Backend erstellt, Lösung für JWT-Session gefunden \\ \hline
+        17.04.20 & 8 & Beleg bearbeitet (Kap. 6.4, 6.5), viele Screenshots erstellt, Update für Backend aufgesetzt \\ \hline
+        18.04.20 &  &  \\ \hline
+        19.04.20 &  &  \\ \hline
+        \hline
+        20.04.20 & 8,5 & Beleg bearbeitet (Kap. 5, 6.5.2), viele Screenshots erstellt und eingefügt  \\ \hline
+        21.04.20 & 8 & Beleg bearbeitet (Kap. 6.5.1, 6.5.3), Meeting \\ \hline
+        22.04.20 & 9 & OCR-API angefangen zu implementieren, Workflow in View und Store angepasst \\ \hline
+        23.04.20 & 8 & OCR-API-Grundlagen fertig implementiert, Beleg bearbeitet (Kap. 7.2) \\ \hline
+        24.04.20 & 6,5 & offline OCR Verbesserung, Beleg (Kap. 1, 2) \\ \hline
+        25.04.20 &  &  \\ \hline
+        26.04.20 &  &  \\ \hline
+        \hline
+        27.04.20 & 8 & Beleg bearbeitet (Kap. 7.2, 8) \\ \hline
+        28.04.20 & 7 & Beleg bearbeitet (Kap. 8), Meeting \\ \hline
+        29.04.20 & 6,5 & Beleg bearbeitet (Kap. 8), neue Bilder/Screenshots \\ \hline
+        30.04.20 & 7 & Beleg bearbeitet (Kap. 4, 5) \\ \hline
+        01.05.20 & 4 & Beleg bearbeitet (Kap. 4, 5) \\ \hline
+        02.05.20 &  &  \\ \hline
+        03.05.20 &  &  \\ \hline
+        \hline
+        04.05.20 & 8,5 & Beleg bearbeitet (Kap. 4, 5) \\ \hline
+        05.05.20 & 7,5 & Beleg bearbeitet (Kap. 7, 8, Tätigkeitsbericht), App verbessert, Absprache mit Tobias \\ \hline
+        06.05.20 & 10 & Beleg korrigiert, viele kleine App-Probleme behoben, Absprache mit Tobias \\ \hline
+        07.05.20 & 6,5 & Beleg bearbeitet (Installation, Tätigkeitsbericht, Fazit) und korrigiert, Meeting \\ \hline
+        08.05.20 & 8,5 & Beleg korrigiert, Flussdiagramme angefertigt \\ \hline
+        09.05.20 & 2,5 & Beleg korrigiert \\ \hline
+        10.05.20 & 6 & Beleg korrigiert und neue Bilder erstellt und eingefügt \\ \hline
+        \hline
+        11.05.20 & 8 & Beleg korrigiert und neue Bilder erstellt und eingefügt \\ \hline
+        12.05.20 & 8,5 & Beleg korrigiert, Layout verbessert \\ \hline
+        13.05.20 & 8,5 & Beleg korrigiert und neue Bilder erstellt und eingefügt \\ \hline
+        14.05.20 & 6 & Beleg korrigiert, Tätigkeitstabelle erstellt und in LaTeX eingefügt \\ \hline
+        15.05.20 & 5 & Beleg korrigiert, Tätigkeitstabelle vervollständigt \\ \hline
+    \end{longtable}
 
 \bibliography{Beleg}
 \bibliographystyle{iso690.bst}
